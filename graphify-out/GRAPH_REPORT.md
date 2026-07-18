@@ -1,16 +1,16 @@
 # Graph Report - release-truth-gate  (2026-07-18)
 
 ## Corpus Check
-- 101 files · ~212,723 words
+- 102 files · ~212,971 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 497 nodes · 1157 edges · 35 communities (26 shown, 9 thin omitted)
+- 499 nodes · 1158 edges · 36 communities (26 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f1f260a6`
+- Built from commit: `da49db84`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,6 +44,7 @@
 - [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `databaseRoute()` - 63 edges
@@ -62,25 +63,25 @@
   app/api/auth/logout/route.js → src/server/http.js
 - `GET()` --calls--> `databaseRoute()`  [EXTRACTED]
   app/api/github/callback/route.js → src/server/http.js
+- `GET()` --calls--> `databaseRoute()`  [EXTRACTED]
+  app/api/projects/[projectId]/repositories/route.js → src/server/http.js
 - `POST()` --calls--> `databaseRoute()`  [EXTRACTED]
-  app/api/workspaces/[workspaceId]/github/connect/route.js → src/server/http.js
-- `requireSameOriginMutation()` --calls--> `validateSameOrigin()`  [EXTRACTED]
-  src/server/http.js → api/security.mjs
-- `POST()` --calls--> `consumeRateLimit()`  [EXTRACTED]
-  app/api/exports/verify/route.js → api/security.mjs
+  app/api/projects/[projectId]/repositories/route.js → src/server/http.js
+- `GET()` --calls--> `databaseRoute()`  [EXTRACTED]
+  app/api/projects/[projectId]/route.js → src/server/http.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (35 total, 9 thin omitted)
+## Communities (36 total, 10 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.11
-Nodes (31): logOutcome(), POST(), analysisRequestSchema, analystInstructions, buildAnalysisInput(), evidenceAssessmentSchema, groundAssessment(), identifier (+23 more)
+Cohesion: 0.12
+Nodes (30): logOutcome(), POST(), analysisRequestSchema, analystInstructions, buildAnalysisInput(), evidenceAssessmentSchema, groundAssessment(), identifier (+22 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.06
-Nodes (34): assessmentSchema, buildShareUrl(), canonicalJson(), citationSchema, createEvidenceExport(), decisionSchema, decodeBase64Url(), encodeBase64Url() (+26 more)
+Nodes (35): assessmentSchema, buildShareUrl(), canonicalJson(), citationSchema, createEvidenceExport(), decisionSchema, decodeBase64Url(), encodeBase64Url() (+27 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.04
@@ -91,16 +92,16 @@ Cohesion: 0.09
 Nodes (21): Authorization, Baseline verification, Client-owned product state, Current architecture, Deployment target update, Evidence Gate MVP audit, Executive finding, Expected external blockers (+13 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.23
-Nodes (15): clearUserSessionCookieHeader(), createUserSession(), getUserSession(), hashSessionToken(), parseCookies(), revokeRequestSession(), secureCookiesEnabled(), sessionTokenFromRequest() (+7 more)
+Cohesion: 0.28
+Nodes (13): clearUserSessionCookieHeader(), createUserSession(), getUserSession(), hashSessionToken(), parseCookies(), revokeRequestSession(), secureCookiesEnabled(), sessionTokenFromRequest() (+5 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.16
-Nodes (16): appendDecision(), calculateVerdict(), createDecisionRecord(), currentApprovalForCoverage(), deriveClaimCoverage(), deriveFindings(), isValidDate(), KNOWN_RELATIONS (+8 more)
+Cohesion: 0.15
+Nodes (17): appendDecision(), calculateVerdict(), createDecisionRecord(), currentApprovalForCoverage(), deriveClaimCoverage(), deriveFindings(), isValidDate(), KNOWN_RELATIONS (+9 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.09
-Nodes (55): requestSchema, jsonResponse(), claimSchema, auditEvents, claimEvidenceLinks, claims, claimSourceType, decisions (+47 more)
+Cohesion: 0.07
+Nodes (61): requestSchema, jsonResponse(), auditEvents, claimEvidenceLinks, claimSourceType, decisions, decisionStatus, decisionType (+53 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.25
@@ -123,24 +124,24 @@ Cohesion: 0.50
 Nodes (3): Answer, Q: What makes the final Release Truth snapshot reproducible and deployable?, Source Nodes
 
 ### Community 19 - "Community 19"
-Cohesion: 0.17
-Nodes (19): GET(), POST(), githubOauthStates, createGitHubAppJwt(), createGitHubState(), createInstallationToken(), encode(), exchangeGitHubOAuthCode() (+11 more)
+Cohesion: 0.13
+Nodes (22): GET(), githubInstallations, githubOauthStates, GET(), createGitHubAppJwt(), createGitHubState(), createInstallationToken(), encode() (+14 more)
 
 ### Community 23 - "Community 23"
 Cohesion: 0.11
 Nodes (9): App(), can(), capabilities, formatDate(), initials(), markers, ProductApp(), ProductShell() (+1 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.07
-Nodes (43): POST(), GET(), POST(), apiRequest(), cookieFrom(), inviteAndAccept(), registerUser(), responseJson() (+35 more)
+Cohesion: 0.09
+Nodes (37): POST(), claimSchema, GET(), POST(), POST(), apiRequest(), cookieFrom(), inviteAndAccept() (+29 more)
 
 ### Community 25 - "Community 25"
 Cohesion: 0.33
 Nodes (4): client, databaseName, env, parsed
 
 ### Community 29 - "Community 29"
-Cohesion: 0.24
-Nodes (11): canonicalJson(), sortCanonical(), GET(), sha256(), verifyAuditChain(), artifactHash(), exportSigningConfig(), readPem() (+3 more)
+Cohesion: 0.28
+Nodes (9): canonicalJson(), sortCanonical(), GET(), verifyAuditChain(), artifactHash(), exportSigningConfig(), readPem(), signExportManifest() (+1 more)
 
 ### Community 30 - "Community 30"
 Cohesion: 0.25
@@ -155,24 +156,24 @@ Cohesion: 0.43
 Nodes (5): actor(), githubExternalId(), githubSummary(), normalizeGitHubObject(), truncate()
 
 ## Knowledge Gaps
-- **149 isolated node(s):** `identifier`, `payload`, `assessment`, `requestSchema`, `requestSchema` (+144 more)
+- **150 isolated node(s):** `identifier`, `payload`, `assessment`, `requestSchema`, `requestSchema` (+145 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `databaseRoute()` connect `Community 24` to `Community 0`, `Community 4`, `Community 6`, `Community 19`, `Community 31`?**
+- **Why does `databaseRoute()` connect `Community 24` to `Community 19`, `Community 4`, `Community 6`, `Community 31`?**
   _High betweenness centrality (0.066) - this node is a cross-community bridge._
 - **Why does `deriveFindings()` connect `Community 5` to `Community 1`?**
-  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+  _High betweenness centrality (0.053) - this node is a cross-community bridge._
 - **Why does `calculateVerdict()` connect `Community 5` to `Community 1`?**
-  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+  _High betweenness centrality (0.053) - this node is a cross-community bridge._
 - **What connects `identifier`, `payload`, `assessment` to the rest of the system?**
-  _149 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _150 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.11265969802555169 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11829268292682926 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.06079664570230608 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05925925925925926 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._

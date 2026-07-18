@@ -658,5 +658,10 @@
     "mtime": 1784393201.872536,
     "ast_hash": "93f1caa6d6c1c960fa5efc92c9526e94",
     "semantic_hash": ""
+  },
+  "ops/bootstrap-contabo.sh": {
+    "mtime": 1784395090.9390888,
+    "ast_hash": "b16722ce1cbaf1b59d05654ac48654f9",
+    "semantic_hash": ""
   }
 }
