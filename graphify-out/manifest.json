@@ -388,5 +388,85 @@
     "mtime": 1784389225.4124782,
     "ast_hash": "1ffa8020ebfa1f259529b5eca86a8652",
     "semantic_hash": ""
+  },
+  "app/api/auth/login/route.js": {
+    "mtime": 1784389916.5077999,
+    "ast_hash": "bf7fa8e700f28f93d0db888d54629e63",
+    "semantic_hash": ""
+  },
+  "app/api/auth/logout/route.js": {
+    "mtime": 1784389916.5087945,
+    "ast_hash": "81e8068207970088994e26271c613480",
+    "semantic_hash": ""
+  },
+  "app/api/auth/me/route.js": {
+    "mtime": 1784389916.5107982,
+    "ast_hash": "462a82e3fdebe6bf547c8f3e42c69838",
+    "semantic_hash": ""
+  },
+  "app/api/auth/register/route.js": {
+    "mtime": 1784389916.506796,
+    "ast_hash": "d8c10320ddad3ab3c14a0044a0ca136a",
+    "semantic_hash": ""
+  },
+  "app/api/invitations/accept/route.js": {
+    "mtime": 1784390006.8126261,
+    "ast_hash": "e68cf353732f093fc67d98e307764ffc",
+    "semantic_hash": ""
+  },
+  "app/api/workspaces/[workspaceId]/invitations/route.js": {
+    "mtime": 1784390006.8116264,
+    "ast_hash": "e35c1e610e18d779f14f339be62467aa",
+    "semantic_hash": ""
+  },
+  "app/api/workspaces/[workspaceId]/members/[userId]/route.js": {
+    "mtime": 1784390006.80963,
+    "ast_hash": "52be62a17139304e62bf2283c116e8ef",
+    "semantic_hash": ""
+  },
+  "app/api/workspaces/[workspaceId]/members/route.js": {
+    "mtime": 1784390006.8076286,
+    "ast_hash": "9dafe2a841e48a3b16708babc9f24db1",
+    "semantic_hash": ""
+  },
+  "app/api/workspaces/route.js": {
+    "mtime": 1784390006.8054304,
+    "ast_hash": "362e392f27416ab2cfef2f51f537237b",
+    "semantic_hash": ""
+  },
+  "db/auth-rbac.integration.test.mjs": {
+    "mtime": 1784390096.5723834,
+    "ast_hash": "0251a4877223c2cbafc7476741ce63db",
+    "semantic_hash": ""
+  },
+  "src/server/audit.js": {
+    "mtime": 1784389874.6356418,
+    "ast_hash": "a75a3d44b850690b5c5393b9673dd683",
+    "semantic_hash": ""
+  },
+  "src/server/auth/sessions.js": {
+    "mtime": 1784389874.6336398,
+    "ast_hash": "545dd27bffd726a25b260c62665d9841",
+    "semantic_hash": ""
+  },
+  "src/server/errors.js": {
+    "mtime": 1784389874.631641,
+    "ast_hash": "8a2f66900d66aa934d49776979fd7a9b",
+    "semantic_hash": ""
+  },
+  "src/server/http.js": {
+    "mtime": 1784389874.6356418,
+    "ast_hash": "650f3846d87025a32f258e491491bb62",
+    "semantic_hash": ""
+  },
+  "src/server/rbac.js": {
+    "mtime": 1784389874.6346483,
+    "ast_hash": "109697cabfc3a242d6fc82f653d80d90",
+    "semantic_hash": ""
+  },
+  "src/server/rbac.test.js": {
+    "mtime": 1784390068.4125168,
+    "ast_hash": "f41c7c75c412002bc4455444c393f1fc",
+    "semantic_hash": ""
   }
 }
