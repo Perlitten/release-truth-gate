@@ -135,8 +135,8 @@
     "semantic_hash": ""
   },
   "SECURITY.md": {
-    "mtime": 1784384854.4626832,
-    "ast_hash": "acc242b9be1146f080d715d290176cf3",
+    "mtime": 1784385278.2104354,
+    "ast_hash": "1542b55a2d8340d3776ba037e0055758",
     "semantic_hash": ""
   },
   "SITES-BUILD.md": {
@@ -145,8 +145,8 @@
     "semantic_hash": ""
   },
   "design-qa.md": {
-    "mtime": 1784383111.9101098,
-    "ast_hash": "2f6266c243d1606143368f377d492585",
+    "mtime": 1784385278.2115276,
+    "ast_hash": "3764340cdcda3904fdb310cb43c9545e",
     "semantic_hash": ""
   },
   "app/icon.png": {
@@ -297,6 +297,16 @@
   "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md": {
     "mtime": 1784383824.6164548,
     "ast_hash": "65fdab289e192a0c2c2a77f89e708510",
+    "semantic_hash": ""
+  },
+  "docs/mvp-audit.md": {
+    "mtime": 1784388907.8709,
+    "ast_hash": "24294bc836e94498082cf064095b65d0",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260718_143342_what_makes_the_final_release_truth_snapshot_reprod.md": {
+    "mtime": 1784385222.5556538,
+    "ast_hash": "25c38ac6a404e75e09f4b29326c6e0f6",
     "semantic_hash": ""
   }
 }
