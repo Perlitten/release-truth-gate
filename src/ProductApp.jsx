@@ -10,11 +10,13 @@ import {
   ClockCounterClockwise,
   Database,
   DownloadSimple,
+  Flask,
   Folder,
   GithubLogo,
   LockKey,
   Plus,
   RocketLaunch,
+  Scales,
   ShieldCheck,
   SignOut,
   Sparkle,
@@ -23,6 +25,7 @@ import {
   UsersThree,
   WarningCircle,
   X,
+  XCircle,
 } from "@phosphor-icons/react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -906,6 +909,228 @@ function EmptyState({ icon: Icon, title, body, action, actionLabel }) {
   );
 }
 
+const TIMELINE_LANES = [
+  { id: "claim", label: "Claim", hint: "What we promise", icon: ClipboardText },
+  { id: "code", label: "Code", hint: "What we ship", icon: BracketsCurly },
+  { id: "test", label: "Tests", hint: "What we verify", icon: Flask },
+  { id: "decision", label: "Decisions", hint: "Who decides", icon: Scales },
+];
+
+const TIMELINE_STATUS = {
+  verified: { label: "Verified", icon: CheckCircle },
+  contradicted: { label: "Contradicted", icon: XCircle },
+  pending: { label: "Pending", icon: ClockCounterClockwise },
+};
+
+function evidenceTimelineStatus(relation) {
+  if (relation === "supports") return "verified";
+  if (relation === "contradicts") return "contradicted";
+  return "pending";
+}
+
+function timelineDayKey(value) {
+  return new Date(value).toISOString().slice(0, 10);
+}
+
+function formatTimelineDay(dayKey) {
+  return new Intl.DateTimeFormat("en", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(`${dayKey}T00:00:00Z`));
+}
+
+function formatTime(value) {
+  return new Intl.DateTimeFormat("en", { timeStyle: "short" }).format(
+    new Date(value),
+  );
+}
+
+function TimelineTab({ snapshot }) {
+  const events = useMemo(() => {
+    const list = [];
+    for (const item of snapshot.activeEvidence) {
+      const lane = TIMELINE_LANES.some((entry) => entry.id === item.evidenceKind)
+        ? item.evidenceKind
+        : "code";
+      list.push({
+        id: `evidence:${item.id}`,
+        lane,
+        at: item.capturedAt,
+        title: item.summary,
+        status: evidenceTimelineStatus(item.relation),
+        detail: {
+          kind: `${item.evidenceKind} evidence`,
+          relation: item.relation,
+          path: item.sourceMetadata?.path,
+          revision: item.sourceMetadata?.revision,
+          confidence: item.sourceMetadata?.confidence,
+          excerpt: item.payloadSnapshot?.content,
+          hash: item.contentHash,
+          author: item.authorName,
+        },
+      });
+    }
+    for (const decision of snapshot.activeDecisions) {
+      list.push({
+        id: `decision:${decision.id}`,
+        lane: "decision",
+        at: decision.createdAt,
+        title: `${decision.type.replace("_", " ")} · ${decision.status}`,
+        status: decision.status === "approved" ? "verified" : "contradicted",
+        detail: {
+          kind: "human decision",
+          excerpt: decision.rationale,
+          author: decision.actor?.displayName,
+          role: decision.roleAtDecision,
+        },
+      });
+    }
+    for (const run of snapshot.verdictRuns) {
+      list.push({
+        id: `verdict:${run.id}`,
+        lane: "decision",
+        at: run.createdAt,
+        title: `Server verdict · ${run.result?.label || "unknown"}`,
+        status: run.result?.status === "go" ? "verified" : "contradicted",
+        detail: {
+          kind: "deterministic verdict run",
+          excerpt: run.result?.detail,
+          author: run.actor?.displayName,
+        },
+      });
+    }
+    return list.sort((left, right) => Date.parse(left.at) - Date.parse(right.at));
+  }, [snapshot]);
+
+  const days = useMemo(
+    () => [...new Set(events.map((event) => timelineDayKey(event.at)))].sort(),
+    [events],
+  );
+  const [selectedId, setSelectedId] = useState(null);
+  const boardRef = useRef(null);
+  useEffect(() => {
+    setSelectedId(null);
+    // The newest day carries the release-blocking events; keep it in view.
+    boardRef.current?.scrollTo({ left: boardRef.current.scrollWidth });
+  }, [snapshot.release.id]);
+  const selected =
+    events.find((event) => event.id === selectedId) ||
+    events.findLast((event) => event.status === "contradicted") ||
+    events.at(-1) ||
+    null;
+
+  if (events.length === 0) {
+    return (
+      <EmptyState
+        icon={ClockCounterClockwise}
+        title="Nothing on the timeline yet"
+        body="Attach evidence or record a decision and the release history appears here."
+      />
+    );
+  }
+
+  return (
+    <div className="rt-timeline">
+      <div
+        className="rt-timeline-board"
+        role="grid"
+        aria-label="Release timeline"
+        ref={boardRef}
+      >
+        <div className="rt-timeline-grid" style={{ "--rt-days": days.length }}>
+          <span className="rt-timeline-corner" />
+          {days.map((day) => (
+            <span className="rt-timeline-day" key={day}>
+              {formatTimelineDay(day)}
+            </span>
+          ))}
+          {TIMELINE_LANES.map((lane) => (
+            <div className="rt-timeline-row" key={lane.id} role="row">
+              <div className="rt-timeline-lane">
+                <span><lane.icon weight="duotone" /></span>
+                <div>
+                  <strong>{lane.label}</strong>
+                  <small>{lane.hint}</small>
+                </div>
+              </div>
+              {days.map((day) => (
+                <div className="rt-timeline-cell" key={day}>
+                  {events
+                    .filter(
+                      (event) =>
+                        event.lane === lane.id && timelineDayKey(event.at) === day,
+                    )
+                    .map((event) => {
+                      const status = TIMELINE_STATUS[event.status];
+                      return (
+                        <button
+                          type="button"
+                          className={`rt-timeline-event ${event.status} ${
+                            selected?.id === event.id ? "selected" : ""
+                          }`}
+                          onClick={() => setSelectedId(event.id)}
+                          key={event.id}
+                        >
+                          <status.icon weight="fill" />
+                          <span>{event.title}</span>
+                          <small>{formatTime(event.at)}</small>
+                        </button>
+                      );
+                    })}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        <footer className="rt-timeline-legend">
+          {Object.entries(TIMELINE_STATUS).map(([id, status]) => (
+            <span className={id} key={id}>
+              <status.icon weight="fill" /> {status.label}
+            </span>
+          ))}
+        </footer>
+      </div>
+      {selected && (
+        <aside className={`rt-timeline-detail ${selected.status}`}>
+          <span className="rt-kicker">Selected event</span>
+          <h3>{selected.title}</h3>
+          <dl>
+            <div><dt>Type</dt><dd>{selected.detail.kind}</dd></div>
+            {selected.detail.relation && (
+              <div><dt>Relation</dt><dd>{selected.detail.relation}</dd></div>
+            )}
+            {selected.detail.path && (
+              <div><dt>Source</dt><dd>{selected.detail.path}</dd></div>
+            )}
+            {selected.detail.revision && (
+              <div><dt>Revision</dt><dd><code>{selected.detail.revision}</code></dd></div>
+            )}
+            {Number.isFinite(selected.detail.confidence) && (
+              <div>
+                <dt>Confidence</dt>
+                <dd>{Math.round(selected.detail.confidence * 100)}%</dd>
+              </div>
+            )}
+            {selected.detail.author && (
+              <div><dt>Recorded by</dt><dd>{selected.detail.author}</dd></div>
+            )}
+            <div><dt>Captured</dt><dd>{formatDate(selected.at)}</dd></div>
+          </dl>
+          {selected.detail.excerpt && (
+            <blockquote>{selected.detail.excerpt}</blockquote>
+          )}
+          {selected.detail.hash && (
+            <p className="rt-timeline-hash">
+              sha256 <code>{selected.detail.hash.slice(0, 16)}…</code>
+            </p>
+          )}
+        </aside>
+      )}
+    </div>
+  );
+}
+
 function ReleaseWorkspace({
   snapshot,
   onRefresh,
@@ -914,7 +1139,11 @@ function ReleaseWorkspace({
   onRunVerdict,
   onGenerateExport,
 }) {
-  const [tab, setTab] = useState("overview");
+  const [tab, setTab] = useState(() =>
+    snapshot.activeEvidence.length || snapshot.activeDecisions.length
+      ? "timeline"
+      : "overview",
+  );
   const [busy, setBusy] = useState(false);
   const role = snapshot.membership.role;
   const latestRun = snapshot.verdictRuns.at(-1) || null;
@@ -954,6 +1183,7 @@ function ReleaseWorkspace({
   }
 
   const tabs = [
+    ["timeline", "Timeline"],
     ["overview", "Overview"],
     ["claims", `Claims ${snapshot.activeClaims.length}`],
     ["evidence", `Evidence ${snapshot.activeEvidence.length}`],
@@ -1040,6 +1270,7 @@ function ReleaseWorkspace({
       </nav>
 
       <section className="rt-release-content">
+        {tab === "timeline" && <TimelineTab snapshot={snapshot} />}
         {tab === "overview" && (
           <>
             <div className="rt-metrics">
