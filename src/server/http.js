@@ -14,10 +14,20 @@ export async function parseJsonBody(request, schema, maxBytes = 16_384) {
 }
 
 export function requireSameOriginMutation(request, marker) {
-  if (
-    !validateSameOrigin(request) ||
-    request.headers.get("x-release-truth-request") !== marker
-  ) {
+  const validOrigin = validateSameOrigin(request);
+  const validMarker =
+    request.headers.get("x-release-truth-request") === marker;
+  if (!validOrigin || !validMarker) {
+    console.warn(
+      JSON.stringify({
+        event: "release_truth_csrf_rejected",
+        requestOrigin: new URL(request.url).origin,
+        origin: request.headers.get("origin"),
+        fetchSite: request.headers.get("sec-fetch-site"),
+        validOrigin,
+        validMarker,
+      }),
+    );
     throw new HttpError(403, "Cross-site request rejected.", "csrf_rejected");
   }
 }
@@ -92,4 +102,3 @@ export async function databaseRoute(handler) {
     return jsonResponse({ error: message, code, requestId }, { status });
   }
 }
-

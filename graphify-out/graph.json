@@ -270,7 +270,7 @@
       "source_location": "L271",
       "_origin": "ast",
       "id": "api_security_jsonresponse",
-      "community": 4,
+      "community": 0,
       "norm_label": "jsonresponse()"
     },
     {
@@ -360,7 +360,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "login_route_post",
-      "community": 4,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -380,7 +380,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "logout_route_post",
-      "community": 4,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -390,7 +390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "me_route",
-      "community": 4,
+      "community": 24,
       "norm_label": "route.js"
     },
     {
@@ -400,7 +400,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "me_route_get",
-      "community": 4,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -430,7 +430,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "register_route_post",
-      "community": 4,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -460,8 +460,208 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "accept_route_post",
-      "community": 4,
+      "community": 24,
       "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "releases_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "releaseSchema",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "releases_route_releaseschema",
+      "community": 6,
+      "norm_label": "releaseschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "releases_route_get",
+      "community": 6,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "releases_route_post",
+      "community": 6,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projectid_route",
+      "community": 24,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "updateSchema",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "projectid_route_updateschema",
+      "community": 24,
+      "norm_label": "updateschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "projectid_route_get",
+      "community": 24,
+      "norm_label": "get()"
+    },
+    {
+      "label": "PATCH()",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "projectid_route_patch",
+      "community": 24,
+      "norm_label": "patch()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claims_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "claimSchema",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "claims_route_claimschema",
+      "community": 6,
+      "norm_label": "claimschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "claims_route_get",
+      "community": 6,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "claims_route_post",
+      "community": 6,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "evidence_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "evidenceSchema",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "evidence_route_evidenceschema",
+      "community": 6,
+      "norm_label": "evidenceschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "evidence_route_get",
+      "community": 6,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "evidence_route_post",
+      "community": 6,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "releaseid_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "updateSchema",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "releaseid_route_updateschema",
+      "community": 6,
+      "norm_label": "updateschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "releaseid_route_get",
+      "community": 6,
+      "norm_label": "get()"
+    },
+    {
+      "label": "PATCH()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "releaseid_route_patch",
+      "community": 6,
+      "norm_label": "patch()"
     },
     {
       "label": "route.js",
@@ -580,7 +780,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "invitations_route_post",
-      "community": 4,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -610,7 +810,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "userid_route_patch",
-      "community": 4,
+      "community": 24,
       "norm_label": "patch()"
     },
     {
@@ -630,8 +830,48 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "members_route_get",
-      "community": 4,
+      "community": 24,
       "norm_label": "get()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projects_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "projectSchema",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "projects_route_projectschema",
+      "community": 6,
+      "norm_label": "projectschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "projects_route_get",
+      "community": 6,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "projects_route_post",
+      "community": 6,
+      "norm_label": "post()"
     },
     {
       "label": "route.js",
@@ -640,7 +880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "workspaces_route",
-      "community": 4,
+      "community": 24,
       "norm_label": "route.js"
     },
     {
@@ -650,7 +890,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "workspaces_route_createschema",
-      "community": 4,
+      "community": 24,
       "norm_label": "createschema"
     },
     {
@@ -660,7 +900,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "workspaces_route_slugfromname",
-      "community": 4,
+      "community": 24,
       "norm_label": "slugfromname()"
     },
     {
@@ -670,7 +910,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "workspaces_route_get",
-      "community": 4,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -680,7 +920,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "workspaces_route_post",
-      "community": 4,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -697,7 +937,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "app/layout.jsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "_origin": "ast",
       "id": "app_layout_metadata",
       "community": 12,
@@ -707,7 +947,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app/layout.jsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "app_layout_rootlayout",
       "community": 12,
@@ -720,7 +960,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_page",
-      "community": 1,
+      "community": 23,
       "norm_label": "page.jsx"
     },
     {
@@ -730,7 +970,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_page_homepage",
-      "community": 1,
+      "community": 23,
       "norm_label": "homepage()"
     },
     {
@@ -740,7 +980,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "db_auth_rbac_integration_test",
-      "community": 4,
+      "community": 24,
       "norm_label": "auth-rbac.integration.test.mjs"
     },
     {
@@ -750,7 +990,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "db_auth_rbac_integration_test_apirequest",
-      "community": 4,
+      "community": 24,
       "norm_label": "apirequest()"
     },
     {
@@ -760,7 +1000,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "db_auth_rbac_integration_test_cookiefrom",
-      "community": 4,
+      "community": 24,
       "norm_label": "cookiefrom()"
     },
     {
@@ -770,7 +1010,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "db_auth_rbac_integration_test_responsejson",
-      "community": 4,
+      "community": 24,
       "norm_label": "responsejson()"
     },
     {
@@ -780,7 +1020,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "db_auth_rbac_integration_test_registeruser",
-      "community": 4,
+      "community": 24,
       "norm_label": "registeruser()"
     },
     {
@@ -790,7 +1030,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "db_auth_rbac_integration_test_inviteandaccept",
-      "community": 4,
+      "community": 24,
       "norm_label": "inviteandaccept()"
     },
     {
@@ -852,6 +1092,46 @@
       "id": "db_connection_withdatabase",
       "community": 24,
       "norm_label": "withdatabase()"
+    },
+    {
+      "label": "core-crud.integration.test.mjs",
+      "file_type": "code",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "db_core_crud_integration_test",
+      "community": 6,
+      "norm_label": "core-crud.integration.test.mjs"
+    },
+    {
+      "label": "request()",
+      "file_type": "code",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "db_core_crud_integration_test_request",
+      "community": 6,
+      "norm_label": "request()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "db_core_crud_integration_test_json",
+      "community": 6,
+      "norm_label": "json()"
+    },
+    {
+      "label": "user()",
+      "file_type": "code",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "db_core_crud_integration_test_user",
+      "community": 6,
+      "norm_label": "user()"
     },
     {
       "label": "schema.integration.test.mjs",
@@ -1020,7 +1300,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "db_schema_usersessions",
-      "community": 29,
+      "community": 6,
       "norm_label": "usersessions"
     },
     {
@@ -1030,7 +1310,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "db_schema_workspaces",
-      "community": 4,
+      "community": 24,
       "norm_label": "workspaces"
     },
     {
@@ -1170,7 +1450,7 @@
       "source_location": "L639",
       "_origin": "ast",
       "id": "db_schema_auditevents",
-      "community": 4,
+      "community": 6,
       "norm_label": "auditevents"
     },
     {
@@ -1210,7 +1490,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "seeds_nova_2_4_sha256",
-      "community": 1,
+      "community": 6,
       "norm_label": "sha256()"
     },
     {
@@ -1400,7 +1680,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "package_scripts",
-      "community": 23,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -1410,7 +1690,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "package_scripts_dev",
-      "community": 23,
+      "community": 2,
       "norm_label": "dev"
     },
     {
@@ -1420,7 +1700,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "package_scripts_build",
-      "community": 23,
+      "community": 2,
       "norm_label": "build"
     },
     {
@@ -1430,7 +1710,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "package_scripts_start",
-      "community": 23,
+      "community": 2,
       "norm_label": "start"
     },
     {
@@ -1440,7 +1720,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "package_scripts_build_worker",
-      "community": 23,
+      "community": 2,
       "norm_label": "build:worker"
     },
     {
@@ -1450,7 +1730,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "package_scripts_preview",
-      "community": 23,
+      "community": 2,
       "norm_label": "preview"
     },
     {
@@ -1460,7 +1740,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "package_scripts_preview_e2e",
-      "community": 23,
+      "community": 2,
       "norm_label": "preview:e2e"
     },
     {
@@ -1470,7 +1750,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "package_scripts_test",
-      "community": 23,
+      "community": 2,
       "norm_label": "test"
     },
     {
@@ -1480,7 +1760,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "package_scripts_test_e2e",
-      "community": 23,
+      "community": 2,
       "norm_label": "test:e2e"
     },
     {
@@ -1490,7 +1770,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "package_scripts_db_up",
-      "community": 23,
+      "community": 2,
       "norm_label": "db:up"
     },
     {
@@ -1500,7 +1780,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "package_scripts_db_down",
-      "community": 23,
+      "community": 2,
       "norm_label": "db:down"
     },
     {
@@ -1510,7 +1790,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "package_scripts_db_generate",
-      "community": 23,
+      "community": 2,
       "norm_label": "db:generate"
     },
     {
@@ -1520,7 +1800,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "package_scripts_db_check",
-      "community": 23,
+      "community": 2,
       "norm_label": "db:check"
     },
     {
@@ -1530,7 +1810,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "package_scripts_db_migrate",
-      "community": 23,
+      "community": 2,
       "norm_label": "db:migrate"
     },
     {
@@ -1540,7 +1820,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "package_scripts_db_seed_nova",
-      "community": 23,
+      "community": 2,
       "norm_label": "db:seed:nova"
     },
     {
@@ -1550,7 +1830,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "package_scripts_test_db",
-      "community": 23,
+      "community": 2,
       "norm_label": "test:db"
     },
     {
@@ -1560,7 +1840,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "package_scripts_audit_prod",
-      "community": 23,
+      "community": 2,
       "norm_label": "audit:prod"
     },
     {
@@ -1570,7 +1850,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "package_scripts_verify_worker",
-      "community": 23,
+      "community": 2,
       "norm_label": "verify:worker"
     },
     {
@@ -1580,7 +1860,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "package_scripts_check",
-      "community": 23,
+      "community": 2,
       "norm_label": "check"
     },
     {
@@ -2130,8 +2410,198 @@
       "source_location": "L1017",
       "_origin": "ast",
       "id": "src_app_app",
-      "community": 1,
+      "community": 23,
       "norm_label": "app()"
+    },
+    {
+      "label": "ProductApp.jsx",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_productapp",
+      "community": 23,
+      "norm_label": "productapp.jsx"
+    },
+    {
+      "label": "markers",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "src_productapp_markers",
+      "community": 23,
+      "norm_label": "markers"
+    },
+    {
+      "label": "capabilities",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "src_productapp_capabilities",
+      "community": 23,
+      "norm_label": "capabilities"
+    },
+    {
+      "label": "can()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "src_productapp_can",
+      "community": 23,
+      "norm_label": "can()"
+    },
+    {
+      "label": "api()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "src_productapp_api",
+      "community": 23,
+      "norm_label": "api()"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "src_productapp_formatdate",
+      "community": 23,
+      "norm_label": "formatdate()"
+    },
+    {
+      "label": "initials()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "src_productapp_initials",
+      "community": 23,
+      "norm_label": "initials()"
+    },
+    {
+      "label": "Field()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "src_productapp_field",
+      "community": 23,
+      "norm_label": "field()"
+    },
+    {
+      "label": "Dialog()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "src_productapp_dialog",
+      "community": 23,
+      "norm_label": "dialog()"
+    },
+    {
+      "label": "SubmitButton()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L134",
+      "_origin": "ast",
+      "id": "src_productapp_submitbutton",
+      "community": 23,
+      "norm_label": "submitbutton()"
+    },
+    {
+      "label": "AuthScreen()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L142",
+      "_origin": "ast",
+      "id": "src_productapp_authscreen",
+      "community": 23,
+      "norm_label": "authscreen()"
+    },
+    {
+      "label": "EmptyWorkspace()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L255",
+      "_origin": "ast",
+      "id": "src_productapp_emptyworkspace",
+      "community": 23,
+      "norm_label": "emptyworkspace()"
+    },
+    {
+      "label": "CreationDialog()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L295",
+      "_origin": "ast",
+      "id": "src_productapp_creationdialog",
+      "community": 23,
+      "norm_label": "creationdialog()"
+    },
+    {
+      "label": "TeamDialog()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L480",
+      "_origin": "ast",
+      "id": "src_productapp_teamdialog",
+      "community": 23,
+      "norm_label": "teamdialog()"
+    },
+    {
+      "label": "RecordSection()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L582",
+      "_origin": "ast",
+      "id": "src_productapp_recordsection",
+      "community": 23,
+      "norm_label": "recordsection()"
+    },
+    {
+      "label": "EmptyState()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L598",
+      "_origin": "ast",
+      "id": "src_productapp_emptystate",
+      "community": 23,
+      "norm_label": "emptystate()"
+    },
+    {
+      "label": "ReleaseWorkspace()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L613",
+      "_origin": "ast",
+      "id": "src_productapp_releaseworkspace",
+      "community": 23,
+      "norm_label": "releaseworkspace()"
+    },
+    {
+      "label": "ProductShell()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L899",
+      "_origin": "ast",
+      "id": "src_productapp_productshell",
+      "community": 23,
+      "norm_label": "productshell()"
+    },
+    {
+      "label": "ProductApp()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L1053",
+      "_origin": "ast",
+      "id": "src_productapp_productapp",
+      "community": 23,
+      "norm_label": "productapp()"
     },
     {
       "label": "data.js",
@@ -2230,7 +2700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json",
-      "community": 1,
+      "community": 6,
       "norm_label": "canonical-json.js"
     },
     {
@@ -2240,7 +2710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json_sortcanonical",
-      "community": 1,
+      "community": 6,
       "norm_label": "sortcanonical()"
     },
     {
@@ -2250,7 +2720,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "lib_canonical_json_canonicaljson",
-      "community": 1,
+      "community": 6,
       "norm_label": "canonicaljson()"
     },
     {
@@ -2260,7 +2730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json_test",
-      "community": 1,
+      "community": 6,
       "norm_label": "canonical-json.test.js"
     },
     {
@@ -2610,7 +3080,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_audit",
-      "community": 4,
+      "community": 6,
       "norm_label": "audit.js"
     },
     {
@@ -2620,7 +3090,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "server_audit_appendauditevent",
-      "community": 4,
+      "community": 6,
       "norm_label": "appendauditevent()"
     },
     {
@@ -2630,7 +3100,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "server_audit_verifyauditchain",
-      "community": 4,
+      "community": 6,
       "norm_label": "verifyauditchain()"
     },
     {
@@ -2640,7 +3110,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "auth_sessions",
-      "community": 29,
+      "community": 4,
       "norm_label": "sessions.js"
     },
     {
@@ -2650,7 +3120,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "auth_sessions_securecookiesenabled",
-      "community": 29,
+      "community": 4,
       "norm_label": "securecookiesenabled()"
     },
     {
@@ -2660,7 +3130,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "auth_sessions_usersessioncookiename",
-      "community": 29,
+      "community": 4,
       "norm_label": "usersessioncookiename()"
     },
     {
@@ -2670,7 +3140,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "auth_sessions_parsecookies",
-      "community": 29,
+      "community": 4,
       "norm_label": "parsecookies()"
     },
     {
@@ -2680,7 +3150,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "auth_sessions_hashsessiontoken",
-      "community": 29,
+      "community": 4,
       "norm_label": "hashsessiontoken()"
     },
     {
@@ -2690,7 +3160,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "auth_sessions_sessionttlhours",
-      "community": 29,
+      "community": 4,
       "norm_label": "sessionttlhours()"
     },
     {
@@ -2700,7 +3170,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "auth_sessions_createusersession",
-      "community": 29,
+      "community": 4,
       "norm_label": "createusersession()"
     },
     {
@@ -2710,7 +3180,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "auth_sessions_usersessioncookieheader",
-      "community": 29,
+      "community": 4,
       "norm_label": "usersessioncookieheader()"
     },
     {
@@ -2720,7 +3190,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "auth_sessions_clearusersessioncookieheader",
-      "community": 29,
+      "community": 4,
       "norm_label": "clearusersessioncookieheader()"
     },
     {
@@ -2730,7 +3200,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "auth_sessions_sessiontokenfromrequest",
-      "community": 29,
+      "community": 4,
       "norm_label": "sessiontokenfromrequest()"
     },
     {
@@ -2740,7 +3210,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "auth_sessions_getusersession",
-      "community": 29,
+      "community": 4,
       "norm_label": "getusersession()"
     },
     {
@@ -2750,7 +3220,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "auth_sessions_revokerequestsession",
-      "community": 29,
+      "community": 4,
       "norm_label": "revokerequestsession()"
     },
     {
@@ -2817,7 +3287,7 @@
       "label": "requireAuthenticatedUser()",
       "file_type": "code",
       "source_file": "src/server/http.js",
-      "source_location": "L25",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "server_http_requireauthenticateduser",
       "community": 4,
@@ -2827,11 +3297,41 @@
       "label": "databaseRoute()",
       "file_type": "code",
       "source_file": "src/server/http.js",
-      "source_location": "L33",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "server_http_databaseroute",
-      "community": 4,
+      "community": 24,
       "norm_label": "databaseroute()"
+    },
+    {
+      "label": "immutable-records.js",
+      "file_type": "code",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_immutable_records",
+      "community": 6,
+      "norm_label": "immutable-records.js"
+    },
+    {
+      "label": "contentHash()",
+      "file_type": "code",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "server_immutable_records_contenthash",
+      "community": 6,
+      "norm_label": "contenthash()"
+    },
+    {
+      "label": "activeAppendOnlyRecords()",
+      "file_type": "code",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "server_immutable_records_activeappendonlyrecords",
+      "community": 6,
+      "norm_label": "activeappendonlyrecords()"
     },
     {
       "label": "rbac.js",
@@ -2840,7 +3340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_rbac",
-      "community": 6,
+      "community": 4,
       "norm_label": "rbac.js"
     },
     {
@@ -2850,7 +3350,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "server_rbac_capabilities",
-      "community": 6,
+      "community": 4,
       "norm_label": "capabilities"
     },
     {
@@ -2860,7 +3360,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "server_rbac_rolecan",
-      "community": 6,
+      "community": 4,
       "norm_label": "rolecan()"
     },
     {
@@ -2870,7 +3370,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "server_rbac_requireworkspacecapability",
-      "community": 6,
+      "community": 4,
       "norm_label": "requireworkspacecapability()"
     },
     {
@@ -2880,7 +3380,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "server_rbac_requireprojectcapability",
-      "community": 6,
+      "community": 4,
       "norm_label": "requireprojectcapability()"
     },
     {
@@ -2890,7 +3390,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "server_rbac_requirereleasecapability",
-      "community": 6,
+      "community": 4,
       "norm_label": "requirereleasecapability()"
     },
     {
@@ -2900,7 +3400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_rbac_test",
-      "community": 6,
+      "community": 4,
       "norm_label": "rbac.test.js"
     },
     {
@@ -3724,9 +4224,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -3914,12 +4414,34 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -3928,9 +4450,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -3939,9 +4461,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -3950,9 +4472,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -3961,7 +4483,29 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
+      "target": "api_security"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "projects_route",
       "target": "api_security",
       "confidence_score": 1.0
     },
@@ -3972,7 +4516,29 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
+      "target": "api_security"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "releases_route",
       "target": "api_security",
       "confidence_score": 1.0
     },
@@ -3983,9 +4549,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4005,9 +4571,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4016,9 +4582,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "calls",
@@ -4324,9 +4890,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "api_security_validatesameorigin",
-      "confidence_score": 1.0
+      "target": "api_security_validatesameorigin"
     },
     {
       "relation": "calls",
@@ -4412,9 +4978,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "api_security_consumeratelimit",
-      "confidence_score": 1.0
+      "target": "api_security_consumeratelimit"
     },
     {
       "relation": "imports",
@@ -4423,9 +4989,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "api_security_consumeratelimit",
-      "confidence_score": 1.0
+      "target": "api_security_consumeratelimit"
     },
     {
       "relation": "imports",
@@ -4489,9 +5055,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "api_security_readboundedtext",
-      "confidence_score": 1.0
+      "target": "api_security_readboundedtext"
     },
     {
       "relation": "calls",
@@ -4533,9 +5099,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -4563,12 +5129,34 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -4577,9 +5165,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -4588,9 +5176,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -4599,9 +5187,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -4610,7 +5198,29 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
+      "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "projects_route",
       "target": "api_security_jsonresponse",
       "confidence_score": 1.0
     },
@@ -4621,7 +5231,29 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
+      "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "releases_route",
       "target": "api_security_jsonresponse",
       "confidence_score": 1.0
     },
@@ -4632,9 +5264,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "calls",
@@ -4687,9 +5319,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -4698,9 +5330,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "contains",
@@ -4760,9 +5392,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "login_route",
-      "confidence_score": 1.0
+      "target": "login_route"
     },
     {
       "relation": "imports_from",
@@ -4771,9 +5403,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "auth_sessions",
-      "confidence_score": 1.0
+      "target": "auth_sessions"
     },
     {
       "relation": "imports",
@@ -4782,9 +5414,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "auth_sessions_createusersession",
-      "confidence_score": 1.0
+      "target": "auth_sessions_createusersession"
     },
     {
       "relation": "imports",
@@ -4793,9 +5425,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "auth_sessions_usersessioncookieheader",
-      "confidence_score": 1.0
+      "target": "auth_sessions_usersessioncookieheader"
     },
     {
       "relation": "imports_from",
@@ -4804,9 +5436,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -4815,9 +5447,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "db_schema_users",
-      "confidence_score": 1.0
+      "target": "db_schema_users"
     },
     {
       "relation": "contains",
@@ -4825,9 +5457,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "login_route_post",
-      "confidence_score": 1.0
+      "target": "login_route_post"
     },
     {
       "relation": "contains",
@@ -4835,9 +5467,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "login_route_requestschema",
-      "confidence_score": 1.0
+      "target": "login_route_requestschema"
     },
     {
       "relation": "imports_from",
@@ -4846,9 +5478,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports",
@@ -4857,9 +5489,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -4868,9 +5500,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -4879,9 +5511,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -4890,9 +5522,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -4901,9 +5533,9 @@
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "login_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports",
@@ -4912,9 +5544,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "login_route_post",
-      "confidence_score": 1.0
+      "target": "login_route_post"
     },
     {
       "relation": "calls",
@@ -4934,9 +5566,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "auth_sessions",
-      "confidence_score": 1.0
+      "target": "auth_sessions"
     },
     {
       "relation": "imports",
@@ -4945,9 +5577,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "auth_sessions_clearusersessioncookieheader",
-      "confidence_score": 1.0
+      "target": "auth_sessions_clearusersessioncookieheader"
     },
     {
       "relation": "imports",
@@ -4956,9 +5588,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "auth_sessions_revokerequestsession",
-      "confidence_score": 1.0
+      "target": "auth_sessions_revokerequestsession"
     },
     {
       "relation": "contains",
@@ -4966,9 +5598,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "logout_route_post",
-      "confidence_score": 1.0
+      "target": "logout_route_post"
     },
     {
       "relation": "imports_from",
@@ -4977,9 +5609,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -4988,9 +5620,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -4999,9 +5631,9 @@
       "source_file": "app/api/auth/logout/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logout_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "calls",
@@ -5021,9 +5653,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "me_route",
-      "confidence_score": 1.0
+      "target": "me_route"
     },
     {
       "relation": "imports_from",
@@ -5032,9 +5664,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -5043,9 +5675,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "db_schema_memberships",
-      "confidence_score": 1.0
+      "target": "db_schema_memberships"
     },
     {
       "relation": "imports",
@@ -5054,9 +5686,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "db_schema_workspaces",
-      "confidence_score": 1.0
+      "target": "db_schema_workspaces"
     },
     {
       "relation": "contains",
@@ -5064,9 +5696,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "me_route_get",
-      "confidence_score": 1.0
+      "target": "me_route_get"
     },
     {
       "relation": "imports_from",
@@ -5075,9 +5707,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -5086,9 +5718,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -5097,9 +5729,9 @@
       "source_file": "app/api/auth/me/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "me_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -5108,9 +5740,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "me_route_get",
-      "confidence_score": 1.0
+      "target": "me_route_get"
     },
     {
       "relation": "calls",
@@ -5130,7 +5762,18 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
+      "target": "register_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
       "target": "register_route",
       "confidence_score": 1.0
     },
@@ -5141,9 +5784,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "auth_sessions",
-      "confidence_score": 1.0
+      "target": "auth_sessions"
     },
     {
       "relation": "imports",
@@ -5152,9 +5795,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "auth_sessions_createusersession",
-      "confidence_score": 1.0
+      "target": "auth_sessions_createusersession"
     },
     {
       "relation": "imports",
@@ -5163,9 +5806,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "auth_sessions_usersessioncookieheader",
-      "confidence_score": 1.0
+      "target": "auth_sessions_usersessioncookieheader"
     },
     {
       "relation": "imports_from",
@@ -5174,9 +5817,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -5185,9 +5828,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "db_schema_users",
-      "confidence_score": 1.0
+      "target": "db_schema_users"
     },
     {
       "relation": "contains",
@@ -5195,9 +5838,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "register_route_post",
-      "confidence_score": 1.0
+      "target": "register_route_post"
     },
     {
       "relation": "contains",
@@ -5205,9 +5848,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "register_route_requestschema",
-      "confidence_score": 1.0
+      "target": "register_route_requestschema"
     },
     {
       "relation": "imports_from",
@@ -5216,9 +5859,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports",
@@ -5227,9 +5870,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -5238,9 +5881,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -5249,9 +5892,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -5260,9 +5903,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -5271,9 +5914,9 @@
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "register_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports",
@@ -5282,9 +5925,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "register_route_post",
-      "confidence_score": 1.0
+      "target": "register_route_post"
     },
     {
       "relation": "calls",
@@ -5293,7 +5936,29 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_registeruser",
+      "target": "register_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "register_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test_user",
       "target": "register_route_post",
       "confidence_score": 1.0
     },
@@ -5314,9 +5979,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "accept_route_post",
-      "confidence_score": 1.0
+      "target": "accept_route_post"
     },
     {
       "relation": "contains",
@@ -5324,9 +5989,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "accept_route_requestschema",
-      "confidence_score": 1.0
+      "target": "accept_route_requestschema"
     },
     {
       "relation": "imports_from",
@@ -5335,9 +6000,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -5346,9 +6011,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "db_schema_invitations",
-      "confidence_score": 1.0
+      "target": "db_schema_invitations"
     },
     {
       "relation": "imports",
@@ -5357,9 +6022,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "db_schema_memberships",
-      "confidence_score": 1.0
+      "target": "db_schema_memberships"
     },
     {
       "relation": "imports_from",
@@ -5368,9 +6033,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -5379,9 +6044,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -5390,9 +6055,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports",
@@ -5401,9 +6066,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -5412,9 +6077,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -5423,9 +6088,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -5434,9 +6099,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -5445,9 +6110,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -5456,9 +6121,9 @@
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "accept_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -5467,9 +6132,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "accept_route",
-      "confidence_score": 1.0
+      "target": "accept_route"
     },
     {
       "relation": "calls",
@@ -5489,9 +6154,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "accept_route_post",
-      "confidence_score": 1.0
+      "target": "accept_route_post"
     },
     {
       "relation": "calls",
@@ -5500,9 +6165,1204 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_inviteandaccept",
-      "target": "accept_route_post",
+      "target": "accept_route_post"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "releases_route",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "db_schema_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "releases_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "releases_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "releases_route_releaseschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "releases_route",
+      "target": "server_rbac_requireprojectcapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "releases_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "releases_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "releases_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/projects/[projectId]/releases/route.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "releases_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "db_schema_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "projectid_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "projectid_route_patch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "projectid_route_updateschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "projectid_route",
+      "target": "server_rbac_requireprojectcapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "projectid_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/projects/[projectId]/route.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "projectid_route_patch",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "claims_route_claimschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "claims_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "claims_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "db_schema_claims",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_immutable_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_immutable_records_activeappendonlyrecords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_immutable_records_contenthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "claims_route",
+      "target": "server_rbac_requirereleasecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "claims_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "claims_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/claims/route.js",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "claims_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "claims_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "evidence_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "db_schema_claimevidencelinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "db_schema_claims",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "db_schema_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "evidence_route_evidenceschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "evidence_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "evidence_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_immutable_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_immutable_records_activeappendonlyrecords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_immutable_records_contenthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "evidence_route",
+      "target": "server_rbac_requirereleasecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "evidence_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "evidence_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/evidence/route.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "evidence_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "releaseid_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_auditevents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_claimevidencelinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_claims",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_users",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_verdictruns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "db_schema_workspaces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "releaseid_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "releaseid_route_patch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "releaseid_route_updateschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_immutable_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_immutable_records_activeappendonlyrecords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "releaseid_route",
+      "target": "server_rbac_requirereleasecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "releaseid_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "releaseid_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/route.js",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "releaseid_route_patch",
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "contains",
@@ -5594,9 +7454,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "invitations_route",
-      "confidence_score": 1.0
+      "target": "invitations_route"
     },
     {
       "relation": "imports_from",
@@ -5605,9 +7465,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -5616,9 +7476,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "db_schema_invitations",
-      "confidence_score": 1.0
+      "target": "db_schema_invitations"
     },
     {
       "relation": "contains",
@@ -5626,9 +7486,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "invitations_route_get",
-      "confidence_score": 1.0
+      "target": "invitations_route_get"
     },
     {
       "relation": "contains",
@@ -5636,9 +7496,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "invitations_route_invitationurl",
-      "confidence_score": 1.0
+      "target": "invitations_route_invitationurl"
     },
     {
       "relation": "contains",
@@ -5646,9 +7506,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "invitations_route_post",
-      "confidence_score": 1.0
+      "target": "invitations_route_post"
     },
     {
       "relation": "contains",
@@ -5656,9 +7516,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "invitations_route_requestschema",
-      "confidence_score": 1.0
+      "target": "invitations_route_requestschema"
     },
     {
       "relation": "imports_from",
@@ -5667,9 +7527,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -5678,9 +7538,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -5689,9 +7549,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports",
@@ -5700,9 +7560,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -5711,9 +7571,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -5722,9 +7582,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -5733,9 +7593,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -5744,9 +7604,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -5755,9 +7615,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -5766,9 +7626,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -5777,9 +7637,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/invitations/route.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "invitations_route",
-      "target": "server_rbac_requireworkspacecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireworkspacecapability"
     },
     {
       "relation": "imports",
@@ -5788,9 +7648,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "invitations_route_get",
-      "confidence_score": 1.0
+      "target": "invitations_route_get"
     },
     {
       "relation": "calls",
@@ -5810,9 +7670,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "invitations_route_post",
-      "confidence_score": 1.0
+      "target": "invitations_route_post"
     },
     {
       "relation": "calls",
@@ -5821,9 +7681,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_inviteandaccept",
-      "target": "invitations_route_post",
-      "confidence_score": 1.0
+      "target": "invitations_route_post"
     },
     {
       "relation": "calls",
@@ -5843,9 +7703,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "userid_route",
-      "confidence_score": 1.0
+      "target": "userid_route"
     },
     {
       "relation": "imports_from",
@@ -5854,9 +7714,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -5865,9 +7725,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "db_schema_memberships",
-      "confidence_score": 1.0
+      "target": "db_schema_memberships"
     },
     {
       "relation": "imports_from",
@@ -5876,9 +7736,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -5887,9 +7747,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -5898,9 +7758,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports",
@@ -5909,9 +7769,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -5920,9 +7780,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -5931,9 +7791,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -5942,9 +7802,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -5953,9 +7813,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -5964,9 +7824,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -5975,9 +7835,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -5986,9 +7846,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "server_rbac_requireworkspacecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireworkspacecapability"
     },
     {
       "relation": "contains",
@@ -5996,9 +7856,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "userid_route_patch",
-      "confidence_score": 1.0
+      "target": "userid_route_patch"
     },
     {
       "relation": "contains",
@@ -6006,9 +7866,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/[userId]/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "userid_route",
-      "target": "userid_route_requestschema",
-      "confidence_score": 1.0
+      "target": "userid_route_requestschema"
     },
     {
       "relation": "imports",
@@ -6017,9 +7877,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "userid_route_patch",
-      "confidence_score": 1.0
+      "target": "userid_route_patch"
     },
     {
       "relation": "calls",
@@ -6039,9 +7899,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "members_route",
-      "confidence_score": 1.0
+      "target": "members_route"
     },
     {
       "relation": "imports_from",
@@ -6050,9 +7910,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -6061,9 +7921,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "db_schema_memberships",
-      "confidence_score": 1.0
+      "target": "db_schema_memberships"
     },
     {
       "relation": "imports",
@@ -6072,9 +7932,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "db_schema_users",
-      "confidence_score": 1.0
+      "target": "db_schema_users"
     },
     {
       "relation": "contains",
@@ -6082,9 +7942,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "members_route_get",
-      "confidence_score": 1.0
+      "target": "members_route_get"
     },
     {
       "relation": "imports_from",
@@ -6093,9 +7953,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -6104,9 +7964,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -6115,9 +7975,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports_from",
@@ -6126,9 +7986,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -6137,9 +7997,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/members/route.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "members_route",
-      "target": "server_rbac_requireworkspacecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireworkspacecapability"
     },
     {
       "relation": "imports",
@@ -6148,9 +8008,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "members_route_get",
-      "confidence_score": 1.0
+      "target": "members_route_get"
     },
     {
       "relation": "calls",
@@ -6167,10 +8027,227 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "projects_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "db_schema_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "projects_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "projects_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "projects_route_projectschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "projects_route",
+      "target": "server_rbac_requireworkspacecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "projects_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "projects_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "projects_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "projects_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
+      "target": "workspaces_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
       "target": "workspaces_route",
       "confidence_score": 1.0
     },
@@ -6181,9 +8258,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -6192,9 +8269,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "db_schema_memberships",
-      "confidence_score": 1.0
+      "target": "db_schema_memberships"
     },
     {
       "relation": "imports",
@@ -6203,9 +8280,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "db_schema_workspaces",
-      "confidence_score": 1.0
+      "target": "db_schema_workspaces"
     },
     {
       "relation": "imports_from",
@@ -6214,9 +8291,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -6225,9 +8302,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -6236,9 +8313,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -6247,9 +8324,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -6258,9 +8335,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -6269,9 +8346,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -6280,9 +8357,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "contains",
@@ -6290,9 +8367,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "workspaces_route_createschema",
-      "confidence_score": 1.0
+      "target": "workspaces_route_createschema"
     },
     {
       "relation": "contains",
@@ -6300,9 +8377,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "workspaces_route_get",
-      "confidence_score": 1.0
+      "target": "workspaces_route_get"
     },
     {
       "relation": "contains",
@@ -6310,9 +8387,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "workspaces_route_post",
-      "confidence_score": 1.0
+      "target": "workspaces_route_post"
     },
     {
       "relation": "contains",
@@ -6320,9 +8397,9 @@
       "source_file": "app/api/workspaces/route.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workspaces_route",
-      "target": "workspaces_route_slugfromname",
-      "confidence_score": 1.0
+      "target": "workspaces_route_slugfromname"
     },
     {
       "relation": "imports",
@@ -6331,9 +8408,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "workspaces_route_get",
-      "confidence_score": 1.0
+      "target": "workspaces_route_get"
     },
     {
       "relation": "calls",
@@ -6353,7 +8430,18 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
+      "target": "workspaces_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
       "target": "workspaces_route_post",
       "confidence_score": 1.0
     },
@@ -6421,14 +8509,36 @@
       "target": "src_app_app"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "src_productapp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "app_page",
+      "target": "src_productapp_productapp",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "db_auth_rbac_integration_test_apirequest",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_apirequest"
     },
     {
       "relation": "contains",
@@ -6436,9 +8546,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "db_auth_rbac_integration_test_cookiefrom",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_cookiefrom"
     },
     {
       "relation": "contains",
@@ -6446,9 +8556,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "db_auth_rbac_integration_test_inviteandaccept",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_inviteandaccept"
     },
     {
       "relation": "contains",
@@ -6456,9 +8566,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "db_auth_rbac_integration_test_registeruser",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_registeruser"
     },
     {
       "relation": "contains",
@@ -6466,9 +8576,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "db_auth_rbac_integration_test_responsejson",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_responsejson"
     },
     {
       "relation": "imports_from",
@@ -6477,9 +8587,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "db_connection",
-      "confidence_score": 1.0
+      "target": "db_connection"
     },
     {
       "relation": "imports",
@@ -6488,9 +8598,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "db_connection_withdatabase",
-      "confidence_score": 1.0
+      "target": "db_connection_withdatabase"
     },
     {
       "relation": "imports_from",
@@ -6499,9 +8609,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -6510,9 +8620,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
-      "target": "server_audit_verifyauditchain",
-      "confidence_score": 1.0
+      "target": "server_audit_verifyauditchain"
     },
     {
       "relation": "calls",
@@ -6521,9 +8631,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_inviteandaccept",
-      "target": "db_auth_rbac_integration_test_apirequest",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_apirequest"
     },
     {
       "relation": "calls",
@@ -6532,9 +8642,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_registeruser",
-      "target": "db_auth_rbac_integration_test_apirequest",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_apirequest"
     },
     {
       "relation": "calls",
@@ -6543,9 +8653,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_registeruser",
-      "target": "db_auth_rbac_integration_test_cookiefrom",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_cookiefrom"
     },
     {
       "relation": "calls",
@@ -6554,9 +8664,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_inviteandaccept",
-      "target": "db_auth_rbac_integration_test_responsejson",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_responsejson"
     },
     {
       "relation": "calls",
@@ -6565,9 +8675,9 @@
       "source_file": "db/auth-rbac.integration.test.mjs",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_registeruser",
-      "target": "db_auth_rbac_integration_test_responsejson",
-      "confidence_score": 1.0
+      "target": "db_auth_rbac_integration_test_responsejson"
     },
     {
       "relation": "contains",
@@ -6627,9 +8737,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "db_connection",
-      "confidence_score": 1.0
+      "target": "db_connection"
     },
     {
       "relation": "method",
@@ -6648,9 +8758,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "db_connection_databaseunavailableerror",
-      "confidence_score": 1.0
+      "target": "db_connection_databaseunavailableerror"
     },
     {
       "relation": "calls",
@@ -6681,9 +8791,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "db_connection_withdatabase",
-      "confidence_score": 1.0
+      "target": "db_connection_withdatabase"
     },
     {
       "relation": "calls",
@@ -6695,6 +8805,47 @@
       "weight": 1.0,
       "source": "server_http_databaseroute",
       "target": "db_connection_withdatabase"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "db_core_crud_integration_test_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "db_core_crud_integration_test_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test",
+      "target": "db_core_crud_integration_test_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test_user",
+      "target": "db_core_crud_integration_test_json",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6713,9 +8864,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "contains",
@@ -7024,9 +9175,9 @@
       "source_file": "src/server/audit.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_audit",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports_from",
@@ -7035,9 +9186,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -7046,9 +9197,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "db_schema_users",
-      "confidence_score": 1.0
+      "target": "db_schema_users"
     },
     {
       "relation": "imports",
@@ -7057,9 +9208,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "db_schema_usersessions",
-      "confidence_score": 1.0
+      "target": "db_schema_usersessions"
     },
     {
       "relation": "imports",
@@ -7068,9 +9219,9 @@
       "source_file": "src/server/audit.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_audit",
-      "target": "db_schema_workspaces",
-      "confidence_score": 1.0
+      "target": "db_schema_workspaces"
     },
     {
       "relation": "imports",
@@ -7079,9 +9230,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "db_schema_workspaces",
-      "confidence_score": 1.0
+      "target": "db_schema_workspaces"
     },
     {
       "relation": "imports",
@@ -7090,9 +9241,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "db_schema_memberships",
-      "confidence_score": 1.0
+      "target": "db_schema_memberships"
     },
     {
       "relation": "imports",
@@ -7101,9 +9252,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "db_schema_projects",
-      "confidence_score": 1.0
+      "target": "db_schema_projects"
     },
     {
       "relation": "imports",
@@ -7112,9 +9263,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "db_schema_releases",
-      "confidence_score": 1.0
+      "target": "db_schema_releases"
     },
     {
       "relation": "imports",
@@ -7123,9 +9274,9 @@
       "source_file": "src/server/audit.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_audit",
-      "target": "db_schema_auditevents",
-      "confidence_score": 1.0
+      "target": "db_schema_auditevents"
     },
     {
       "relation": "imports_from",
@@ -8300,6 +10451,230 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_authscreen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_can",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_creationdialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_dialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L598",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_emptystate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L255",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_emptyworkspace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_initials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_markers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L1053",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_productapp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L899",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_productshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L582",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_recordsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L613",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_releaseworkspace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_submitbutton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L480",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_teamdialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L943",
+      "weight": 1.0,
+      "source": "src_productapp_productshell",
+      "target": "src_productapp_can",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L665",
+      "weight": 1.0,
+      "source": "src_productapp_releaseworkspace",
+      "target": "src_productapp_can",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L723",
+      "weight": 1.0,
+      "source": "src_productapp_releaseworkspace",
+      "target": "src_productapp_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L969",
+      "weight": 1.0,
+      "source": "src_productapp_productshell",
+      "target": "src_productapp_initials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/data.js",
       "source_location": "L492",
       "weight": 1.0,
@@ -8415,7 +10790,18 @@
       "source_file": "src/server/audit.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_audit",
+      "target": "lib_canonical_json"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_immutable_records",
       "target": "lib_canonical_json",
       "confidence_score": 1.0
     },
@@ -8448,9 +10834,9 @@
       "source_file": "src/server/audit.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_audit",
-      "target": "lib_canonical_json_canonicaljson",
-      "confidence_score": 1.0
+      "target": "lib_canonical_json_canonicaljson"
     },
     {
       "relation": "calls",
@@ -8472,6 +10858,28 @@
       "source_location": "L91",
       "weight": 1.0,
       "source": "server_audit_verifyauditchain",
+      "target": "lib_canonical_json_canonicaljson"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_immutable_records",
+      "target": "lib_canonical_json_canonicaljson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "server_immutable_records_contenthash",
       "target": "lib_canonical_json_canonicaljson"
     },
     {
@@ -9088,9 +11496,9 @@
       "source_file": "src/server/audit.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_audit",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "contains",
@@ -9098,9 +11506,9 @@
       "source_file": "src/server/audit.js",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_audit",
-      "target": "server_audit_verifyauditchain",
-      "confidence_score": 1.0
+      "target": "server_audit_verifyauditchain"
     },
     {
       "relation": "contains",
@@ -9108,9 +11516,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_clearusersessioncookieheader",
-      "confidence_score": 1.0
+      "target": "auth_sessions_clearusersessioncookieheader"
     },
     {
       "relation": "contains",
@@ -9118,9 +11526,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_createusersession",
-      "confidence_score": 1.0
+      "target": "auth_sessions_createusersession"
     },
     {
       "relation": "contains",
@@ -9128,9 +11536,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_getusersession",
-      "confidence_score": 1.0
+      "target": "auth_sessions_getusersession"
     },
     {
       "relation": "contains",
@@ -9138,9 +11546,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_hashsessiontoken",
-      "confidence_score": 1.0
+      "target": "auth_sessions_hashsessiontoken"
     },
     {
       "relation": "contains",
@@ -9148,9 +11556,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_parsecookies",
-      "confidence_score": 1.0
+      "target": "auth_sessions_parsecookies"
     },
     {
       "relation": "contains",
@@ -9158,9 +11566,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_revokerequestsession",
-      "confidence_score": 1.0
+      "target": "auth_sessions_revokerequestsession"
     },
     {
       "relation": "contains",
@@ -9168,9 +11576,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_securecookiesenabled",
-      "confidence_score": 1.0
+      "target": "auth_sessions_securecookiesenabled"
     },
     {
       "relation": "contains",
@@ -9178,9 +11586,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_sessiontokenfromrequest",
-      "confidence_score": 1.0
+      "target": "auth_sessions_sessiontokenfromrequest"
     },
     {
       "relation": "contains",
@@ -9188,9 +11596,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_sessionttlhours",
-      "confidence_score": 1.0
+      "target": "auth_sessions_sessionttlhours"
     },
     {
       "relation": "contains",
@@ -9198,9 +11606,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_usersessioncookieheader",
-      "confidence_score": 1.0
+      "target": "auth_sessions_usersessioncookieheader"
     },
     {
       "relation": "contains",
@@ -9208,9 +11616,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions",
-      "target": "auth_sessions_usersessioncookiename",
-      "confidence_score": 1.0
+      "target": "auth_sessions_usersessioncookiename"
     },
     {
       "relation": "imports_from",
@@ -9219,9 +11627,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "auth_sessions",
-      "confidence_score": 1.0
+      "target": "auth_sessions"
     },
     {
       "relation": "calls",
@@ -9230,9 +11638,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_clearusersessioncookieheader",
-      "target": "auth_sessions_securecookiesenabled",
-      "confidence_score": 1.0
+      "target": "auth_sessions_securecookiesenabled"
     },
     {
       "relation": "calls",
@@ -9241,9 +11649,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_usersessioncookieheader",
-      "target": "auth_sessions_securecookiesenabled",
-      "confidence_score": 1.0
+      "target": "auth_sessions_securecookiesenabled"
     },
     {
       "relation": "calls",
@@ -9252,9 +11660,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_usersessioncookiename",
-      "target": "auth_sessions_securecookiesenabled",
-      "confidence_score": 1.0
+      "target": "auth_sessions_securecookiesenabled"
     },
     {
       "relation": "calls",
@@ -9263,9 +11671,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_clearusersessioncookieheader",
-      "target": "auth_sessions_usersessioncookiename",
-      "confidence_score": 1.0
+      "target": "auth_sessions_usersessioncookiename"
     },
     {
       "relation": "calls",
@@ -9274,9 +11682,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_sessiontokenfromrequest",
-      "target": "auth_sessions_usersessioncookiename",
-      "confidence_score": 1.0
+      "target": "auth_sessions_usersessioncookiename"
     },
     {
       "relation": "calls",
@@ -9285,9 +11693,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_usersessioncookieheader",
-      "target": "auth_sessions_usersessioncookiename",
-      "confidence_score": 1.0
+      "target": "auth_sessions_usersessioncookiename"
     },
     {
       "relation": "calls",
@@ -9296,9 +11704,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_sessiontokenfromrequest",
-      "target": "auth_sessions_parsecookies",
-      "confidence_score": 1.0
+      "target": "auth_sessions_parsecookies"
     },
     {
       "relation": "calls",
@@ -9307,9 +11715,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_createusersession",
-      "target": "auth_sessions_hashsessiontoken",
-      "confidence_score": 1.0
+      "target": "auth_sessions_hashsessiontoken"
     },
     {
       "relation": "calls",
@@ -9318,9 +11726,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_getusersession",
-      "target": "auth_sessions_hashsessiontoken",
-      "confidence_score": 1.0
+      "target": "auth_sessions_hashsessiontoken"
     },
     {
       "relation": "calls",
@@ -9329,9 +11737,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_revokerequestsession",
-      "target": "auth_sessions_hashsessiontoken",
-      "confidence_score": 1.0
+      "target": "auth_sessions_hashsessiontoken"
     },
     {
       "relation": "calls",
@@ -9340,9 +11748,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_createusersession",
-      "target": "auth_sessions_sessionttlhours",
-      "confidence_score": 1.0
+      "target": "auth_sessions_sessionttlhours"
     },
     {
       "relation": "calls",
@@ -9351,9 +11759,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_getusersession",
-      "target": "auth_sessions_sessiontokenfromrequest",
-      "confidence_score": 1.0
+      "target": "auth_sessions_sessiontokenfromrequest"
     },
     {
       "relation": "calls",
@@ -9362,9 +11770,9 @@
       "source_file": "src/server/auth/sessions.js",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_sessions_revokerequestsession",
-      "target": "auth_sessions_sessiontokenfromrequest",
-      "confidence_score": 1.0
+      "target": "auth_sessions_sessiontokenfromrequest"
     },
     {
       "relation": "imports",
@@ -9373,9 +11781,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "auth_sessions_getusersession",
-      "confidence_score": 1.0
+      "target": "auth_sessions_getusersession"
     },
     {
       "relation": "calls",
@@ -9394,9 +11802,9 @@
       "source_file": "src/server/errors.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_errors",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -9405,9 +11813,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports_from",
@@ -9416,9 +11824,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "method",
@@ -9426,9 +11834,9 @@
       "source_file": "src/server/errors.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_errors_httperror",
-      "target": "server_errors_httperror_constructor",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror_constructor"
     },
     {
       "relation": "imports",
@@ -9437,9 +11845,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports",
@@ -9448,9 +11856,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "contains",
@@ -9458,9 +11866,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "contains",
@@ -9468,9 +11876,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "contains",
@@ -9478,9 +11886,9 @@
       "source_file": "src/server/http.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "contains",
@@ -9488,8 +11896,28 @@
       "source_file": "src/server/http.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_http",
-      "target": "server_http_requiresameoriginmutation",
+      "target": "server_http_requiresameoriginmutation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "server_immutable_records",
+      "target": "server_immutable_records_activeappendonlyrecords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_immutable_records",
+      "target": "server_immutable_records_contenthash",
       "confidence_score": 1.0
     },
     {
@@ -9498,9 +11926,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "server_rbac_capabilities",
-      "confidence_score": 1.0
+      "target": "server_rbac_capabilities"
     },
     {
       "relation": "contains",
@@ -9508,9 +11936,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "server_rbac_requireprojectcapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireprojectcapability"
     },
     {
       "relation": "contains",
@@ -9518,9 +11946,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "server_rbac_requirereleasecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requirereleasecapability"
     },
     {
       "relation": "contains",
@@ -9528,9 +11956,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "server_rbac_requireworkspacecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireworkspacecapability"
     },
     {
       "relation": "contains",
@@ -9538,9 +11966,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac",
-      "target": "server_rbac_rolecan",
-      "confidence_score": 1.0
+      "target": "server_rbac_rolecan"
     },
     {
       "relation": "imports_from",
@@ -9549,9 +11977,9 @@
       "source_file": "src/server/rbac.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac_test",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "calls",
@@ -9560,9 +11988,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac_requireworkspacecapability",
-      "target": "server_rbac_rolecan",
-      "confidence_score": 1.0
+      "target": "server_rbac_rolecan"
     },
     {
       "relation": "imports",
@@ -9571,9 +11999,9 @@
       "source_file": "src/server/rbac.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac_test",
-      "target": "server_rbac_rolecan",
-      "confidence_score": 1.0
+      "target": "server_rbac_rolecan"
     },
     {
       "relation": "calls",
@@ -9582,9 +12010,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac_requireprojectcapability",
-      "target": "server_rbac_requireworkspacecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireworkspacecapability"
     },
     {
       "relation": "calls",
@@ -9593,9 +12021,9 @@
       "source_file": "src/server/rbac.js",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_rbac_requirereleasecapability",
-      "target": "server_rbac_requireworkspacecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireworkspacecapability"
     },
     {
       "relation": "contains",
@@ -10089,5 +12517,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7009402540689140697df1196ce4eff20c12bff7"
+  "built_at_commit": "9bffc868c90f4ca047f5fa88c1df29095dc4aba0"
 }

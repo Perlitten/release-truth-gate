@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "api/security.mjs": {
-    "mtime": 1784383212.1784458,
-    "ast_hash": "c6650272638e792dc326ea813b5e31f5",
+    "mtime": 1784392261.8195503,
+    "ast_hash": "ffe0fd9d64dfb79645db9941bcf14c67",
     "semantic_hash": ""
   },
   "api/security.test.mjs": {
@@ -35,13 +35,13 @@
     "semantic_hash": ""
   },
   "app/layout.jsx": {
-    "mtime": 1784370369.7321615,
-    "ast_hash": "de92211d2c227748b37b7109520cd982",
+    "mtime": 1784391352.198772,
+    "ast_hash": "5ab4943450e1de96a2f999f352c0c84f",
     "semantic_hash": ""
   },
   "app/page.jsx": {
-    "mtime": 1784368889.8244243,
-    "ast_hash": "69f70cf36628f7ec297f1861afccd6af",
+    "mtime": 1784391352.1967561,
+    "ast_hash": "3655c4ca60418048ab2d2a4c50550b85",
     "semantic_hash": ""
   },
   "middleware.js": {
@@ -455,8 +455,8 @@
     "semantic_hash": ""
   },
   "src/server/http.js": {
-    "mtime": 1784389874.6356418,
-    "ast_hash": "650f3846d87025a32f258e491491bb62",
+    "mtime": 1784391884.4798708,
+    "ast_hash": "ff1606e0c6f41b7f8ec15ac3e2dca748",
     "semantic_hash": ""
   },
   "src/server/rbac.js": {
@@ -467,6 +467,51 @@
   "src/server/rbac.test.js": {
     "mtime": 1784390068.4125168,
     "ast_hash": "f41c7c75c412002bc4455444c393f1fc",
+    "semantic_hash": ""
+  },
+  "app/api/projects/[projectId]/releases/route.js": {
+    "mtime": 1784390495.9375653,
+    "ast_hash": "b5f08201c3dcda15391fa9dcaebe67e3",
+    "semantic_hash": ""
+  },
+  "app/api/projects/[projectId]/route.js": {
+    "mtime": 1784390495.936558,
+    "ast_hash": "29916504b791216836eecf52b45f61c6",
+    "semantic_hash": ""
+  },
+  "app/api/releases/[releaseId]/claims/route.js": {
+    "mtime": 1784390495.9410903,
+    "ast_hash": "b45caed0107c969642889532f703f348",
+    "semantic_hash": ""
+  },
+  "app/api/releases/[releaseId]/evidence/route.js": {
+    "mtime": 1784390619.4505262,
+    "ast_hash": "4d94677c532814f27da6e69e82e9d1ad",
+    "semantic_hash": ""
+  },
+  "app/api/releases/[releaseId]/route.js": {
+    "mtime": 1784390619.4491475,
+    "ast_hash": "428ec2f52d8fd5514317946008cd3dbf",
+    "semantic_hash": ""
+  },
+  "app/api/workspaces/[workspaceId]/projects/route.js": {
+    "mtime": 1784390495.93456,
+    "ast_hash": "b4fd2eb21d17e5effe8134f4486cb4d5",
+    "semantic_hash": ""
+  },
+  "db/core-crud.integration.test.mjs": {
+    "mtime": 1784390545.0163717,
+    "ast_hash": "bd53e96b794a4e7dd10939e89f7947a9",
+    "semantic_hash": ""
+  },
+  "src/ProductApp.jsx": {
+    "mtime": 1784391231.1655304,
+    "ast_hash": "bd86c39d926b54c89c3a81b8b21ec99b",
+    "semantic_hash": ""
+  },
+  "src/server/immutable-records.js": {
+    "mtime": 1784390495.9335556,
+    "ast_hash": "7e570f3f674f0ca192543e283c740e88",
     "semantic_hash": ""
   }
 }

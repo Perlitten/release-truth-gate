@@ -167,7 +167,7 @@ export function validateSameOrigin(request) {
   const allowedOrigin = configuredOrigin || requestOrigin;
   if (origin === allowedOrigin && requestOrigin === allowedOrigin) return true;
 
-  if (process.env.NODE_ENV !== "production" && !configuredOrigin) {
+  if (!configuredOrigin) {
     const originUrl = new URL(origin);
     const requestUrl = new URL(requestOrigin);
     const loopbackHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
