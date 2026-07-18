@@ -1,101 +1,117 @@
 # Release Truth
 
-Release Truth is an evidence-gated launch workspace for small, AI-assisted product teams. It connects claims, exact code revisions, test runs, and human decisions, then fails closed when the current evidence no longer supports a material claim.
+Release Truth is a multi-user evidence gate for software releases. Teams record
+material claims, attach manual or GitHub evidence, capture reviewer decisions,
+and run a deterministic server-side policy before shipping.
 
-The bundled Nova 2.4 dataset is explicitly synthetic. It demonstrates the core case: a privacy promise was approved, a later telemetry change introduced full message content, the current privacy test failed, and the deterministic gate changed the release to `NO-GO`.
+## What is authoritative
 
-## Trust model
+- PostgreSQL stores users, workspaces, roles, projects, releases, claims,
+  evidence, decisions, verdict runs, audit events, integrations, and exports.
+- Claims, evidence, decisions, verdict runs, imports, audit events, and signed
+  exports are append-only at the database layer.
+- The server loads the full evidence head and calculates the verdict. It rejects
+  client-supplied verdict results.
+- Every verdict run stores its normalized input snapshot, SHA-256 digest, engine
+  version, policy version, reason codes, result, actor, and timestamp.
+- Release exports are canonical JSON signed with a server-held Ed25519 key.
+  `/api/exports/verify` detects changed manifests or signatures.
+- Browser storage is not an authority and the product does not use `localStorage`.
 
-- The verdict is calculated locally from structured claims, current evidence, and decisions. Missing or ambiguous required evidence produces `NOT EVALUABLE`, never an optimistic pass.
-- AI is advisory. It may classify an evidence relation and explain it, but it cannot approve a release, mutate evidence, or override the deterministic policy.
-- AI citations must reference allowlisted source IDs and quote exact contiguous source excerpts. Unsupported model output is rejected.
-- Review actions append scoped decision proposals. They never rewrite source evidence or silently clear a blocker.
-- Exported bundles contain the full evidence content, findings, decisions, assessments, and a SHA-256 checksum. The checksum helps detect accidental changes; it is not tamper-proof or a server signature.
-- Share links use the URL fragment, so the snapshot is not sent in the HTTP request. Browser drafts and shared snapshots are validated, but remain untrusted client-side demo state. Imported AI assessments are always discarded.
+Nova 2.4 remains available only as an explicit synthetic seed. It is never
+loaded automatically.
 
-## Product surface
+## Roles
 
-- Five-day Claim, Code, Tests, and Decisions timeline
-- Fail-closed material-claim coverage and one deduplicated blocker per causal issue
-- Summary, evidence, risk, and append-only decision views
-- Exact current-versus-approved revision comparison
-- Live, cited OpenAI evidence review with explicit failure states
-- Portable share snapshot and full JSON evidence export
-- Keyboard-accessible dialogs and responsive desktop, tablet, and mobile layouts
+Workspace roles are `owner`, `admin`, `contributor`, `reviewer`, and `viewer`.
+Every resource lookup and mutation enforces the corresponding server-side
+capability. Unauthorized workspace resources are hidden with a `404`.
 
-## Security boundary
+## GitHub App
 
-`POST /api/analyze` applies bounded request reads, Zod validation, same-origin checks, a custom request marker, per-client rate limiting, an optional signed `HttpOnly` session, an upstream timeout, and no-store responses. OpenAI requests use `store: false`; the server logs metadata only.
+Owners and admins can connect a GitHub App installation, link an installation
+repository to a project, and import:
 
-Production fails closed unless `APP_ORIGIN`, `RELEASE_TRUTH_ACCESS_CODE`, and a strong `RELEASE_TRUTH_SESSION_SECRET` are configured. CSP nonces and strict browser hardening headers are applied at the edge. See [SECURITY.md](./SECURITY.md).
+- issues as claims;
+- pull requests, commits, check runs, and commit statuses as evidence.
 
-Next.js 16's deprecated Edge Middleware convention is retained intentionally because the current OpenNext Cloudflare adapter does not yet support Node Proxy. Migrate the boundary to `proxy.js` only after adapter support is verified.
+The connection uses a hashed, expiring, single-use state. The setup callback is
+followed by GitHub user authorization, and the server confirms that the user can
+administer the selected installation. Imports use short-lived installation
+tokens, verify repository access on every call, store normalized source payloads
+and hashes, return the existing record for exact retries, and append a correction
+when upstream content changes.
+
+Required GitHub App permissions are read-only metadata, issues, pull requests,
+contents, checks, and commit statuses. Configure its setup/callback URL as
+`https://YOUR_ORIGIN/api/github/callback` and webhook URL as
+`https://YOUR_ORIGIN/api/github/webhook`.
 
 ## Local development
 
-Requirements: Node.js 22+ and an OpenAI API key.
-
-Copy `.env.example` to `.env.local` and set `OPENAI_API_KEY`. A parent `../.env.local` is accepted only as a local-development convenience.
+Requirements: Node.js 22+, Docker, and PostgreSQL via the included Compose file.
 
 ```bash
-npm install
+cp .env.example .env.local
+npm ci
+npm run db:up
+npm run db:migrate
 npm run dev
 ```
 
 Open `http://127.0.0.1:3000`.
 
-### PostgreSQL
-
-The usable-MVP data model uses PostgreSQL and Drizzle migrations. Local
-PostgreSQL is isolated on port `54329`:
-
-```bash
-npm run db:up
-npm run db:migrate
-npm run test:db
-```
-
-The application works with an empty migrated database. Nova 2.4 is not an
-automatic production fixture; load it only when an explicit synthetic demo is
-wanted:
+The application works with an empty migrated database. To load the explicit
+Nova demo:
 
 ```bash
 npm run db:seed:nova
 ```
 
-The local-only seed account is `jordan@nova-demo.local`. Set
-`NOVA_SEED_PASSWORD` before seeding to avoid the documented local default. The
-seed refuses to run under `NODE_ENV=production` unless
-`ALLOW_NOVA_SEED=true` is also set explicitly.
+The seed refuses production unless `ALLOW_NOVA_SEED=true` is deliberately set.
 
 ## Verification
 
 ```bash
 npm run test
-npm run check
-npm run preview:e2e
+npm run test:db
+npm run build
 npm run test:e2e
+npm run audit:prod
 ```
 
-`npm run check` runs unit/security tests, a production dependency audit that fails on moderate-or-higher findings, the exact OpenNext Worker build, bundle verification, and a Wrangler dry run. E2E tests use the same Worker artifact that is deployed.
+The E2E path resets only a database whose name ends in `_test`. It creates two
+users, shares a workspace, records evidence and reviewer approval, reproduces a
+`GO`, downloads a signed export, verifies it, and confirms that a modified
+manifest fails verification. GitHub Actions runs the same checks against
+PostgreSQL 17.
 
-`npm run preview:e2e` starts the built Worker with the non-production `e2e` Wrangler environment from `wrangler.jsonc`. The committed `e2e` values are test-only and are not used by the top-level production dry run or deployment.
+## Production
 
-The production build intentionally uses Next.js Webpack. OpenNext documents `ChunkLoadError` in Worker previews as a Turbopack-adapter compatibility failure and recommends Webpack as the supported fallback.
+`Dockerfile` produces a non-root Next.js standalone image.
+`compose.production.yaml` runs it with an isolated PostgreSQL 17 volume; the
+database has no host port and the app binds only to `127.0.0.1:3187` for a host
+reverse proxy. Migrations run before the server starts. Production is never
+seeded automatically.
 
-The design source is `design-reference.png`; measured visual and interaction QA is in [design-qa.md](./design-qa.md).
+Runtime secrets and variables:
 
-## Production configuration
-
-Set these as runtime secrets or variables:
-
-```bash
-OPENAI_API_KEY=
-OPENAI_MODEL=gpt-5.6-terra
+```dotenv
 APP_ORIGIN=https://release-truth.example.com
-RELEASE_TRUTH_ACCESS_CODE=
-RELEASE_TRUTH_SESSION_SECRET=
-RELEASE_TRUTH_REVIEWER_NAME=Release reviewer
+DATABASE_URL=postgresql://...
+SESSION_TTL_HOURS=24
+EXPORT_SIGNING_PRIVATE_KEY=...Ed25519 PKCS8 PEM...
+EXPORT_SIGNING_PUBLIC_KEY=...Ed25519 SPKI PEM...
+EXPORT_SIGNING_KEY_ID=production-ed25519
+GITHUB_APP_ID=
+GITHUB_APP_SLUG=
+GITHUB_APP_CLIENT_ID=
+GITHUB_APP_CLIENT_SECRET=
+GITHUB_APP_PRIVATE_KEY=
+GITHUB_WEBHOOK_SECRET=
 ```
 
-The current implementation is a secure synthetic demo, not yet a multi-user governance system. A production rollout still needs authenticated organizational identity, server-side append-only storage/signatures, source-system connectors, and deployment access configured outside this repository.
+If GitHub credentials are absent, the integration reports itself unavailable;
+manual claims, evidence, decisions, verdicts, collaboration, and signed exports
+remain fully operational. See [ops/README.md](./ops/README.md) for deployment
+and backup details and [SECURITY.md](./SECURITY.md) for the security boundary.

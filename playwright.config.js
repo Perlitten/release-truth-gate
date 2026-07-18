@@ -12,7 +12,7 @@ export default defineConfig({
     video: "retain-on-failure",
   },
   webServer: {
-    command: "npm run build:worker && npm run preview:e2e",
+    command: "node scripts/start-e2e.mjs",
     url: "http://localhost:8787",
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,

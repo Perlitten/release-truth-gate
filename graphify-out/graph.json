@@ -436,6 +436,126 @@
     {
       "label": "route.js",
       "file_type": "code",
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_key_route",
+      "community": 29,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "public_key_route_get",
+      "community": 29,
+      "norm_label": "get()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "verify_route",
+      "community": 29,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "verify_route_post",
+      "community": 29,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "callback_route",
+      "community": 19,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "applicationOrigin()",
+      "file_type": "code",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "callback_route_applicationorigin",
+      "community": 19,
+      "norm_label": "applicationorigin()"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "callback_route_get",
+      "community": 19,
+      "norm_label": "get()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "webhook_route",
+      "community": 0,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "signatureValid()",
+      "file_type": "code",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "webhook_route_signaturevalid",
+      "community": 0,
+      "norm_label": "signaturevalid()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "webhook_route_post",
+      "community": 0,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/health/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "health_route",
+      "community": 31,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/health/route.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "health_route_get",
+      "community": 31,
+      "norm_label": "get()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L1",
       "_origin": "ast",
@@ -470,7 +590,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "releases_route",
-      "community": 24,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -480,7 +600,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "releases_route_releaseschema",
-      "community": 24,
+      "community": 6,
       "norm_label": "releaseschema"
     },
     {
@@ -500,6 +620,46 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "releases_route_post",
+      "community": 24,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "repositories_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "linkSchema",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "repositories_route_linkschema",
+      "community": 6,
+      "norm_label": "linkschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "repositories_route_get",
+      "community": 24,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "repositories_route_post",
       "community": 24,
       "norm_label": "post()"
     },
@@ -666,6 +826,96 @@
     {
       "label": "route.js",
       "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "exports_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "requestSchema",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "exports_route_requestschema",
+      "community": 6,
+      "norm_label": "requestschema"
+    },
+    {
+      "label": "envelope()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "exports_route_envelope",
+      "community": 6,
+      "norm_label": "envelope()"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "exports_route_get",
+      "community": 24,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "exports_route_post",
+      "community": 24,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "import_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "importSchema",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "import_route_importschema",
+      "community": 6,
+      "norm_label": "importschema"
+    },
+    {
+      "label": "sourceTypes",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "import_route_sourcetypes",
+      "community": 6,
+      "norm_label": "sourcetypes"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "import_route_post",
+      "community": 24,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L1",
       "_origin": "ast",
@@ -822,6 +1072,46 @@
       "id": "session_route_test_sessionrequest",
       "community": 0,
       "norm_label": "sessionrequest()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "connect_route",
+      "community": 19,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "connect_route_post",
+      "community": 19,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "installations_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "installations_route_get",
+      "community": 24,
+      "norm_label": "get()"
     },
     {
       "label": "route.js",
@@ -1480,7 +1770,7 @@
       "source_location": "L264",
       "_origin": "ast",
       "id": "db_schema_releases",
-      "community": 24,
+      "community": 6,
       "norm_label": "releases"
     },
     {
@@ -1550,14 +1840,14 @@
       "source_location": "L534",
       "_origin": "ast",
       "id": "db_schema_githuboauthstates",
-      "community": 6,
+      "community": 19,
       "norm_label": "githuboauthstates"
     },
     {
       "label": "projectRepositories",
       "file_type": "code",
       "source_file": "db/schema.js",
-      "source_location": "L558",
+      "source_location": "L559",
       "_origin": "ast",
       "id": "db_schema_projectrepositories",
       "community": 6,
@@ -1567,7 +1857,7 @@
       "label": "integrationImports",
       "file_type": "code",
       "source_file": "db/schema.js",
-      "source_location": "L591",
+      "source_location": "L592",
       "_origin": "ast",
       "id": "db_schema_integrationimports",
       "community": 6,
@@ -1577,7 +1867,7 @@
       "label": "auditEvents",
       "file_type": "code",
       "source_file": "db/schema.js",
-      "source_location": "L639",
+      "source_location": "L640",
       "_origin": "ast",
       "id": "db_schema_auditevents",
       "community": 6,
@@ -1587,7 +1877,7 @@
       "label": "exportArtifacts",
       "file_type": "code",
       "source_file": "db/schema.js",
-      "source_location": "L669",
+      "source_location": "L670",
       "_origin": "ast",
       "id": "db_schema_exportartifacts",
       "community": 6,
@@ -1620,7 +1910,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "seeds_nova_2_4_sha256",
-      "community": 1,
+      "community": 29,
       "norm_label": "sha256()"
     },
     {
@@ -1734,6 +2024,34 @@
       "norm_label": "open-next.config.ts"
     },
     {
+      "label": "backup.sh",
+      "file_type": "code",
+      "source_file": "ops/backup.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "ops_backup",
+      "community": 33,
+      "norm_label": "backup.sh"
+    },
+    {
+      "label": "backup.sh script",
+      "file_type": "code",
+      "source_file": "ops/backup.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "d_projects_hakaton_release_truth_gate_ops_backup_sh__entry",
+      "community": 33,
+      "norm_label": "backup.sh script"
+    },
+    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "package.json",
@@ -1810,7 +2128,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "package_scripts",
-      "community": 29,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -1820,7 +2138,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "package_scripts_dev",
-      "community": 29,
+      "community": 2,
       "norm_label": "dev"
     },
     {
@@ -1830,7 +2148,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "package_scripts_build",
-      "community": 29,
+      "community": 2,
       "norm_label": "build"
     },
     {
@@ -1840,7 +2158,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "package_scripts_start",
-      "community": 29,
+      "community": 2,
       "norm_label": "start"
     },
     {
@@ -1850,7 +2168,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "package_scripts_build_worker",
-      "community": 29,
+      "community": 2,
       "norm_label": "build:worker"
     },
     {
@@ -1860,7 +2178,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "package_scripts_preview",
-      "community": 29,
+      "community": 2,
       "norm_label": "preview"
     },
     {
@@ -1870,7 +2188,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "package_scripts_preview_e2e",
-      "community": 29,
+      "community": 2,
       "norm_label": "preview:e2e"
     },
     {
@@ -1880,7 +2198,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "package_scripts_test",
-      "community": 29,
+      "community": 2,
       "norm_label": "test"
     },
     {
@@ -1890,7 +2208,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "package_scripts_test_e2e",
-      "community": 29,
+      "community": 2,
       "norm_label": "test:e2e"
     },
     {
@@ -1900,7 +2218,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "package_scripts_db_up",
-      "community": 29,
+      "community": 2,
       "norm_label": "db:up"
     },
     {
@@ -1910,7 +2228,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "package_scripts_db_down",
-      "community": 29,
+      "community": 2,
       "norm_label": "db:down"
     },
     {
@@ -1920,7 +2238,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "package_scripts_db_generate",
-      "community": 29,
+      "community": 2,
       "norm_label": "db:generate"
     },
     {
@@ -1930,7 +2248,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "package_scripts_db_check",
-      "community": 29,
+      "community": 2,
       "norm_label": "db:check"
     },
     {
@@ -1940,7 +2258,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "package_scripts_db_migrate",
-      "community": 29,
+      "community": 2,
       "norm_label": "db:migrate"
     },
     {
@@ -1950,7 +2268,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "package_scripts_db_seed_nova",
-      "community": 29,
+      "community": 2,
       "norm_label": "db:seed:nova"
     },
     {
@@ -1960,7 +2278,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "package_scripts_test_db",
-      "community": 29,
+      "community": 2,
       "norm_label": "test:db"
     },
     {
@@ -1970,7 +2288,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "package_scripts_audit_prod",
-      "community": 29,
+      "community": 2,
       "norm_label": "audit:prod"
     },
     {
@@ -1980,7 +2298,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "package_scripts_verify_worker",
-      "community": 29,
+      "community": 2,
       "norm_label": "verify:worker"
     },
     {
@@ -1990,7 +2308,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "package_scripts_check",
-      "community": 29,
+      "community": 2,
       "norm_label": "check"
     },
     {
@@ -2214,6 +2532,16 @@
       "norm_label": "playwright.config.js"
     },
     {
+      "label": "migrate-production.mjs",
+      "file_type": "code",
+      "source_file": "scripts/migrate-production.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_migrate_production",
+      "community": 31,
+      "norm_label": "migrate-production.mjs"
+    },
+    {
       "label": "patch-opennext-require.mjs",
       "file_type": "code",
       "source_file": "scripts/patch-opennext-require.mjs",
@@ -2232,6 +2560,106 @@
       "id": "scripts_patch_opennext_require_handlerpath",
       "community": 17,
       "norm_label": "handlerpath"
+    },
+    {
+      "label": "start-e2e.mjs",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_start_e2e",
+      "community": 30,
+      "norm_label": "start-e2e.mjs"
+    },
+    {
+      "label": "parsed",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "scripts_start_e2e_parsed",
+      "community": 30,
+      "norm_label": "parsed"
+    },
+    {
+      "label": "databaseName",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "scripts_start_e2e_databasename",
+      "community": 30,
+      "norm_label": "databasename"
+    },
+    {
+      "label": "client",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "scripts_start_e2e_client",
+      "community": 30,
+      "norm_label": "client"
+    },
+    {
+      "label": "{ privateKey, publicKey }",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "scripts_start_e2e_privatekey_publickey",
+      "community": 30,
+      "norm_label": "{ privatekey, publickey }"
+    },
+    {
+      "label": "env",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "scripts_start_e2e_env",
+      "community": 30,
+      "norm_label": "env"
+    },
+    {
+      "label": "migration",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "scripts_start_e2e_migration",
+      "community": 30,
+      "norm_label": "migration"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "scripts_start_e2e_next",
+      "community": 30,
+      "norm_label": "next"
+    },
+    {
+      "label": "start-production.mjs",
+      "file_type": "code",
+      "source_file": "scripts/start-production.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_start_production",
+      "community": 31,
+      "norm_label": "start-production.mjs"
+    },
+    {
+      "label": "child",
+      "file_type": "code",
+      "source_file": "scripts/start-production.mjs",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "scripts_start_production_child",
+      "community": 31,
+      "norm_label": "child"
     },
     {
       "label": "test-database.mjs",
@@ -2557,7 +2985,7 @@
       "label": "markers",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L27",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "src_productapp_markers",
       "community": 23,
@@ -2567,7 +2995,7 @@
       "label": "capabilities",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L43",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "src_productapp_capabilities",
       "community": 23,
@@ -2577,7 +3005,7 @@
       "label": "can()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L51",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "src_productapp_can",
       "community": 23,
@@ -2587,7 +3015,7 @@
       "label": "api()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L55",
+      "source_location": "L61",
       "_origin": "ast",
       "id": "src_productapp_api",
       "community": 23,
@@ -2597,7 +3025,7 @@
       "label": "formatDate()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L76",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "src_productapp_formatdate",
       "community": 23,
@@ -2607,7 +3035,7 @@
       "label": "initials()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L84",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "src_productapp_initials",
       "community": 23,
@@ -2617,7 +3045,7 @@
       "label": "Field()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L95",
+      "source_location": "L101",
       "_origin": "ast",
       "id": "src_productapp_field",
       "community": 23,
@@ -2627,7 +3055,7 @@
       "label": "Dialog()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L105",
+      "source_location": "L111",
       "_origin": "ast",
       "id": "src_productapp_dialog",
       "community": 23,
@@ -2637,7 +3065,7 @@
       "label": "SubmitButton()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L136",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "src_productapp_submitbutton",
       "community": 23,
@@ -2647,7 +3075,7 @@
       "label": "AuthScreen()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L144",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "src_productapp_authscreen",
       "community": 23,
@@ -2657,7 +3085,7 @@
       "label": "EmptyWorkspace()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L257",
+      "source_location": "L263",
       "_origin": "ast",
       "id": "src_productapp_emptyworkspace",
       "community": 23,
@@ -2667,7 +3095,7 @@
       "label": "CreationDialog()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L297",
+      "source_location": "L303",
       "_origin": "ast",
       "id": "src_productapp_creationdialog",
       "community": 23,
@@ -2677,17 +3105,27 @@
       "label": "TeamDialog()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L544",
+      "source_location": "L550",
       "_origin": "ast",
       "id": "src_productapp_teamdialog",
       "community": 23,
       "norm_label": "teamdialog()"
     },
     {
+      "label": "GitHubDialog()",
+      "file_type": "code",
+      "source_file": "src/ProductApp.jsx",
+      "source_location": "L652",
+      "_origin": "ast",
+      "id": "src_productapp_githubdialog",
+      "community": 23,
+      "norm_label": "githubdialog()"
+    },
+    {
       "label": "RecordSection()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L646",
+      "source_location": "L845",
       "_origin": "ast",
       "id": "src_productapp_recordsection",
       "community": 23,
@@ -2697,7 +3135,7 @@
       "label": "EmptyState()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L662",
+      "source_location": "L861",
       "_origin": "ast",
       "id": "src_productapp_emptystate",
       "community": 23,
@@ -2707,7 +3145,7 @@
       "label": "ReleaseWorkspace()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L677",
+      "source_location": "L876",
       "_origin": "ast",
       "id": "src_productapp_releaseworkspace",
       "community": 23,
@@ -2717,7 +3155,7 @@
       "label": "ProductShell()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L996",
+      "source_location": "L1215",
       "_origin": "ast",
       "id": "src_productapp_productshell",
       "community": 23,
@@ -2727,7 +3165,7 @@
       "label": "ProductApp()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L1152",
+      "source_location": "L1377",
       "_origin": "ast",
       "id": "src_productapp_productapp",
       "community": 23,
@@ -2830,7 +3268,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json",
-      "community": 1,
+      "community": 29,
       "norm_label": "canonical-json.js"
     },
     {
@@ -2840,7 +3278,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json_sortcanonical",
-      "community": 1,
+      "community": 29,
       "norm_label": "sortcanonical()"
     },
     {
@@ -2850,7 +3288,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "lib_canonical_json_canonicaljson",
-      "community": 1,
+      "community": 29,
       "norm_label": "canonicaljson()"
     },
     {
@@ -2860,7 +3298,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json_test",
-      "community": 1,
+      "community": 29,
       "norm_label": "canonical-json.test.js"
     },
     {
@@ -2870,7 +3308,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_snapshot",
-      "community": 30,
+      "community": 1,
       "norm_label": "snapshot.js"
     },
     {
@@ -2880,7 +3318,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "lib_snapshot_decisionschema",
-      "community": 30,
+      "community": 1,
       "norm_label": "decisionschema"
     },
     {
@@ -2890,7 +3328,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "lib_snapshot_citationschema",
-      "community": 30,
+      "community": 1,
       "norm_label": "citationschema"
     },
     {
@@ -2900,7 +3338,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "lib_snapshot_assessmentschema",
-      "community": 30,
+      "community": 1,
       "norm_label": "assessmentschema"
     },
     {
@@ -2910,7 +3348,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "lib_snapshot_portablestateschema",
-      "community": 30,
+      "community": 1,
       "norm_label": "portablestateschema"
     },
     {
@@ -2920,7 +3358,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "lib_snapshot_sanitizeportablestate",
-      "community": 30,
+      "community": 1,
       "norm_label": "sanitizeportablestate()"
     },
     {
@@ -2930,7 +3368,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "lib_snapshot_encodebase64url",
-      "community": 30,
+      "community": 1,
       "norm_label": "encodebase64url()"
     },
     {
@@ -2940,7 +3378,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "lib_snapshot_decodebase64url",
-      "community": 30,
+      "community": 1,
       "norm_label": "decodebase64url()"
     },
     {
@@ -2950,7 +3388,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "lib_snapshot_serializeportablestate",
-      "community": 30,
+      "community": 1,
       "norm_label": "serializeportablestate()"
     },
     {
@@ -2960,7 +3398,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "lib_snapshot_parseportablestate",
-      "community": 30,
+      "community": 1,
       "norm_label": "parseportablestate()"
     },
     {
@@ -2970,7 +3408,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "lib_snapshot_statefromlocationhash",
-      "community": 30,
+      "community": 1,
       "norm_label": "statefromlocationhash()"
     },
     {
@@ -2980,7 +3418,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "lib_snapshot_buildshareurl",
-      "community": 30,
+      "community": 1,
       "norm_label": "buildshareurl()"
     },
     {
@@ -2990,7 +3428,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "lib_snapshot_sortvalue",
-      "community": 30,
+      "community": 1,
       "norm_label": "sortvalue()"
     },
     {
@@ -3000,7 +3438,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "lib_snapshot_canonicaljson",
-      "community": 30,
+      "community": 1,
       "norm_label": "canonicaljson()"
     },
     {
@@ -3010,7 +3448,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "lib_snapshot_sha256",
-      "community": 30,
+      "community": 1,
       "norm_label": "sha256()"
     },
     {
@@ -3020,7 +3458,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "lib_snapshot_createevidenceexport",
-      "community": 30,
+      "community": 1,
       "norm_label": "createevidenceexport()"
     },
     {
@@ -3030,7 +3468,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_snapshot_test",
-      "community": 30,
+      "community": 1,
       "norm_label": "snapshot.test.js"
     },
     {
@@ -3040,7 +3478,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "lib_snapshot_test_state",
-      "community": 30,
+      "community": 1,
       "norm_label": "state"
     },
     {
@@ -3230,7 +3668,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "server_audit_verifyauditchain",
-      "community": 1,
+      "community": 29,
       "norm_label": "verifyauditchain()"
     },
     {
@@ -3382,6 +3820,256 @@
       "id": "server_errors_httperror_constructor",
       "community": 6,
       "norm_label": ".constructor()"
+    },
+    {
+      "label": "github-app.js",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_github_app",
+      "community": 19,
+      "norm_label": "github-app.js"
+    },
+    {
+      "label": "required()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "server_github_app_required",
+      "community": 19,
+      "norm_label": "required()"
+    },
+    {
+      "label": "githubAppConfig()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "server_github_app_githubappconfig",
+      "community": 19,
+      "norm_label": "githubappconfig()"
+    },
+    {
+      "label": "encode()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "server_github_app_encode",
+      "community": 19,
+      "norm_label": "encode()"
+    },
+    {
+      "label": "createGitHubAppJwt()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "server_github_app_creategithubappjwt",
+      "community": 19,
+      "norm_label": "creategithubappjwt()"
+    },
+    {
+      "label": "githubFetch()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "server_github_app_githubfetch",
+      "community": 19,
+      "norm_label": "githubfetch()"
+    },
+    {
+      "label": "createGitHubState()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "server_github_app_creategithubstate",
+      "community": 19,
+      "norm_label": "creategithubstate()"
+    },
+    {
+      "label": "hashGitHubState()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "server_github_app_hashgithubstate",
+      "community": 19,
+      "norm_label": "hashgithubstate()"
+    },
+    {
+      "label": "githubInstallUrl()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "server_github_app_githubinstallurl",
+      "community": 19,
+      "norm_label": "githubinstallurl()"
+    },
+    {
+      "label": "githubAuthorizeUrl()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "server_github_app_githubauthorizeurl",
+      "community": 19,
+      "norm_label": "githubauthorizeurl()"
+    },
+    {
+      "label": "exchangeGitHubOAuthCode()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "server_github_app_exchangegithuboauthcode",
+      "community": 19,
+      "norm_label": "exchangegithuboauthcode()"
+    },
+    {
+      "label": "getGitHubInstallation()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "server_github_app_getgithubinstallation",
+      "community": 19,
+      "norm_label": "getgithubinstallation()"
+    },
+    {
+      "label": "listUserGitHubInstallations()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "server_github_app_listusergithubinstallations",
+      "community": 19,
+      "norm_label": "listusergithubinstallations()"
+    },
+    {
+      "label": "createInstallationToken()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "server_github_app_createinstallationtoken",
+      "community": 19,
+      "norm_label": "createinstallationtoken()"
+    },
+    {
+      "label": "listInstallationRepositories()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L163",
+      "_origin": "ast",
+      "id": "server_github_app_listinstallationrepositories",
+      "community": 19,
+      "norm_label": "listinstallationrepositories()"
+    },
+    {
+      "label": "getInstallationRepository()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L171",
+      "_origin": "ast",
+      "id": "server_github_app_getinstallationrepository",
+      "community": 19,
+      "norm_label": "getinstallationrepository()"
+    },
+    {
+      "label": "fetchGitHubImportObject()",
+      "file_type": "code",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "server_github_app_fetchgithubimportobject",
+      "community": 19,
+      "norm_label": "fetchgithubimportobject()"
+    },
+    {
+      "label": "github-app.test.js",
+      "file_type": "code",
+      "source_file": "src/server/github-app.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_github_app_test",
+      "community": 19,
+      "norm_label": "github-app.test.js"
+    },
+    {
+      "label": "github-import.js",
+      "file_type": "code",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_github_import",
+      "community": 32,
+      "norm_label": "github-import.js"
+    },
+    {
+      "label": "truncate()",
+      "file_type": "code",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "server_github_import_truncate",
+      "community": 32,
+      "norm_label": "truncate()"
+    },
+    {
+      "label": "actor()",
+      "file_type": "code",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "server_github_import_actor",
+      "community": 32,
+      "norm_label": "actor()"
+    },
+    {
+      "label": "normalizeGitHubObject()",
+      "file_type": "code",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "server_github_import_normalizegithubobject",
+      "community": 32,
+      "norm_label": "normalizegithubobject()"
+    },
+    {
+      "label": "githubExternalId()",
+      "file_type": "code",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "server_github_import_githubexternalid",
+      "community": 32,
+      "norm_label": "githubexternalid()"
+    },
+    {
+      "label": "githubSummary()",
+      "file_type": "code",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "server_github_import_githubsummary",
+      "community": 32,
+      "norm_label": "githubsummary()"
+    },
+    {
+      "label": "github-import.test.js",
+      "file_type": "code",
+      "source_file": "src/server/github-import.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_github_import_test",
+      "community": 32,
+      "norm_label": "github-import.test.js"
     },
     {
       "label": "http.js",
@@ -3544,6 +4232,76 @@
       "norm_label": "rbac.test.js"
     },
     {
+      "label": "signed-export.js",
+      "file_type": "code",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_signed_export",
+      "community": 29,
+      "norm_label": "signed-export.js"
+    },
+    {
+      "label": "readPem()",
+      "file_type": "code",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "server_signed_export_readpem",
+      "community": 29,
+      "norm_label": "readpem()"
+    },
+    {
+      "label": "exportSigningConfig()",
+      "file_type": "code",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "server_signed_export_exportsigningconfig",
+      "community": 29,
+      "norm_label": "exportsigningconfig()"
+    },
+    {
+      "label": "artifactHash()",
+      "file_type": "code",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "server_signed_export_artifacthash",
+      "community": 29,
+      "norm_label": "artifacthash()"
+    },
+    {
+      "label": "signExportManifest()",
+      "file_type": "code",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "server_signed_export_signexportmanifest",
+      "community": 29,
+      "norm_label": "signexportmanifest()"
+    },
+    {
+      "label": "verifyExportEnvelope()",
+      "file_type": "code",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "server_signed_export_verifyexportenvelope",
+      "community": 29,
+      "norm_label": "verifyexportenvelope()"
+    },
+    {
+      "label": "signed-export.test.js",
+      "file_type": "code",
+      "source_file": "src/server/signed-export.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_signed_export_test",
+      "community": 29,
+      "norm_label": "signed-export.test.js"
+    },
+    {
       "label": "verdict-engine.js",
       "file_type": "code",
       "source_file": "src/server/verdict-engine.js",
@@ -3610,8 +4368,18 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "e2e_release_truth_spec",
-      "community": 19,
+      "community": 24,
       "norm_label": "release-truth.spec.js"
+    },
+    {
+      "label": "register()",
+      "file_type": "code",
+      "source_file": "tests/e2e/release-truth.spec.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "e2e_release_truth_spec_register",
+      "community": 24,
+      "norm_label": "register()"
     },
     {
       "label": "vitest.config.js",
@@ -3674,74 +4442,64 @@
       "norm_label": "release truth"
     },
     {
-      "label": "Trust model",
+      "label": "What is authoritative",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "readme_trust_model",
+      "id": "readme_what_is_authoritative",
       "community": 8,
-      "norm_label": "trust model"
+      "norm_label": "what is authoritative"
     },
     {
-      "label": "Product surface",
+      "label": "Roles",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L16",
+      "source_location": "L24",
       "_origin": "ast",
-      "id": "readme_product_surface",
+      "id": "readme_roles",
       "community": 8,
-      "norm_label": "product surface"
+      "norm_label": "roles"
     },
     {
-      "label": "Security boundary",
+      "label": "GitHub App",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L26",
+      "source_location": "L30",
       "_origin": "ast",
-      "id": "readme_security_boundary",
+      "id": "readme_github_app",
       "community": 8,
-      "norm_label": "security boundary"
+      "norm_label": "github app"
     },
     {
       "label": "Local development",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L34",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "readme_local_development",
       "community": 8,
       "norm_label": "local development"
     },
     {
-      "label": "PostgreSQL",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "readme_postgresql",
-      "community": 8,
-      "norm_label": "postgresql"
-    },
-    {
       "label": "Verification",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L71",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "readme_verification",
       "community": 8,
       "norm_label": "verification"
     },
     {
-      "label": "Production configuration",
+      "label": "Production",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "_origin": "ast",
-      "id": "readme_production_configuration",
+      "id": "readme_production",
       "community": 8,
-      "norm_label": "production configuration"
+      "norm_label": "production"
     },
     {
       "label": "SECURITY.md",
@@ -3764,14 +4522,14 @@
       "norm_label": "security model"
     },
     {
-      "label": "Protected assets",
+      "label": "Trust boundary",
       "file_type": "document",
       "source_file": "SECURITY.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "security_protected_assets",
+      "id": "security_trust_boundary",
       "community": 9,
-      "norm_label": "protected assets"
+      "norm_label": "trust boundary"
     },
     {
       "label": "Implemented controls",
@@ -3784,24 +4542,24 @@
       "norm_label": "implemented controls"
     },
     {
-      "label": "Residual production requirements",
+      "label": "Operational requirements",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L21",
+      "source_location": "L43",
       "_origin": "ast",
-      "id": "security_residual_production_requirements",
+      "id": "security_operational_requirements",
       "community": 9,
-      "norm_label": "residual production requirements"
+      "norm_label": "operational requirements"
     },
     {
-      "label": "Dependency and incident practice",
+      "label": "Verification and incident practice",
       "file_type": "document",
       "source_file": "SECURITY.md",
-      "source_location": "L30",
+      "source_location": "L56",
       "_origin": "ast",
-      "id": "security_dependency_and_incident_practice",
+      "id": "security_verification_and_incident_practice",
       "community": 9,
-      "norm_label": "dependency and incident practice"
+      "norm_label": "verification and incident practice"
     },
     {
       "label": "SITES-BUILD.md",
@@ -4202,6 +4960,26 @@
       "id": "memory_query_20260718_143342_what_makes_the_final_release_truth_snapshot_reprod_source_nodes",
       "community": 11,
       "norm_label": "source nodes"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "ops/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ops_readme",
+      "community": 34,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Production operations",
+      "file_type": "document",
+      "source_file": "ops/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "ops_readme_production_operations",
+      "community": 34,
+      "norm_label": "production operations"
     }
   ],
   "links": [
@@ -4625,12 +5403,23 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4642,6 +5431,50 @@
       "confidence_score": 1.0,
       "source": "evidence_route",
       "target": "api_security"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/health/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "health_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "api_security",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -4724,6 +5557,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "public_key_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L4",
       "weight": 1.0,
@@ -4752,6 +5596,17 @@
       "confidence_score": 1.0,
       "source": "releases_route",
       "target": "api_security"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "api_security",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -4793,7 +5648,29 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
+      "target": "api_security"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "verify_route",
+      "target": "api_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "webhook_route",
       "target": "api_security",
       "confidence_score": 1.0
     },
@@ -5197,6 +6074,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "api_security_consumeratelimit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/auth/login/route.js",
       "source_location": "L4",
       "weight": 1.0,
@@ -5235,6 +6123,28 @@
       "source_location": "L37",
       "weight": 1.0,
       "source": "session_route_post",
+      "target": "api_security_consumeratelimit"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "verify_route",
+      "target": "api_security_consumeratelimit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "verify_route_post",
       "target": "api_security_consumeratelimit"
     },
     {
@@ -5318,6 +6228,50 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "verify_route",
+      "target": "api_security_readboundedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "verify_route_post",
+      "target": "api_security_readboundedtext"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "api_security_readboundedtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "webhook_route_post",
+      "target": "api_security_readboundedtext"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/invitations/accept/route.js",
       "source_location": "L6",
       "weight": 1.0,
@@ -5362,12 +6316,23 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -5379,6 +6344,61 @@
       "confidence_score": 1.0,
       "source": "evidence_route",
       "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/health/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "health_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/health/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "health_route_get",
+      "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -5461,6 +6481,28 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "public_key_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "public_key_route_get",
+      "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "app/api/auth/register/route.js",
       "source_location": "L4",
       "weight": 1.0,
@@ -5489,6 +6531,17 @@
       "confidence_score": 1.0,
       "source": "releases_route",
       "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -5563,9 +6616,53 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
+      "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "verify_route",
       "target": "api_security_jsonresponse",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "verify_route_post",
+      "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "webhook_route_post",
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -6028,9 +7125,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "register_route",
-      "confidence_score": 1.0
+      "target": "register_route"
     },
     {
       "relation": "imports_from",
@@ -6224,9 +7321,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "register_route_post",
-      "confidence_score": 1.0
+      "target": "register_route_post"
     },
     {
       "relation": "calls",
@@ -6235,9 +7332,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test_user",
-      "target": "register_route_post",
-      "confidence_score": 1.0
+      "target": "register_route_post"
     },
     {
       "relation": "calls",
@@ -6249,6 +7346,494 @@
       "weight": 1.0,
       "source": "register_route_post",
       "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "public_key_route",
+      "target": "public_key_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "public_key_route",
+      "target": "server_signed_export",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "public_key_route",
+      "target": "server_signed_export_exportsigningconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/exports/public-key/route.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "public_key_route_get",
+      "target": "server_signed_export_exportsigningconfig"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "verify_route",
+      "target": "server_signed_export",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "verify_route",
+      "target": "server_signed_export_exportsigningconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "verify_route",
+      "target": "server_signed_export_verifyexportenvelope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "verify_route",
+      "target": "verify_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "verify_route_post",
+      "target": "server_signed_export_exportsigningconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/exports/verify/route.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "verify_route_post",
+      "target": "server_signed_export_verifyexportenvelope"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "callback_route_applicationorigin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "callback_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "db_schema_githubinstallations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "db_schema_githuboauthstates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_github_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_github_app_exchangegithuboauthcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_github_app_getgithubinstallation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_github_app_githubauthorizeurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_github_app_hashgithubstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_github_app_listusergithubinstallations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "callback_route",
+      "target": "server_rbac_requireworkspacecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/github/callback/route.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "callback_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "db_schema_githubinstallations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "webhook_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "webhook_route",
+      "target": "webhook_route_signaturevalid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "webhook_route_post",
+      "target": "webhook_route_signaturevalid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/github/webhook/route.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "webhook_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/health/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "health_route",
+      "target": "db_connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/health/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "health_route",
+      "target": "db_connection_withdatabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/health/route.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "health_route",
+      "target": "health_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/health/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "health_route_get",
+      "target": "db_connection_withdatabase"
     },
     {
       "relation": "contains",
@@ -6420,9 +8005,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "accept_route",
-      "confidence_score": 1.0
+      "target": "accept_route"
     },
     {
       "relation": "calls",
@@ -6464,9 +8049,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "accept_route_post",
-      "confidence_score": 1.0
+      "target": "accept_route_post"
     },
     {
       "relation": "imports_from",
@@ -6486,9 +8071,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "releases_route",
-      "confidence_score": 1.0
+      "target": "releases_route"
     },
     {
       "relation": "imports_from",
@@ -6681,9 +8266,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "releases_route_post",
-      "confidence_score": 1.0
+      "target": "releases_route_post"
     },
     {
       "relation": "calls",
@@ -6694,6 +8279,234 @@
       "source_location": "L63",
       "weight": 1.0,
       "source": "releases_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "db_schema_githubinstallations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "db_schema_projectrepositories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "repositories_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "repositories_route_linkschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "repositories_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_github_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_github_app_getinstallationrepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "repositories_route",
+      "target": "server_rbac_requireprojectcapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "repositories_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/projects/[projectId]/repositories/route.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "repositories_route_post",
       "target": "server_http_databaseroute"
     },
     {
@@ -7071,9 +8884,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "claims_route",
-      "confidence_score": 1.0
+      "target": "claims_route"
     },
     {
       "relation": "calls",
@@ -7115,9 +8928,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "claims_route_post",
-      "confidence_score": 1.0
+      "target": "claims_route_post"
     },
     {
       "relation": "imports_from",
@@ -7126,9 +8939,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "decisions_route",
-      "confidence_score": 1.0
+      "target": "decisions_route"
     },
     {
       "relation": "imports_from",
@@ -7137,9 +8950,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -7148,9 +8961,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "db_schema_claimevidencelinks",
-      "confidence_score": 1.0
+      "target": "db_schema_claimevidencelinks"
     },
     {
       "relation": "imports",
@@ -7159,9 +8972,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "db_schema_claims",
-      "confidence_score": 1.0
+      "target": "db_schema_claims"
     },
     {
       "relation": "imports",
@@ -7170,9 +8983,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "db_schema_decisions",
-      "confidence_score": 1.0
+      "target": "db_schema_decisions"
     },
     {
       "relation": "imports",
@@ -7181,9 +8994,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "db_schema_evidence",
-      "confidence_score": 1.0
+      "target": "db_schema_evidence"
     },
     {
       "relation": "contains",
@@ -7191,9 +9004,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "decisions_route_decisionschema",
-      "confidence_score": 1.0
+      "target": "decisions_route_decisionschema"
     },
     {
       "relation": "contains",
@@ -7201,9 +9014,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "decisions_route_get",
-      "confidence_score": 1.0
+      "target": "decisions_route_get"
     },
     {
       "relation": "contains",
@@ -7211,9 +9024,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "decisions_route_post",
-      "confidence_score": 1.0
+      "target": "decisions_route_post"
     },
     {
       "relation": "imports_from",
@@ -7222,9 +9035,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -7233,9 +9046,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -7244,9 +9057,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports",
@@ -7255,9 +9068,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -7266,9 +9079,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -7277,9 +9090,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -7288,9 +9101,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -7299,9 +9112,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -7310,9 +9123,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -7321,9 +9134,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_immutable_records",
-      "confidence_score": 1.0
+      "target": "server_immutable_records"
     },
     {
       "relation": "imports",
@@ -7332,9 +9145,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_immutable_records_activeappendonlyrecords",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_activeappendonlyrecords"
     },
     {
       "relation": "imports",
@@ -7343,9 +9156,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_immutable_records_contenthash",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_contenthash"
     },
     {
       "relation": "imports_from",
@@ -7354,9 +9167,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -7365,9 +9178,9 @@
       "source_file": "app/api/releases/[releaseId]/decisions/route.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_route",
-      "target": "server_rbac_requirereleasecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requirereleasecapability"
     },
     {
       "relation": "calls",
@@ -7387,9 +9200,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "decisions_route_post",
-      "confidence_score": 1.0
+      "target": "decisions_route_post"
     },
     {
       "relation": "calls",
@@ -7420,9 +9233,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "evidence_route",
-      "confidence_score": 1.0
+      "target": "evidence_route"
     },
     {
       "relation": "imports_from",
@@ -7681,9 +9494,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "evidence_route_post",
-      "confidence_score": 1.0
+      "target": "evidence_route_post"
     },
     {
       "relation": "calls",
@@ -7694,6 +9507,615 @@
       "source_location": "L71",
       "weight": 1.0,
       "source": "evidence_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "db_schema_exportartifacts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "db_schema_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "db_schema_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "db_schema_verdictruns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "db_schema_workspaces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "exports_route_envelope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "exports_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "exports_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "exports_route_requestschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_rbac_requirereleasecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_signed_export",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "exports_route",
+      "target": "server_signed_export_signexportmanifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "exports_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/exports/route.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "exports_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema_claimevidencelinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema_claims",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema_githubinstallations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema_integrationimports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema_projectrepositories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "db_schema_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "import_route_importschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "import_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "import_route_sourcetypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_github_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_github_app_fetchgithubimportobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_github_import",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_github_import_githubexternalid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_github_import_githubsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_github_import_normalizegithubobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_immutable_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_immutable_records_contenthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "import_route",
+      "target": "server_rbac_requirereleasecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/github/import/route.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "import_route_post",
       "target": "server_http_databaseroute"
     },
     {
@@ -8019,9 +10441,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "verdict_runs_route",
-      "confidence_score": 1.0
+      "target": "verdict_runs_route"
     },
     {
       "relation": "imports_from",
@@ -8030,9 +10452,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -8041,9 +10463,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "db_schema_claimevidencelinks",
-      "confidence_score": 1.0
+      "target": "db_schema_claimevidencelinks"
     },
     {
       "relation": "imports",
@@ -8052,9 +10474,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "db_schema_claims",
-      "confidence_score": 1.0
+      "target": "db_schema_claims"
     },
     {
       "relation": "imports",
@@ -8063,9 +10485,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "db_schema_decisions",
-      "confidence_score": 1.0
+      "target": "db_schema_decisions"
     },
     {
       "relation": "imports",
@@ -8074,9 +10496,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "db_schema_evidence",
-      "confidence_score": 1.0
+      "target": "db_schema_evidence"
     },
     {
       "relation": "imports",
@@ -8085,9 +10507,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "db_schema_verdictruns",
-      "confidence_score": 1.0
+      "target": "db_schema_verdictruns"
     },
     {
       "relation": "imports_from",
@@ -8096,9 +10518,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -8107,9 +10529,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -8118,9 +10540,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -8129,9 +10551,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -8140,9 +10562,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -8151,9 +10573,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -8162,9 +10584,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -8173,9 +10595,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_immutable_records",
-      "confidence_score": 1.0
+      "target": "server_immutable_records"
     },
     {
       "relation": "imports",
@@ -8184,9 +10606,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_immutable_records_contenthash",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_contenthash"
     },
     {
       "relation": "imports_from",
@@ -8195,9 +10617,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -8206,9 +10628,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_rbac_requirereleasecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requirereleasecapability"
     },
     {
       "relation": "imports_from",
@@ -8217,9 +10639,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_verdict_engine",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine"
     },
     {
       "relation": "imports",
@@ -8228,9 +10650,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_verdict_engine_buildverdictinput",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine_buildverdictinput"
     },
     {
       "relation": "imports",
@@ -8239,9 +10661,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "server_verdict_engine_evaluateverdict",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine_evaluateverdict"
     },
     {
       "relation": "contains",
@@ -8249,9 +10671,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "verdict_runs_route_get",
-      "confidence_score": 1.0
+      "target": "verdict_runs_route_get"
     },
     {
       "relation": "contains",
@@ -8259,9 +10681,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "verdict_runs_route_loadinputs",
-      "confidence_score": 1.0
+      "target": "verdict_runs_route_loadinputs"
     },
     {
       "relation": "contains",
@@ -8269,9 +10691,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "verdict_runs_route_post",
-      "confidence_score": 1.0
+      "target": "verdict_runs_route_post"
     },
     {
       "relation": "contains",
@@ -8279,9 +10701,9 @@
       "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "verdict_runs_route",
-      "target": "verdict_runs_route_runschema",
-      "confidence_score": 1.0
+      "target": "verdict_runs_route_runschema"
     },
     {
       "relation": "calls",
@@ -8301,9 +10723,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "verdict_runs_route_post",
-      "confidence_score": 1.0
+      "target": "verdict_runs_route_post"
     },
     {
       "relation": "calls",
@@ -8400,6 +10822,268 @@
       "target": "session_route_test_sessionrequest"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "connect_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "db_schema_githuboauthstates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_github_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_github_app_creategithubstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_github_app_githubinstallurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "connect_route",
+      "target": "server_rbac_requireworkspacecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/workspaces/[workspaceId]/github/connect/route.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "connect_route_post",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "db_schema_githubinstallations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "installations_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "server_github_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "server_github_app_listinstallationrepositories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "installations_route",
+      "target": "server_rbac_requireworkspacecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/workspaces/[workspaceId]/github/installations/route.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "installations_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -8417,9 +11101,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "invitations_route",
-      "confidence_score": 1.0
+      "target": "invitations_route"
     },
     {
       "relation": "imports_from",
@@ -8655,9 +11339,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "invitations_route_post",
-      "confidence_score": 1.0
+      "target": "invitations_route_post"
     },
     {
       "relation": "calls",
@@ -9015,9 +11699,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "projects_route",
-      "confidence_score": 1.0
+      "target": "projects_route"
     },
     {
       "relation": "imports_from",
@@ -9210,9 +11894,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "projects_route_post",
-      "confidence_score": 1.0
+      "target": "projects_route_post"
     },
     {
       "relation": "calls",
@@ -9254,9 +11938,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "workspaces_route",
-      "confidence_score": 1.0
+      "target": "workspaces_route"
     },
     {
       "relation": "imports_from",
@@ -9459,9 +12143,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "workspaces_route_post",
-      "confidence_score": 1.0
+      "target": "workspaces_route_post"
     },
     {
       "relation": "calls",
@@ -9698,6 +12382,17 @@
       "target": "db_auth_rbac_integration_test_responsejson"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "db/auth-rbac.integration.test.mjs",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "db_auth_rbac_integration_test_registeruser",
+      "target": "e2e_release_truth_spec_register"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "db/connection.js",
@@ -9752,6 +12447,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/migrate-production.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scripts_migrate_production",
+      "target": "db_connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/server/http.js",
       "source_location": "L8",
       "weight": 1.0,
@@ -9801,6 +12507,17 @@
       "confidence_score": 1.0,
       "source": "db_connection_withdatabase",
       "target": "db_connection_opendatabase"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/migrate-production.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scripts_migrate_production",
+      "target": "db_connection_opendatabase",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9866,14 +12583,25 @@
       "target": "db_core_crud_integration_test_json"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "db/core-crud.integration.test.mjs",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "db_core_crud_integration_test_user",
+      "target": "e2e_release_truth_spec_register"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "db_governance_integration_test_json",
-      "confidence_score": 1.0
+      "target": "db_governance_integration_test_json"
     },
     {
       "relation": "contains",
@@ -9881,9 +12609,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "db_governance_integration_test_request",
-      "confidence_score": 1.0
+      "target": "db_governance_integration_test_request"
     },
     {
       "relation": "contains",
@@ -9891,9 +12619,9 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test",
-      "target": "db_governance_integration_test_user",
-      "confidence_score": 1.0
+      "target": "db_governance_integration_test_user"
     },
     {
       "relation": "calls",
@@ -9902,9 +12630,20 @@
       "source_file": "db/governance.integration.test.mjs",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_governance_integration_test_user",
-      "target": "db_governance_integration_test_json",
-      "confidence_score": 1.0
+      "target": "db_governance_integration_test_json"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "db_governance_integration_test_user",
+      "target": "e2e_release_truth_spec_register"
     },
     {
       "relation": "contains",
@@ -10518,6 +13257,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "ops/backup.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ops_backup",
+      "target": "d_projects_hakaton_release_truth_gate_ops_backup_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "package.json",
       "source_location": "L22",
       "weight": 1.0,
@@ -10976,6 +13725,17 @@
       "target": "package_overrides_postcss"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-production.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scripts_start_production",
+      "target": "scripts_migrate_production",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/patch-opennext-require.mjs",
@@ -10984,6 +13744,86 @@
       "confidence_score": 1.0,
       "source": "scripts_patch_opennext_require",
       "target": "scripts_patch_opennext_require_handlerpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "scripts_start_e2e",
+      "target": "scripts_start_e2e_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "scripts_start_e2e",
+      "target": "scripts_start_e2e_databasename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "scripts_start_e2e",
+      "target": "scripts_start_e2e_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "scripts_start_e2e",
+      "target": "scripts_start_e2e_migration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "scripts_start_e2e",
+      "target": "scripts_start_e2e_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "scripts_start_e2e",
+      "target": "scripts_start_e2e_parsed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-e2e.mjs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "scripts_start_e2e",
+      "target": "scripts_start_e2e_privatekey_publickey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-production.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scripts_start_production",
+      "target": "scripts_start_production_child",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11611,6 +14451,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/ProductApp.jsx",
+      "source_location": "L652",
+      "weight": 1.0,
+      "source": "src_productapp",
+      "target": "src_productapp_githubdialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/ProductApp.jsx",
       "source_location": "L82",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -11865,6 +14715,17 @@
       "target": "lib_canonical_json"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "lib_canonical_json",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -11939,6 +14800,50 @@
       "source_location": "L6",
       "weight": 1.0,
       "source": "server_immutable_records_contenthash",
+      "target": "lib_canonical_json_canonicaljson"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "lib_canonical_json_canonicaljson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "server_signed_export_artifacthash",
+      "target": "lib_canonical_json_canonicaljson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "server_signed_export_signexportmanifest",
+      "target": "lib_canonical_json_canonicaljson"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "server_signed_export_verifyexportenvelope",
       "target": "lib_canonical_json_canonicaljson"
     },
     {
@@ -12395,9 +15300,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "lib_verdict",
-      "confidence_score": 1.0
+      "target": "lib_verdict"
     },
     {
       "relation": "calls",
@@ -12472,9 +15377,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "lib_verdict_derivefindings",
-      "confidence_score": 1.0
+      "target": "lib_verdict_derivefindings"
     },
     {
       "relation": "calls",
@@ -12505,9 +15410,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "lib_verdict_calculateverdict",
-      "confidence_score": 1.0
+      "target": "lib_verdict_calculateverdict"
     },
     {
       "relation": "calls",
@@ -12924,6 +15829,28 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "server_github_import",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/server/http.js",
       "source_location": "L10",
       "weight": 1.0,
@@ -12943,6 +15870,17 @@
       "target": "server_errors"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/server/errors.js",
@@ -12951,6 +15889,28 @@
       "confidence_score": 1.0,
       "source": "server_errors_httperror",
       "target": "server_errors_httperror_constructor"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "server_github_import",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -12973,6 +15933,458 @@
       "confidence_score": 1.0,
       "source": "server_rbac",
       "target": "server_errors_httperror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_creategithubappjwt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_creategithubstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_createinstallationtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_encode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_exchangegithuboauthcode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_fetchgithubimportobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_getgithubinstallation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_getinstallationrepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_githubappconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_githubauthorizeurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_githubfetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_githubinstallurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_hashgithubstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_listinstallationrepositories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_listusergithubinstallations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "server_github_app",
+      "target": "server_github_app_required",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_github_app_test",
+      "target": "server_github_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "server_github_app_githubappconfig",
+      "target": "server_github_app_required",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "server_github_app_creategithubappjwt",
+      "target": "server_github_app_encode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "server_github_app_createinstallationtoken",
+      "target": "server_github_app_creategithubappjwt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "server_github_app_getgithubinstallation",
+      "target": "server_github_app_creategithubappjwt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_github_app_test",
+      "target": "server_github_app_creategithubappjwt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "server_github_app_createinstallationtoken",
+      "target": "server_github_app_githubfetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "server_github_app_fetchgithubimportobject",
+      "target": "server_github_app_githubfetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "server_github_app_getgithubinstallation",
+      "target": "server_github_app_githubfetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "server_github_app_listinstallationrepositories",
+      "target": "server_github_app_githubfetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "server_github_app_listusergithubinstallations",
+      "target": "server_github_app_githubfetch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "server_github_app_creategithubstate",
+      "target": "server_github_app_hashgithubstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_github_app_test",
+      "target": "server_github_app_creategithubstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_github_app_test",
+      "target": "server_github_app_hashgithubstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "server_github_app_fetchgithubimportobject",
+      "target": "server_github_app_createinstallationtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "server_github_app_listinstallationrepositories",
+      "target": "server_github_app_createinstallationtoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-app.js",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "server_github_app_getinstallationrepository",
+      "target": "server_github_app_listinstallationrepositories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "server_github_import",
+      "target": "server_github_import_actor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "server_github_import",
+      "target": "server_github_import_githubexternalid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "server_github_import",
+      "target": "server_github_import_githubsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "server_github_import",
+      "target": "server_github_import_normalizegithubobject",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_github_import",
+      "target": "server_github_import_truncate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_github_import_test",
+      "target": "server_github_import",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "server_github_import_normalizegithubobject",
+      "target": "server_github_import_truncate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "server_github_import_normalizegithubobject",
+      "target": "server_github_import_actor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/github-import.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_github_import_test",
+      "target": "server_github_import_normalizegithubobject",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13040,9 +16452,9 @@
       "source_file": "src/server/immutable-records.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_immutable_records",
-      "target": "server_immutable_records_validateappendonlychain",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_validateappendonlychain"
     },
     {
       "relation": "imports_from",
@@ -13051,9 +16463,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "server_immutable_records",
-      "confidence_score": 1.0
+      "target": "server_immutable_records"
     },
     {
       "relation": "imports",
@@ -13062,9 +16474,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "server_immutable_records_activeappendonlyrecords",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_activeappendonlyrecords"
     },
     {
       "relation": "calls",
@@ -13084,9 +16496,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "server_immutable_records_validateappendonlychain",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_validateappendonlychain"
     },
     {
       "relation": "calls",
@@ -13207,12 +16619,128 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "server_signed_export_artifacthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "server_signed_export_exportsigningconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "server_signed_export_readpem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "server_signed_export_signexportmanifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "server_signed_export",
+      "target": "server_signed_export_verifyexportenvelope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_signed_export_test",
+      "target": "server_signed_export",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "server_signed_export_exportsigningconfig",
+      "target": "server_signed_export_readpem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "server_signed_export_signexportmanifest",
+      "target": "server_signed_export_artifacthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.js",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "server_signed_export_verifyexportenvelope",
+      "target": "server_signed_export_artifacthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_signed_export_test",
+      "target": "server_signed_export_signexportmanifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_signed_export_test",
+      "target": "server_signed_export_verifyexportenvelope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "server_verdict_engine_buildverdictinput",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine_buildverdictinput"
     },
     {
       "relation": "contains",
@@ -13220,9 +16748,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "server_verdict_engine_evaluateverdict",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine_evaluateverdict"
     },
     {
       "relation": "contains",
@@ -13230,9 +16758,9 @@
       "source_file": "src/server/verdict-engine.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine",
-      "target": "server_verdict_engine_iso",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine_iso"
     },
     {
       "relation": "imports_from",
@@ -13241,9 +16769,9 @@
       "source_file": "src/server/verdict-engine.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine_test",
-      "target": "server_verdict_engine",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine"
     },
     {
       "relation": "imports",
@@ -13252,9 +16780,9 @@
       "source_file": "src/server/verdict-engine.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine_test",
-      "target": "server_verdict_engine_buildverdictinput",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine_buildverdictinput"
     },
     {
       "relation": "imports",
@@ -13263,9 +16791,9 @@
       "source_file": "src/server/verdict-engine.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine_test",
-      "target": "server_verdict_engine_evaluateverdict",
-      "confidence_score": 1.0
+      "target": "server_verdict_engine_evaluateverdict"
     },
     {
       "relation": "contains",
@@ -13273,8 +16801,18 @@
       "source_file": "src/server/verdict-engine.test.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_verdict_engine_test",
-      "target": "server_verdict_engine_test_record",
+      "target": "server_verdict_engine_test_record"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/release-truth.spec.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "e2e_release_truth_spec",
+      "target": "e2e_release_truth_spec_register",
       "confidence_score": 1.0
     },
     {
@@ -13301,6 +16839,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "readme_release_truth",
+      "target": "readme_github_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L34",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13311,41 +16859,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L16",
+      "source_location": "L89",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "readme_release_truth",
-      "target": "readme_product_surface"
+      "target": "readme_production",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L64",
+      "source_location": "L24",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "readme_release_truth",
-      "target": "readme_production_configuration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_release_truth",
-      "target": "readme_security_boundary"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_release_truth",
-      "target": "readme_trust_model"
+      "target": "readme_roles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13361,11 +16889,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L47",
+      "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_local_development",
-      "target": "readme_postgresql"
+      "source": "readme_release_truth",
+      "target": "readme_what_is_authoritative",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13381,16 +16909,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SECURITY.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "security_security_model",
-      "target": "security_dependency_and_incident_practice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "SECURITY.md",
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -13401,21 +16919,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SECURITY.md",
-      "source_location": "L3",
+      "source_location": "L43",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "security_security_model",
-      "target": "security_protected_assets"
+      "target": "security_operational_requirements",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SECURITY.md",
-      "source_location": "L21",
+      "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "security_security_model",
-      "target": "security_residual_production_requirements"
+      "target": "security_trust_boundary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SECURITY.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "security_security_model",
+      "target": "security_verification_and_incident_practice",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13766,8 +17294,18 @@
       "confidence_score": 1.0,
       "source": "memory_query_20260718_143342_what_makes_the_final_release_truth_snapshot_reprod_q_what_makes_the_final_release_truth_snapshot_reproducible_and_deployable",
       "target": "memory_query_20260718_143342_what_makes_the_final_release_truth_snapshot_reprod_source_nodes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ops/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ops_readme",
+      "target": "ops_readme_production_operations",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6847f4eb638903f7273407c9e0a61c3fb79c654b"
+  "built_at_commit": "f1f260a62422abaa93cc7d73fdb4df41c92aa606"
 }

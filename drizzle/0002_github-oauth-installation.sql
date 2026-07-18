@@ -1,0 +1,1 @@
+ALTER TABLE "github_oauth_states" ADD COLUMN "installation_id" text;

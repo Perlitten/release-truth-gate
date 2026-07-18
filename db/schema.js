@@ -542,6 +542,7 @@ export const githubOauthStates = pgTable(
       .notNull()
       .references(() => users.id),
     stateHash: text("state_hash").notNull(),
+    installationId: text("installation_id"),
     expiresAt: timestamp("expires_at", { withTimezone: true, mode: "date" }).notNull(),
     consumedAt: timestamp("consumed_at", { withTimezone: true, mode: "date" }),
     createdAt: createdAt(),

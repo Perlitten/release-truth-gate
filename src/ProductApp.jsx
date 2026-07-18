@@ -9,7 +9,9 @@ import {
   ClipboardText,
   ClockCounterClockwise,
   Database,
+  DownloadSimple,
   Folder,
+  GithubLogo,
   LockKey,
   Plus,
   RocketLaunch,
@@ -35,17 +37,21 @@ const markers = {
   evidence: "evidence-create",
   decision: "decision-create",
   verdict: "verdict-run",
+  export: "export-generate",
   invite: "workspace-invitation",
   invitationAccept: "invitation-accept",
   releaseUpdate: "release-update",
+  githubConnect: "github-connect",
+  githubLink: "github-repository-link",
+  githubImport: "github-import",
 };
 
 const capabilities = {
-  owner: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "members"]),
-  admin: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "members"]),
-  contributor: new Set(["project", "release", "claim", "evidence", "verdict"]),
-  reviewer: new Set(["decision", "verdict"]),
-  viewer: new Set(),
+  owner: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "export", "members", "integrations"]),
+  admin: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "export", "members", "integrations"]),
+  contributor: new Set(["project", "release", "claim", "evidence", "verdict", "export"]),
+  reviewer: new Set(["decision", "verdict", "export"]),
+  viewer: new Set(["export"]),
 };
 
 function can(role, capability) {
@@ -643,6 +649,199 @@ function TeamDialog({ workspace, onClose }) {
   );
 }
 
+function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
+  const [installations, setInstallations] = useState([]);
+  const [repositories, setRepositories] = useState([]);
+  const [busy, setBusy] = useState(true);
+  const [error, setError] = useState("");
+
+  const load = useCallback(async () => {
+    setBusy(true);
+    setError("");
+    try {
+      const [installationResult, repositoryResult] = await Promise.all([
+        api(`/api/workspaces/${workspace.id}/github/installations?repositories=true`),
+        project
+          ? api(`/api/projects/${project.id}/repositories`)
+          : Promise.resolve({ repositories: [] }),
+      ]);
+      setInstallations(installationResult.installations);
+      setRepositories(repositoryResult.repositories);
+    } catch (requestError) {
+      setError(requestError.message);
+    } finally {
+      setBusy(false);
+    }
+  }, [project, workspace.id]);
+
+  useEffect(() => {
+    void load();
+  }, [load]);
+
+  async function connect() {
+    setBusy(true);
+    setError("");
+    try {
+      const result = await api(`/api/workspaces/${workspace.id}/github/connect`, {
+        method: "POST",
+        marker: markers.githubConnect,
+        body: {},
+      });
+      window.location.assign(result.installUrl);
+    } catch (requestError) {
+      setError(requestError.message);
+      setBusy(false);
+    }
+  }
+
+  async function link(event) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const selected = JSON.parse(data.get("repository"));
+    setBusy(true);
+    setError("");
+    try {
+      await api(`/api/projects/${project.id}/repositories`, {
+        method: "POST",
+        marker: markers.githubLink,
+        body: selected,
+      });
+      await load();
+    } catch (requestError) {
+      setError(requestError.message);
+      setBusy(false);
+    }
+  }
+
+  async function importObject(event) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    setBusy(true);
+    setError("");
+    try {
+      const objectType = data.get("objectType");
+      await api(`/api/releases/${snapshot.release.id}/github/import`, {
+        method: "POST",
+        marker: markers.githubImport,
+        body: {
+          projectRepositoryId: data.get("projectRepositoryId"),
+          objectType,
+          reference: data.get("reference"),
+          claimIds:
+            objectType === "issue" || !data.get("claimId")
+              ? []
+              : [data.get("claimId")],
+          relation: data.get("relation"),
+          evidenceKind: data.get("evidenceKind"),
+          material: true,
+        },
+      });
+      await onImported();
+      onClose();
+    } catch (requestError) {
+      setError(requestError.message);
+      setBusy(false);
+    }
+  }
+
+  const available = installations.flatMap((installation) =>
+    (installation.repositories || []).map((repository) => ({
+      label: repository.fullName,
+      value: JSON.stringify({
+        githubInstallationId: installation.id,
+        owner: repository.owner,
+        repository: repository.name,
+      }),
+    })),
+  );
+
+  return (
+    <Dialog title="GitHub evidence source" eyebrow={workspace.name} onClose={onClose} wide>
+      <div className="rt-team-grid">
+        <section>
+          <h3>GitHub App installation</h3>
+          <p className="rt-muted">
+            Installation access is verified by GitHub before a repository can be linked.
+          </p>
+          <button type="button" className="rt-secondary" onClick={connect} disabled={busy}>
+            <GithubLogo /> Connect GitHub App
+          </button>
+          {project && available.length > 0 && (
+            <form className="rt-form compact" onSubmit={link}>
+              <Field label="Repository">
+                <select name="repository" required>
+                  {available.map((item) => (
+                    <option value={item.value} key={item.value}>{item.label}</option>
+                  ))}
+                </select>
+              </Field>
+              <SubmitButton busy={busy}>Link repository <ArrowRight /></SubmitButton>
+            </form>
+          )}
+          {installations.length > 0 && available.length === 0 && (
+            <p className="rt-muted">No accessible repositories were returned by the installation.</p>
+          )}
+        </section>
+        <section>
+          <h3>Import immutable snapshot</h3>
+          {snapshot && repositories.length > 0 ? (
+            <form className="rt-form compact" onSubmit={importObject}>
+              <Field label="Linked repository">
+                <select name="projectRepositoryId" required>
+                  {repositories.map((repository) => (
+                    <option value={repository.id} key={repository.id}>
+                      {repository.ownerLogin}/{repository.repositoryName}
+                    </option>
+                  ))}
+                </select>
+              </Field>
+              <Field label="Object type">
+                <select name="objectType" defaultValue="pull_request">
+                  <option value="issue">Issue → claim</option>
+                  <option value="pull_request">Pull request → evidence</option>
+                  <option value="commit">Commit → evidence</option>
+                  <option value="check_run">Check run → evidence</option>
+                  <option value="status">Commit status → evidence</option>
+                </select>
+              </Field>
+              <Field label="Number, SHA, or check-run id">
+                <input name="reference" required maxLength={255} />
+              </Field>
+              <Field label="Link evidence to claim">
+                <select name="claimId" defaultValue="">
+                  <option value="">No claim link</option>
+                  {snapshot.activeClaims.map((claim) => (
+                    <option value={claim.id} key={claim.id}>{claim.title}</option>
+                  ))}
+                </select>
+              </Field>
+              <div className="rt-field-row">
+                <Field label="Relation">
+                  <select name="relation" defaultValue="supports">
+                    <option value="supports">Supports</option>
+                    <option value="contradicts">Contradicts</option>
+                    <option value="missing">Missing</option>
+                  </select>
+                </Field>
+                <Field label="Evidence kind">
+                  <input name="evidenceKind" defaultValue="github" required />
+                </Field>
+              </div>
+              <SubmitButton busy={busy}>Import snapshot <GithubLogo /></SubmitButton>
+            </form>
+          ) : (
+            <p className="rt-muted">
+              Link a repository and open a release before importing.
+            </p>
+          )}
+        </section>
+      </div>
+      {busy && <p className="rt-muted"><SpinnerGap className="rt-spin" /> Loading GitHub state…</p>}
+      {error && <p className="rt-error"><WarningCircle /> {error}</p>}
+    </Dialog>
+  );
+}
+
 function RecordSection({ title, description, action, actionLabel, children }) {
   return (
     <section className="rt-record-section">
@@ -680,6 +879,7 @@ function ReleaseWorkspace({
   onCreate,
   onUpdateStatus,
   onRunVerdict,
+  onGenerateExport,
 }) {
   const [tab, setTab] = useState("overview");
   const [busy, setBusy] = useState(false);
@@ -706,6 +906,15 @@ function ReleaseWorkspace({
     setBusy(true);
     try {
       await onRunVerdict();
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function generateExport() {
+    setBusy(true);
+    try {
+      await onGenerateExport();
     } finally {
       setBusy(false);
     }
@@ -749,6 +958,16 @@ function ReleaseWorkspace({
               disabled={busy}
             >
               <ShieldCheck /> Run verdict
+            </button>
+          )}
+          {can(role, "export") && latestRun && (
+            <button
+              type="button"
+              className="rt-secondary"
+              onClick={generateExport}
+              disabled={busy}
+            >
+              <DownloadSimple /> Signed export
             </button>
           )}
           {can(role, "release") && snapshot.release.status !== "finalized" && (
@@ -1009,10 +1228,12 @@ function ProductShell({
   error,
   onCreate,
   onOpenTeam,
+  onOpenGitHub,
   onLogout,
   onRefresh,
   onUpdateStatus,
   onRunVerdict,
+  onGenerateExport,
 }) {
   const workspace = workspaces.find((item) => item.id === workspaceId);
   const project = projects.find((item) => item.id === projectId);
@@ -1060,6 +1281,9 @@ function ProductShell({
         <div className="rt-side-bottom">
           {can(role, "members") && (
             <button type="button" onClick={onOpenTeam}><UsersThree /> Team</button>
+          )}
+          {can(role, "integrations") && (
+            <button type="button" onClick={onOpenGitHub}><GithubLogo /> GitHub</button>
           )}
           <button type="button" onClick={() => onCreate("workspace")}><Plus /> Workspace</button>
           <button type="button" onClick={onLogout}><SignOut /> Sign out</button>
@@ -1142,6 +1366,7 @@ function ProductShell({
             onCreate={onCreate}
             onUpdateStatus={onUpdateStatus}
             onRunVerdict={onRunVerdict}
+            onGenerateExport={onGenerateExport}
           />
         )}
       </section>
@@ -1360,6 +1585,24 @@ export function ProductApp() {
     await loadSnapshot();
   }
 
+  async function generateExport() {
+    const payload = await api(`/api/releases/${releaseId}/exports`, {
+      method: "POST",
+      marker: markers.export,
+      body: {},
+    });
+    const blob = new Blob([JSON.stringify(payload.export, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `release-truth-${snapshot.release.name}-${payload.artifact.id}.json`;
+    anchor.click();
+    URL.revokeObjectURL(url);
+    await loadSnapshot();
+  }
+
   if (status === "loading") {
     return (
       <main className="rt-boot">
@@ -1396,12 +1639,14 @@ export function ProductApp() {
         error={error}
         onCreate={setDialog}
         onOpenTeam={() => setDialog("team")}
+        onOpenGitHub={() => setDialog("github")}
         onLogout={logout}
         onRefresh={loadSnapshot}
         onUpdateStatus={updateStatus}
         onRunVerdict={runVerdict}
+        onGenerateExport={generateExport}
       />
-      {dialog && dialog !== "team" && (
+      {dialog && !["team", "github"].includes(dialog) && (
         <CreationDialog
           type={dialog}
           context={{
@@ -1418,6 +1663,15 @@ export function ProductApp() {
       )}
       {dialog === "team" && workspace && (
         <TeamDialog workspace={workspace} onClose={() => setDialog(null)} />
+      )}
+      {dialog === "github" && workspace && (
+        <GitHubDialog
+          workspace={workspace}
+          project={project}
+          snapshot={snapshot}
+          onClose={() => setDialog(null)}
+          onImported={loadSnapshot}
+        />
       )}
     </>
   );

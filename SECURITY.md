@@ -1,34 +1,65 @@
 # Security model
 
-## Protected assets
+## Trust boundary
 
-- The OpenAI API key and session-signing secret are server-only.
-- Evidence content may contain confidential product, customer, or policy data.
-- Release verdicts and human decisions are governance records and must not be silently mutated.
+PostgreSQL and authenticated server routes are authoritative. Browser state,
+AI output, GitHub callback parameters, and imported source payloads are
+untrusted inputs.
 
 ## Implemented controls
 
-- Production AI access is disabled unless an exact HTTPS origin, access code, and strong session secret are configured.
-- The access code is exchanged for a signed, short-lived `HttpOnly`, `Secure`, `SameSite=Strict` cookie.
-- Analysis requests require the same origin and a custom request marker, have a 48 KB body limit, and are rate limited.
-- Request and response schemas are validated. Source IDs and decision IDs are allowlisted, and citations must be exact contiguous source excerpts.
-- Evidence is serialized as data inside the model prompt. Evidence text cannot supply system instructions.
-- OpenAI requests use `store: false`, a bounded output size, one retry, and a 25-second abort timeout.
-- Application logs contain request metadata and status only, not secrets, evidence text, access codes, or model output.
-- CSP nonces, `strict-dynamic`, frame denial, MIME sniffing protection, a restrictive permissions policy, HSTS, COOP, and CORP are applied.
-- Client-side drafts and shared snapshots are schema validated and explicitly treated as untrusted demo state. Imported AI assessments are discarded and can only be recreated by a live authenticated server request.
+- Passwords use per-user salts and PBKDF2; opaque session tokens are stored only
+  as SHA-256 hashes and sent in `HttpOnly`, `SameSite=Strict` cookies
+  (`Secure` and `__Host-` in HTTPS production).
+- Every tenant resource is resolved through centralized workspace RBAC.
+  Cross-workspace access is hidden, and mutations require same-origin checks
+  plus route-specific request markers.
+- JSON and webhook bodies are bounded and schema validated. Authentication,
+  GitHub import, and public export verification are rate limited in the app;
+  production nginx also applies request controls.
+- Claims, evidence, decisions, verdict runs, GitHub imports, audit events, and
+  export artifacts reject database `UPDATE` and `DELETE`. Corrections append a
+  record that points to the superseded record.
+- The audit log is a workspace-scoped SHA-256 hash chain. Verdicts are calculated
+  from database inputs, fail closed on invalid history, and persist their exact
+  input digest and engine/policy versions.
+- Exports are canonical JSON signed with Ed25519. The private key is server-only;
+  the public key and bounded verification endpoint cannot sign arbitrary input.
+- GitHub setup state is random, hashed at rest, expiring, and single use.
+  A GitHub user token confirms administration of the chosen installation before
+  it is attached. Repository data is fetched with short-lived installation
+  tokens and normalized before storage. Webhook lifecycle changes require
+  `X-Hub-Signature-256`.
+- CSP nonces with `strict-dynamic`, frame denial, MIME-sniffing protection,
+  HSTS, COOP/CORP, a restrictive permissions policy, and no-referrer policy are
+  set on browser responses.
+- Logs contain identifiers, action names, status, hashes, and provider request
+  IDs—not passwords, session tokens, GitHub/OpenAI tokens, signing keys, or
+  evidence payloads.
+- The production container runs as a non-root user. PostgreSQL has no host port;
+  the app is published only on loopback behind TLS nginx. No production seed is
+  automatic.
 
-## Residual production requirements
+## Operational requirements
 
-- Replace the in-memory rate limiter with an edge-distributed limiter for a multi-instance deployment.
-- Migrate the CSP nonce boundary from Edge Middleware to Next.js Node Proxy only after OpenNext Cloudflare supports Node Proxy; renaming it earlier would remove the deployable adapter path.
-- Add organizational authentication and authorization with audit-ready identities.
-- Store evidence and decisions in server-side append-only storage and sign or attest exported bundles.
-- Add source-specific authorization and redaction before ingesting real repositories, CI logs, tickets, or customer data.
-- Define retention, deletion, incident-response, and data-residency policies for the chosen deployment.
+- Keep `.env.production` mode `0600`, rotate signing/GitHub/session secrets on
+  suspected exposure, and retain old public verification keys when historical
+  exports must remain verifiable.
+- Test database dumps by restoring them into an isolated instance. Define the
+  required retention/deletion policy before storing regulated evidence.
+- A future multi-instance deployment must replace process-local application rate
+  buckets with a distributed limiter. The current single-app Contabo deployment
+  is additionally protected at nginx.
+- Configure the GitHub App with only read permissions required for metadata,
+  issues, pull requests, contents, checks, and commit statuses.
 
-## Dependency and incident practice
+## Verification and incident practice
 
-`npm run check` fails on moderate-or-higher production dependency advisories. The locked tree currently audits with zero known vulnerabilities.
+`npm run audit:prod` fails on moderate-or-higher production advisories. CI also
+runs unit tests, database integration tests, the production build, and a
+two-user browser flow including signed-export tamper detection.
 
-If a server secret may have leaked: revoke it at the provider, rotate the session secret and access code, invalidate active sessions by redeploying, review metadata logs, and rerun the full verification gate.
+On suspected compromise: revoke provider credentials, rotate the user-session
+and export-signing keys, restart the app, invalidate active sessions in
+`user_sessions`, review the audit hash chain and server logs, and rerun the full
+verification gate before reopening writes.
