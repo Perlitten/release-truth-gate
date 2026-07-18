@@ -270,7 +270,7 @@
       "source_location": "L271",
       "_origin": "ast",
       "id": "api_security_jsonresponse",
-      "community": 0,
+      "community": 6,
       "norm_label": "jsonresponse()"
     },
     {
@@ -380,7 +380,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "logout_route_post",
-      "community": 24,
+      "community": 4,
       "norm_label": "post()"
     },
     {
@@ -440,7 +440,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "accept_route",
-      "community": 4,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -450,7 +450,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "accept_route_requestschema",
-      "community": 4,
+      "community": 6,
       "norm_label": "requestschema"
     },
     {
@@ -470,7 +470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "releases_route",
-      "community": 6,
+      "community": 24,
       "norm_label": "route.js"
     },
     {
@@ -480,7 +480,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "releases_route_releaseschema",
-      "community": 6,
+      "community": 24,
       "norm_label": "releaseschema"
     },
     {
@@ -490,7 +490,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "releases_route_get",
-      "community": 6,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -500,7 +500,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "releases_route_post",
-      "community": 6,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -510,7 +510,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "projectid_route",
-      "community": 24,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -520,7 +520,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "projectid_route_updateschema",
-      "community": 24,
+      "community": 6,
       "norm_label": "updateschema"
     },
     {
@@ -570,7 +570,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "claims_route_get",
-      "community": 6,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -580,7 +580,47 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "claims_route_post",
+      "community": 24,
+      "norm_label": "post()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "decisions_route",
       "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "decisionSchema",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "decisions_route_decisionschema",
+      "community": 6,
+      "norm_label": "decisionschema"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "decisions_route_get",
+      "community": 24,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "decisions_route_post",
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -610,7 +650,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "evidence_route_get",
-      "community": 6,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -620,7 +660,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "evidence_route_post",
-      "community": 6,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -650,7 +690,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "releaseid_route_get",
-      "community": 6,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -660,8 +700,58 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "releaseid_route_patch",
-      "community": 6,
+      "community": 24,
       "norm_label": "patch()"
+    },
+    {
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "verdict_runs_route",
+      "community": 6,
+      "norm_label": "route.js"
+    },
+    {
+      "label": "runSchema",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "verdict_runs_route_runschema",
+      "community": 6,
+      "norm_label": "runschema"
+    },
+    {
+      "label": "loadInputs()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "verdict_runs_route_loadinputs",
+      "community": 6,
+      "norm_label": "loadinputs()"
+    },
+    {
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "verdict_runs_route_get",
+      "community": 24,
+      "norm_label": "get()"
+    },
+    {
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "verdict_runs_route_post",
+      "community": 24,
+      "norm_label": "post()"
     },
     {
       "label": "route.js",
@@ -740,7 +830,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "invitations_route",
-      "community": 4,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -750,7 +840,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "invitations_route_requestschema",
-      "community": 4,
+      "community": 6,
       "norm_label": "requestschema"
     },
     {
@@ -760,7 +850,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "invitations_route_invitationurl",
-      "community": 4,
+      "community": 6,
       "norm_label": "invitationurl()"
     },
     {
@@ -770,7 +860,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "invitations_route_get",
-      "community": 4,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -790,7 +880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "userid_route",
-      "community": 4,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -800,7 +890,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "userid_route_requestschema",
-      "community": 4,
+      "community": 6,
       "norm_label": "requestschema"
     },
     {
@@ -820,7 +910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "members_route",
-      "community": 4,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -860,7 +950,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "projects_route_get",
-      "community": 6,
+      "community": 24,
       "norm_label": "get()"
     },
     {
@@ -870,7 +960,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "projects_route_post",
-      "community": 6,
+      "community": 24,
       "norm_label": "post()"
     },
     {
@@ -880,7 +970,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "workspaces_route",
-      "community": 24,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -890,7 +980,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "workspaces_route_createschema",
-      "community": 24,
+      "community": 6,
       "norm_label": "createschema"
     },
     {
@@ -900,7 +990,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "workspaces_route_slugfromname",
-      "community": 24,
+      "community": 6,
       "norm_label": "slugfromname()"
     },
     {
@@ -1040,7 +1130,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "db_connection",
-      "community": 24,
+      "community": 31,
       "norm_label": "connection.js"
     },
     {
@@ -1050,7 +1140,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "db_connection_databaseunavailableerror",
-      "community": 24,
+      "community": 31,
       "norm_label": "databaseunavailableerror"
     },
     {
@@ -1060,7 +1150,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "db_connection_databaseunavailableerror_constructor",
-      "community": 24,
+      "community": 31,
       "norm_label": ".constructor()"
     },
     {
@@ -1070,7 +1160,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "db_connection_resolvedatabaseconnectionstring",
-      "community": 24,
+      "community": 31,
       "norm_label": "resolvedatabaseconnectionstring()"
     },
     {
@@ -1080,7 +1170,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "db_connection_opendatabase",
-      "community": 24,
+      "community": 31,
       "norm_label": "opendatabase()"
     },
     {
@@ -1090,7 +1180,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "db_connection_withdatabase",
-      "community": 24,
+      "community": 31,
       "norm_label": "withdatabase()"
     },
     {
@@ -1100,7 +1190,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "db_core_crud_integration_test",
-      "community": 6,
+      "community": 24,
       "norm_label": "core-crud.integration.test.mjs"
     },
     {
@@ -1110,7 +1200,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "db_core_crud_integration_test_request",
-      "community": 6,
+      "community": 24,
       "norm_label": "request()"
     },
     {
@@ -1120,7 +1210,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "db_core_crud_integration_test_json",
-      "community": 6,
+      "community": 24,
       "norm_label": "json()"
     },
     {
@@ -1130,7 +1220,47 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "db_core_crud_integration_test_user",
-      "community": 6,
+      "community": 24,
+      "norm_label": "user()"
+    },
+    {
+      "label": "governance.integration.test.mjs",
+      "file_type": "code",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "db_governance_integration_test",
+      "community": 24,
+      "norm_label": "governance.integration.test.mjs"
+    },
+    {
+      "label": "request()",
+      "file_type": "code",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "db_governance_integration_test_request",
+      "community": 24,
+      "norm_label": "request()"
+    },
+    {
+      "label": "json()",
+      "file_type": "code",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "db_governance_integration_test_json",
+      "community": 24,
+      "norm_label": "json()"
+    },
+    {
+      "label": "user()",
+      "file_type": "code",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "db_governance_integration_test_user",
+      "community": 24,
       "norm_label": "user()"
     },
     {
@@ -1310,7 +1440,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "db_schema_workspaces",
-      "community": 24,
+      "community": 6,
       "norm_label": "workspaces"
     },
     {
@@ -1320,7 +1450,7 @@
       "source_location": "L180",
       "_origin": "ast",
       "id": "db_schema_memberships",
-      "community": 4,
+      "community": 6,
       "norm_label": "memberships"
     },
     {
@@ -1330,7 +1460,7 @@
       "source_location": "L203",
       "_origin": "ast",
       "id": "db_schema_invitations",
-      "community": 4,
+      "community": 6,
       "norm_label": "invitations"
     },
     {
@@ -1350,7 +1480,7 @@
       "source_location": "L264",
       "_origin": "ast",
       "id": "db_schema_releases",
-      "community": 6,
+      "community": 24,
       "norm_label": "releases"
     },
     {
@@ -1490,7 +1620,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "seeds_nova_2_4_sha256",
-      "community": 6,
+      "community": 1,
       "norm_label": "sha256()"
     },
     {
@@ -1680,7 +1810,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "package_scripts",
-      "community": 2,
+      "community": 29,
       "norm_label": "scripts"
     },
     {
@@ -1690,7 +1820,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "package_scripts_dev",
-      "community": 2,
+      "community": 29,
       "norm_label": "dev"
     },
     {
@@ -1700,7 +1830,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "package_scripts_build",
-      "community": 2,
+      "community": 29,
       "norm_label": "build"
     },
     {
@@ -1710,7 +1840,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "package_scripts_start",
-      "community": 2,
+      "community": 29,
       "norm_label": "start"
     },
     {
@@ -1720,7 +1850,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "package_scripts_build_worker",
-      "community": 2,
+      "community": 29,
       "norm_label": "build:worker"
     },
     {
@@ -1730,7 +1860,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "package_scripts_preview",
-      "community": 2,
+      "community": 29,
       "norm_label": "preview"
     },
     {
@@ -1740,7 +1870,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "package_scripts_preview_e2e",
-      "community": 2,
+      "community": 29,
       "norm_label": "preview:e2e"
     },
     {
@@ -1750,7 +1880,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "package_scripts_test",
-      "community": 2,
+      "community": 29,
       "norm_label": "test"
     },
     {
@@ -1760,7 +1890,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "package_scripts_test_e2e",
-      "community": 2,
+      "community": 29,
       "norm_label": "test:e2e"
     },
     {
@@ -1770,7 +1900,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "package_scripts_db_up",
-      "community": 2,
+      "community": 29,
       "norm_label": "db:up"
     },
     {
@@ -1780,7 +1910,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "package_scripts_db_down",
-      "community": 2,
+      "community": 29,
       "norm_label": "db:down"
     },
     {
@@ -1790,7 +1920,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "package_scripts_db_generate",
-      "community": 2,
+      "community": 29,
       "norm_label": "db:generate"
     },
     {
@@ -1800,7 +1930,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "package_scripts_db_check",
-      "community": 2,
+      "community": 29,
       "norm_label": "db:check"
     },
     {
@@ -1810,7 +1940,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "package_scripts_db_migrate",
-      "community": 2,
+      "community": 29,
       "norm_label": "db:migrate"
     },
     {
@@ -1820,7 +1950,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "package_scripts_db_seed_nova",
-      "community": 2,
+      "community": 29,
       "norm_label": "db:seed:nova"
     },
     {
@@ -1830,7 +1960,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "package_scripts_test_db",
-      "community": 2,
+      "community": 29,
       "norm_label": "test:db"
     },
     {
@@ -1840,7 +1970,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "package_scripts_audit_prod",
-      "community": 2,
+      "community": 29,
       "norm_label": "audit:prod"
     },
     {
@@ -1850,7 +1980,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "package_scripts_verify_worker",
-      "community": 2,
+      "community": 29,
       "norm_label": "verify:worker"
     },
     {
@@ -1860,7 +1990,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "package_scripts_check",
-      "community": 2,
+      "community": 29,
       "norm_label": "check"
     },
     {
@@ -2437,7 +2567,7 @@
       "label": "capabilities",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L41",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "src_productapp_capabilities",
       "community": 23,
@@ -2447,7 +2577,7 @@
       "label": "can()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L49",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "src_productapp_can",
       "community": 23,
@@ -2457,7 +2587,7 @@
       "label": "api()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L53",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "src_productapp_api",
       "community": 23,
@@ -2467,7 +2597,7 @@
       "label": "formatDate()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L74",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "src_productapp_formatdate",
       "community": 23,
@@ -2477,7 +2607,7 @@
       "label": "initials()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L82",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "src_productapp_initials",
       "community": 23,
@@ -2487,7 +2617,7 @@
       "label": "Field()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L93",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "src_productapp_field",
       "community": 23,
@@ -2497,7 +2627,7 @@
       "label": "Dialog()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L103",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "src_productapp_dialog",
       "community": 23,
@@ -2507,7 +2637,7 @@
       "label": "SubmitButton()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L134",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "src_productapp_submitbutton",
       "community": 23,
@@ -2517,7 +2647,7 @@
       "label": "AuthScreen()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L142",
+      "source_location": "L144",
       "_origin": "ast",
       "id": "src_productapp_authscreen",
       "community": 23,
@@ -2527,7 +2657,7 @@
       "label": "EmptyWorkspace()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L255",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "src_productapp_emptyworkspace",
       "community": 23,
@@ -2537,7 +2667,7 @@
       "label": "CreationDialog()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L295",
+      "source_location": "L297",
       "_origin": "ast",
       "id": "src_productapp_creationdialog",
       "community": 23,
@@ -2547,7 +2677,7 @@
       "label": "TeamDialog()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L480",
+      "source_location": "L544",
       "_origin": "ast",
       "id": "src_productapp_teamdialog",
       "community": 23,
@@ -2557,7 +2687,7 @@
       "label": "RecordSection()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L582",
+      "source_location": "L646",
       "_origin": "ast",
       "id": "src_productapp_recordsection",
       "community": 23,
@@ -2567,7 +2697,7 @@
       "label": "EmptyState()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L598",
+      "source_location": "L662",
       "_origin": "ast",
       "id": "src_productapp_emptystate",
       "community": 23,
@@ -2577,7 +2707,7 @@
       "label": "ReleaseWorkspace()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L613",
+      "source_location": "L677",
       "_origin": "ast",
       "id": "src_productapp_releaseworkspace",
       "community": 23,
@@ -2587,7 +2717,7 @@
       "label": "ProductShell()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L899",
+      "source_location": "L996",
       "_origin": "ast",
       "id": "src_productapp_productshell",
       "community": 23,
@@ -2597,7 +2727,7 @@
       "label": "ProductApp()",
       "file_type": "code",
       "source_file": "src/ProductApp.jsx",
-      "source_location": "L1053",
+      "source_location": "L1152",
       "_origin": "ast",
       "id": "src_productapp_productapp",
       "community": 23,
@@ -2700,7 +2830,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json",
-      "community": 6,
+      "community": 1,
       "norm_label": "canonical-json.js"
     },
     {
@@ -2710,7 +2840,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json_sortcanonical",
-      "community": 6,
+      "community": 1,
       "norm_label": "sortcanonical()"
     },
     {
@@ -2720,7 +2850,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "lib_canonical_json_canonicaljson",
-      "community": 6,
+      "community": 1,
       "norm_label": "canonicaljson()"
     },
     {
@@ -2730,7 +2860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_canonical_json_test",
-      "community": 6,
+      "community": 1,
       "norm_label": "canonical-json.test.js"
     },
     {
@@ -2740,7 +2870,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_snapshot",
-      "community": 1,
+      "community": 30,
       "norm_label": "snapshot.js"
     },
     {
@@ -2750,7 +2880,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "lib_snapshot_decisionschema",
-      "community": 1,
+      "community": 30,
       "norm_label": "decisionschema"
     },
     {
@@ -2760,7 +2890,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "lib_snapshot_citationschema",
-      "community": 1,
+      "community": 30,
       "norm_label": "citationschema"
     },
     {
@@ -2770,7 +2900,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "lib_snapshot_assessmentschema",
-      "community": 1,
+      "community": 30,
       "norm_label": "assessmentschema"
     },
     {
@@ -2780,7 +2910,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "lib_snapshot_portablestateschema",
-      "community": 1,
+      "community": 30,
       "norm_label": "portablestateschema"
     },
     {
@@ -2790,7 +2920,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "lib_snapshot_sanitizeportablestate",
-      "community": 1,
+      "community": 30,
       "norm_label": "sanitizeportablestate()"
     },
     {
@@ -2800,7 +2930,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "lib_snapshot_encodebase64url",
-      "community": 1,
+      "community": 30,
       "norm_label": "encodebase64url()"
     },
     {
@@ -2810,7 +2940,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "lib_snapshot_decodebase64url",
-      "community": 1,
+      "community": 30,
       "norm_label": "decodebase64url()"
     },
     {
@@ -2820,7 +2950,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "lib_snapshot_serializeportablestate",
-      "community": 1,
+      "community": 30,
       "norm_label": "serializeportablestate()"
     },
     {
@@ -2830,7 +2960,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "lib_snapshot_parseportablestate",
-      "community": 1,
+      "community": 30,
       "norm_label": "parseportablestate()"
     },
     {
@@ -2840,7 +2970,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "lib_snapshot_statefromlocationhash",
-      "community": 1,
+      "community": 30,
       "norm_label": "statefromlocationhash()"
     },
     {
@@ -2850,7 +2980,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "lib_snapshot_buildshareurl",
-      "community": 1,
+      "community": 30,
       "norm_label": "buildshareurl()"
     },
     {
@@ -2860,7 +2990,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "lib_snapshot_sortvalue",
-      "community": 1,
+      "community": 30,
       "norm_label": "sortvalue()"
     },
     {
@@ -2870,7 +3000,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "lib_snapshot_canonicaljson",
-      "community": 1,
+      "community": 30,
       "norm_label": "canonicaljson()"
     },
     {
@@ -2880,7 +3010,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "lib_snapshot_sha256",
-      "community": 1,
+      "community": 30,
       "norm_label": "sha256()"
     },
     {
@@ -2890,7 +3020,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "lib_snapshot_createevidenceexport",
-      "community": 1,
+      "community": 30,
       "norm_label": "createevidenceexport()"
     },
     {
@@ -2900,7 +3030,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_snapshot_test",
-      "community": 1,
+      "community": 30,
       "norm_label": "snapshot.test.js"
     },
     {
@@ -2910,7 +3040,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "lib_snapshot_test_state",
-      "community": 1,
+      "community": 30,
       "norm_label": "state"
     },
     {
@@ -3100,7 +3230,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "server_audit_verifyauditchain",
-      "community": 6,
+      "community": 1,
       "norm_label": "verifyauditchain()"
     },
     {
@@ -3230,7 +3360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_errors",
-      "community": 4,
+      "community": 6,
       "norm_label": "errors.js"
     },
     {
@@ -3240,7 +3370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_errors_httperror",
-      "community": 4,
+      "community": 6,
       "norm_label": "httperror"
     },
     {
@@ -3250,7 +3380,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "server_errors_httperror_constructor",
-      "community": 4,
+      "community": 6,
       "norm_label": ".constructor()"
     },
     {
@@ -3260,7 +3390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_http",
-      "community": 4,
+      "community": 6,
       "norm_label": "http.js"
     },
     {
@@ -3270,7 +3400,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "server_http_parsejsonbody",
-      "community": 4,
+      "community": 6,
       "norm_label": "parsejsonbody()"
     },
     {
@@ -3280,7 +3410,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "server_http_requiresameoriginmutation",
-      "community": 4,
+      "community": 6,
       "norm_label": "requiresameoriginmutation()"
     },
     {
@@ -3290,7 +3420,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "server_http_requireauthenticateduser",
-      "community": 4,
+      "community": 6,
       "norm_label": "requireauthenticateduser()"
     },
     {
@@ -3334,13 +3464,23 @@
       "norm_label": "activeappendonlyrecords()"
     },
     {
+      "label": "validateAppendOnlyChain()",
+      "file_type": "code",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "server_immutable_records_validateappendonlychain",
+      "community": 5,
+      "norm_label": "validateappendonlychain()"
+    },
+    {
       "label": "rbac.js",
       "file_type": "code",
       "source_file": "src/server/rbac.js",
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_rbac",
-      "community": 4,
+      "community": 6,
       "norm_label": "rbac.js"
     },
     {
@@ -3350,7 +3490,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "server_rbac_capabilities",
-      "community": 4,
+      "community": 6,
       "norm_label": "capabilities"
     },
     {
@@ -3360,7 +3500,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "server_rbac_rolecan",
-      "community": 4,
+      "community": 6,
       "norm_label": "rolecan()"
     },
     {
@@ -3370,7 +3510,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "server_rbac_requireworkspacecapability",
-      "community": 4,
+      "community": 6,
       "norm_label": "requireworkspacecapability()"
     },
     {
@@ -3380,7 +3520,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "server_rbac_requireprojectcapability",
-      "community": 4,
+      "community": 6,
       "norm_label": "requireprojectcapability()"
     },
     {
@@ -3390,7 +3530,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "server_rbac_requirereleasecapability",
-      "community": 4,
+      "community": 6,
       "norm_label": "requirereleasecapability()"
     },
     {
@@ -3400,8 +3540,68 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_rbac_test",
-      "community": 4,
+      "community": 6,
       "norm_label": "rbac.test.js"
+    },
+    {
+      "label": "verdict-engine.js",
+      "file_type": "code",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_verdict_engine",
+      "community": 5,
+      "norm_label": "verdict-engine.js"
+    },
+    {
+      "label": "iso()",
+      "file_type": "code",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "server_verdict_engine_iso",
+      "community": 5,
+      "norm_label": "iso()"
+    },
+    {
+      "label": "buildVerdictInput()",
+      "file_type": "code",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "server_verdict_engine_buildverdictinput",
+      "community": 5,
+      "norm_label": "buildverdictinput()"
+    },
+    {
+      "label": "evaluateVerdict()",
+      "file_type": "code",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "server_verdict_engine_evaluateverdict",
+      "community": 5,
+      "norm_label": "evaluateverdict()"
+    },
+    {
+      "label": "verdict-engine.test.js",
+      "file_type": "code",
+      "source_file": "src/server/verdict-engine.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server_verdict_engine_test",
+      "community": 5,
+      "norm_label": "verdict-engine.test.js"
+    },
+    {
+      "label": "record()",
+      "file_type": "code",
+      "source_file": "src/server/verdict-engine.test.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "server_verdict_engine_test_record",
+      "community": 5,
+      "norm_label": "record()"
     },
     {
       "label": "release-truth.spec.js",
@@ -4417,7 +4617,18 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
+      "target": "api_security"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "decisions_route",
       "target": "api_security",
       "confidence_score": 1.0
     },
@@ -4428,9 +4639,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4494,9 +4705,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4505,9 +4716,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4527,9 +4738,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4538,9 +4749,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "api_security",
-      "confidence_score": 1.0
+      "target": "api_security"
     },
     {
       "relation": "imports_from",
@@ -4574,6 +4785,17 @@
       "confidence_score": 1.0,
       "source": "userid_route",
       "target": "api_security"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "api_security",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -5132,7 +5354,18 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
+      "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "decisions_route",
       "target": "api_security_jsonresponse",
       "confidence_score": 1.0
     },
@@ -5143,9 +5376,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -5209,9 +5442,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -5220,9 +5453,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -5242,9 +5475,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -5253,9 +5486,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "api_security_jsonresponse",
-      "confidence_score": 1.0
+      "target": "api_security_jsonresponse"
     },
     {
       "relation": "imports",
@@ -5322,6 +5555,17 @@
       "confidence_score": 1.0,
       "source": "userid_route",
       "target": "api_security_jsonresponse"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "api_security_jsonresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -5773,7 +6017,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "register_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "register_route",
       "confidence_score": 1.0
     },
@@ -5947,9 +6202,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "register_route_post",
-      "confidence_score": 1.0
+      "target": "register_route_post"
     },
     {
       "relation": "calls",
@@ -5958,7 +6213,29 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test_user",
+      "target": "register_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "register_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "db_governance_integration_test_user",
       "target": "register_route_post",
       "confidence_score": 1.0
     },
@@ -6137,6 +6414,17 @@
       "target": "accept_route"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "accept_route",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6170,13 +6458,35 @@
       "target": "accept_route_post"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "accept_route_post",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "releases_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "releases_route",
       "confidence_score": 1.0
     },
@@ -6187,9 +6497,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -6198,9 +6508,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "db_schema_releases",
-      "confidence_score": 1.0
+      "target": "db_schema_releases"
     },
     {
       "relation": "contains",
@@ -6208,9 +6518,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "releases_route_get",
-      "confidence_score": 1.0
+      "target": "releases_route_get"
     },
     {
       "relation": "contains",
@@ -6218,9 +6528,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "releases_route_post",
-      "confidence_score": 1.0
+      "target": "releases_route_post"
     },
     {
       "relation": "contains",
@@ -6228,9 +6538,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "releases_route_releaseschema",
-      "confidence_score": 1.0
+      "target": "releases_route_releaseschema"
     },
     {
       "relation": "imports_from",
@@ -6239,9 +6549,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -6250,9 +6560,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -6261,9 +6571,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -6272,9 +6582,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -6283,9 +6593,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -6294,9 +6604,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -6305,9 +6615,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -6316,9 +6626,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -6327,9 +6637,9 @@
       "source_file": "app/api/projects/[projectId]/releases/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releases_route",
-      "target": "server_rbac_requireprojectcapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireprojectcapability"
     },
     {
       "relation": "imports",
@@ -6338,9 +6648,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "releases_route_get",
-      "confidence_score": 1.0
+      "target": "releases_route_get"
     },
     {
       "relation": "calls",
@@ -6360,7 +6670,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "releases_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "releases_route_post",
       "confidence_score": 1.0
     },
@@ -6382,9 +6703,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -6393,9 +6714,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "db_schema_projects",
-      "confidence_score": 1.0
+      "target": "db_schema_projects"
     },
     {
       "relation": "contains",
@@ -6403,9 +6724,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "projectid_route_get",
-      "confidence_score": 1.0
+      "target": "projectid_route_get"
     },
     {
       "relation": "contains",
@@ -6413,9 +6734,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "projectid_route_patch",
-      "confidence_score": 1.0
+      "target": "projectid_route_patch"
     },
     {
       "relation": "contains",
@@ -6423,9 +6744,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "projectid_route_updateschema",
-      "confidence_score": 1.0
+      "target": "projectid_route_updateschema"
     },
     {
       "relation": "imports_from",
@@ -6434,9 +6755,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -6445,9 +6766,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -6456,9 +6777,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -6467,9 +6788,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -6478,9 +6799,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -6489,9 +6810,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -6500,9 +6821,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -6511,9 +6832,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -6522,9 +6843,9 @@
       "source_file": "app/api/projects/[projectId]/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projectid_route",
-      "target": "server_rbac_requireprojectcapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireprojectcapability"
     },
     {
       "relation": "calls",
@@ -6554,9 +6875,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "claims_route_claimschema",
-      "confidence_score": 1.0
+      "target": "claims_route_claimschema"
     },
     {
       "relation": "contains",
@@ -6564,9 +6885,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "claims_route_get",
-      "confidence_score": 1.0
+      "target": "claims_route_get"
     },
     {
       "relation": "contains",
@@ -6574,9 +6895,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "claims_route_post",
-      "confidence_score": 1.0
+      "target": "claims_route_post"
     },
     {
       "relation": "imports_from",
@@ -6585,9 +6906,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -6596,9 +6917,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "db_schema_claims",
-      "confidence_score": 1.0
+      "target": "db_schema_claims"
     },
     {
       "relation": "imports_from",
@@ -6607,9 +6928,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -6618,9 +6939,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -6629,9 +6950,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -6640,9 +6961,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -6651,9 +6972,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -6662,9 +6983,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -6673,9 +6994,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -6684,9 +7005,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_immutable_records",
-      "confidence_score": 1.0
+      "target": "server_immutable_records"
     },
     {
       "relation": "imports",
@@ -6695,9 +7016,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_immutable_records_activeappendonlyrecords",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_activeappendonlyrecords"
     },
     {
       "relation": "imports",
@@ -6706,9 +7027,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_immutable_records_contenthash",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_contenthash"
     },
     {
       "relation": "imports_from",
@@ -6717,9 +7038,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -6728,9 +7049,9 @@
       "source_file": "app/api/releases/[releaseId]/claims/route.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claims_route",
-      "target": "server_rbac_requirereleasecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requirereleasecapability"
     },
     {
       "relation": "imports_from",
@@ -6739,7 +7060,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "claims_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "claims_route",
       "confidence_score": 1.0
     },
@@ -6772,9 +7104,303 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "claims_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "claims_route_post",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "decisions_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "db_schema_claimevidencelinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "db_schema_claims",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "db_schema_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "db_schema_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "decisions_route_decisionschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "decisions_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "decisions_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_errors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_errors_httperror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_immutable_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_immutable_records_activeappendonlyrecords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_immutable_records_contenthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "decisions_route",
+      "target": "server_rbac_requirereleasecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "decisions_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "decisions_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/decisions/route.js",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "decisions_route_post",
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports_from",
@@ -6783,7 +7409,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "evidence_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "evidence_route",
       "confidence_score": 1.0
     },
@@ -6794,9 +7431,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -6805,9 +7442,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "db_schema_claimevidencelinks",
-      "confidence_score": 1.0
+      "target": "db_schema_claimevidencelinks"
     },
     {
       "relation": "imports",
@@ -6816,9 +7453,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "db_schema_claims",
-      "confidence_score": 1.0
+      "target": "db_schema_claims"
     },
     {
       "relation": "imports",
@@ -6827,9 +7464,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "db_schema_evidence",
-      "confidence_score": 1.0
+      "target": "db_schema_evidence"
     },
     {
       "relation": "contains",
@@ -6837,9 +7474,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "evidence_route_evidenceschema",
-      "confidence_score": 1.0
+      "target": "evidence_route_evidenceschema"
     },
     {
       "relation": "contains",
@@ -6847,9 +7484,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "evidence_route_get",
-      "confidence_score": 1.0
+      "target": "evidence_route_get"
     },
     {
       "relation": "contains",
@@ -6857,9 +7494,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "evidence_route_post",
-      "confidence_score": 1.0
+      "target": "evidence_route_post"
     },
     {
       "relation": "imports_from",
@@ -6868,9 +7505,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -6879,9 +7516,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -6890,9 +7527,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_errors",
-      "confidence_score": 1.0
+      "target": "server_errors"
     },
     {
       "relation": "imports",
@@ -6901,9 +7538,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_errors_httperror",
-      "confidence_score": 1.0
+      "target": "server_errors_httperror"
     },
     {
       "relation": "imports_from",
@@ -6912,9 +7549,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -6923,9 +7560,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -6934,9 +7571,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -6945,9 +7582,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -6956,9 +7593,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -6967,9 +7604,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_immutable_records",
-      "confidence_score": 1.0
+      "target": "server_immutable_records"
     },
     {
       "relation": "imports",
@@ -6978,9 +7615,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_immutable_records_activeappendonlyrecords",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_activeappendonlyrecords"
     },
     {
       "relation": "imports",
@@ -6989,9 +7626,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_immutable_records_contenthash",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_contenthash"
     },
     {
       "relation": "imports_from",
@@ -7000,9 +7637,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -7011,9 +7648,9 @@
       "source_file": "app/api/releases/[releaseId]/evidence/route.js",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "evidence_route",
-      "target": "server_rbac_requirereleasecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requirereleasecapability"
     },
     {
       "relation": "calls",
@@ -7033,7 +7670,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "evidence_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "evidence_route_post",
       "confidence_score": 1.0
     },
@@ -7055,9 +7703,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "releaseid_route",
-      "confidence_score": 1.0
+      "target": "releaseid_route"
     },
     {
       "relation": "imports_from",
@@ -7066,9 +7714,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -7077,9 +7725,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_auditevents",
-      "confidence_score": 1.0
+      "target": "db_schema_auditevents"
     },
     {
       "relation": "imports",
@@ -7088,9 +7736,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_claimevidencelinks",
-      "confidence_score": 1.0
+      "target": "db_schema_claimevidencelinks"
     },
     {
       "relation": "imports",
@@ -7099,9 +7747,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_claims",
-      "confidence_score": 1.0
+      "target": "db_schema_claims"
     },
     {
       "relation": "imports",
@@ -7110,9 +7758,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_decisions",
-      "confidence_score": 1.0
+      "target": "db_schema_decisions"
     },
     {
       "relation": "imports",
@@ -7121,9 +7769,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_evidence",
-      "confidence_score": 1.0
+      "target": "db_schema_evidence"
     },
     {
       "relation": "imports",
@@ -7132,9 +7780,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_projects",
-      "confidence_score": 1.0
+      "target": "db_schema_projects"
     },
     {
       "relation": "imports",
@@ -7143,9 +7791,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_releases",
-      "confidence_score": 1.0
+      "target": "db_schema_releases"
     },
     {
       "relation": "imports",
@@ -7154,9 +7802,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_users",
-      "confidence_score": 1.0
+      "target": "db_schema_users"
     },
     {
       "relation": "imports",
@@ -7165,9 +7813,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_verdictruns",
-      "confidence_score": 1.0
+      "target": "db_schema_verdictruns"
     },
     {
       "relation": "imports",
@@ -7176,9 +7824,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "db_schema_workspaces",
-      "confidence_score": 1.0
+      "target": "db_schema_workspaces"
     },
     {
       "relation": "contains",
@@ -7186,9 +7834,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "releaseid_route_get",
-      "confidence_score": 1.0
+      "target": "releaseid_route_get"
     },
     {
       "relation": "contains",
@@ -7196,9 +7844,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L151",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "releaseid_route_patch",
-      "confidence_score": 1.0
+      "target": "releaseid_route_patch"
     },
     {
       "relation": "contains",
@@ -7206,9 +7854,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "releaseid_route_updateschema",
-      "confidence_score": 1.0
+      "target": "releaseid_route_updateschema"
     },
     {
       "relation": "imports_from",
@@ -7217,9 +7865,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -7228,9 +7876,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -7239,9 +7887,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -7250,9 +7898,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -7261,9 +7909,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -7272,9 +7920,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -7283,9 +7931,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -7294,9 +7942,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_immutable_records",
-      "confidence_score": 1.0
+      "target": "server_immutable_records"
     },
     {
       "relation": "imports",
@@ -7305,9 +7953,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_immutable_records_activeappendonlyrecords",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_activeappendonlyrecords"
     },
     {
       "relation": "imports_from",
@@ -7316,9 +7964,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -7327,9 +7975,9 @@
       "source_file": "app/api/releases/[releaseId]/route.js",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "releaseid_route",
-      "target": "server_rbac_requirereleasecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requirereleasecapability"
     },
     {
       "relation": "imports",
@@ -7338,9 +7986,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "releaseid_route_get",
-      "confidence_score": 1.0
+      "target": "releaseid_route_get"
     },
     {
       "relation": "calls",
@@ -7362,6 +8010,310 @@
       "source_location": "L152",
       "weight": 1.0,
       "source": "releaseid_route_patch",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "verdict_runs_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "db_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "db_schema_claimevidencelinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "db_schema_claims",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "db_schema_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "db_schema_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "db_schema_verdictruns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_audit_appendauditevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_http_databaseroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_http_parsejsonbody",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_http_requireauthenticateduser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_http_requiresameoriginmutation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_immutable_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_immutable_records_contenthash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_rbac_requirereleasecapability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_verdict_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_verdict_engine_buildverdictinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "server_verdict_engine_evaluateverdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "verdict_runs_route_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "verdict_runs_route_loadinputs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "verdict_runs_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "verdict_runs_route",
+      "target": "verdict_runs_route_runschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "verdict_runs_route_get",
+      "target": "server_http_databaseroute"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "verdict_runs_route_post",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/releases/[releaseId]/verdict-runs/route.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "verdict_runs_route_post",
       "target": "server_http_databaseroute"
     },
     {
@@ -7457,6 +8409,17 @@
       "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test",
       "target": "invitations_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "invitations_route",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -7684,6 +8647,17 @@
       "confidence_score": 1.0,
       "source": "db_auth_rbac_integration_test_inviteandaccept",
       "target": "invitations_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "invitations_route_post",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -8030,7 +9004,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "projects_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "projects_route",
       "confidence_score": 1.0
     },
@@ -8041,9 +9026,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "db_schema",
-      "confidence_score": 1.0
+      "target": "db_schema"
     },
     {
       "relation": "imports",
@@ -8052,9 +9037,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "db_schema_projects",
-      "confidence_score": 1.0
+      "target": "db_schema_projects"
     },
     {
       "relation": "contains",
@@ -8062,9 +9047,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "projects_route_get",
-      "confidence_score": 1.0
+      "target": "projects_route_get"
     },
     {
       "relation": "contains",
@@ -8072,9 +9057,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "projects_route_post",
-      "confidence_score": 1.0
+      "target": "projects_route_post"
     },
     {
       "relation": "contains",
@@ -8082,9 +9067,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "projects_route_projectschema",
-      "confidence_score": 1.0
+      "target": "projects_route_projectschema"
     },
     {
       "relation": "imports_from",
@@ -8093,9 +9078,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_audit",
-      "confidence_score": 1.0
+      "target": "server_audit"
     },
     {
       "relation": "imports",
@@ -8104,9 +9089,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_audit_appendauditevent",
-      "confidence_score": 1.0
+      "target": "server_audit_appendauditevent"
     },
     {
       "relation": "imports_from",
@@ -8115,9 +9100,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_http",
-      "confidence_score": 1.0
+      "target": "server_http"
     },
     {
       "relation": "imports",
@@ -8126,9 +9111,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_http_databaseroute",
-      "confidence_score": 1.0
+      "target": "server_http_databaseroute"
     },
     {
       "relation": "imports",
@@ -8137,9 +9122,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_http_parsejsonbody",
-      "confidence_score": 1.0
+      "target": "server_http_parsejsonbody"
     },
     {
       "relation": "imports",
@@ -8148,9 +9133,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_http_requireauthenticateduser",
-      "confidence_score": 1.0
+      "target": "server_http_requireauthenticateduser"
     },
     {
       "relation": "imports",
@@ -8159,9 +9144,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_http_requiresameoriginmutation",
-      "confidence_score": 1.0
+      "target": "server_http_requiresameoriginmutation"
     },
     {
       "relation": "imports_from",
@@ -8170,9 +9155,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_rbac",
-      "confidence_score": 1.0
+      "target": "server_rbac"
     },
     {
       "relation": "imports",
@@ -8181,9 +9166,9 @@
       "source_file": "app/api/workspaces/[workspaceId]/projects/route.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "projects_route",
-      "target": "server_rbac_requireworkspacecapability",
-      "confidence_score": 1.0
+      "target": "server_rbac_requireworkspacecapability"
     },
     {
       "relation": "imports",
@@ -8192,9 +9177,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "projects_route_get",
-      "confidence_score": 1.0
+      "target": "projects_route_get"
     },
     {
       "relation": "calls",
@@ -8214,7 +9199,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "projects_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "projects_route_post",
       "confidence_score": 1.0
     },
@@ -8247,7 +9243,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "workspaces_route"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "workspaces_route",
       "confidence_score": 1.0
     },
@@ -8441,7 +9448,18 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
+      "target": "workspaces_route_post"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
       "target": "workspaces_route_post",
       "confidence_score": 1.0
     },
@@ -8515,9 +9533,9 @@
       "source_file": "app/page.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_page",
-      "target": "src_productapp",
-      "confidence_score": 1.0
+      "target": "src_productapp"
     },
     {
       "relation": "imports",
@@ -8526,9 +9544,9 @@
       "source_file": "app/page.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_page",
-      "target": "src_productapp_productapp",
-      "confidence_score": 1.0
+      "target": "src_productapp_productapp"
     },
     {
       "relation": "contains",
@@ -8812,9 +9830,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "db_core_crud_integration_test_json",
-      "confidence_score": 1.0
+      "target": "db_core_crud_integration_test_json"
     },
     {
       "relation": "contains",
@@ -8822,9 +9840,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "db_core_crud_integration_test_request",
-      "confidence_score": 1.0
+      "target": "db_core_crud_integration_test_request"
     },
     {
       "relation": "contains",
@@ -8832,9 +9850,9 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test",
-      "target": "db_core_crud_integration_test_user",
-      "confidence_score": 1.0
+      "target": "db_core_crud_integration_test_user"
     },
     {
       "relation": "calls",
@@ -8843,8 +9861,49 @@
       "source_file": "db/core-crud.integration.test.mjs",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_core_crud_integration_test_user",
-      "target": "db_core_crud_integration_test_json",
+      "target": "db_core_crud_integration_test_json"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "db_governance_integration_test_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "db_governance_integration_test_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "db_governance_integration_test",
+      "target": "db_governance_integration_test_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "db/governance.integration.test.mjs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "db_governance_integration_test_user",
+      "target": "db_governance_integration_test_json",
       "confidence_score": 1.0
     },
     {
@@ -10454,9 +11513,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_api",
-      "confidence_score": 1.0
+      "target": "src_productapp_api"
     },
     {
       "relation": "contains",
@@ -10464,9 +11523,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L142",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_authscreen",
-      "confidence_score": 1.0
+      "target": "src_productapp_authscreen"
     },
     {
       "relation": "contains",
@@ -10474,9 +11533,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_can",
-      "confidence_score": 1.0
+      "target": "src_productapp_can"
     },
     {
       "relation": "contains",
@@ -10484,9 +11543,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_capabilities",
-      "confidence_score": 1.0
+      "target": "src_productapp_capabilities"
     },
     {
       "relation": "contains",
@@ -10494,9 +11553,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L295",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_creationdialog",
-      "confidence_score": 1.0
+      "target": "src_productapp_creationdialog"
     },
     {
       "relation": "contains",
@@ -10504,9 +11563,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_dialog",
-      "confidence_score": 1.0
+      "target": "src_productapp_dialog"
     },
     {
       "relation": "contains",
@@ -10514,9 +11573,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L598",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_emptystate",
-      "confidence_score": 1.0
+      "target": "src_productapp_emptystate"
     },
     {
       "relation": "contains",
@@ -10524,9 +11583,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_emptyworkspace",
-      "confidence_score": 1.0
+      "target": "src_productapp_emptyworkspace"
     },
     {
       "relation": "contains",
@@ -10534,9 +11593,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_field",
-      "confidence_score": 1.0
+      "target": "src_productapp_field"
     },
     {
       "relation": "contains",
@@ -10544,9 +11603,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_formatdate",
-      "confidence_score": 1.0
+      "target": "src_productapp_formatdate"
     },
     {
       "relation": "contains",
@@ -10554,9 +11613,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_initials",
-      "confidence_score": 1.0
+      "target": "src_productapp_initials"
     },
     {
       "relation": "contains",
@@ -10564,9 +11623,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_markers",
-      "confidence_score": 1.0
+      "target": "src_productapp_markers"
     },
     {
       "relation": "contains",
@@ -10574,9 +11633,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L1053",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_productapp",
-      "confidence_score": 1.0
+      "target": "src_productapp_productapp"
     },
     {
       "relation": "contains",
@@ -10584,9 +11643,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L899",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_productshell",
-      "confidence_score": 1.0
+      "target": "src_productapp_productshell"
     },
     {
       "relation": "contains",
@@ -10594,9 +11653,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L582",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_recordsection",
-      "confidence_score": 1.0
+      "target": "src_productapp_recordsection"
     },
     {
       "relation": "contains",
@@ -10604,9 +11663,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L613",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_releaseworkspace",
-      "confidence_score": 1.0
+      "target": "src_productapp_releaseworkspace"
     },
     {
       "relation": "contains",
@@ -10614,9 +11673,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L134",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_submitbutton",
-      "confidence_score": 1.0
+      "target": "src_productapp_submitbutton"
     },
     {
       "relation": "contains",
@@ -10624,9 +11683,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L480",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp",
-      "target": "src_productapp_teamdialog",
-      "confidence_score": 1.0
+      "target": "src_productapp_teamdialog"
     },
     {
       "relation": "calls",
@@ -10635,9 +11694,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L943",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp_productshell",
-      "target": "src_productapp_can",
-      "confidence_score": 1.0
+      "target": "src_productapp_can"
     },
     {
       "relation": "calls",
@@ -10646,9 +11705,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L665",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp_releaseworkspace",
-      "target": "src_productapp_can",
-      "confidence_score": 1.0
+      "target": "src_productapp_can"
     },
     {
       "relation": "calls",
@@ -10657,9 +11716,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L723",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp_releaseworkspace",
-      "target": "src_productapp_formatdate",
-      "confidence_score": 1.0
+      "target": "src_productapp_formatdate"
     },
     {
       "relation": "calls",
@@ -10668,9 +11727,9 @@
       "source_file": "src/ProductApp.jsx",
       "source_location": "L969",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_productapp_productshell",
-      "target": "src_productapp_initials",
-      "confidence_score": 1.0
+      "target": "src_productapp_initials"
     },
     {
       "relation": "contains",
@@ -10801,9 +11860,9 @@
       "source_file": "src/server/immutable-records.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_immutable_records",
-      "target": "lib_canonical_json",
-      "confidence_score": 1.0
+      "target": "lib_canonical_json"
     },
     {
       "relation": "calls",
@@ -10867,9 +11926,9 @@
       "source_file": "src/server/immutable-records.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_immutable_records",
-      "target": "lib_canonical_json_canonicaljson",
-      "confidence_score": 1.0
+      "target": "lib_canonical_json_canonicaljson"
     },
     {
       "relation": "calls",
@@ -11330,6 +12389,17 @@
       "target": "lib_verdict"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "lib_verdict",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -11399,11 +12469,55 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "lib_verdict_derivefindings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "server_verdict_engine_evaluateverdict",
+      "target": "lib_verdict_derivefindings"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/lib/verdict.test.js",
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "lib_verdict_test",
+      "target": "lib_verdict_calculateverdict"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "lib_verdict_calculateverdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "server_verdict_engine_evaluateverdict",
       "target": "lib_verdict_calculateverdict"
     },
     {
@@ -11906,9 +13020,9 @@
       "source_file": "src/server/immutable-records.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_immutable_records",
-      "target": "server_immutable_records_activeappendonlyrecords",
-      "confidence_score": 1.0
+      "target": "server_immutable_records_activeappendonlyrecords"
     },
     {
       "relation": "contains",
@@ -11916,9 +13030,74 @@
       "source_file": "src/server/immutable-records.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_immutable_records",
-      "target": "server_immutable_records_contenthash",
+      "target": "server_immutable_records_contenthash"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/immutable-records.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "server_immutable_records",
+      "target": "server_immutable_records_validateappendonlychain",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "server_immutable_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "server_immutable_records_activeappendonlyrecords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "server_verdict_engine_buildverdictinput",
+      "target": "server_immutable_records_activeappendonlyrecords"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "server_immutable_records_validateappendonlychain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "server_verdict_engine_buildverdictinput",
+      "target": "server_immutable_records_validateappendonlychain"
     },
     {
       "relation": "contains",
@@ -12024,6 +13203,79 @@
       "confidence_score": 1.0,
       "source": "server_rbac_requirereleasecapability",
       "target": "server_rbac_requireworkspacecapability"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "server_verdict_engine_buildverdictinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "server_verdict_engine_evaluateverdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "server_verdict_engine",
+      "target": "server_verdict_engine_iso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_verdict_engine_test",
+      "target": "server_verdict_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_verdict_engine_test",
+      "target": "server_verdict_engine_buildverdictinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "server_verdict_engine_test",
+      "target": "server_verdict_engine_evaluateverdict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/verdict-engine.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "server_verdict_engine_test",
+      "target": "server_verdict_engine_test_record",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12517,5 +13769,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9bffc868c90f4ca047f5fa88c1df29095dc4aba0"
+  "built_at_commit": "6847f4eb638903f7273407c9e0a61c3fb79c654b"
 }

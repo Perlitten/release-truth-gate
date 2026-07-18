@@ -33,16 +33,18 @@ const markers = {
   release: "release-create",
   claim: "claim-create",
   evidence: "evidence-create",
+  decision: "decision-create",
+  verdict: "verdict-run",
   invite: "workspace-invitation",
   invitationAccept: "invitation-accept",
   releaseUpdate: "release-update",
 };
 
 const capabilities = {
-  owner: new Set(["project", "release", "claim", "evidence", "decision", "members"]),
-  admin: new Set(["project", "release", "claim", "evidence", "decision", "members"]),
-  contributor: new Set(["project", "release", "claim", "evidence"]),
-  reviewer: new Set(["decision"]),
+  owner: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "members"]),
+  admin: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "members"]),
+  contributor: new Set(["project", "release", "claim", "evidence", "verdict"]),
+  reviewer: new Set(["decision", "verdict"]),
   viewer: new Set(),
 };
 
@@ -295,12 +297,16 @@ function EmptyWorkspace({ user, onCreate }) {
 function CreationDialog({ type, context, onClose, onCreated }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [decisionClaimId, setDecisionClaimId] = useState(
+    context?.claims?.[0]?.id || "",
+  );
   const config = {
     workspace: { title: "New workspace", eyebrow: "Organization boundary" },
     project: { title: "New project", eyebrow: context?.workspace?.name },
     release: { title: "New release", eyebrow: context?.project?.name },
     claim: { title: "Add a claim", eyebrow: context?.release?.name },
     evidence: { title: "Add evidence", eyebrow: context?.release?.name },
+    decision: { title: "Record decision", eyebrow: context?.release?.name },
   }[type];
 
   async function submit(event) {
@@ -343,6 +349,14 @@ function CreationDialog({ type, context, onClose, onCreated }) {
         sourceReference: data.get("sourceReference") || null,
         authorName: data.get("authorName") || null,
         claimIds: data.getAll("claimIds"),
+      };
+    }
+    if (type === "decision") {
+      payload = {
+        claimId: data.get("claimId"),
+        type: data.get("decisionType"),
+        rationale: data.get("rationale"),
+        basedOnEvidenceIds: data.getAll("basedOnEvidenceIds"),
       };
     }
     setBusy(true);
@@ -464,6 +478,56 @@ function CreationDialog({ type, context, onClose, onCreated }) {
             </Field>
             <Field label="Author / observer">
               <input name="authorName" maxLength={160} />
+            </Field>
+          </>
+        )}
+        {type === "decision" && (
+          <>
+            <Field label="Claim">
+              <select
+                name="claimId"
+                value={decisionClaimId}
+                onChange={(event) => setDecisionClaimId(event.target.value)}
+                required
+              >
+                {context.claims.map((claim) => (
+                  <option value={claim.id} key={claim.id}>{claim.title}</option>
+                ))}
+              </select>
+            </Field>
+            <Field label="Decision">
+              <select name="decisionType" defaultValue="approval">
+                <option value="approval">Approve current evidence head</option>
+                <option value="rejection">Reject</option>
+                <option value="risk_acceptance">Accept documented risk</option>
+                <option value="comment">Reviewer comment</option>
+              </select>
+            </Field>
+            <Field label="Rationale" hint="At least 12 characters. Explain why the evidence is sufficient or insufficient.">
+              <textarea name="rationale" rows={4} minLength={12} required />
+            </Field>
+            <Field label="Evidence considered">
+              <div className="rt-checkbox-list">
+                {context.evidence
+                  .filter((item) =>
+                    context.links.some(
+                      (link) =>
+                        link.claimId === decisionClaimId &&
+                        link.evidenceId === item.id,
+                    ),
+                  )
+                  .map((item) => (
+                  <label key={item.id}>
+                    <input
+                      type="checkbox"
+                      name="basedOnEvidenceIds"
+                      value={item.id}
+                      defaultChecked
+                    />
+                    <span>{item.summary}</span>
+                  </label>
+                  ))}
+              </div>
             </Field>
           </>
         )}
@@ -610,7 +674,13 @@ function EmptyState({ icon: Icon, title, body, action, actionLabel }) {
   );
 }
 
-function ReleaseWorkspace({ snapshot, onRefresh, onCreate, onUpdateStatus }) {
+function ReleaseWorkspace({
+  snapshot,
+  onRefresh,
+  onCreate,
+  onUpdateStatus,
+  onRunVerdict,
+}) {
   const [tab, setTab] = useState("overview");
   const [busy, setBusy] = useState(false);
   const role = snapshot.membership.role;
@@ -627,6 +697,15 @@ function ReleaseWorkspace({ snapshot, onRefresh, onCreate, onUpdateStatus }) {
     setBusy(true);
     try {
       await onUpdateStatus(status);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function runVerdict() {
+    setBusy(true);
+    try {
+      await onRunVerdict();
     } finally {
       setBusy(false);
     }
@@ -662,6 +741,16 @@ function ReleaseWorkspace({ snapshot, onRefresh, onCreate, onUpdateStatus }) {
           <button type="button" className="rt-secondary" onClick={onRefresh}>
             <ArrowClockwise /> Refresh
           </button>
+          {can(role, "verdict") && (
+            <button
+              type="button"
+              className="rt-primary"
+              onClick={runVerdict}
+              disabled={busy}
+            >
+              <ShieldCheck /> Run verdict
+            </button>
+          )}
           {can(role, "release") && snapshot.release.status !== "finalized" && (
             <button
               type="button"
@@ -846,6 +935,14 @@ function ReleaseWorkspace({ snapshot, onRefresh, onCreate, onUpdateStatus }) {
           <RecordSection
             title="Review decisions"
             description="Every review is attributed to an authenticated workspace member."
+            action={
+              can(role, "decision") &&
+              snapshot.activeClaims.length > 0 &&
+              snapshot.activeEvidence.length > 0
+                ? () => onCreate("decision")
+                : null
+            }
+            actionLabel="Record decision"
           >
             {snapshot.activeDecisions.length === 0 ? (
               <EmptyState
@@ -915,6 +1012,7 @@ function ProductShell({
   onLogout,
   onRefresh,
   onUpdateStatus,
+  onRunVerdict,
 }) {
   const workspace = workspaces.find((item) => item.id === workspaceId);
   const project = projects.find((item) => item.id === projectId);
@@ -1043,6 +1141,7 @@ function ProductShell({
             onRefresh={onRefresh}
             onCreate={onCreate}
             onUpdateStatus={onUpdateStatus}
+            onRunVerdict={onRunVerdict}
           />
         )}
       </section>
@@ -1209,6 +1308,7 @@ export function ProductApp() {
     if (type === "release") path = `/api/projects/${projectId}/releases`;
     if (type === "claim") path = `/api/releases/${releaseId}/claims`;
     if (type === "evidence") path = `/api/releases/${releaseId}/evidence`;
+    if (type === "decision") path = `/api/releases/${releaseId}/decisions`;
     const result = await api(path, {
       method: "POST",
       marker: markers[type],
@@ -1222,7 +1322,9 @@ export function ProductApp() {
       await loadReleases();
       setReleaseId(result.release.id);
     }
-    if (type === "claim" || type === "evidence") await loadSnapshot();
+    if (type === "claim" || type === "evidence" || type === "decision") {
+      await loadSnapshot();
+    }
   }
 
   async function logout() {
@@ -1247,6 +1349,15 @@ export function ProductApp() {
     });
     await loadSnapshot();
     await loadReleases();
+  }
+
+  async function runVerdict() {
+    await api(`/api/releases/${releaseId}/verdict-runs`, {
+      method: "POST",
+      marker: markers.verdict,
+      body: {},
+    });
+    await loadSnapshot();
   }
 
   if (status === "loading") {
@@ -1288,6 +1399,7 @@ export function ProductApp() {
         onLogout={logout}
         onRefresh={loadSnapshot}
         onUpdateStatus={updateStatus}
+        onRunVerdict={runVerdict}
       />
       {dialog && dialog !== "team" && (
         <CreationDialog
@@ -1297,6 +1409,8 @@ export function ProductApp() {
             project,
             release: snapshot?.release,
             claims: snapshot?.activeClaims || [],
+            evidence: snapshot?.activeEvidence || [],
+            links: snapshot?.links || [],
           }}
           onClose={() => setDialog(null)}
           onCreated={createRecord}
@@ -1308,4 +1422,3 @@ export function ProductApp() {
     </>
   );
 }
-

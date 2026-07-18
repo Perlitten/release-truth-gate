@@ -16,3 +16,21 @@ export function activeAppendOnlyRecords(records) {
   );
 }
 
+export function validateAppendOnlyChain(records) {
+  const byId = new Map(records.map((record) => [record.id, record]));
+  for (const record of records) {
+    if (record.recordAction === "snapshot" && record.supersedesId) return false;
+    if (record.recordAction !== "snapshot" && !record.supersedesId) return false;
+    if (record.supersedesId && !byId.has(record.supersedesId)) return false;
+    const visited = new Set([record.id]);
+    let cursor = record;
+    while (cursor.supersedesId) {
+      if (visited.has(cursor.supersedesId)) return false;
+      visited.add(cursor.supersedesId);
+      cursor = byId.get(cursor.supersedesId);
+      if (!cursor) return false;
+    }
+  }
+  return true;
+}
+
