@@ -70,6 +70,16 @@ npm run db:seed:nova
 
 The seed refuses production unless `ALLOW_NOVA_SEED=true` is deliberately set.
 
+## Guided demo access
+
+Once the Nova seed is installed, the sign-in screen shows an
+"Explore the Nova 2.4 demo" button. One click signs the visitor in as a
+shared reviewer-role judge account (`judge@nova-demo.local`, reachable only
+through this button) inside the seeded workspace, so reviewers and hackathon
+judges can browse claims, record decisions, run the server verdict, and
+generate signed exports without registering. The button is always available
+in development; on production it additionally requires `DEMO_MODE=true`.
+
 ## Verification
 
 ```bash

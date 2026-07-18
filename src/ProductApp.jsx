@@ -40,6 +40,7 @@ const markers = {
   export: "export-generate",
   invite: "workspace-invitation",
   invitationAccept: "invitation-accept",
+  demo: "demo-session",
   releaseUpdate: "release-update",
   githubConnect: "github-connect",
   githubLink: "github-repository-link",
@@ -190,6 +191,22 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
     }
   }
 
+  async function enterDemo() {
+    setBusy(true);
+    setError("");
+    try {
+      const result = await api("/api/demo/session", {
+        method: "POST",
+        marker: markers.demo,
+      });
+      onAuthenticated(result.user);
+    } catch (requestError) {
+      setError(requestError.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
   return (
     <main className="rt-auth">
       <section className="rt-auth-story">
@@ -260,6 +277,14 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
             {mode === "register" ? "Create account" : "Sign in"} <ArrowRight />
           </SubmitButton>
         </form>
+        <button
+          className="rt-secondary rt-demo-entry"
+          type="button"
+          disabled={busy}
+          onClick={enterDemo}
+        >
+          <Sparkle weight="fill" /> Explore the Nova 2.4 demo
+        </button>
         <p className="rt-auth-foot">
           Product data stays on the server. Clearing your browser does not erase it.
         </p>
