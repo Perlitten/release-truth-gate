@@ -33,7 +33,6 @@ if ! test -f "$env_file"; then
   access_code="$(openssl rand -hex 24)"
   signing_key="$(mktemp)"
   signing_public="$(mktemp)"
-  trap 'rm -f "$signing_key" "$signing_public"' EXIT
   openssl genpkey -algorithm Ed25519 -out "$signing_key"
   openssl pkey -in "$signing_key" -pubout -out "$signing_public"
   private_base64="$(base64 -w 0 "$signing_key")"
@@ -66,6 +65,7 @@ if ! test -f "$env_file"; then
       "EXPORT_SIGNING_KEY_ID=contabo-ed25519-2026-07-18"
   } > "$env_file"
   chmod 0600 "$env_file"
+  rm -f "$signing_key" "$signing_public"
 fi
 
 if ! grep -q '^EXPORT_SIGNING_PRIVATE_KEY_BASE64=.' "$env_file"; then
@@ -73,7 +73,6 @@ if ! grep -q '^EXPORT_SIGNING_PRIVATE_KEY_BASE64=.' "$env_file"; then
   signing_key="$(mktemp)"
   signing_public="$(mktemp)"
   replacement_env="$(mktemp)"
-  trap 'rm -f "$signing_key" "$signing_public" "$replacement_env"' EXIT
   openssl genpkey -algorithm Ed25519 -out "$signing_key"
   openssl pkey -in "$signing_key" -pubout -out "$signing_public"
   private_base64="$(base64 -w 0 "$signing_key")"
@@ -87,6 +86,7 @@ if ! grep -q '^EXPORT_SIGNING_PRIVATE_KEY_BASE64=.' "$env_file"; then
   } >> "$replacement_env"
   chmod 0600 "$replacement_env"
   mv "$replacement_env" "$env_file"
+  rm -f "$signing_key" "$signing_public"
 fi
 
 ln -sfn ../../shared/.env.production "$release_dir/.env.production"
@@ -94,7 +94,10 @@ ln -sfn "releases/$release" "$root/current"
 cd "$root/current"
 docker compose -f compose.production.yaml up -d --build --remove-orphans
 
-install -m 0750 "$release_dir/ops/backup.sh" /usr/local/sbin/release-truth-backup
+normalized_backup="$(mktemp)"
+tr -d '\r' < "$release_dir/ops/backup.sh" > "$normalized_backup"
+install -m 0750 "$normalized_backup" /usr/local/sbin/release-truth-backup
+rm -f "$normalized_backup"
 {
   printf '%s\n' \
     "SHELL=/bin/sh" \
