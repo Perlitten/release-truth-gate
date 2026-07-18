@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: release_truth
+      POSTGRES_PASSWORD: release_truth_local
+      POSTGRES_DB: release_truth
+    ports:
+      - "54329:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U release_truth -d release_truth"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - release_truth_postgres:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+
+volumes:
+  release_truth_postgres:
+

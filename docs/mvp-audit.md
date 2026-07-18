@@ -208,3 +208,13 @@ public deployment additionally requires an authenticated Cloudflare account,
 a production PostgreSQL connection/Hyperdrive binding, signing key secret, and
 canonical production origin. If any are absent, the final report must name the
 specific missing credential and must not claim deployment or GitHub completion.
+
+## Deployment target update
+
+After this audit the product owner explicitly selected the existing Contabo VPS
+as the production target. The primary production topology is therefore a
+versioned Docker image running the standard Next.js Node server, an isolated
+PostgreSQL container/volume, and the host's existing nginx/Let's Encrypt edge.
+The audited OpenNext Cloudflare build remains a portability check but is no
+longer the primary production runtime. No existing service or occupied host
+port may be reused.

@@ -44,6 +44,30 @@ npm run dev
 
 Open `http://127.0.0.1:3000`.
 
+### PostgreSQL
+
+The usable-MVP data model uses PostgreSQL and Drizzle migrations. Local
+PostgreSQL is isolated on port `54329`:
+
+```bash
+npm run db:up
+npm run db:migrate
+npm run test:db
+```
+
+The application works with an empty migrated database. Nova 2.4 is not an
+automatic production fixture; load it only when an explicit synthetic demo is
+wanted:
+
+```bash
+npm run db:seed:nova
+```
+
+The local-only seed account is `jordan@nova-demo.local`. Set
+`NOVA_SEED_PASSWORD` before seeding to avoid the documented local default. The
+seed refuses to run under `NODE_ENV=production` unless
+`ALLOW_NOVA_SEED=true` is also set explicitly.
+
 ## Verification
 
 ```bash

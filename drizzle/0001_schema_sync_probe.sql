@@ -1,0 +1,2 @@
+ALTER TABLE "integration_imports" DROP CONSTRAINT "integration_imports_result_check";--> statement-breakpoint
+ALTER TABLE "integration_imports" ADD CONSTRAINT "integration_imports_result_check" CHECK (num_nonnulls("integration_imports"."imported_claim_id", "integration_imports"."imported_evidence_id") = 1);

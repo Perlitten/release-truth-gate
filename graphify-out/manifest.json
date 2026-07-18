@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1784384902.5147662,
-    "ast_hash": "7e5469ee73e6f313bfda7feec528cc35",
+    "mtime": 1784389437.7040067,
+    "ast_hash": "d58ccd7aaa0ccf2427f90c8382ab0f4a",
     "semantic_hash": ""
   },
   "playwright.config.js": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1784384957.2720423,
-    "ast_hash": "2a92975ec06882298985682583745ab5",
+    "mtime": 1784389656.739506,
+    "ast_hash": "24832f7953ff1b298cf62e96f96b7483",
     "semantic_hash": ""
   },
   "SECURITY.md": {
@@ -300,13 +300,93 @@
     "semantic_hash": ""
   },
   "docs/mvp-audit.md": {
-    "mtime": 1784388907.8709,
-    "ast_hash": "24294bc836e94498082cf064095b65d0",
+    "mtime": 1784389656.7405093,
+    "ast_hash": "3069b370da3df424bb9ec49bf3aca005",
     "semantic_hash": ""
   },
   "graphify-out/memory/query_20260718_143342_what_makes_the_final_release_truth_snapshot_reprod.md": {
     "mtime": 1784385222.5556538,
     "ast_hash": "25c38ac6a404e75e09f4b29326c6e0f6",
+    "semantic_hash": ""
+  },
+  "db/connection.js": {
+    "mtime": 1784389437.7009933,
+    "ast_hash": "819e74bffa283ef330d67c4bf7c8e1cf",
+    "semantic_hash": ""
+  },
+  "db/init/001-test-database.sql": {
+    "mtime": 1784389225.4139998,
+    "ast_hash": "18c6b64e6fc36ef0edf06623e81dbafc",
+    "semantic_hash": ""
+  },
+  "db/schema.integration.test.mjs": {
+    "mtime": 1784389437.7030032,
+    "ast_hash": "b7ddda21b9577a8f755a978399c4a5ca",
+    "semantic_hash": ""
+  },
+  "db/schema.js": {
+    "mtime": 1784389285.0838895,
+    "ast_hash": "c98f3377f303f8aa0d130269a9571d9c",
+    "semantic_hash": ""
+  },
+  "db/seeds/nova-2.4.mjs": {
+    "mtime": 1784389585.8053446,
+    "ast_hash": "c9c96c7c8eba596487ba732bce19f495",
+    "semantic_hash": ""
+  },
+  "drizzle.config.js": {
+    "mtime": 1784389225.4114723,
+    "ast_hash": "c16a6c935af6d26291ed0843bee69902",
+    "semantic_hash": ""
+  },
+  "drizzle/0000_mvp_foundation.sql": {
+    "mtime": 1784389296.7764492,
+    "ast_hash": "cd9d50e627afc639b7c9a8531b80a641",
+    "semantic_hash": ""
+  },
+  "drizzle/0001_schema_sync_probe.sql": {
+    "mtime": 1784389609.2505367,
+    "ast_hash": "68f474f263ae4c8a377065fe349e293a",
+    "semantic_hash": ""
+  },
+  "drizzle/meta/0000_snapshot.json": {
+    "mtime": 1784389234.557353,
+    "ast_hash": "e8d2733fe1ad563fa5ae0756daed827d",
+    "semantic_hash": ""
+  },
+  "drizzle/meta/0001_snapshot.json": {
+    "mtime": 1784389609.2495337,
+    "ast_hash": "a2665302f7fc4534b5e5ae8b320a9699",
+    "semantic_hash": ""
+  },
+  "drizzle/meta/_journal.json": {
+    "mtime": 1784389609.2505367,
+    "ast_hash": "c0ad3b0057d799abf231da964bf99e39",
+    "semantic_hash": ""
+  },
+  "scripts/test-database.mjs": {
+    "mtime": 1784389460.6285446,
+    "ast_hash": "e060317af353010baa39cc9bf336fdf3",
+    "semantic_hash": ""
+  },
+  "src/lib/canonical-json.js": {
+    "mtime": 1784389585.8003066,
+    "ast_hash": "71ffaab8f45075709140f04d06ec106a",
+    "semantic_hash": ""
+  },
+  "src/lib/canonical-json.test.js": {
+    "mtime": 1784389585.803344,
+    "ast_hash": "d123fcbb701950d04f7abb4d4f566c5a",
+    "semantic_hash": ""
+  },
+  "vitest.db.config.js": {
+    "mtime": 1784389460.6265507,
+    "ast_hash": "7186d303797d071a781144a2bf0683ca",
+    "semantic_hash": ""
+  },
+  "compose.yaml": {
+    "mtime": 1784389225.4124782,
+    "ast_hash": "1ffa8020ebfa1f259529b5eca86a8652",
     "semantic_hash": ""
   }
 }

@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1784389234558,
+      "tag": "0000_mvp_foundation",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1784389609250,
+      "tag": "0001_schema_sync_probe",
+      "breakpoints": true
+    }
+  ]
+}
