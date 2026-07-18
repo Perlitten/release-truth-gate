@@ -237,7 +237,7 @@
       "label": "clientKey()",
       "file_type": "code",
       "source_file": "api/security.mjs",
-      "source_location": "L185",
+      "source_location": "L184",
       "_origin": "ast",
       "id": "api_security_clientkey",
       "community": 0,
@@ -247,7 +247,7 @@
       "label": "consumeRateLimit()",
       "file_type": "code",
       "source_file": "api/security.mjs",
-      "source_location": "L205",
+      "source_location": "L204",
       "_origin": "ast",
       "id": "api_security_consumeratelimit",
       "community": 0,
@@ -257,7 +257,7 @@
       "label": "readBoundedText()",
       "file_type": "code",
       "source_file": "api/security.mjs",
-      "source_location": "L241",
+      "source_location": "L240",
       "_origin": "ast",
       "id": "api_security_readboundedtext",
       "community": 0,
@@ -267,7 +267,7 @@
       "label": "jsonResponse()",
       "file_type": "code",
       "source_file": "api/security.mjs",
-      "source_location": "L271",
+      "source_location": "L270",
       "_origin": "ast",
       "id": "api_security_jsonresponse",
       "community": 6,
@@ -13298,9 +13298,9 @@
       "source_file": "ops/bootstrap-contabo.sh",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "ops_bootstrap_contabo",
-      "target": "d_projects_hakaton_release_truth_gate_ops_bootstrap_contabo_sh__entry",
-      "confidence_score": 1.0
+      "target": "d_projects_hakaton_release_truth_gate_ops_bootstrap_contabo_sh__entry"
     },
     {
       "relation": "contains",
@@ -17345,5 +17345,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "da49db849d54eb8ac00339d67a4bb932b1cbd1ea"
+  "built_at_commit": "37f7194d7c5006e64079f87421169438405a8879"
 }

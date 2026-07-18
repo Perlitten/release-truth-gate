@@ -1,7 +1,7 @@
 # Graph Report - release-truth-gate  (2026-07-18)
 
 ## Corpus Check
-- 102 files · ~212,971 words
+- 102 files · ~213,002 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `da49db84`
+- Built from commit: `37f7194d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

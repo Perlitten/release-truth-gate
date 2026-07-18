@@ -45,6 +45,19 @@ describe("same-origin guard", () => {
     expect(validateSameOrigin(request)).toBe(true);
   });
 
+  it("uses the configured public origin behind a trusted reverse proxy", () => {
+    vi.stubEnv("NODE_ENV", "production");
+    vi.stubEnv("APP_ORIGIN", "https://release.example");
+    const request = new Request("https://0.0.0.0:3000/api/analyze", {
+      method: "POST",
+      headers: {
+        Origin: "https://release.example",
+        "Sec-Fetch-Site": "same-origin",
+      },
+    });
+    expect(validateSameOrigin(request)).toBe(true);
+  });
+
   it("rejects missing and cross-site origins", () => {
     expect(
       validateSameOrigin(

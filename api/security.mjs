@@ -164,22 +164,21 @@ export function validateSameOrigin(request) {
 
   const requestOrigin = new URL(request.url).origin;
   const configuredOrigin = process.env.APP_ORIGIN;
-  const allowedOrigin = configuredOrigin || requestOrigin;
-  if (origin === allowedOrigin && requestOrigin === allowedOrigin) return true;
-
-  if (!configuredOrigin) {
-    const originUrl = new URL(origin);
-    const requestUrl = new URL(requestOrigin);
-    const loopbackHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
-    return (
-      loopbackHosts.has(originUrl.hostname) &&
-      loopbackHosts.has(requestUrl.hostname) &&
-      originUrl.port === requestUrl.port &&
-      originUrl.protocol === requestUrl.protocol
-    );
+  if (configuredOrigin) {
+    return origin === configuredOrigin;
   }
+  const allowedOrigin = requestOrigin;
+  if (origin === allowedOrigin) return true;
 
-  return false;
+  const originUrl = new URL(origin);
+  const requestUrl = new URL(requestOrigin);
+  const loopbackHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
+  return (
+    loopbackHosts.has(originUrl.hostname) &&
+    loopbackHosts.has(requestUrl.hostname) &&
+    originUrl.port === requestUrl.port &&
+    originUrl.protocol === requestUrl.protocol
+  );
 }
 
 function clientKey(request) {
