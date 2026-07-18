@@ -1,7 +1,6 @@
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig = {
-  output: "standalone",
   poweredByHeader: false,
 };
 
