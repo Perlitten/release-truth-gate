@@ -7,15 +7,18 @@ import {
 } from "../../../../db/schema.js";
 import {
   databaseRoute,
-  requireAuthenticatedUser,
 } from "../../../../src/server/http.js";
+import { getUserSession } from "../../../../src/server/auth/sessions.js";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export async function GET(request) {
   return databaseRoute(async ({ db }) => {
-    const session = await requireAuthenticatedUser(db, request);
+    const session = await getUserSession(db, request);
+    if (!session) {
+      return jsonResponse({ user: null, workspaces: [] });
+    }
     const accessibleWorkspaces = await db
       .select({
         id: workspaces.id,
@@ -38,4 +41,3 @@ export async function GET(request) {
     });
   });
 }
-

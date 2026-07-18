@@ -1396,6 +1396,12 @@ export function ProductApp() {
   const loadIdentity = useCallback(async () => {
     try {
       const result = await api("/api/auth/me");
+      if (!result.user) {
+        setStatus("guest");
+        setUser(null);
+        setWorkspaces([]);
+        return;
+      }
       setUser(result.user);
       setWorkspaces(result.workspaces);
       setWorkspaceId((current) =>

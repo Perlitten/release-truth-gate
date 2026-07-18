@@ -7031,6 +7031,28 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/api/auth/me/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "me_route",
+      "target": "auth_sessions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/auth/me/route.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "me_route",
+      "target": "auth_sessions_getusersession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/auth/me/route.js",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -16733,9 +16755,9 @@
       "source_file": "src/server/signed-export.test.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_signed_export_test",
-      "target": "server_signed_export_exportsigningconfig",
-      "confidence_score": 1.0
+      "target": "server_signed_export_exportsigningconfig"
     },
     {
       "relation": "calls",
@@ -17356,5 +17378,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0de07d02ec9196e2b7febb6cbf29d7f333d92c60"
+  "built_at_commit": "6c1db9c0a9a877f243d799741006766b9581ab09"
 }

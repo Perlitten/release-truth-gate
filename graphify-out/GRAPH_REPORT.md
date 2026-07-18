@@ -1,16 +1,16 @@
 # Graph Report - release-truth-gate  (2026-07-18)
 
 ## Corpus Check
-- 102 files · ~213,172 words
+- 102 files · ~213,196 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 499 nodes · 1159 edges · 36 communities (26 shown, 10 thin omitted)
+- 499 nodes · 1161 edges · 36 communities (26 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0de07d02`
+- Built from commit: `6c1db9c0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

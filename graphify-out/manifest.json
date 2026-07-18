@@ -400,8 +400,8 @@
     "semantic_hash": ""
   },
   "app/api/auth/me/route.js": {
-    "mtime": 1784389916.5107982,
-    "ast_hash": "462a82e3fdebe6bf547c8f3e42c69838",
+    "mtime": 1784396749.9183502,
+    "ast_hash": "76f980e2c9804d3c221af5a1a5c9aec9",
     "semantic_hash": ""
   },
   "app/api/auth/register/route.js": {
@@ -505,8 +505,8 @@
     "semantic_hash": ""
   },
   "src/ProductApp.jsx": {
-    "mtime": 1784393597.0852828,
-    "ast_hash": "9b969a230d43c8c4e48537347abdd5e6",
+    "mtime": 1784396749.921353,
+    "ast_hash": "f08d1112339170d7cecb5ec90950b283",
     "semantic_hash": ""
   },
   "src/server/immutable-records.js": {
