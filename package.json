@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build:worker": "opennextjs-cloudflare build",
+    "build:worker": "opennextjs-cloudflare build && node scripts/patch-opennext-require.mjs",
     "preview": "opennextjs-cloudflare preview",
     "test": "vitest run",
     "check": "npm run test && npm run build"
