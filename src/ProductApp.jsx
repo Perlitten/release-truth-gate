@@ -1093,7 +1093,16 @@ function TimelineTab({ snapshot }) {
       </div>
       {selected && (
         <aside className={`rt-timeline-detail ${selected.status}`}>
-          <span className="rt-kicker">Selected event</span>
+          <div className="rt-timeline-detail-head">
+            <span className="rt-kicker">Selected event</span>
+            <span className={`rt-timeline-detail-status ${selected.status}`}>
+              {(() => {
+                const StatusIcon = TIMELINE_STATUS[selected.status].icon;
+                return <StatusIcon weight="fill" />;
+              })()}
+              {TIMELINE_STATUS[selected.status].label}
+            </span>
+          </div>
           <h3>{selected.title}</h3>
           <dl>
             <div><dt>Type</dt><dd>{selected.detail.kind}</dd></div>
