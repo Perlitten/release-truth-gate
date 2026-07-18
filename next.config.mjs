@@ -3,6 +3,10 @@ import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 const nextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  // Without this, opening the dev server via http://127.0.0.1 (as the README
+  // suggests) blocks Next.js dev resources cross-origin and hydration never
+  // completes, leaving the boot spinner on screen forever.
+  allowedDevOrigins: ["127.0.0.1"],
   async headers() {
     return [
       {

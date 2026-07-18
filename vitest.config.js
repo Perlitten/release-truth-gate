@@ -6,6 +6,7 @@ export default defineConfig({
       "src/**/*.test.{js,mjs}",
       "api/**/*.test.mjs",
       "app/**/*.test.js",
+      "db/*.test.js",
     ],
   },
 });

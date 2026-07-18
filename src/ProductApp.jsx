@@ -62,13 +62,21 @@ async function api(path, options = {}) {
   const headers = new Headers(options.headers);
   if (options.body !== undefined) headers.set("content-type", "application/json");
   if (options.marker) headers.set("x-release-truth-request", options.marker);
-  const response = await fetch(path, {
-    method: options.method || "GET",
-    credentials: "same-origin",
-    headers,
-    body: options.body === undefined ? undefined : JSON.stringify(options.body),
-    cache: "no-store",
-  });
+  let response;
+  try {
+    response = await fetch(path, {
+      method: options.method || "GET",
+      credentials: "same-origin",
+      headers,
+      body: options.body === undefined ? undefined : JSON.stringify(options.body),
+      cache: "no-store",
+      signal: AbortSignal.timeout(20_000),
+    });
+  } catch {
+    const error = new Error("The server did not respond. Retry in a moment.");
+    error.code = "network_unreachable";
+    throw error;
+  }
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) {
     const error = new Error(payload.error || "The request could not be completed.");
@@ -147,10 +155,10 @@ function SubmitButton({ busy, children }) {
   );
 }
 
-function AuthScreen({ invitation, onAuthenticated }) {
+function AuthScreen({ invitation, bootError, onAuthenticated }) {
   const [mode, setMode] = useState("register");
   const [busy, setBusy] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(bootError || "");
 
   async function submit(event) {
     event.preventDefault();
@@ -1618,7 +1626,13 @@ export function ProductApp() {
     );
   }
   if (status === "guest") {
-    return <AuthScreen invitation={invitation} onAuthenticated={loadIdentity} />;
+    return (
+      <AuthScreen
+        invitation={invitation}
+        bootError={error}
+        onAuthenticated={loadIdentity}
+      />
+    );
   }
   if (workspaces.length === 0) {
     return <EmptyWorkspace user={user} onCreate={createWorkspace} />;

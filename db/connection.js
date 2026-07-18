@@ -7,8 +7,8 @@ import * as schema from "./schema.js";
 const { Client } = pg;
 
 export class DatabaseUnavailableError extends Error {
-  constructor(message = "The PostgreSQL database is not configured.") {
-    super(message);
+  constructor(message = "The PostgreSQL database is not configured.", options) {
+    super(message, options);
     this.name = "DatabaseUnavailableError";
   }
 }
@@ -34,11 +34,24 @@ export async function resolveDatabaseConnectionString() {
   throw new DatabaseUnavailableError();
 }
 
+const CONNECT_TIMEOUT_MS = 5_000;
+const QUERY_TIMEOUT_MS = 15_000;
+
 export async function openDatabase(connectionString) {
   const client = new Client({
     connectionString: connectionString || (await resolveDatabaseConnectionString()),
+    connectionTimeoutMillis: CONNECT_TIMEOUT_MS,
+    query_timeout: QUERY_TIMEOUT_MS,
   });
-  await client.connect();
+  try {
+    await client.connect();
+  } catch (connectError) {
+    await client.end().catch(() => {});
+    throw new DatabaseUnavailableError(
+      "The PostgreSQL database is not reachable.",
+      { cause: connectError },
+    );
+  }
 
   return {
     client,
