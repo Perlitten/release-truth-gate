@@ -1,0 +1,4591 @@
+{
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "nodes": [
+    {
+      "id": "api_schema",
+      "label": "schema.mjs",
+      "file_type": "code",
+      "source_file": "api/schema.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_identifier",
+      "label": "identifier",
+      "file_type": "code",
+      "source_file": "api/schema.mjs",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_evidenceassessmentschema",
+      "label": "evidenceAssessmentSchema",
+      "file_type": "code",
+      "source_file": "api/schema.mjs",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_analysisrequestschema",
+      "label": "analysisRequestSchema",
+      "file_type": "code",
+      "source_file": "api/schema.mjs",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_buildanalysisinput",
+      "label": "buildAnalysisInput()",
+      "file_type": "code",
+      "source_file": "api/schema.mjs",
+      "source_location": "L86",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_groundassessment",
+      "label": "groundAssessment()",
+      "file_type": "code",
+      "source_file": "api/schema.mjs",
+      "source_location": "L98",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_analystinstructions",
+      "label": "analystInstructions",
+      "file_type": "code",
+      "source_file": "api/schema.mjs",
+      "source_location": "L124",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_test",
+      "label": "schema.test.mjs",
+      "file_type": "code",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_test_payload",
+      "label": "payload",
+      "file_type": "code",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_schema_test_assessment",
+      "label": "assessment",
+      "file_type": "code",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L42",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security",
+      "label": "security.mjs",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_safeequal",
+      "label": "safeEqual()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_issecureapplicationorigin",
+      "label": "isSecureApplicationOrigin()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_sessionconfig",
+      "label": "sessionConfig()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_usessecuresessioncookie",
+      "label": "usesSecureSessionCookie()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L72",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_sessioncookiename",
+      "label": "sessionCookieName()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L81",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_getanalystaccessstate",
+      "label": "getAnalystAccessState()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L87",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_createsessiontoken",
+      "label": "createSessionToken()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L99",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_parsecookies",
+      "label": "parseCookies()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L108",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_verifysessioncookie",
+      "label": "verifySessionCookie()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L123",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_authenticateaccesscode",
+      "label": "authenticateAccessCode()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L140",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_sessioncookieheader",
+      "label": "sessionCookieHeader()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L155",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_validatesameorigin",
+      "label": "validateSameOrigin()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L160",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_clientkey",
+      "label": "clientKey()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L185",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_consumeratelimit",
+      "label": "consumeRateLimit()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L205",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_readboundedtext",
+      "label": "readBoundedText()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L241",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_jsonresponse",
+      "label": "jsonResponse()",
+      "file_type": "code",
+      "source_file": "api/security.mjs",
+      "source_location": "L271",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_test",
+      "label": "security.test.mjs",
+      "file_type": "code",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_test_configureproductionaccess",
+      "label": "configureProductionAccess()",
+      "file_type": "code",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "api_security_test_cookiepairfor",
+      "label": "cookiePairFor()",
+      "file_type": "code",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "analyze_route",
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "analyze_route_logoutcome",
+      "label": "logOutcome()",
+      "file_type": "code",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "analyze_route_post",
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "session_route",
+      "label": "route.js",
+      "file_type": "code",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "session_route_requestschema",
+      "label": "requestSchema",
+      "file_type": "code",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "session_route_get",
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "session_route_post",
+      "label": "POST()",
+      "file_type": "code",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "session_route_test",
+      "label": "route.test.js",
+      "file_type": "code",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "session_route_test_configureproductionaccess",
+      "label": "configureProductionAccess()",
+      "file_type": "code",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "session_route_test_sessionrequest",
+      "label": "sessionRequest()",
+      "file_type": "code",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_layout",
+      "label": "layout.jsx",
+      "file_type": "code",
+      "source_file": "app/layout.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_layout_metadata",
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app/layout.jsx",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_layout_rootlayout",
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "app/layout.jsx",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_page",
+      "label": "page.jsx",
+      "file_type": "code",
+      "source_file": "app/page.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "app_page_homepage",
+      "label": "HomePage()",
+      "file_type": "code",
+      "source_file": "app/page.jsx",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "middleware",
+      "label": "middleware.js",
+      "file_type": "code",
+      "source_file": "middleware.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "middleware_middleware",
+      "label": "middleware()",
+      "file_type": "code",
+      "source_file": "middleware.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "middleware_config",
+      "label": "config",
+      "file_type": "code",
+      "source_file": "middleware.js",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "next_config",
+      "label": "next.config.mjs",
+      "file_type": "code",
+      "source_file": "next.config.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "next_config_nextconfig",
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "next.config.mjs",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "open_next_config",
+      "label": "open-next.config.ts",
+      "file_type": "code",
+      "source_file": "open-next.config.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "package",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_type",
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_engines",
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_engines_node",
+      "label": "node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_start",
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_build_worker",
+      "label": "build:worker",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_preview",
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_preview_e2e",
+      "label": "preview:e2e",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_test",
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_test_e2e",
+      "label": "test:e2e",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_audit_prod",
+      "label": "audit:prod",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_verify_worker",
+      "label": "verify:worker",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_scripts_check",
+      "label": "check",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_fontsource_variable_inter",
+      "label": "@fontsource-variable/inter",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_opennextjs_cloudflare",
+      "label": "@opennextjs/cloudflare",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_phosphor_icons_react",
+      "label": "@phosphor-icons/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_dotenv",
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_next",
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_openai",
+      "label": "openai",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_react",
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_react_dom",
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_dependencies_zod",
+      "label": "zod",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_devdependencies_playwright_test",
+      "label": "@playwright/test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_devdependencies_esbuild",
+      "label": "esbuild",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_devdependencies_vite",
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_devdependencies_vitest",
+      "label": "vitest",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_devdependencies_wrangler",
+      "label": "wrangler",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_overrides",
+      "label": "overrides",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "_origin": "ast"
+    },
+    {
+      "id": "package_overrides_postcss",
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "playwright_config",
+      "label": "playwright.config.js",
+      "file_type": "code",
+      "source_file": "playwright.config.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_patch_opennext_require",
+      "label": "patch-opennext-require.mjs",
+      "file_type": "code",
+      "source_file": "scripts/patch-opennext-require.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_patch_opennext_require_handlerpath",
+      "label": "handlerPath",
+      "file_type": "code",
+      "source_file": "scripts/patch-opennext-require.mjs",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_verify_worker_build",
+      "label": "verify-worker-build.mjs",
+      "file_type": "code",
+      "source_file": "scripts/verify-worker-build.mjs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_verify_worker_build_workerpath",
+      "label": "workerPath",
+      "file_type": "code",
+      "source_file": "scripts/verify-worker-build.mjs",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_verify_worker_build_handlerpath",
+      "label": "handlerPath",
+      "file_type": "code",
+      "source_file": "scripts/verify-worker-build.mjs",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app",
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_laneicons",
+      "label": "laneIcons",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L64",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_navitems",
+      "label": "navItems",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L71",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_statuslabel",
+      "label": "statusLabel()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L79",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_formatutctimestamp",
+      "label": "formatUtcTimestamp()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L91",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_statusmark",
+      "label": "StatusMark()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L99",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_header",
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L119",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_navigation",
+      "label": "Navigation()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L166",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_timeline",
+      "label": "Timeline()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L200",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_codeexcerpt",
+      "label": "CodeExcerpt()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L314",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_assessmentcard",
+      "label": "AssessmentCard()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L351",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_detailpanel",
+      "label": "DetailPanel()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L393",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_summaryview",
+      "label": "SummaryView()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L554",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_listview",
+      "label": "ListView()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L625",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_dialog",
+      "label": "Dialog()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L749",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_reviewdialog",
+      "label": "ReviewDialog()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L824",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_accessdialog",
+      "label": "AccessDialog()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L885",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_sharedialog",
+      "label": "ShareDialog()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L948",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_howitworksdialog",
+      "label": "HowItWorksDialog()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L978",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_toast",
+      "label": "Toast()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L995",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_makeportablestate",
+      "label": "makePortableState()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L1006",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_app_app",
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L1017",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data",
+      "label": "data.js",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_release",
+      "label": "release",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_claims",
+      "label": "claims",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_evidencesources",
+      "label": "evidenceSources",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_initialdecisions",
+      "label": "initialDecisions",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L111",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_lanes",
+      "label": "lanes",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L166",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_allevents",
+      "label": "allEvents",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L492",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_eventbyid",
+      "label": "eventById",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L496",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_data_buildanalysispayloadforevent",
+      "label": "buildAnalysisPayloadForEvent()",
+      "file_type": "code",
+      "source_file": "src/data.js",
+      "source_location": "L498",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot",
+      "label": "snapshot.js",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_decisionschema",
+      "label": "decisionSchema",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_citationschema",
+      "label": "citationSchema",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_assessmentschema",
+      "label": "assessmentSchema",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_portablestateschema",
+      "label": "portableStateSchema",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L45",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_sanitizeportablestate",
+      "label": "sanitizePortableState()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_encodebase64url",
+      "label": "encodeBase64Url()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L62",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_decodebase64url",
+      "label": "decodeBase64Url()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L72",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_serializeportablestate",
+      "label": "serializePortableState()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L80",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_parseportablestate",
+      "label": "parsePortableState()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L85",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_statefromlocationhash",
+      "label": "stateFromLocationHash()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L94",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_buildshareurl",
+      "label": "buildShareUrl()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L101",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_sortvalue",
+      "label": "sortValue()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L109",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_canonicaljson",
+      "label": "canonicalJson()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L121",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_sha256",
+      "label": "sha256()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L125",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_createevidenceexport",
+      "label": "createEvidenceExport()",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L133",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_test",
+      "label": "snapshot.test.js",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_snapshot_test_state",
+      "label": "state",
+      "file_type": "code",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict",
+      "label": "verdict.js",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_known_relations",
+      "label": "KNOWN_RELATIONS",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_newestfirst",
+      "label": "newestFirst()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_isvaliddate",
+      "label": "isValidDate()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_latestapproveddecision",
+      "label": "latestApprovedDecision()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_deriveclaimcoverage",
+      "label": "deriveClaimCoverage()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_derivefindings",
+      "label": "deriveFindings()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L88",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_currentapprovalforcoverage",
+      "label": "currentApprovalForCoverage()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L153",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_calculateverdict",
+      "label": "calculateVerdict()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L166",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_createdecisionrecord",
+      "label": "createDecisionRecord()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L254",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_appenddecision",
+      "label": "appendDecision()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L295",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_test",
+      "label": "verdict.test.js",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_test_claim",
+      "label": "claim",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_test_source",
+      "label": "source()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_test_approval",
+      "label": "approval()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "lib_verdict_test_input",
+      "label": "input()",
+      "file_type": "code",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "e2e_release_truth_spec",
+      "label": "release-truth.spec.js",
+      "file_type": "code",
+      "source_file": "tests/e2e/release-truth.spec.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "vitest_config",
+      "label": "vitest.config.js",
+      "file_type": "code",
+      "source_file": "vitest.config.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents",
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_prototype_instructions",
+      "label": "Prototype Instructions",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_release_truth",
+      "label": "Release Truth",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_trust_model",
+      "label": "Trust model",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_product_surface",
+      "label": "Product surface",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_security_boundary",
+      "label": "Security boundary",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_local_development",
+      "label": "Local development",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_verification",
+      "label": "Verification",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_production_configuration",
+      "label": "Production configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "_origin": "ast"
+    },
+    {
+      "id": "security",
+      "label": "SECURITY.md",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "security_security_model",
+      "label": "Security model",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "security_protected_assets",
+      "label": "Protected assets",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "security_implemented_controls",
+      "label": "Implemented controls",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "security_residual_production_requirements",
+      "label": "Residual production requirements",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "security_dependency_and_incident_practice",
+      "label": "Dependency and incident practice",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "sites_build",
+      "label": "SITES-BUILD.md",
+      "file_type": "document",
+      "source_file": "SITES-BUILD.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "sites_build_sites_build_provenance",
+      "label": "Sites build provenance",
+      "file_type": "document",
+      "source_file": "SITES-BUILD.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa",
+      "label": "design-qa.md",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa_design_qa",
+      "label": "Design QA",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa_ground_truth_and_artifacts",
+      "label": "Ground truth and artifacts",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa_measured_viewports",
+      "label": "Measured viewports",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa_functional_checks",
+      "label": "Functional checks",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa_visual_decisions",
+      "label": "Visual decisions",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa_runtime_checks",
+      "label": "Runtime checks",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L40",
+      "_origin": "ast"
+    },
+    {
+      "id": "design_qa_remaining_production_prerequisites",
+      "label": "Remaining production prerequisites",
+      "file_type": "document",
+      "source_file": "design-qa.md",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit",
+      "label": "query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_q_what_trust_boundary_fixes_closed_the_round_2_audit_findings",
+      "label": "Q: What trust-boundary fixes closed the Round 2 audit findings?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_answer",
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_source_nodes",
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "source_location": "L15",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "api_schema",
+      "target": "zod",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema",
+      "target": "api_schema_identifier",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema",
+      "target": "api_schema_evidenceassessmentschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.mjs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema",
+      "target": "api_schema_analysisrequestschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.mjs",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema",
+      "target": "api_schema_buildanalysisinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.mjs",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema",
+      "target": "api_schema_groundassessment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.mjs",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema",
+      "target": "api_schema_analystinstructions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.mjs",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema_test",
+      "target": "api_schema",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema_test",
+      "target": "api_schema_analysisrequestschema",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema_test",
+      "target": "api_schema_buildanalysisinput",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema_test",
+      "target": "api_schema_groundassessment",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema_test",
+      "target": "api_schema_test_payload",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "api_schema_test",
+      "target": "api_schema_test_assessment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/schema.test.mjs",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "node_crypto",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_safeequal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_issecureapplicationorigin",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_sessionconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_usessecuresessioncookie",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_sessioncookiename",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_getanalystaccessstate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_createsessiontoken",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_parsecookies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_verifysessioncookie",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_authenticateaccesscode",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_sessioncookieheader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_validatesameorigin",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_clientkey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_consumeratelimit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_readboundedtext",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security",
+      "target": "api_security_jsonresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L271",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_sessionconfig",
+      "target": "api_security_issecureapplicationorigin",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_sessioncookiename",
+      "target": "api_security_usessecuresessioncookie",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_getanalystaccessstate",
+      "target": "api_security_sessionconfig",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_getanalystaccessstate",
+      "target": "api_security_verifysessioncookie",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_verifysessioncookie",
+      "target": "api_security_parsecookies",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_verifysessioncookie",
+      "target": "api_security_sessioncookiename",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_verifysessioncookie",
+      "target": "api_security_safeequal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_authenticateaccesscode",
+      "target": "api_security_sessionconfig",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_authenticateaccesscode",
+      "target": "api_security_safeequal",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_authenticateaccesscode",
+      "target": "api_security_createsessiontoken",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_sessioncookieheader",
+      "target": "api_security_usessecuresessioncookie",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_sessioncookieheader",
+      "target": "api_security_sessioncookiename",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_consumeratelimit",
+      "target": "api_security_clientkey",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.mjs",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_authenticateaccesscode",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_consumeratelimit",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_getanalystaccessstate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_readboundedtext",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_sessioncookieheader",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_validatesameorigin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_test_configureproductionaccess",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test",
+      "target": "api_security_test_cookiepairfor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "node_path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "openai",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "zod",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_schema",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_schema_analysisrequestschema",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_schema_analystinstructions",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_schema_buildanalysisinput",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_schema_evidenceassessmentschema",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_schema_groundassessment",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_security",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_security_consumeratelimit",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_security_getanalystaccessstate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_security_jsonresponse",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_security_readboundedtext",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "api_security_validatesameorigin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "analyze_route_logoutcome",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route",
+      "target": "analyze_route_post",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "analyze_route_logoutcome",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "zod",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security_authenticateaccesscode",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security_consumeratelimit",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security_getanalystaccessstate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security_jsonresponse",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security_readboundedtext",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security_sessioncookieheader",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "api_security_validatesameorigin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "session_route_requestschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "session_route_get",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route",
+      "target": "session_route_post",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.js",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_test",
+      "target": "session_route",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_test",
+      "target": "session_route_get",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_test",
+      "target": "session_route_post",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_test",
+      "target": "session_route_test_configureproductionaccess",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_test",
+      "target": "session_route_test_sessionrequest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/session/route.test.js",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout",
+      "target": "inter",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout",
+      "target": "d_projects_hakaton_release_truth_gate_src_styles_css",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout",
+      "target": "app_layout_metadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout",
+      "target": "app_layout_rootlayout",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.jsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page",
+      "target": "src_app",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page",
+      "target": "src_app_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page",
+      "target": "server",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.jsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page",
+      "target": "app_page_homepage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware",
+      "target": "server",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware",
+      "target": "middleware_middleware",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "middleware",
+      "target": "middleware_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "middleware.js",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "next_config",
+      "target": "cloudflare",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "next_config",
+      "target": "next_config_nextconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "open_next_config",
+      "target": "cloudflare",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "open-next.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_engines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "package_engines",
+      "target": "package_engines_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_build_worker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_preview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_preview_e2e",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_e2e",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_audit_prod",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_verify_worker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_fontsource_variable_inter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_fontsource_variable_inter",
+      "target": "fontsource_variable_inter",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_opennextjs_cloudflare",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_opennextjs_cloudflare",
+      "target": "opennextjs_cloudflare",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_phosphor_icons_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_phosphor_icons_react",
+      "target": "phosphor_icons_react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_dotenv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_dotenv",
+      "target": "dotenv",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_next",
+      "target": "next",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_openai",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_openai",
+      "target": "openai",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_react",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_react_dom",
+      "target": "react_dom",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_zod",
+      "target": "zod",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package",
+      "target": "package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_playwright_test",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_playwright_test",
+      "target": "playwright_test",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_esbuild",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_esbuild",
+      "target": "esbuild",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_vite",
+      "target": "vite",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vitest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_vitest",
+      "target": "vitest",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_wrangler",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_wrangler",
+      "target": "wrangler",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package",
+      "target": "package_overrides",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "package_overrides",
+      "target": "package_overrides_postcss",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "playwright_config",
+      "target": "test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "playwright.config.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_patch_opennext_require",
+      "target": "promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patch-opennext-require.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_patch_opennext_require",
+      "target": "node_path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patch-opennext-require.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_patch_opennext_require",
+      "target": "scripts_patch_opennext_require_handlerpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/patch-opennext-require.mjs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_worker_build",
+      "target": "promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/verify-worker-build.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_worker_build",
+      "target": "node_path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/verify-worker-build.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_worker_build",
+      "target": "scripts_verify_worker_build_workerpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/verify-worker-build.mjs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_worker_build",
+      "target": "scripts_verify_worker_build_handlerpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/verify-worker-build.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_allevents",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_buildanalysispayloadforevent",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_claims",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_eventbyid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_evidencesources",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_initialdecisions",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_lanes",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_data_release",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_verdict",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_verdict_appenddecision",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_verdict_calculateverdict",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_verdict_createdecisionrecord",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_verdict_derivefindings",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_snapshot",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_snapshot_buildshareurl",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_snapshot_createevidenceexport",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_snapshot_local_draft_key",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_snapshot_sanitizeportablestate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_snapshot_snapshot_version",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "lib_snapshot_statefromlocationhash",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_laneicons",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_navitems",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_statuslabel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_formatutctimestamp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_statusmark",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_header",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_navigation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_timeline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_codeexcerpt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L314",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_assessmentcard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L351",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_detailpanel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L393",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_summaryview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L554",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_listview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L625",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_dialog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L749",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_reviewdialog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L824",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_accessdialog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L885",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_sharedialog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L948",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_howitworksdialog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L978",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_toast",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L995",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_makeportablestate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L1006",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_app",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L1017",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_assessmentcard",
+      "target": "src_app_formatutctimestamp",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L386",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_detailpanel",
+      "target": "src_app_statuslabel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L452",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_release",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_claims",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_evidencesources",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_initialdecisions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_lanes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_allevents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L492",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_eventbyid",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L496",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data",
+      "target": "src_data_buildanalysispayloadforevent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data.js",
+      "source_location": "L498",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "zod",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_decisionschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_citationschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_assessmentschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_portablestateschema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_sanitizeportablestate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_encodebase64url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_decodebase64url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_serializeportablestate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_parseportablestate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_statefromlocationhash",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_buildshareurl",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_sortvalue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_canonicaljson",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_sha256",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot",
+      "target": "lib_snapshot_createevidenceexport",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_serializeportablestate",
+      "target": "lib_snapshot_sanitizeportablestate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_serializeportablestate",
+      "target": "lib_snapshot_encodebase64url",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_parseportablestate",
+      "target": "lib_snapshot_sanitizeportablestate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_parseportablestate",
+      "target": "lib_snapshot_decodebase64url",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_statefromlocationhash",
+      "target": "lib_snapshot_parseportablestate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_buildshareurl",
+      "target": "lib_snapshot_serializeportablestate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_canonicaljson",
+      "target": "lib_snapshot_sortvalue",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_createevidenceexport",
+      "target": "lib_snapshot_sha256",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_createevidenceexport",
+      "target": "lib_snapshot_canonicaljson",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.js",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot_buildshareurl",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot_createevidenceexport",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot_parseportablestate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot_sanitizeportablestate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot_serializeportablestate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot_statefromlocationhash",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_snapshot_test",
+      "target": "lib_snapshot_test_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/snapshot.test.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_known_relations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_newestfirst",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_isvaliddate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_latestapproveddecision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_deriveclaimcoverage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_derivefindings",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_currentapprovalforcoverage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_calculateverdict",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_createdecisionrecord",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L254",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict",
+      "target": "lib_verdict_appenddecision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L295",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_derivefindings",
+      "target": "lib_verdict_deriveclaimcoverage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_currentapprovalforcoverage",
+      "target": "lib_verdict_latestapproveddecision",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_calculateverdict",
+      "target": "lib_verdict_deriveclaimcoverage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_calculateverdict",
+      "target": "lib_verdict_derivefindings",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_createdecisionrecord",
+      "target": "lib_verdict_isvaliddate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.js",
+      "source_location": "L276",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "vitest",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_appenddecision",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_calculateverdict",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_createdecisionrecord",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_derivefindings",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_test_claim",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_test_source",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_test_approval",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test",
+      "target": "lib_verdict_test_input",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test_input",
+      "target": "lib_verdict_test_source",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "lib_verdict_test_input",
+      "target": "lib_verdict_test_approval",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/verdict.test.js",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "e2e_release_truth_spec",
+      "target": "test",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/e2e/release-truth.spec.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "vitest_config",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "vitest.config.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "agents",
+      "target": "agents_prototype_instructions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "readme_release_truth",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_release_truth",
+      "target": "readme_trust_model",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_release_truth",
+      "target": "readme_product_surface",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_release_truth",
+      "target": "readme_security_boundary",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_release_truth",
+      "target": "readme_local_development",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_release_truth",
+      "target": "readme_verification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_release_truth",
+      "target": "readme_production_configuration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "security",
+      "target": "security_security_model",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SECURITY.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "security_security_model",
+      "target": "security_protected_assets",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SECURITY.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "security_security_model",
+      "target": "security_implemented_controls",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SECURITY.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "security_security_model",
+      "target": "security_residual_production_requirements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SECURITY.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "security_security_model",
+      "target": "security_dependency_and_incident_practice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SECURITY.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "sites_build",
+      "target": "sites_build_sites_build_provenance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SITES-BUILD.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "design_qa",
+      "target": "design_qa_design_qa",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "design_qa_design_qa",
+      "target": "design_qa_ground_truth_and_artifacts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "design_qa_design_qa",
+      "target": "design_qa_measured_viewports",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "design_qa_design_qa",
+      "target": "design_qa_functional_checks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "design_qa_design_qa",
+      "target": "design_qa_visual_decisions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "design_qa_design_qa",
+      "target": "design_qa_runtime_checks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "design_qa_design_qa",
+      "target": "design_qa_remaining_production_prerequisites",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit",
+      "target": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_q_what_trust_boundary_fixes_closed_the_round_2_audit_findings",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_q_what_trust_boundary_fixes_closed_the_round_2_audit_findings",
+      "target": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_answer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_q_what_trust_boundary_fixes_closed_the_round_2_audit_findings",
+      "target": "memory_query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit_source_nodes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260718_140824_what_trust_boundary_fixes_closed_the_round_2_audit.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "api_security_test_cookiepairfor",
+      "target": "api_security_sessioncookieheader",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "api/security.test.mjs",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_detailpanel",
+      "target": "src_data_buildanalysispayloadforevent",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L540",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "api_security_validatesameorigin",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "api_security_jsonresponse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "api_security_getanalystaccessstate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "api_security_consumeratelimit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "api_security_readboundedtext",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "api_schema_buildanalysisinput",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "analyze_route_post",
+      "target": "api_schema_groundassessment",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/analyze/route.js",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_get",
+      "target": "api_security_getanalystaccessstate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_get",
+      "target": "api_security_jsonresponse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_post",
+      "target": "api_security_validatesameorigin",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_post",
+      "target": "api_security_jsonresponse",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_post",
+      "target": "api_security_consumeratelimit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_post",
+      "target": "api_security_readboundedtext",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_post",
+      "target": "api_security_authenticateaccesscode",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "session_route_post",
+      "target": "api_security_sessioncookieheader",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/api/session/route.js",
+      "source_location": "L73",
+      "weight": 1.0
+    }
+  ]
+}

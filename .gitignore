@@ -4,8 +4,16 @@ node_modules/
 .open-next/
 .wrangler/
 dist/
+playwright-report/
+test-results/
+graphify-out/cache/
+qa-*.png
+!qa-ai-2026-07-18.png
+!qa-comparison-2026-07-18.png
+!qa-desktop-2026-07-18.png
+!qa-mobile-2026-07-18.png
+!qa-tablet-2026-07-18.png
 .env
 .env.*
 !.env.example
 *.log
-qa-*.png

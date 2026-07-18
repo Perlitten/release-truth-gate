@@ -7,5 +7,14 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
+  },
+  "env": {
+    "e2e": {
+      "vars": {
+        "APP_ORIGIN": "http://localhost:8787",
+        "RELEASE_TRUTH_ACCESS_CODE": "release-truth-e2e",
+        "RELEASE_TRUTH_SESSION_SECRET": "release-truth-e2e-session-secret-is-not-a-production-secret"
+      }
+    }
   }
 }

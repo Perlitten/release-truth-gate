@@ -3,14 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "build:worker": "opennextjs-cloudflare build && node scripts/patch-opennext-require.mjs",
     "preview": "opennextjs-cloudflare preview",
+    "preview:e2e": "opennextjs-cloudflare preview --env e2e",
     "test": "vitest run",
-    "check": "npm run test && npm run build"
+    "test:e2e": "playwright test",
+    "audit:prod": "npm audit --omit=dev --audit-level=moderate",
+    "verify:worker": "node scripts/verify-worker-build.mjs && wrangler deploy --env=\"\" --dry-run --outdir .wrangler/dry-run",
+    "check": "npm run test && npm run audit:prod && npm run build:worker && npm run verify:worker"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
@@ -19,12 +26,18 @@
     "dotenv": "^17.2.3",
     "next": "16.2.10",
     "openai": "^6.21.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "esbuild": "^0.28.1",
+    "vite": "^8.1.5",
     "vitest": "^4.0.15",
     "wrangler": "4.112.0"
+  },
+  "overrides": {
+    "postcss": "8.5.19"
   }
 }
