@@ -1,16 +1,16 @@
 # Graph Report - release-truth-gate  (2026-07-18)
 
 ## Corpus Check
-- 102 files · ~213,002 words
+- 102 files · ~213,172 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 499 nodes · 1158 edges · 36 communities (26 shown, 10 thin omitted)
+- 499 nodes · 1159 edges · 36 communities (26 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `37f7194d`
+- Built from commit: `0de07d02`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -77,7 +77,7 @@
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
-Nodes (30): logOutcome(), POST(), analysisRequestSchema, analystInstructions, buildAnalysisInput(), evidenceAssessmentSchema, groundAssessment(), identifier (+22 more)
+Nodes (29): logOutcome(), POST(), analysisRequestSchema, analystInstructions, buildAnalysisInput(), evidenceAssessmentSchema, groundAssessment(), identifier (+21 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.06
@@ -101,7 +101,7 @@ Nodes (17): appendDecision(), calculateVerdict(), createDecisionRecord(), curren
 
 ### Community 6 - "Community 6"
 Cohesion: 0.07
-Nodes (61): requestSchema, jsonResponse(), auditEvents, claimEvidenceLinks, claimSourceType, decisions, decisionStatus, decisionType (+53 more)
+Nodes (65): requestSchema, jsonResponse(), claimSchema, GET(), auditEvents, claimEvidenceLinks, claims, claimSourceType (+57 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.25
@@ -132,16 +132,16 @@ Cohesion: 0.11
 Nodes (9): App(), can(), capabilities, formatDate(), initials(), markers, ProductApp(), ProductShell() (+1 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.09
-Nodes (37): POST(), claimSchema, GET(), POST(), POST(), apiRequest(), cookieFrom(), inviteAndAccept() (+29 more)
+Cohesion: 0.11
+Nodes (33): POST(), POST(), POST(), apiRequest(), cookieFrom(), inviteAndAccept(), registerUser(), responseJson() (+25 more)
 
 ### Community 25 - "Community 25"
 Cohesion: 0.33
 Nodes (4): client, databaseName, env, parsed
 
 ### Community 29 - "Community 29"
-Cohesion: 0.28
-Nodes (9): canonicalJson(), sortCanonical(), GET(), verifyAuditChain(), artifactHash(), exportSigningConfig(), readPem(), signExportManifest() (+1 more)
+Cohesion: 0.26
+Nodes (10): canonicalJson(), sortCanonical(), GET(), verifyAuditChain(), artifactHash(), exportSigningConfig(), readPem(), signExportManifest() (+2 more)
 
 ### Community 30 - "Community 30"
 Cohesion: 0.25
@@ -172,7 +172,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `identifier`, `payload`, `assessment` to the rest of the system?**
   _150 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.11829268292682926 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.12280701754385964 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05925925925925926 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**

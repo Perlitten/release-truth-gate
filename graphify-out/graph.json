@@ -460,7 +460,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "verify_route",
-      "community": 0,
+      "community": 29,
       "norm_label": "route.js"
     },
     {
@@ -470,7 +470,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "verify_route_post",
-      "community": 0,
+      "community": 29,
       "norm_label": "post()"
     },
     {
@@ -710,7 +710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "claims_route",
-      "community": 24,
+      "community": 6,
       "norm_label": "route.js"
     },
     {
@@ -720,7 +720,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "claims_route_claimschema",
-      "community": 24,
+      "community": 6,
       "norm_label": "claimschema"
     },
     {
@@ -730,7 +730,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "claims_route_get",
-      "community": 24,
+      "community": 6,
       "norm_label": "get()"
     },
     {
@@ -1780,7 +1780,7 @@
       "source_location": "L303",
       "_origin": "ast",
       "id": "db_schema_claims",
-      "community": 24,
+      "community": 6,
       "norm_label": "claims"
     },
     {
@@ -4166,7 +4166,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "server_immutable_records_contenthash",
-      "community": 24,
+      "community": 6,
       "norm_label": "contenthash()"
     },
     {
@@ -4283,7 +4283,7 @@
       "label": "exportSigningConfig()",
       "file_type": "code",
       "source_file": "src/server/signed-export.js",
-      "source_location": "L27",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "server_signed_export_exportsigningconfig",
       "community": 29,
@@ -4293,7 +4293,7 @@
       "label": "artifactHash()",
       "file_type": "code",
       "source_file": "src/server/signed-export.js",
-      "source_location": "L59",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "server_signed_export_artifacthash",
       "community": 29,
@@ -4303,7 +4303,7 @@
       "label": "signExportManifest()",
       "file_type": "code",
       "source_file": "src/server/signed-export.js",
-      "source_location": "L63",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "server_signed_export_signexportmanifest",
       "community": 29,
@@ -4313,7 +4313,7 @@
       "label": "verifyExportEnvelope()",
       "file_type": "code",
       "source_file": "src/server/signed-export.js",
-      "source_location": "L73",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "server_signed_export_verifyexportenvelope",
       "community": 29,
@@ -16727,6 +16727,17 @@
       "target": "server_signed_export_readpem"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/server/signed-export.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "server_signed_export_test",
+      "target": "server_signed_export_exportsigningconfig",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -17345,5 +17356,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "37f7194d7c5006e64079f87421169438405a8879"
+  "built_at_commit": "0de07d02ec9196e2b7febb6cbf29d7f333d92c60"
 }

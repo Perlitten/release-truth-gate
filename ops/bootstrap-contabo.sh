@@ -36,8 +36,8 @@ if ! test -f "$env_file"; then
   trap 'rm -f "$signing_key" "$signing_public"' EXIT
   openssl genpkey -algorithm Ed25519 -out "$signing_key"
   openssl pkey -in "$signing_key" -pubout -out "$signing_public"
-  private_escaped="$(awk '{printf "%s\\\\n", $0}' "$signing_key")"
-  public_escaped="$(awk '{printf "%s\\\\n", $0}' "$signing_public")"
+  private_base64="$(base64 -w 0 "$signing_key")"
+  public_base64="$(base64 -w 0 "$signing_public")"
   {
     printf '%s\n' \
       "NODE_ENV=production" \
@@ -61,11 +61,32 @@ if ! test -f "$env_file"; then
       "GITHUB_APP_CLIENT_SECRET=" \
       "GITHUB_APP_PRIVATE_KEY=" \
       "GITHUB_WEBHOOK_SECRET=" \
-      "EXPORT_SIGNING_PRIVATE_KEY=$private_escaped" \
-      "EXPORT_SIGNING_PUBLIC_KEY=$public_escaped" \
+      "EXPORT_SIGNING_PRIVATE_KEY_BASE64=$private_base64" \
+      "EXPORT_SIGNING_PUBLIC_KEY_BASE64=$public_base64" \
       "EXPORT_SIGNING_KEY_ID=contabo-ed25519-2026-07-18"
   } > "$env_file"
   chmod 0600 "$env_file"
+fi
+
+if ! grep -q '^EXPORT_SIGNING_PRIVATE_KEY_BASE64=.' "$env_file"; then
+  umask 077
+  signing_key="$(mktemp)"
+  signing_public="$(mktemp)"
+  replacement_env="$(mktemp)"
+  trap 'rm -f "$signing_key" "$signing_public" "$replacement_env"' EXIT
+  openssl genpkey -algorithm Ed25519 -out "$signing_key"
+  openssl pkey -in "$signing_key" -pubout -out "$signing_public"
+  private_base64="$(base64 -w 0 "$signing_key")"
+  public_base64="$(base64 -w 0 "$signing_public")"
+  grep -v '^EXPORT_SIGNING_' "$env_file" > "$replacement_env"
+  {
+    printf '%s\n' \
+      "EXPORT_SIGNING_PRIVATE_KEY_BASE64=$private_base64" \
+      "EXPORT_SIGNING_PUBLIC_KEY_BASE64=$public_base64" \
+      "EXPORT_SIGNING_KEY_ID=contabo-ed25519-2026-07-18"
+  } >> "$replacement_env"
+  chmod 0600 "$replacement_env"
+  mv "$replacement_env" "$env_file"
 fi
 
 ln -sfn ../../shared/.env.production "$release_dir/.env.production"

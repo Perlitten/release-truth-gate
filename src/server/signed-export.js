@@ -13,6 +13,22 @@ export const EXPORT_FORMAT_VERSION = 1;
 export const EXPORT_SIGNATURE_ALGORITHM = "Ed25519";
 
 function readPem(name) {
+  const encoded = process.env[`${name}_BASE64`]?.trim();
+  if (encoded) {
+    try {
+      const decoded = Buffer.from(encoded, "base64").toString("utf8").trim();
+      if (decoded.startsWith("-----BEGIN ") && decoded.endsWith("-----")) {
+        return decoded;
+      }
+    } catch {
+      // Fall through to the normal unavailable error.
+    }
+    throw new HttpError(
+      503,
+      "The configured export key is invalid.",
+      "export_signing_unavailable",
+    );
+  }
   const value = process.env[name]?.replaceAll("\\n", "\n").trim();
   if (!value) {
     throw new HttpError(
