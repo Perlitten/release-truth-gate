@@ -74,7 +74,7 @@ async function api(path, options = {}) {
       headers,
       body: options.body === undefined ? undefined : JSON.stringify(options.body),
       cache: "no-store",
-      signal: AbortSignal.timeout(20_000),
+      signal: AbortSignal.timeout(options.timeoutMs || 20_000),
     });
   } catch {
     const error = new Error("The server did not respond. Retry in a moment.");
@@ -946,8 +946,71 @@ function formatTime(value) {
   );
 }
 
+const LANE_TO_FOCUS = { claim: "claim", code: "code", test: "tests", decision: "decisions" };
+
+function buildAnalysisPayload(event, snapshot) {
+  if (!event.claimId) return null;
+  const claim = snapshot.activeClaims.find((item) => item.id === event.claimId);
+  if (!claim) return null;
+  const evidenceIdsForClaim = new Set(
+    snapshot.links
+      .filter((link) => link.claimId === event.claimId)
+      .map((link) => link.evidenceId),
+  );
+  const sources = snapshot.activeEvidence
+    .filter((item) => evidenceIdsForClaim.has(item.id))
+    .slice(0, 12)
+    .map((item) => ({
+      id: item.id,
+      kind: item.evidenceKind,
+      title: item.summary,
+      revision: item.sourceMetadata?.revision || item.id,
+      updatedAt: new Date(item.capturedAt).toISOString(),
+      content: (item.payloadSnapshot?.content || item.summary).slice(0, 4000),
+    }));
+  if (sources.length === 0) return null;
+
+  const approvedDecision = snapshot.activeDecisions
+    .filter(
+      (decision) =>
+        decision.claimId === event.claimId &&
+        decision.type === "approval" &&
+        decision.status === "approved",
+    )
+    .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt))[0];
+
+  return {
+    claim: {
+      id: claim.id,
+      text: (claim.description || claim.title).slice(0, 600),
+      riskType: claim.payloadSnapshot?.riskType || "core_workflow",
+      currentRevision: claim.payloadSnapshot?.currentRevision || claim.id,
+    },
+    focus: {
+      eventId: event.id,
+      title: event.title.slice(0, 180),
+      lane: LANE_TO_FOCUS[event.lane] || "code",
+      status: event.status,
+      revision: event.detail.revision || claim.payloadSnapshot?.currentRevision || "unknown",
+      timestamp: new Date(event.at).toISOString(),
+    },
+    decision: approvedDecision
+      ? {
+          id: approvedDecision.id,
+          summary: approvedDecision.rationale.slice(0, 400),
+          approvedAt: new Date(approvedDecision.createdAt).toISOString(),
+          evidenceHead: claim.contentHash || claim.id,
+        }
+      : null,
+    sources,
+  };
+}
+
 function TimelineTab({ snapshot }) {
   const events = useMemo(() => {
+    const claimIdByEvidenceId = new Map(
+      snapshot.links.map((link) => [link.evidenceId, link.claimId]),
+    );
     const list = [];
     for (const item of snapshot.activeEvidence) {
       const lane = TIMELINE_LANES.some((entry) => entry.id === item.evidenceKind)
@@ -959,6 +1022,7 @@ function TimelineTab({ snapshot }) {
         at: item.capturedAt,
         title: item.summary,
         status: evidenceTimelineStatus(item.relation),
+        claimId: claimIdByEvidenceId.get(item.id),
         detail: {
           kind: `${item.evidenceKind} evidence`,
           relation: item.relation,
@@ -978,6 +1042,7 @@ function TimelineTab({ snapshot }) {
         at: decision.createdAt,
         title: `${decision.type.replace("_", " ")} · ${decision.status}`,
         status: decision.status === "approved" ? "verified" : "contradicted",
+        claimId: decision.claimId,
         detail: {
           kind: "human decision",
           excerpt: decision.rationale,
@@ -1019,6 +1084,34 @@ function TimelineTab({ snapshot }) {
     events.findLast((event) => event.status === "contradicted") ||
     events.at(-1) ||
     null;
+
+  const [assessing, setAssessing] = useState(false);
+  const [assessment, setAssessment] = useState(null);
+  const [assessError, setAssessError] = useState("");
+  useEffect(() => {
+    setAssessment(null);
+    setAssessError("");
+  }, [selected?.id]);
+
+  async function runAssessment() {
+    const payload = buildAnalysisPayload(selected, snapshot);
+    if (!payload) return;
+    setAssessing(true);
+    setAssessError("");
+    try {
+      const result = await api("/api/analyze", {
+        method: "POST",
+        marker: "analyze",
+        body: payload,
+        timeoutMs: 30_000,
+      });
+      setAssessment(result);
+    } catch (requestError) {
+      setAssessError(requestError.message);
+    } finally {
+      setAssessing(false);
+    }
+  }
 
   if (events.length === 0) {
     return (
@@ -1133,6 +1226,49 @@ function TimelineTab({ snapshot }) {
             <p className="rt-timeline-hash">
               sha256 <code>{selected.detail.hash.slice(0, 16)}…</code>
             </p>
+          )}
+          {selected.claimId && (
+            <div className="rt-ai-panel">
+              <button
+                type="button"
+                className="rt-secondary rt-ai-trigger"
+                onClick={runAssessment}
+                disabled={assessing}
+              >
+                {assessing ? <SpinnerGap className="rt-spin" /> : <Sparkle weight="fill" />}
+                {assessing ? "Asking GPT-5.6…" : "Assess with GPT-5.6"}
+              </button>
+              {assessError && (
+                <p className="rt-error"><WarningCircle /> {assessError}</p>
+              )}
+              {assessment && (
+                <article className={`rt-ai-result ${assessment.assessment.relation}`}>
+                  <div className="rt-ai-result-head">
+                    <span className="rt-ai-mode">
+                      {assessment.mode === "live" ? "LIVE" : assessment.mode} · {assessment.model}
+                    </span>
+                    <span>{Math.round(assessment.assessment.confidence * 100)}% confidence</span>
+                  </div>
+                  <h4>{assessment.assessment.headline}</h4>
+                  <p>{assessment.assessment.finding}</p>
+                  <p className="rt-ai-impact"><strong>Impact —</strong> {assessment.assessment.impact}</p>
+                  <ul className="rt-ai-citations">
+                    {assessment.assessment.evidence.map((citation) => (
+                      <li key={citation.sourceId}>
+                        <span>{citation.relation}</span>
+                        <q>{citation.excerpt}</q>
+                      </li>
+                    ))}
+                  </ul>
+                  {assessment.assessment.missingEvidence.length > 0 && (
+                    <p className="rt-ai-missing">
+                      Missing: {assessment.assessment.missingEvidence.join("; ")}
+                    </p>
+                  )}
+                  <p className="rt-ai-action"><strong>Recommended —</strong> {assessment.assessment.recommendedAction}</p>
+                </article>
+              )}
+            </div>
           )}
         </aside>
       )}

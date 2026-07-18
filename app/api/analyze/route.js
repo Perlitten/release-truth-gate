@@ -11,11 +11,12 @@ import {
 } from "../../../api/schema.mjs";
 import {
   consumeRateLimit,
-  getAnalystAccessState,
   jsonResponse,
   readBoundedText,
   validateSameOrigin,
 } from "../../../api/security.mjs";
+import { withDatabase } from "../../../db/connection.js";
+import { getUserSession } from "../../../src/server/auth/sessions.js";
 
 if (process.env.NODE_ENV !== "production") {
   dotenv.config({
@@ -58,19 +59,10 @@ export async function POST(request) {
     );
   }
 
-  const access = getAnalystAccessState(request);
-  if (!access.enabled) {
+  const session = await withDatabase((db) => getUserSession(db, request));
+  if (!session) {
     return jsonResponse(
-      {
-        error: "AI review is disabled until access control is configured.",
-        requestId,
-      },
-      { status: 503 },
-    );
-  }
-  if (access.required && !access.authenticated) {
-    return jsonResponse(
-      { error: "AI review requires an authenticated analyst session.", requestId },
+      { error: "AI review requires an authenticated workspace session.", requestId },
       { status: 401 },
     );
   }
