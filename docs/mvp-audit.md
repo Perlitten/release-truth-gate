@@ -218,3 +218,44 @@ PostgreSQL container/volume, and the host's existing nginx/Let's Encrypt edge.
 The audited OpenNext Cloudflare build remains a portability check but is no
 longer the primary production runtime. No existing service or occupied host
 port may be reused.
+
+## Implementation and deployment result
+
+Completed on 2026-07-18.
+
+- Product identity, workspace tenancy, invitations, project/release CRUD,
+  claims, evidence, decisions, verdict runs, audit history, GitHub App
+  integration, and signed exports now use PostgreSQL-backed server routes.
+- Immutable governance tables reject update/delete; corrections and revocations
+  append a new hash-addressed record.
+- The deterministic verdict is server-owned, fail-closed, reproducible, and
+  idempotent for the same engine version and input digest.
+- Ed25519 exports are generated only from stored verdict runs and public
+  verification rejects a changed manifest.
+- GitHub App ingestion code is complete and fail-closed. Production GitHub
+  ingestion remains unavailable until the app credentials are configured.
+- CI contains PostgreSQL integration tests, production build, dependency audit,
+  and a two-user Chromium flow.
+- Nova is an explicit seed only; a new production database starts empty.
+
+Production is live at
+`https://release-truth.167.86.91.77.nip.io` from app commit `9a154dd`.
+Linux deployment normalization is recorded in commit `9e71c04`.
+
+Production evidence:
+
+- app and PostgreSQL containers are healthy;
+- PostgreSQL has no host port; the app binds only to `127.0.0.1:3187`;
+- nginx terminates a valid, automatically renewed Let's Encrypt certificate;
+- external HTTPS registration → workspace → project → release → claim/evidence
+  → server verdict → signed export → public verification passed;
+- changing the exported verdict fails with `artifact_hash_mismatch`;
+- the public browser render has zero console errors and warnings;
+- the first PostgreSQL custom-format backup is 82,985 bytes and its catalog
+  passes `pg_restore -l`; a daily retained backup cron is installed.
+
+Final verdict: the manual multi-user governance and signed audit path is a
+usable single-node MVP. GitHub import becomes operational after external GitHub
+App credentials are added. Multi-instance or enterprise rollout still requires
+a distributed limiter, SSO/SCIM, HA/restore drills, and explicit
+retention/data-residency policy.
