@@ -28,7 +28,11 @@ The unmodified audited commit was verified before migration:
 - Next.js reports the known Edge Middleware deprecation warning. The file must
   remain `middleware.js` until OpenNext supports the Node Proxy artifact.
 
-## Current architecture
+## Audited architecture (historical baseline)
+
+The following sections describe commit `180b8ce7c7faf67f7281447c298be295a37a4eca`,
+not the current implementation. `src/App.jsx` and `src/styles.css` from that
+baseline were subsequently removed; the live UI is now `src/ProductApp.jsx`.
 
 ### Framework and deployment
 
@@ -47,11 +51,11 @@ The unmodified audited commit was verified before migration:
 - There are no server routes for workspaces, memberships, projects, releases,
   claims, evidence, decisions, verdict runs, GitHub, invitations, or exports.
 
-### Client-owned product state
+### Client-owned product state at the audited commit
 
 - `src/data.js` hard-codes Nova 2.4, claims, evidence, historical decisions,
   and timeline events.
-- `src/App.jsx` combines hard-coded and browser-local decisions, calls
+- The then-live `src/App.jsx` combined hard-coded and browser-local decisions, called
   `calculateVerdict`, and owns the displayed verdict.
 - Browser-local decisions are persisted under
   `release-truth:nova-2.4:draft:v1`.
@@ -68,7 +72,7 @@ The unmodified audited commit was verified before migration:
 - `api/schema.mjs`: reuse strict advisory-AI request/response grounding rules.
 - `api/security.mjs`: reuse constant-time helpers, bounded body reads,
   same-origin validation, no-store responses, and security-response patterns.
-- `src/App.jsx` and `src/styles.css`: preserve the dense timeline, detail
+- The then-live `src/App.jsx` and `src/styles.css`: preserve the dense timeline, detail
   panel, summary cards, empty/error/loading conventions, and responsive visual
   language while replacing demo data with API state.
 - Exact OpenNext build verification and production-preview E2E harness.

@@ -28,6 +28,7 @@ import {
   XCircle,
 } from "@phosphor-icons/react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { isAllowedSourceUrl } from "./lib/source-url.js";
 
 const markers = {
   login: "auth-login",
@@ -51,11 +52,11 @@ const markers = {
 };
 
 const capabilities = {
-  owner: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "export", "members", "integrations"]),
-  admin: new Set(["project", "release", "claim", "evidence", "decision", "verdict", "export", "members", "integrations"]),
-  contributor: new Set(["project", "release", "claim", "evidence", "verdict", "export"]),
-  reviewer: new Set(["decision", "verdict", "export"]),
-  viewer: new Set(["export"]),
+  owner: new Set(["create_project", "manage_release", "create_claim", "create_evidence", "create_decision", "run_verdict", "generate_export", "manage_members", "manage_integrations"]),
+  admin: new Set(["create_project", "manage_release", "create_claim", "create_evidence", "create_decision", "run_verdict", "generate_export", "manage_members", "manage_integrations"]),
+  contributor: new Set(["create_project", "manage_release", "create_claim", "create_evidence", "run_verdict", "generate_export"]),
+  reviewer: new Set(["create_decision", "run_verdict", "generate_export"]),
+  viewer: new Set(["generate_export"]),
 };
 
 function can(role, capability) {
@@ -74,7 +75,7 @@ async function api(path, options = {}) {
       headers,
       body: options.body === undefined ? undefined : JSON.stringify(options.body),
       cache: "no-store",
-      signal: AbortSignal.timeout(options.timeoutMs || 20_000),
+      signal: options.signal || AbortSignal.timeout(options.timeoutMs || 20_000),
     });
   } catch {
     const error = new Error("The server did not respond. Retry in a moment.");
@@ -121,10 +122,51 @@ function Field({ label, hint, children }) {
 }
 
 function Dialog({ title, eyebrow, children, onClose, wide = false }) {
+  const dialogRef = useRef(null);
+  const returnFocusRef = useRef(null);
+
   useEffect(() => {
-    const close = (event) => event.key === "Escape" && onClose();
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
+    returnFocusRef.current = document.activeElement;
+    const focusableSelector = [
+      'button:not([disabled])',
+      'a[href]',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(",");
+    const focusFirst = () =>
+      dialogRef.current?.querySelector(focusableSelector)?.focus();
+    focusFirst();
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const focusable = [...dialogRef.current?.querySelectorAll(focusableSelector) || []];
+      if (focusable.length === 0) {
+        event.preventDefault();
+        dialogRef.current?.focus();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable.at(-1);
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      returnFocusRef.current?.focus?.();
+    };
   }, [onClose]);
 
   return (
@@ -134,6 +176,8 @@ function Dialog({ title, eyebrow, children, onClose, wide = false }) {
         role="dialog"
         aria-modal="true"
         aria-label={title}
+        tabIndex={-1}
+        ref={dialogRef}
         onMouseDown={(event) => event.stopPropagation()}
       >
         <header>
@@ -275,7 +319,7 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
               autoComplete={mode === "register" ? "new-password" : "current-password"}
             />
           </Field>
-          {error && <p className="rt-error"><WarningCircle /> {error}</p>}
+          {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
           <SubmitButton busy={busy}>
             {mode === "register" ? "Create account" : "Sign in"} <ArrowRight />
           </SubmitButton>
@@ -328,7 +372,7 @@ function EmptyWorkspace({ user, onCreate }) {
           <Field label="Workspace name" hint="For example: Platform team">
             <input name="name" minLength={2} maxLength={120} required autoFocus />
           </Field>
-          {error && <p className="rt-error"><WarningCircle /> {error}</p>}
+          {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
           <SubmitButton busy={busy}>Create workspace <ArrowRight /></SubmitButton>
         </form>
       </section>
@@ -342,6 +386,12 @@ function CreationDialog({ type, context, onClose, onCreated }) {
   const [decisionClaimId, setDecisionClaimId] = useState(
     context?.claims?.[0]?.id || "",
   );
+  const [targetType, setTargetType] = useState("tag");
+  const decisionEvidence = context?.evidence?.filter((item) =>
+    context.links?.some(
+      (link) => link.claimId === decisionClaimId && link.evidenceId === item.id,
+    ),
+  ) || [];
   const config = {
     workspace: { title: "New workspace", eyebrow: "Organization boundary" },
     project: { title: "New project", eyebrow: context?.workspace?.name },
@@ -360,7 +410,6 @@ function CreationDialog({ type, context, onClose, onCreated }) {
       payload = { name: data.get("name"), description: data.get("description") };
     }
     if (type === "release") {
-      const targetType = data.get("targetType");
       payload = {
         name: data.get("name"),
         description: data.get("description"),
@@ -441,15 +490,15 @@ function CreationDialog({ type, context, onClose, onCreated }) {
             </Field>
             <div className="rt-field-row">
               <Field label="Target type">
-                <select name="targetType" defaultValue="tag">
+                <select name="targetType" value={targetType} onChange={(event) => setTargetType(event.target.value)}>
                   <option value="tag">Git tag</option>
                   <option value="branch">Branch</option>
                   <option value="commit">Commit</option>
                   <option value="unspecified">Not set yet</option>
                 </select>
               </Field>
-              <Field label="Target value">
-                <input name="targetValue" placeholder="v1.0.0" maxLength={255} />
+              <Field label="Target value" hint={targetType === "unspecified" ? "Not needed when the target is unspecified." : "Required for the selected target type."}>
+                <input name="targetValue" placeholder="v1.0.0" maxLength={255} required={targetType !== "unspecified"} disabled={targetType === "unspecified"} />
               </Field>
             </div>
           </>
@@ -512,7 +561,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
                 ))}
               </div>
             </Field>
-            <Field label="Source URL" hint="Optional. Must be a complete https:// URL.">
+            <Field label="Source URL" hint="Optional. Must be a complete http:// or https:// URL.">
               <input name="sourceUrl" type="url" maxLength={2_000} />
             </Field>
             <Field label="Source reference" hint="Commit, file, test run, or document">
@@ -550,15 +599,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
             </Field>
             <Field label="Evidence considered">
               <div className="rt-checkbox-list">
-                {context.evidence
-                  .filter((item) =>
-                    context.links.some(
-                      (link) =>
-                        link.claimId === decisionClaimId &&
-                        link.evidenceId === item.id,
-                    ),
-                  )
-                  .map((item) => (
+                {decisionEvidence.map((item) => (
                   <label key={item.id}>
                     <input
                       type="checkbox"
@@ -570,10 +611,13 @@ function CreationDialog({ type, context, onClose, onCreated }) {
                   </label>
                   ))}
               </div>
+              {decisionEvidence.length === 0 && (
+                <small className="rt-field-hint">No evidence is linked to this claim yet. Record the decision only after reviewing the available evidence.</small>
+              )}
             </Field>
           </>
         )}
-        {error && <p className="rt-error"><WarningCircle /> {error}</p>}
+        {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
         <div className="rt-dialog-actions">
           <button type="button" className="rt-secondary" onClick={onClose}>Cancel</button>
           <SubmitButton busy={busy}>Create record <ArrowRight /></SubmitButton>
@@ -589,6 +633,7 @@ function TeamDialog({ workspace, onClose }) {
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState("");
   const [inviteUrl, setInviteUrl] = useState("");
+  const [copyStatus, setCopyStatus] = useState("");
 
   const load = useCallback(async () => {
     setBusy(true);
@@ -668,8 +713,18 @@ function TeamDialog({ workspace, onClose }) {
             <div className="rt-invite-link">
               <span>Single-use invite link</span>
               <input value={inviteUrl} readOnly onFocus={(event) => event.target.select()} />
-              <button type="button" onClick={() => navigator.clipboard.writeText(inviteUrl)}>
-                Copy link
+              <button
+                type="button"
+                onClick={async () => {
+                  try {
+                    await navigator.clipboard.writeText(inviteUrl);
+                    setCopyStatus("Invite link copied.");
+                  } catch {
+                    setCopyStatus("Could not copy the link. Select and copy it manually.");
+                  }
+                }}
+              >
+                {copyStatus || "Copy link"}
               </button>
             </div>
           )}
@@ -680,7 +735,7 @@ function TeamDialog({ workspace, onClose }) {
           )}
         </section>
       </div>
-      {error && <p className="rt-error"><WarningCircle /> {error}</p>}
+      {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
     </Dialog>
   );
 }
@@ -873,7 +928,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
         </section>
       </div>
       {busy && <p className="rt-muted"><SpinnerGap className="rt-spin" /> Loading GitHub state…</p>}
-      {error && <p className="rt-error"><WarningCircle /> {error}</p>}
+      {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
     </Dialog>
   );
 }
@@ -925,6 +980,18 @@ const TIMELINE_STATUS = {
 function evidenceTimelineStatus(relation) {
   if (relation === "supports") return "verified";
   if (relation === "contradicts") return "contradicted";
+  return "pending";
+}
+
+function timelineLaneForEvidence(item) {
+  if (item.evidenceKind === "claim" || item.sourceType === "claim") return "claim";
+  if (["test", "check_run", "status", "check"].includes(item.evidenceKind)) return "test";
+  return "code";
+}
+
+function decisionTimelineStatus(decision) {
+  if (decision.type === "rejection" || decision.status === "rejected") return "contradicted";
+  if (decision.type === "approval" && decision.status === "approved") return "verified";
   return "pending";
 }
 
@@ -1012,10 +1079,23 @@ function TimelineTab({ snapshot }) {
       snapshot.links.map((link) => [link.evidenceId, link.claimId]),
     );
     const list = [];
+    for (const claim of snapshot.activeClaims) {
+      list.push({
+        id: `claim:${claim.id}`,
+        lane: "claim",
+        at: claim.createdAt,
+        title: claim.title,
+        status: "pending",
+        claimId: claim.id,
+        detail: {
+          kind: "release claim",
+          excerpt: claim.acceptanceCriteria,
+          hash: claim.contentHash,
+        },
+      });
+    }
     for (const item of snapshot.activeEvidence) {
-      const lane = TIMELINE_LANES.some((entry) => entry.id === item.evidenceKind)
-        ? item.evidenceKind
-        : "code";
+      const lane = timelineLaneForEvidence(item);
       list.push({
         id: `evidence:${item.id}`,
         lane,
@@ -1041,7 +1121,7 @@ function TimelineTab({ snapshot }) {
         lane: "decision",
         at: decision.createdAt,
         title: `${decision.type.replace("_", " ")} · ${decision.status}`,
-        status: decision.status === "approved" ? "verified" : "contradicted",
+        status: decisionTimelineStatus(decision),
         claimId: decision.claimId,
         detail: {
           kind: "human decision",
@@ -1057,7 +1137,7 @@ function TimelineTab({ snapshot }) {
         lane: "decision",
         at: run.createdAt,
         title: `Server verdict · ${run.result?.label || "unknown"}`,
-        status: run.result?.status === "go" ? "verified" : "contradicted",
+        status: run.result?.status === "go" ? "verified" : run.result?.status === "no_go" ? "contradicted" : "pending",
         detail: {
           kind: "deterministic verdict run",
           excerpt: run.result?.detail,
@@ -1239,7 +1319,7 @@ function TimelineTab({ snapshot }) {
                 {assessing ? "Asking GPT-5.6…" : "Assess with GPT-5.6"}
               </button>
               {assessError && (
-                <p className="rt-error"><WarningCircle /> {assessError}</p>
+                <p className="rt-error" role="alert"><WarningCircle /> {assessError}</p>
               )}
               {assessment && (
                 <article className={`rt-ai-result ${assessment.assessment.relation}`}>
@@ -1290,8 +1370,17 @@ function ReleaseWorkspace({
       : "overview",
   );
   const [busy, setBusy] = useState(false);
+  const [actionError, setActionError] = useState("");
   const role = snapshot.membership.role;
   const latestRun = snapshot.verdictRuns.at(-1) || null;
+  const verdictStatus = latestRun?.result?.status || "not_run";
+  const verdictLabel = latestRun?.result?.label || "NOT RUN";
+  const VerdictIcon =
+    verdictStatus === "go"
+      ? CheckCircle
+      : verdictStatus === "no_go"
+        ? XCircle
+        : WarningCircle;
   const claimLinks = useMemo(() => {
     const counts = new Map();
     for (const link of snapshot.links) {
@@ -1302,8 +1391,11 @@ function ReleaseWorkspace({
 
   async function changeStatus(status) {
     setBusy(true);
+    setActionError("");
     try {
       await onUpdateStatus(status);
+    } catch (requestError) {
+      setActionError(requestError.message);
     } finally {
       setBusy(false);
     }
@@ -1311,8 +1403,11 @@ function ReleaseWorkspace({
 
   async function runVerdict() {
     setBusy(true);
+    setActionError("");
     try {
       await onRunVerdict();
+    } catch (requestError) {
+      setActionError(requestError.message);
     } finally {
       setBusy(false);
     }
@@ -1320,8 +1415,11 @@ function ReleaseWorkspace({
 
   async function generateExport() {
     setBusy(true);
+    setActionError("");
     try {
       await onGenerateExport();
+    } catch (requestError) {
+      setActionError(requestError.message);
     } finally {
       setBusy(false);
     }
@@ -1353,12 +1451,12 @@ function ReleaseWorkspace({
         </div>
         <div className="rt-release-actions">
           <span className={`rt-state ${snapshot.release.status}`}>
-            {snapshot.release.status.replace("_", " ")}
+            <ClockCounterClockwise weight="fill" /> Workflow: {snapshot.release.status.replace("_", " ")}
           </span>
           <button type="button" className="rt-secondary" onClick={onRefresh}>
             <ArrowClockwise /> Refresh
           </button>
-          {can(role, "verdict") && (
+          {can(role, "run_verdict") && (
             <button
               type="button"
               className="rt-primary"
@@ -1368,7 +1466,7 @@ function ReleaseWorkspace({
               <ShieldCheck /> Run verdict
             </button>
           )}
-          {can(role, "export") && latestRun && (
+          {can(role, "generate_export") && latestRun && (
             <button
               type="button"
               className="rt-secondary"
@@ -1378,7 +1476,7 @@ function ReleaseWorkspace({
               <DownloadSimple /> Signed export
             </button>
           )}
-          {can(role, "release") && snapshot.release.status !== "finalized" && (
+          {can(role, "manage_release") && snapshot.release.status !== "finalized" && (
             <button
               type="button"
               className="rt-primary"
@@ -1388,7 +1486,7 @@ function ReleaseWorkspace({
               <CheckCircle /> Finalize
             </button>
           )}
-          {can(role, "release") && snapshot.release.status === "finalized" && (
+          {can(role, "manage_release") && snapshot.release.status === "finalized" && (
             <button
               type="button"
               className="rt-secondary"
@@ -1400,21 +1498,38 @@ function ReleaseWorkspace({
           )}
         </div>
       </header>
+      <section className={`rt-verdict-banner ${verdictStatus}`} aria-label={`Server verdict: ${verdictLabel}`}>
+        <VerdictIcon weight="fill" aria-hidden="true" />
+        <div>
+          <span>Server verdict</span>
+          <strong>{verdictLabel}</strong>
+        </div>
+        <p>
+          {latestRun
+            ? `Computed ${formatDate(latestRun.createdAt)} from the current evidence ledger.`
+            : "No server verdict has been stored. Treat this release as blocked until one is run."}
+        </p>
+      </section>
+      {actionError && <p className="rt-error rt-release-error" role="alert"><WarningCircle /> {actionError}</p>}
 
-      <nav className="rt-tabs">
+      <nav className="rt-tabs" role="tablist" aria-label="Release records">
         {tabs.map(([id, label]) => (
           <button
             type="button"
             className={tab === id ? "active" : ""}
             onClick={() => setTab(id)}
             key={id}
+            role="tab"
+            aria-selected={tab === id}
+            aria-controls={`release-panel-${id}`}
+            id={`release-tab-${id}`}
           >
             {label}
           </button>
         ))}
       </nav>
 
-      <section className="rt-release-content">
+      <section className="rt-release-content" role="tabpanel" id={`release-panel-${tab}`} aria-labelledby={`release-tab-${tab}`}>
         {tab === "timeline" && <TimelineTab snapshot={snapshot} />}
         {tab === "overview" && (
           <>
@@ -1434,9 +1549,9 @@ function ReleaseWorkspace({
                 <strong>{snapshot.activeDecisions.length}</strong>
                 <small>Append-only review log</small>
               </article>
-              <article className={latestRun?.result?.status || "neutral"}>
+              <article className={verdictStatus}>
                 <span>Server verdict</span>
-                <strong>{latestRun?.result?.label || "NOT RUN"}</strong>
+                <strong><VerdictIcon weight="fill" /> {verdictLabel}</strong>
                 <small>{latestRun ? formatDate(latestRun.createdAt) : "No stored verdict run"}</small>
               </article>
             </div>
@@ -1468,7 +1583,7 @@ function ReleaseWorkspace({
                 icon={ClipboardText}
                 title="Start with a material claim"
                 body="Describe what must be true for this release, then attach current evidence."
-                action={can(role, "claim") ? () => onCreate("claim") : null}
+                action={can(role, "create_claim") ? () => onCreate("claim") : null}
                 actionLabel="Add first claim"
               />
             )}
@@ -1479,7 +1594,7 @@ function ReleaseWorkspace({
           <RecordSection
             title="Release claims"
             description="Immutable statements the team must prove before shipping."
-            action={can(role, "claim") ? () => onCreate("claim") : null}
+            action={can(role, "create_claim") ? () => onCreate("claim") : null}
             actionLabel="Add claim"
           >
             {snapshot.activeClaims.length === 0 ? (
@@ -1515,7 +1630,7 @@ function ReleaseWorkspace({
             title="Evidence ledger"
             description="Source snapshots are content-addressed and cannot be edited in place."
             action={
-              can(role, "evidence") && snapshot.activeClaims.length > 0
+              can(role, "create_evidence") && snapshot.activeClaims.length > 0
                 ? () => onCreate("evidence")
                 : null
             }
@@ -1530,6 +1645,8 @@ function ReleaseWorkspace({
                     ? "Create a claim before linking evidence."
                     : "Attach a manual source snapshot to one or more claims."
                 }
+                action={can(role, "create_evidence") && snapshot.activeClaims.length > 0 ? () => onCreate("evidence") : null}
+                actionLabel="Add evidence"
               />
             ) : (
               <div className="rt-record-list">
@@ -1547,7 +1664,7 @@ function ReleaseWorkspace({
                         <div><dt>Kind</dt><dd>{item.evidenceKind}</dd></div>
                         <div><dt>Captured</dt><dd>{formatDate(item.capturedAt)}</dd></div>
                       </dl>
-                      {item.sourceUrl && (
+                      {isAllowedSourceUrl(item.sourceUrl) && (
                         <a href={item.sourceUrl} target="_blank" rel="noreferrer">Open source</a>
                       )}
                       <small>hash {item.contentHash.slice(0, 12)}…</small>
@@ -1564,7 +1681,7 @@ function ReleaseWorkspace({
             title="Review decisions"
             description="Every review is attributed to an authenticated workspace member."
             action={
-              can(role, "decision") &&
+              can(role, "create_decision") &&
               snapshot.activeClaims.length > 0 &&
               snapshot.activeEvidence.length > 0
                 ? () => onCreate("decision")
@@ -1603,6 +1720,13 @@ function ReleaseWorkspace({
             title="Tamper-evident audit"
             description="Each event includes the hash of the previous workspace event."
           >
+            {snapshot.auditEvents.length === 0 ? (
+              <EmptyState
+                icon={ClockCounterClockwise}
+                title="No audit events yet"
+                body="Record activity will appear here with its tamper-evident hash chain."
+              />
+            ) : (
             <div className="rt-audit-list">
               {[...snapshot.auditEvents].reverse().map((event) => (
                 <article key={event.id}>
@@ -1614,6 +1738,7 @@ function ReleaseWorkspace({
                 </article>
               ))}
             </div>
+            )}
           </RecordSection>
         )}
       </section>
@@ -1623,6 +1748,7 @@ function ReleaseWorkspace({
 
 function ProductShell({
   user,
+  isDemo,
   workspaces,
   workspaceId,
   setWorkspaceId,
@@ -1654,6 +1780,7 @@ function ProductShell({
         <header>
           <span className="rt-logo"><Sparkle weight="fill" /></span>
           <span><strong>Release Truth</strong><small>Evidence Gate</small></span>
+          {isDemo && <span className="rt-demo-badge"><Sparkle weight="fill" /> Demo data</span>}
         </header>
         <div className="rt-workspace-select">
           <span>Workspace</span>
@@ -1668,7 +1795,7 @@ function ProductShell({
         <div className="rt-side-section">
           <div className="rt-side-heading">
             <span>Projects</span>
-            {can(role, "project") && (
+            {can(role, "create_project") && (
               <button type="button" onClick={() => onCreate("project")} aria-label="New project"><Plus /></button>
             )}
           </div>
@@ -1686,12 +1813,19 @@ function ProductShell({
             ))}
             {projects.length === 0 && <p>No projects yet.</p>}
           </nav>
+          <label className="rt-mobile-project-select">
+            <span>Switch project</span>
+            <select value={projectId || ""} onChange={(event) => setProjectId(event.target.value)}>
+              <option value="">Choose project</option>
+              {projects.map((item) => <option value={item.id} key={item.id}>{item.name}</option>)}
+            </select>
+          </label>
         </div>
         <div className="rt-side-bottom">
-          {can(role, "members") && (
+          {can(role, "manage_members") && (
             <button type="button" onClick={onOpenTeam}><UsersThree /> Team</button>
           )}
-          {can(role, "integrations") && (
+          {can(role, "manage_integrations") && (
             <button type="button" onClick={onOpenGitHub}><GithubLogo /> GitHub</button>
           )}
           <button type="button" onClick={() => onCreate("workspace")}><Plus /> Workspace</button>
@@ -1715,7 +1849,7 @@ function ProductShell({
               </select>
               <CaretDown />
             </label>
-            {can(role, "release") && (
+            {can(role, "manage_release") && (
               <button type="button" className="rt-secondary" onClick={() => onCreate("release")}>
                 <Plus /> New release
               </button>
@@ -1739,7 +1873,7 @@ function ProductShell({
             icon={Folder}
             title="Create the first project"
             body="Projects group real release targets and their evidence history."
-            action={can(role, "project") ? () => onCreate("project") : null}
+            action={can(role, "create_project") ? () => onCreate("project") : null}
             actionLabel="New project"
           />
         )}
@@ -1748,7 +1882,7 @@ function ProductShell({
             icon={RocketLaunch}
             title="Create a release to evaluate"
             body="A release pins claims and evidence to a branch, tag, commit, or explicit target."
-            action={can(role, "release") ? () => onCreate("release") : null}
+            action={can(role, "manage_release") ? () => onCreate("release") : null}
             actionLabel="New release"
           />
         )}
@@ -1770,6 +1904,7 @@ function ProductShell({
         )}
         {!loading && !error && snapshot && (
           <ReleaseWorkspace
+            key={releaseId}
             snapshot={snapshot}
             onRefresh={onRefresh}
             onCreate={onCreate}
@@ -1797,6 +1932,9 @@ export function ProductApp() {
   const [error, setError] = useState("");
   const [dialog, setDialog] = useState(null);
   const acceptedInvite = useRef(false);
+  const projectRequest = useRef({ controller: null, sequence: 0 });
+  const releaseRequest = useRef({ controller: null, sequence: 0 });
+  const snapshotRequest = useRef({ controller: null, sequence: 0 });
   const invitation =
     typeof window === "undefined"
       ? null
@@ -1854,6 +1992,10 @@ export function ProductApp() {
   }, [invitation, loadIdentity, status]);
 
   const loadProjects = useCallback(async () => {
+    projectRequest.current.controller?.abort();
+    const controller = new AbortController();
+    const sequence = ++projectRequest.current.sequence;
+    projectRequest.current.controller = controller;
     if (!workspaceId) {
       setProjects([]);
       setProjectId("");
@@ -1862,7 +2004,8 @@ export function ProductApp() {
     setLoading(true);
     setError("");
     try {
-      const result = await api(`/api/workspaces/${workspaceId}/projects`);
+      const result = await api(`/api/workspaces/${workspaceId}/projects`, { signal: controller.signal });
+      if (sequence !== projectRequest.current.sequence) return;
       setProjects(result.projects);
       setProjectId((current) =>
         result.projects.some((item) => item.id === current)
@@ -1870,9 +2013,10 @@ export function ProductApp() {
           : result.projects[0]?.id || "",
       );
     } catch (requestError) {
+      if (controller.signal.aborted || sequence !== projectRequest.current.sequence) return;
       setError(requestError.message);
     } finally {
-      setLoading(false);
+      if (sequence === projectRequest.current.sequence) setLoading(false);
     }
   }, [workspaceId]);
 
@@ -1883,6 +2027,10 @@ export function ProductApp() {
   }, [loadProjects]);
 
   const loadReleases = useCallback(async () => {
+    releaseRequest.current.controller?.abort();
+    const controller = new AbortController();
+    const sequence = ++releaseRequest.current.sequence;
+    releaseRequest.current.controller = controller;
     if (!projectId) {
       setReleases([]);
       setReleaseId("");
@@ -1891,7 +2039,8 @@ export function ProductApp() {
     setLoading(true);
     setError("");
     try {
-      const result = await api(`/api/projects/${projectId}/releases`);
+      const result = await api(`/api/projects/${projectId}/releases`, { signal: controller.signal });
+      if (sequence !== releaseRequest.current.sequence) return;
       setReleases(result.releases);
       setReleaseId((current) =>
         result.releases.some((item) => item.id === current)
@@ -1899,9 +2048,10 @@ export function ProductApp() {
           : result.releases[0]?.id || "",
       );
     } catch (requestError) {
+      if (controller.signal.aborted || sequence !== releaseRequest.current.sequence) return;
       setError(requestError.message);
     } finally {
-      setLoading(false);
+      if (sequence === releaseRequest.current.sequence) setLoading(false);
     }
   }, [projectId]);
 
@@ -1911,6 +2061,10 @@ export function ProductApp() {
   }, [loadReleases]);
 
   const loadSnapshot = useCallback(async () => {
+    snapshotRequest.current.controller?.abort();
+    const controller = new AbortController();
+    const sequence = ++snapshotRequest.current.sequence;
+    snapshotRequest.current.controller = controller;
     if (!releaseId) {
       setSnapshot(null);
       return;
@@ -1918,12 +2072,15 @@ export function ProductApp() {
     setLoading(true);
     setError("");
     try {
-      setSnapshot(await api(`/api/releases/${releaseId}`));
+      const result = await api(`/api/releases/${releaseId}`, { signal: controller.signal });
+      if (sequence !== snapshotRequest.current.sequence) return;
+      setSnapshot(result);
     } catch (requestError) {
+      if (controller.signal.aborted || sequence !== snapshotRequest.current.sequence) return;
       setError(requestError.message);
       setSnapshot(null);
     } finally {
-      setLoading(false);
+      if (sequence === snapshotRequest.current.sequence) setLoading(false);
     }
   }, [releaseId]);
 
@@ -1982,40 +2139,55 @@ export function ProductApp() {
   }
 
   async function updateStatus(nextStatus) {
-    await api(`/api/releases/${releaseId}`, {
-      method: "PATCH",
-      marker: markers.releaseUpdate,
-      body: { status: nextStatus },
-    });
-    await loadSnapshot();
-    await loadReleases();
+    try {
+      await api(`/api/releases/${releaseId}`, {
+        method: "PATCH",
+        marker: markers.releaseUpdate,
+        body: { status: nextStatus },
+      });
+      await loadSnapshot();
+      await loadReleases();
+    } catch (requestError) {
+      setError(requestError.message);
+      throw requestError;
+    }
   }
 
   async function runVerdict() {
-    await api(`/api/releases/${releaseId}/verdict-runs`, {
-      method: "POST",
-      marker: markers.verdict,
-      body: {},
-    });
-    await loadSnapshot();
+    try {
+      await api(`/api/releases/${releaseId}/verdict-runs`, {
+        method: "POST",
+        marker: markers.verdict,
+        body: {},
+      });
+      await loadSnapshot();
+    } catch (requestError) {
+      setError(requestError.message);
+      throw requestError;
+    }
   }
 
   async function generateExport() {
-    const payload = await api(`/api/releases/${releaseId}/exports`, {
-      method: "POST",
-      marker: markers.export,
-      body: {},
-    });
-    const blob = new Blob([JSON.stringify(payload.export, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = `release-truth-${snapshot.release.name}-${payload.artifact.id}.json`;
-    anchor.click();
-    URL.revokeObjectURL(url);
-    await loadSnapshot();
+    try {
+      const payload = await api(`/api/releases/${releaseId}/exports`, {
+        method: "POST",
+        marker: markers.export,
+        body: {},
+      });
+      const blob = new Blob([JSON.stringify(payload.export, null, 2)], {
+        type: "application/json",
+      });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = `release-truth-${snapshot.release.name}-${payload.artifact.id}.json`;
+      anchor.click();
+      URL.revokeObjectURL(url);
+      await loadSnapshot();
+    } catch (requestError) {
+      setError(requestError.message);
+      throw requestError;
+    }
   }
 
   if (status === "loading") {
@@ -2046,6 +2218,7 @@ export function ProductApp() {
     <>
       <ProductShell
         user={user}
+        isDemo={user?.isDemo}
         workspaces={workspaces}
         workspaceId={workspaceId}
         setWorkspaceId={setWorkspaceId}

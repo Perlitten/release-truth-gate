@@ -20,6 +20,7 @@ import {
   contentHash,
 } from "../../../../../src/server/immutable-records.js";
 import { requireReleaseCapability } from "../../../../../src/server/rbac.js";
+import { isAllowedSourceUrl } from "../../../../../src/lib/source-url.js";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -28,7 +29,14 @@ const evidenceSchema = z.object({
   summary: z.string().trim().min(2).max(12_000),
   relation: z.enum(["supports", "contradicts", "missing"]),
   evidenceKind: z.string().trim().min(1).max(64),
-  sourceUrl: z.string().trim().url().max(2_000).nullable().optional(),
+  sourceUrl: z
+    .string()
+    .trim()
+    .url()
+    .max(2_000)
+    .refine(isAllowedSourceUrl, "Source URL must use http or https.")
+    .nullable()
+    .optional(),
   sourceReference: z.string().trim().max(500).nullable().optional(),
   authorName: z.string().trim().max(160).nullable().optional(),
   capturedAt: z.coerce.date().optional(),

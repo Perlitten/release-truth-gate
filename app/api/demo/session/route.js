@@ -116,7 +116,7 @@ export async function POST(request) {
     });
 
     return jsonResponse(
-      { user: result.user },
+      { user: { ...result.user, isDemo: true } },
       {
         headers: {
           "Set-Cookie": userSessionCookieHeader(result.session),

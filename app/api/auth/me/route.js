@@ -12,6 +12,7 @@ import { getUserSession } from "../../../../src/server/auth/sessions.js";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
+const DEMO_JUDGE_EMAIL = "judge@nova-demo.local";
 
 export async function GET(request) {
   return databaseRoute(async ({ db }) => {
@@ -36,6 +37,7 @@ export async function GET(request) {
         id: session.userId,
         email: session.email,
         displayName: session.displayName,
+        isDemo: session.email.toLowerCase() === DEMO_JUDGE_EMAIL,
       },
       workspaces: accessibleWorkspaces,
     });
