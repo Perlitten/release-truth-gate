@@ -403,6 +403,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
 
   async function submit(event) {
     event.preventDefault();
+    if (busy) return;
     const data = new FormData(event.currentTarget);
     let payload;
     if (type === "workspace") payload = { name: data.get("name") };
@@ -598,7 +599,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
               <textarea name="rationale" rows={4} minLength={12} required />
             </Field>
             <Field label="Evidence considered">
-              <div className="rt-checkbox-list">
+              <div className="rt-checkbox-list rt-checkbox-list-detailed">
                 {decisionEvidence.map((item) => (
                   <label key={item.id}>
                     <input
@@ -607,7 +608,12 @@ function CreationDialog({ type, context, onClose, onCreated }) {
                       value={item.id}
                       defaultChecked
                     />
-                    <span>{item.summary}</span>
+                    <span>
+                      <strong>{item.summary}</strong>
+                      {item.payloadSnapshot?.content && (
+                        <q>{item.payloadSnapshot.content}</q>
+                      )}
+                    </span>
                   </label>
                   ))}
               </div>
@@ -615,6 +621,12 @@ function CreationDialog({ type, context, onClose, onCreated }) {
                 <small className="rt-field-hint">No evidence is linked to this claim yet. Record the decision only after reviewing the available evidence.</small>
               )}
             </Field>
+            {decisionEvidence.length > 0 && (
+              <label className="rt-check rt-review-ack">
+                <input type="checkbox" name="reviewedEvidence" required />
+                I have read the evidence content above, not only the titles, before recording this decision.
+              </label>
+            )}
           </>
         )}
         {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
