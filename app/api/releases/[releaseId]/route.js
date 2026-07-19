@@ -1,4 +1,5 @@
 import { eq } from "drizzle-orm";
+import { alias } from "drizzle-orm/pg-core";
 import { z } from "zod";
 
 import { jsonResponse } from "../../../../api/security.mjs";
@@ -92,6 +93,7 @@ export async function GET(request, { params }) {
       .from(claimEvidenceLinks)
       .innerJoin(claims, eq(claims.id, claimEvidenceLinks.claimId))
       .where(eq(claims.releaseId, releaseId));
+    const assignees = alias(users, "assignees");
     const decisionRows = await db
       .select({
         id: decisions.id,
@@ -101,6 +103,7 @@ export async function GET(request, { params }) {
         type: decisions.type,
         status: decisions.status,
         rationale: decisions.rationale,
+        assigneeId: decisions.assigneeId,
         roleAtDecision: decisions.roleAtDecision,
         basedOnEvidenceIds: decisions.basedOnEvidenceIds,
         recordAction: decisions.recordAction,
@@ -112,9 +115,14 @@ export async function GET(request, { params }) {
           id: users.id,
           displayName: users.displayName,
         },
+        assignee: {
+          id: assignees.id,
+          displayName: assignees.displayName,
+        },
       })
       .from(decisions)
       .innerJoin(users, eq(users.id, decisions.authoredBy))
+      .leftJoin(assignees, eq(assignees.id, decisions.assigneeId))
       .where(eq(decisions.releaseId, releaseId))
       .orderBy(decisions.createdAt);
     const runRows = await db

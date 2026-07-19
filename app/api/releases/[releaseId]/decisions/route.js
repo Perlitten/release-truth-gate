@@ -7,6 +7,7 @@ import {
   claims,
   decisions,
   evidence,
+  memberships,
 } from "../../../../../db/schema.js";
 import { appendAuditEvent } from "../../../../../src/server/audit.js";
 import { HttpError } from "../../../../../src/server/errors.js";
@@ -28,8 +29,15 @@ export const runtime = "nodejs";
 const decisionSchema = z
   .object({
     claimId: z.string().uuid(),
-    type: z.enum(["approval", "rejection", "risk_acceptance", "comment"]),
+    type: z.enum([
+      "approval",
+      "rejection",
+      "risk_acceptance",
+      "comment",
+      "assignment",
+    ]),
     rationale: z.string().trim().min(12).max(12_000),
+    assigneeId: z.string().uuid().nullable().optional(),
     basedOnEvidenceIds: z.array(z.string().uuid()).max(100).default([]),
     recordAction: z
       .enum(["snapshot", "correction", "revocation"])
@@ -46,6 +54,12 @@ const decisionSchema = z
       (!value.supersedesId || !value.correctionReason)
     ) {
       context.addIssue({ code: "custom", path: ["correctionReason"], message: "Corrections and revocations require a target and reason." });
+    }
+    if (value.type === "assignment" && !value.assigneeId) {
+      context.addIssue({ code: "custom", path: ["assigneeId"], message: "An assignment decision requires an assignee." });
+    }
+    if (value.type !== "assignment" && value.assigneeId) {
+      context.addIssue({ code: "custom", path: ["assigneeId"], message: "Only an assignment decision may set an assignee." });
     }
   });
 
@@ -111,6 +125,25 @@ export async function POST(request, { params }) {
         );
       }
     }
+    if (input.type === "assignment") {
+      const [assigneeMembership] = await db
+        .select({ userId: memberships.userId })
+        .from(memberships)
+        .where(
+          and(
+            eq(memberships.workspaceId, membership.workspaceId),
+            eq(memberships.userId, input.assigneeId),
+          ),
+        )
+        .limit(1);
+      if (!assigneeMembership) {
+        throw new HttpError(
+          400,
+          "The assignee must be a member of this workspace.",
+          "invalid_decision_assignee",
+        );
+      }
+    }
     if (input.recordAction !== "snapshot") {
       const [previous] = await db
         .select()
@@ -144,6 +177,7 @@ export async function POST(request, { params }) {
       type: input.type,
       status,
       rationale: input.rationale,
+      assigneeId: input.assigneeId || null,
       roleAtDecision: membership.role,
       basedOnEvidenceIds: uniqueEvidenceIds,
       recordAction: input.recordAction,

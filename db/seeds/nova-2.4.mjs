@@ -238,6 +238,34 @@ try {
     ],
   );
 
+  const assignmentPayload = {
+    demo: true,
+    dataset: demoRelease.datasetLabel,
+    claimId: scopedDecision.claimId,
+    assigneeId: ids.user,
+    rationale:
+      "The current privacy-boundary test regressed after the telemetry schema refactor. Assigning to the release owner to remove message_text from the payload.",
+  };
+  await client.query(
+    `INSERT INTO decisions (
+      id, release_id, claim_id, type, status, rationale, assignee_id,
+      role_at_decision, based_on_evidence_ids, content_hash, authored_by, created_at
+    ) VALUES (
+      $1, $2, $3, 'assignment', 'pending', $4, $5, 'owner', '[]'::jsonb, $6, $7, $8
+    )
+    ON CONFLICT (id) DO NOTHING`,
+    [
+      uuidFromSeed("nova:decision:privacy-assignment-jul-18"),
+      ids.release,
+      claimIds.get(scopedDecision.claimId),
+      assignmentPayload.rationale,
+      ids.user,
+      sha256(assignmentPayload),
+      ids.user,
+      new Date("2026-07-18T09:15:00Z"),
+    ],
+  );
+
   await client.query("COMMIT");
   console.log(
     JSON.stringify({

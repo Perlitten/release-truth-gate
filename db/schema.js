@@ -70,6 +70,7 @@ export const decisionType = pgEnum("decision_type", [
   "rejection",
   "risk_acceptance",
   "comment",
+  "assignment",
 ]);
 
 export const decisionStatus = pgEnum("decision_status", [
@@ -435,6 +436,7 @@ export const decisions = pgTable(
     type: decisionType("type").notNull(),
     status: decisionStatus("status").notNull(),
     rationale: text("rationale").notNull(),
+    assigneeId: uuid("assignee_id").references(() => users.id),
     roleAtDecision: workspaceRole("role_at_decision").notNull(),
     basedOnEvidenceIds: jsonb("based_on_evidence_ids").notNull().default([]),
     recordAction: immutableRecordAction("record_action")

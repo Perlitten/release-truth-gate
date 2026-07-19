@@ -386,7 +386,21 @@ function CreationDialog({ type, context, onClose, onCreated }) {
   const [decisionClaimId, setDecisionClaimId] = useState(
     context?.claims?.[0]?.id || "",
   );
+  const [decisionType, setDecisionType] = useState("approval");
   const [targetType, setTargetType] = useState("tag");
+  const [members, setMembers] = useState([]);
+  useEffect(() => {
+    if (type !== "decision" || !context?.workspace?.id) return;
+    let cancelled = false;
+    api(`/api/workspaces/${context.workspace.id}/members`)
+      .then((result) => {
+        if (!cancelled) setMembers(result.members);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [type, context?.workspace?.id]);
   const decisionEvidence = context?.evidence?.filter((item) =>
     context.links?.some(
       (link) => link.claimId === decisionClaimId && link.evidenceId === item.id,
@@ -448,6 +462,8 @@ function CreationDialog({ type, context, onClose, onCreated }) {
         claimId: data.get("claimId"),
         type: data.get("decisionType"),
         rationale: data.get("rationale"),
+        assigneeId:
+          data.get("decisionType") === "assignment" ? data.get("assigneeId") : null,
         basedOnEvidenceIds: data.getAll("basedOnEvidenceIds"),
       };
     }
@@ -588,40 +604,66 @@ function CreationDialog({ type, context, onClose, onCreated }) {
               </select>
             </Field>
             <Field label="Decision">
-              <select name="decisionType" defaultValue="approval">
+              <select
+                name="decisionType"
+                value={decisionType}
+                onChange={(event) => setDecisionType(event.target.value)}
+              >
                 <option value="approval">Approve current evidence head</option>
                 <option value="rejection">Reject</option>
                 <option value="risk_acceptance">Accept documented risk</option>
                 <option value="comment">Reviewer comment</option>
+                <option value="assignment">Assign to a teammate for resolution</option>
               </select>
             </Field>
-            <Field label="Rationale" hint="At least 12 characters. Explain why the evidence is sufficient or insufficient.">
+            <Field
+              label="Rationale"
+              hint={
+                decisionType === "assignment"
+                  ? "At least 12 characters. Explain what needs to be resolved."
+                  : "At least 12 characters. Explain why the evidence is sufficient or insufficient."
+              }
+            >
               <textarea name="rationale" rows={4} minLength={12} required />
             </Field>
-            <Field label="Evidence considered">
-              <div className="rt-checkbox-list rt-checkbox-list-detailed">
-                {decisionEvidence.map((item) => (
-                  <label key={item.id}>
-                    <input
-                      type="checkbox"
-                      name="basedOnEvidenceIds"
-                      value={item.id}
-                      defaultChecked
-                    />
-                    <span>
-                      <strong>{item.summary}</strong>
-                      {item.payloadSnapshot?.content && (
-                        <q>{item.payloadSnapshot.content}</q>
-                      )}
-                    </span>
-                  </label>
+            {decisionType === "assignment" && (
+              <Field label="Assignee">
+                <select name="assigneeId" required defaultValue="">
+                  <option value="" disabled>Choose a workspace member</option>
+                  {members.map((member) => (
+                    <option value={member.userId} key={member.userId}>
+                      {member.displayName} ({member.role})
+                    </option>
                   ))}
-              </div>
-              {decisionEvidence.length === 0 && (
-                <small className="rt-field-hint">No evidence is linked to this claim yet. Record the decision only after reviewing the available evidence.</small>
-              )}
-            </Field>
-            {decisionEvidence.length > 0 && (
+                </select>
+              </Field>
+            )}
+            {decisionType !== "assignment" && (
+              <Field label="Evidence considered">
+                <div className="rt-checkbox-list rt-checkbox-list-detailed">
+                  {decisionEvidence.map((item) => (
+                    <label key={item.id}>
+                      <input
+                        type="checkbox"
+                        name="basedOnEvidenceIds"
+                        value={item.id}
+                        defaultChecked
+                      />
+                      <span>
+                        <strong>{item.summary}</strong>
+                        {item.payloadSnapshot?.content && (
+                          <q>{item.payloadSnapshot.content}</q>
+                        )}
+                      </span>
+                    </label>
+                    ))}
+                </div>
+                {decisionEvidence.length === 0 && (
+                  <small className="rt-field-hint">No evidence is linked to this claim yet. Record the decision only after reviewing the available evidence.</small>
+                )}
+              </Field>
+            )}
+            {decisionType !== "assignment" && decisionEvidence.length > 0 && (
               <label className="rt-check rt-review-ack">
                 <input type="checkbox" name="reviewedEvidence" required />
                 I have read the evidence content above, not only the titles, before recording this decision.
@@ -1098,6 +1140,7 @@ function TimelineTab({ snapshot }) {
         at: claim.createdAt,
         title: claim.title,
         status: "pending",
+        statusLabel: "Registered",
         claimId: claim.id,
         detail: {
           kind: "release claim",
@@ -1114,6 +1157,12 @@ function TimelineTab({ snapshot }) {
         at: item.capturedAt,
         title: item.summary,
         status: evidenceTimelineStatus(item.relation),
+        statusLabel:
+          item.relation === "supports"
+            ? "Supports"
+            : item.relation === "contradicts"
+              ? "Contradicts"
+              : "Missing evidence",
         claimId: claimIdByEvidenceId.get(item.id),
         detail: {
           kind: `${item.evidenceKind} evidence`,
@@ -1132,13 +1181,27 @@ function TimelineTab({ snapshot }) {
         id: `decision:${decision.id}`,
         lane: "decision",
         at: decision.createdAt,
-        title: `${decision.type.replace("_", " ")} · ${decision.status}`,
+        title:
+          decision.type === "assignment"
+            ? `Assigned to ${decision.assignee?.displayName || "a teammate"}`
+            : `${decision.type.replace("_", " ")} · ${decision.status}`,
         status: decisionTimelineStatus(decision),
+        statusLabel:
+          decision.type === "assignment"
+            ? "Assigned"
+            : decision.status === "approved"
+              ? "Approved"
+              : decision.status === "rejected"
+                ? "Rejected"
+                : decision.status === "revoked"
+                  ? "Revoked"
+                  : "Pending",
         claimId: decision.claimId,
         detail: {
-          kind: "human decision",
+          kind: decision.type === "assignment" ? "blocker assignment" : "human decision",
           excerpt: decision.rationale,
           author: decision.actor?.displayName,
+          owner: decision.assignee?.displayName,
           role: decision.roleAtDecision,
         },
       });
@@ -1150,6 +1213,7 @@ function TimelineTab({ snapshot }) {
         at: run.createdAt,
         title: `Server verdict · ${run.result?.label || "unknown"}`,
         status: run.result?.status === "go" ? "verified" : run.result?.status === "no_go" ? "contradicted" : "pending",
+        statusLabel: run.result?.label || "Unknown",
         detail: {
           kind: "deterministic verdict run",
           excerpt: run.result?.detail,
@@ -1159,6 +1223,21 @@ function TimelineTab({ snapshot }) {
     }
     return list.sort((left, right) => Date.parse(left.at) - Date.parse(right.at));
   }, [snapshot]);
+
+  const claimOwners = useMemo(() => {
+    const owners = new Map();
+    for (const decision of snapshot.activeDecisions) {
+      if (decision.type !== "assignment" || !decision.claimId) continue;
+      const current = owners.get(decision.claimId);
+      if (!current || Date.parse(decision.createdAt) > Date.parse(current.at)) {
+        owners.set(decision.claimId, {
+          name: decision.assignee?.displayName || "Unknown teammate",
+          at: decision.createdAt,
+        });
+      }
+    }
+    return owners;
+  }, [snapshot.activeDecisions]);
 
   const days = useMemo(
     () => [...new Set(events.map((event) => timelineDayKey(event.at)))].sort(),
@@ -1285,7 +1364,7 @@ function TimelineTab({ snapshot }) {
                 const StatusIcon = TIMELINE_STATUS[selected.status].icon;
                 return <StatusIcon weight="fill" />;
               })()}
-              {TIMELINE_STATUS[selected.status].label}
+              {selected.statusLabel || TIMELINE_STATUS[selected.status].label}
             </span>
           </div>
           <h3>{selected.title}</h3>
@@ -1308,6 +1387,12 @@ function TimelineTab({ snapshot }) {
             )}
             {selected.detail.author && (
               <div><dt>Recorded by</dt><dd>{selected.detail.author}</dd></div>
+            )}
+            {(selected.detail.owner || claimOwners.get(selected.claimId)?.name) && (
+              <div>
+                <dt>Owner</dt>
+                <dd>{selected.detail.owner || claimOwners.get(selected.claimId).name}</dd>
+              </div>
             )}
             <div><dt>Captured</dt><dd>{formatDate(selected.at)}</dd></div>
           </dl>
@@ -1728,7 +1813,26 @@ function ReleaseWorkspace({
         )}
 
         {tab === "audit" && (
-          <RecordSection
+          <>
+            {snapshot.verdictRuns.length > 0 && (
+              <RecordSection
+                title="Verdict history"
+                description="Every server-computed verdict for this release, in order."
+              >
+                <ol className="rt-verdict-history">
+                  {snapshot.verdictRuns.map((run, index) => (
+                    <li key={run.id}>
+                      {index > 0 && <CaretDown className="rt-verdict-history-arrow" weight="bold" />}
+                      <span className={`rt-verdict-history-chip ${run.result?.status || "not_run"}`}>
+                        <strong>{run.result?.label || "UNKNOWN"}</strong>
+                        <small>{formatDate(run.createdAt)}</small>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </RecordSection>
+            )}
+            <RecordSection
             title="Tamper-evident audit"
             description="Each event includes the hash of the previous workspace event."
           >
@@ -1752,6 +1856,7 @@ function ReleaseWorkspace({
             </div>
             )}
           </RecordSection>
+          </>
         )}
       </section>
     </div>
