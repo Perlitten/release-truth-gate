@@ -33,7 +33,7 @@ async function createWorkspaceProjectRelease(page, workspaceName, releaseName) {
 }
 
 async function addClaim(page, title) {
-  await page.getByRole("button", { name: /^Claims/ }).click();
+  await page.getByRole("tab", { name: /^Claims/ }).click();
   await page.getByRole("button", { name: "Add claim" }).click();
   await page.getByLabel("Claim", { exact: true }).fill(title);
   await page.getByLabel("What must be true?").fill("Behavior must be provably correct.");
@@ -52,13 +52,13 @@ test("blocks a blind decision sign-off until evidence acknowledgment is checked"
   await createWorkspaceProjectRelease(page, "Blind Approval Team", "1.0.0");
   await addClaim(page, "Checkout is idempotent");
 
-  await page.getByRole("button", { name: /^Evidence/ }).click();
+  await page.getByRole("tab", { name: /^Evidence/ }).click();
   await page.getByRole("button", { name: "Add evidence" }).click();
   await page.getByLabel("Evidence summary").fill("Idempotency test passed on the release tag.");
   await page.getByLabel("Evidence kind").fill("test");
   await page.getByRole("button", { name: /Create record/ }).click();
 
-  await page.getByRole("button", { name: /^Decisions/ }).click();
+  await page.getByRole("tab", { name: /^Decisions/ }).click();
   await page.getByRole("button", { name: "Record decision" }).click();
   await page.getByLabel("Rationale").fill(
     "The linked test directly satisfies the acceptance criterion.",
@@ -74,12 +74,12 @@ test("blocks a blind decision sign-off until evidence acknowledgment is checked"
   // native required-checkbox validation should keep the dialog open.
   await page.getByRole("button", { name: /Create record/ }).click();
   await expect(page.getByRole("dialog", { name: "Record decision" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Decisions 0" })).toBeVisible();
+  await expect(page.getByRole("tab", { name: "Decisions 0" })).toBeVisible();
 
   await acknowledgment.check();
   await page.getByRole("button", { name: /Create record/ }).click();
   await expect(page.getByRole("dialog", { name: "Record decision" })).toBeHidden();
-  await expect(page.getByRole("button", { name: "Decisions 1" })).toBeVisible();
+  await expect(page.getByRole("tab", { name: "Decisions 1" })).toBeVisible();
 });
 
 // Fail-closed core guarantee: a release with a material claim and no

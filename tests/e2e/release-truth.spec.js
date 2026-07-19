@@ -40,7 +40,7 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   await owner.getByLabel("Target value").fill("v1.0.0");
   await owner.getByRole("button", { name: /Create record/ }).click();
 
-  await owner.getByRole("button", { name: "Claims 0" }).click();
+  await owner.getByRole("tab", { name: "Claims 0" }).click();
   await owner.getByRole("button", { name: "Add claim" }).click();
   await owner.getByLabel("Claim", { exact: true }).fill("Checkout is idempotent");
   await owner
@@ -52,7 +52,7 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   await owner.getByLabel("Required evidence kinds").fill("test");
   await owner.getByRole("button", { name: /Create record/ }).click();
 
-  await owner.getByRole("button", { name: "Evidence 0" }).click();
+  await owner.getByRole("tab", { name: "Evidence 0" }).click();
   await owner.getByRole("button", { name: "Add evidence" }).click();
   await owner
     .getByLabel("Evidence summary")
@@ -96,7 +96,7 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   await reviewer
     .getByRole("button", { name: "Payments API", exact: true })
     .click();
-  await reviewer.getByRole("button", { name: "Decisions 0" }).click();
+  await reviewer.getByRole("tab", { name: "Decisions 0" }).click();
   await reviewer.getByRole("button", { name: "Record decision" }).click();
   await reviewer.getByLabel("Rationale").fill(
     "The linked integration test directly satisfies the acceptance criterion.",
