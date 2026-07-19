@@ -28,6 +28,13 @@ import {
   XCircle,
 } from "@phosphor-icons/react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Avatar } from "./components/core/Avatar.jsx";
+import { Badge } from "./components/core/Badge.jsx";
+import { Button } from "./components/core/Button.jsx";
+import { DemoBadge } from "./components/core/DemoBadge.jsx";
+import { Kicker } from "./components/core/Kicker.jsx";
+import { Logo } from "./components/core/Logo.jsx";
+import { StateChip } from "./components/core/StateChip.jsx";
 import { isAllowedSourceUrl } from "./lib/source-url.js";
 
 const markers = {
@@ -244,14 +251,6 @@ function Dialog({ title, eyebrow, children, onClose, wide = false }) {
   );
 }
 
-function SubmitButton({ busy, children }) {
-  return (
-    <button className="rt-primary" type="submit" disabled={busy}>
-      {busy ? <SpinnerGap className="rt-spin" /> : children}
-    </button>
-  );
-}
-
 function AuthScreen({ invitation, bootError, onAuthenticated }) {
   const [mode, setMode] = useState("register");
   const [busy, setBusy] = useState(false);
@@ -306,8 +305,8 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
   return (
     <main className="rt-auth">
       <section className="rt-auth-story">
-        <div className="rt-logo large"><Sparkle weight="fill" /></div>
-        <p className="rt-kicker">Release Truth</p>
+        <Logo large />
+        <Kicker>Release Truth</Kicker>
         <h1>Decide what ships.<br />Show the evidence.</h1>
         <p>
           A shared release gate for claims, immutable evidence, human decisions,
@@ -374,21 +373,22 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
             />
           </Field>
           {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
-          <SubmitButton busy={busy}>
-            {mode === "register" ? "Create account" : "Sign in"} <ArrowRight />
-          </SubmitButton>
-        </form>
-        <button
-          className="rt-secondary rt-demo-entry"
-          type="button"
-          disabled={busy}
-          onClick={enterDemo}
-        >
-          <Sparkle weight="fill" /> Explore the Nova 2.4 demo
-        </button>
-        <p className="rt-auth-foot">
-          Product data stays on the server. Clearing your browser does not erase it.
-        </p>
+        <Button busy={busy} type="submit">
+          {mode === "register" ? "Create account" : "Sign in"} <ArrowRight />
+        </Button>
+      </form>
+      <Button
+        variant="secondary"
+        type="button"
+        className="rt-demo-entry"
+        disabled={busy}
+        onClick={enterDemo}
+      >
+        <Sparkle weight="fill" /> Explore the Nova 2.4 demo
+      </Button>
+      <p className="rt-auth-foot">
+        Product data stays on the server. Clearing your browser does not erase it.
+      </p>
       </section>
     </main>
   );
@@ -415,8 +415,8 @@ function EmptyWorkspace({ user, onCreate }) {
   return (
     <main className="rt-onboarding">
       <section>
-        <div className="rt-logo"><Sparkle weight="fill" /></div>
-        <span className="rt-kicker">Welcome, {user.displayName}</span>
+        <Logo />
+        <Kicker>Welcome, {user.displayName}</Kicker>
         <h1>Create your first workspace</h1>
         <p>
           Workspaces keep projects, release evidence, teammates, and audit history
@@ -427,7 +427,7 @@ function EmptyWorkspace({ user, onCreate }) {
             <input name="name" minLength={2} maxLength={120} required autoFocus />
           </Field>
           {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
-          <SubmitButton busy={busy}>Create workspace <ArrowRight /></SubmitButton>
+          <Button type="submit" busy={busy}>Create workspace <ArrowRight /></Button>
         </form>
       </section>
     </main>
@@ -725,11 +725,11 @@ function CreationDialog({ type, context, onClose, onCreated }) {
               </label>
             )}
           </>
-        )}
+      )}
         {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
         <div className="rt-dialog-actions">
-          <button type="button" className="rt-secondary" onClick={onClose}>Cancel</button>
-          <SubmitButton busy={busy}>Create record <ArrowRight /></SubmitButton>
+          <Button type="button" variant="secondary" onClick={onClose}>Cancel</Button>
+          <Button busy={busy} type="submit">Create record <ArrowRight /></Button>
         </div>
       </form>
     </Dialog>
@@ -796,7 +796,7 @@ function TeamDialog({ workspace, onClose }) {
             <div className="rt-member-list">
               {members.map((member) => (
                 <div key={member.userId}>
-                  <span className="rt-avatar">{initials(member.displayName)}</span>
+                  <Avatar initials={initials(member.displayName)} />
                   <span><strong>{member.displayName}</strong><small>{member.email}</small></span>
                   <b>{member.role}</b>
                 </div>
@@ -816,7 +816,7 @@ function TeamDialog({ workspace, onClose }) {
                 <option value="viewer">Viewer</option>
               </select>
             </Field>
-            <SubmitButton busy={busy}>Create invite <UserPlus /></SubmitButton>
+            <Button busy={busy} type="submit">Create invite <UserPlus /></Button>
           </form>
           {inviteUrl && (
             <div className="rt-invite-link">
@@ -963,9 +963,9 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
           <p className="rt-muted">
             Installation access is verified by GitHub before a repository can be linked.
           </p>
-          <button type="button" className="rt-secondary" onClick={connect} disabled={busy}>
+          <Button type="button" variant="secondary" onClick={connect} disabled={busy}>
             <GithubLogo /> Connect GitHub App
-          </button>
+          </Button>
           {project && available.length > 0 && (
             <form className="rt-form compact" onSubmit={link}>
               <Field label="Repository">
@@ -975,7 +975,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
                   ))}
                 </select>
               </Field>
-              <SubmitButton busy={busy}>Link repository <ArrowRight /></SubmitButton>
+              <Button busy={busy} type="submit">Link repository <ArrowRight /></Button>
             </form>
           )}
           {installations.length > 0 && available.length === 0 && (
@@ -1027,7 +1027,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
                   <input name="evidenceKind" defaultValue="github" required />
                 </Field>
               </div>
-              <SubmitButton busy={busy}>Import snapshot <GithubLogo /></SubmitButton>
+              <Button busy={busy} type="submit">Import snapshot <GithubLogo /></Button>
             </form>
           ) : (
             <p className="rt-muted">
@@ -1048,9 +1048,9 @@ function RecordSection({ title, description, action, actionLabel, children }) {
       <header>
         <div><h2>{title}</h2><p>{description}</p></div>
         {action && (
-          <button type="button" className="rt-primary" onClick={action}>
+          <Button type="button" variant="primary" onClick={action}>
             <Plus /> {actionLabel}
-          </button>
+          </Button>
         )}
       </header>
       {children}
@@ -1065,9 +1065,9 @@ function EmptyState({ icon: Icon, title, body, action, actionLabel }) {
       <h3>{title}</h3>
       <p>{body}</p>
       {action && (
-        <button type="button" className="rt-primary" onClick={action}>
+        <Button type="button" variant="primary" onClick={action}>
           <Plus /> {actionLabel}
-        </button>
+        </Button>
       )}
     </div>
   );
@@ -1436,7 +1436,7 @@ function TimelineTab({ snapshot, focusClaimId, onFocusHandled }) {
       {selected && (
         <aside className={`rt-timeline-detail ${selected.status}`}>
           <div className="rt-timeline-detail-head">
-            <span className="rt-kicker">Selected event</span>
+            <Kicker>Selected event</Kicker>
             <span className={`rt-timeline-detail-status ${selected.status}`}>
               {(() => {
                 const StatusIcon = TIMELINE_STATUS[selected.status].icon;
@@ -1484,15 +1484,16 @@ function TimelineTab({ snapshot, focusClaimId, onFocusHandled }) {
           )}
           {selected.claimId && (
             <div className="rt-ai-panel">
-              <button
+              <Button
                 type="button"
-                className="rt-secondary rt-ai-trigger"
+                variant="secondary"
+                className="rt-ai-trigger"
                 onClick={runAssessment}
                 disabled={assessing}
               >
                 {assessing ? <SpinnerGap className="rt-spin" /> : <Sparkle weight="fill" />}
                 {assessing ? "Asking GPT-5.6…" : "Assess with GPT-5.6"}
-              </button>
+              </Button>
               {assessError && (
                 <p className="rt-error" role="alert"><WarningCircle /> {assessError}</p>
               )}
@@ -1641,52 +1642,52 @@ function ReleaseWorkspace({
           </div>
         </div>
         <div className="rt-release-actions">
-          <span className={`rt-state ${snapshot.release.status}`}>
+          <Badge status={snapshot.release.status}>
             <ClockCounterClockwise weight="fill" /> Workflow: {snapshot.release.status.replace("_", " ")}
-          </span>
-          <button type="button" className="rt-secondary" onClick={onRefresh}>
+          </Badge>
+          <Button type="button" variant="secondary" onClick={onRefresh}>
             <ArrowClockwise /> Refresh
-          </button>
+          </Button>
           {can(role, "run_verdict") && (
-            <button
+            <Button
               type="button"
-              className="rt-primary"
+              variant="primary"
               onClick={runVerdict}
               disabled={busy}
             >
               <ShieldCheck /> Run verdict
-            </button>
+            </Button>
           )}
           {can(role, "generate_export") && latestRun && (
-            <button
+            <Button
               type="button"
-              className="rt-secondary"
+              variant="secondary"
               onClick={requestExport}
               disabled={busy}
               title="Certifies the record's integrity, not release readiness."
             >
               <DownloadSimple /> Export signed {verdictLabel} record
-            </button>
+            </Button>
           )}
           {can(role, "manage_release") && snapshot.release.status !== "finalized" && (
-            <button
+            <Button
               type="button"
-              className="rt-primary"
+              variant="primary"
               onClick={() => changeStatus("finalized")}
               disabled={busy}
             >
               <CheckCircle /> Finalize
-            </button>
+            </Button>
           )}
           {can(role, "manage_release") && snapshot.release.status === "finalized" && (
-            <button
+            <Button
               type="button"
-              className="rt-secondary"
+              variant="secondary"
               onClick={() => changeStatus("in_review")}
               disabled={busy}
             >
               Reopen review
-            </button>
+            </Button>
           )}
         </div>
       </header>
@@ -1772,7 +1773,7 @@ function ReleaseWorkspace({
             <div className="rt-overview-grid">
               <article className="rt-trust-card">
                 <div>
-                  <span className="rt-kicker">Trust boundary</span>
+                <Kicker>Trust boundary</Kicker>
                   <h2>Browser state is not authority.</h2>
                   <p>
                     Claims, evidence, decisions, roles, audit events, and verdict
@@ -1885,7 +1886,7 @@ function ReleaseWorkspace({
                     <div>
                       <div className="rt-record-title">
                         <h3>{item.summary}</h3>
-                        <span className={item.relation}>{item.relation}</span>
+                        <StateChip state={item.relation}>{item.relation}</StateChip>
                       </div>
                       <dl>
                         <div><dt>Kind</dt><dd>{item.evidenceKind}</dd></div>
@@ -2018,12 +2019,12 @@ function ReleaseWorkspace({
             verdict is <strong>{verdictLabel}</strong>.
           </p>
           <div className="rt-dialog-actions">
-            <button type="button" className="rt-secondary" onClick={() => setConfirmExport(false)}>
+            <Button type="button" variant="secondary" onClick={() => setConfirmExport(false)}>
               Cancel
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
-              className="rt-primary"
+              variant="primary"
               disabled={busy}
               onClick={() => {
                 setConfirmExport(false);
@@ -2031,7 +2032,7 @@ function ReleaseWorkspace({
               }}
             >
               {busy ? <SpinnerGap className="rt-spin" /> : <DownloadSimple />} Export anyway
-            </button>
+            </Button>
           </div>
         </Dialog>
       )}
@@ -2071,9 +2072,9 @@ function ProductShell({
     <main className="rt-app">
       <aside className="rt-sidebar">
         <header>
-          <span className="rt-logo"><Sparkle weight="fill" /></span>
+          <Logo />
           <span><strong>Release Truth</strong><small>Evidence Gate</small></span>
-          {isDemo && <span className="rt-demo-badge"><Sparkle weight="fill" /> Demo data</span>}
+          {isDemo && <DemoBadge />}
         </header>
         <div className="rt-workspace-select">
           <span>Workspace</span>
@@ -2124,7 +2125,7 @@ function ProductShell({
           <button type="button" onClick={() => onCreate("workspace")}><Plus /> Workspace</button>
           <button type="button" onClick={onLogout}><SignOut /> Sign out</button>
           <div className="rt-user">
-            <span className="rt-avatar">{initials(user.displayName)}</span>
+          <Avatar initials={initials(user.displayName)} />
             <span><strong>{user.displayName}</strong><small>{user.email}</small></span>
           </div>
         </div>
@@ -2143,9 +2144,9 @@ function ProductShell({
               <CaretDown />
             </label>
             {can(role, "manage_release") && (
-              <button type="button" className="rt-secondary" onClick={() => onCreate("release")}>
+              <Button type="button" variant="secondary" onClick={() => onCreate("release")}>
                 <Plus /> New release
-              </button>
+              </Button>
             )}
           </header>
         )}
@@ -2158,7 +2159,7 @@ function ProductShell({
             <WarningCircle />
             <h2>Could not load this workspace</h2>
             <p>{error}</p>
-            <button className="rt-secondary" type="button" onClick={onRefresh}>Try again</button>
+            <Button type="button" variant="secondary" onClick={onRefresh}>Try again</Button>
           </div>
         )}
         {!loading && !error && !project && (
@@ -2181,7 +2182,7 @@ function ProductShell({
         )}
         {!loading && !error && project && releases.length > 0 && !releaseId && (
           <div className="rt-release-picker">
-            <span className="rt-kicker">{project.name}</span>
+            <Kicker>{project.name}</Kicker>
             <h1>Select a release</h1>
             <div>
               {releases.map((item) => (
@@ -2486,7 +2487,7 @@ export function ProductApp() {
   if (status === "loading") {
     return (
       <main className="rt-boot">
-        <span className="rt-logo"><Sparkle weight="fill" /></span>
+        <Logo />
         <SpinnerGap className="rt-spin" />
       </main>
     );
