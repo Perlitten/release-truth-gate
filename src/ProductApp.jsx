@@ -35,6 +35,14 @@ import { DemoBadge } from "./components/core/DemoBadge.jsx";
 import { Kicker } from "./components/core/Kicker.jsx";
 import { Logo } from "./components/core/Logo.jsx";
 import { StateChip } from "./components/core/StateChip.jsx";
+import { Check } from "./components/forms/Check.jsx";
+import { CheckboxList } from "./components/forms/CheckboxList.jsx";
+import { ErrorMessage } from "./components/forms/ErrorMessage.jsx";
+import { Field } from "./components/forms/Field.jsx";
+import { FieldRow } from "./components/forms/FieldRow.jsx";
+import { Form } from "./components/forms/Form.jsx";
+import { Notice } from "./components/forms/Notice.jsx";
+
 import { isAllowedSourceUrl } from "./lib/source-url.js";
 
 const markers = {
@@ -164,16 +172,6 @@ function initials(name) {
       .map((part) => part[0])
       .join("")
       .toUpperCase() || "RT"
-  );
-}
-
-function Field({ label, hint, children }) {
-  return (
-    <label className="rt-field">
-      <span>{label}</span>
-      {children}
-      {hint && <small>{hint}</small>}
-    </label>
   );
 }
 
@@ -341,11 +339,11 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
           </button>
         </div>
         {invitation && (
-          <div className="rt-notice">
+          <Notice>
             <UserPlus /> Sign in with the invited email to join the workspace.
-          </div>
+          </Notice>
         )}
-        <form className="rt-form" onSubmit={submit}>
+        <Form onSubmit={submit}>
           {mode === "register" && (
             <Field label="Your name">
               <input name="displayName" minLength={2} maxLength={120} required autoFocus />
@@ -372,11 +370,11 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
               autoComplete={mode === "register" ? "new-password" : "current-password"}
             />
           </Field>
-          {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
+          {error && <ErrorMessage>{error}</ErrorMessage>}
         <Button busy={busy} type="submit">
           {mode === "register" ? "Create account" : "Sign in"} <ArrowRight />
         </Button>
-      </form>
+      </Form>
       <Button
         variant="secondary"
         type="button"
@@ -422,13 +420,13 @@ function EmptyWorkspace({ user, onCreate }) {
           Workspaces keep projects, release evidence, teammates, and audit history
           under one authorization boundary.
         </p>
-        <form className="rt-form rt-onboarding-form" onSubmit={submit}>
+        <Form className="rt-onboarding-form" onSubmit={submit}>
           <Field label="Workspace name" hint="For example: Platform team">
             <input name="name" minLength={2} maxLength={120} required autoFocus />
           </Field>
-          {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
+          {error && <ErrorMessage>{error}</ErrorMessage>}
           <Button type="submit" busy={busy}>Create workspace <ArrowRight /></Button>
-        </form>
+        </Form>
       </section>
     </main>
   );
@@ -536,7 +534,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
 
   return (
     <Dialog title={config.title} eyebrow={config.eyebrow} onClose={onClose}>
-      <form className="rt-form" onSubmit={submit}>
+      <Form onSubmit={submit}>
         {type === "workspace" && (
           <Field label="Workspace name">
             <input name="name" minLength={2} maxLength={120} required autoFocus />
@@ -560,7 +558,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
             <Field label="Description">
               <textarea name="description" rows={3} maxLength={4_000} />
             </Field>
-            <div className="rt-field-row">
+            <FieldRow>
               <Field label="Target type">
                 <select name="targetType" value={targetType} onChange={(event) => setTargetType(event.target.value)}>
                   <option value="tag">Git tag</option>
@@ -572,7 +570,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
               <Field label="Target value" hint={targetType === "unspecified" ? "Not needed when the target is unspecified." : "Required for the selected target type."}>
                 <input name="targetValue" placeholder="v1.0.0" maxLength={255} required={targetType !== "unspecified"} disabled={targetType === "unspecified"} />
               </Field>
-            </div>
+            </FieldRow>
           </>
         )}
         {type === "claim" && (
@@ -595,10 +593,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
             <Field label="Source reference" hint="Optional document or ticket reference">
               <input name="sourceReference" maxLength={500} />
             </Field>
-            <label className="rt-check">
-              <input type="checkbox" name="material" defaultChecked />
-              <span>Material to the release verdict</span>
-            </label>
+            <Check label="Material to the release verdict" name="material" defaultChecked />
           </>
         )}
         {type === "evidence" && (
@@ -606,7 +601,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
             <Field label="Evidence summary">
               <textarea name="summary" rows={4} minLength={2} required autoFocus />
             </Field>
-            <div className="rt-field-row">
+            <FieldRow>
               <Field label="Relation">
                 <select name="relation" defaultValue="supports">
                   <option value="supports">Supports</option>
@@ -617,9 +612,9 @@ function CreationDialog({ type, context, onClose, onCreated }) {
               <Field label="Evidence kind">
                 <input name="evidenceKind" defaultValue="test" required />
               </Field>
-            </div>
+            </FieldRow>
             <Field label="Link to one or more claims">
-              <div className="rt-checkbox-list">
+              <CheckboxList>
                 {context.claims.map((claim) => (
                   <label key={claim.id}>
                     <input
@@ -631,7 +626,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
                     <span>{claim.title}</span>
                   </label>
                 ))}
-              </div>
+              </CheckboxList>
             </Field>
             <Field label="Source URL" hint="Optional. Must be a complete http:// or https:// URL.">
               <input name="sourceUrl" type="url" maxLength={2_000} />
@@ -695,7 +690,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
             )}
             {decisionType !== "assignment" && (
               <Field label="Evidence considered">
-                <div className="rt-checkbox-list rt-checkbox-list-detailed">
+                <CheckboxList detailed>
                   {decisionEvidence.map((item) => (
                     <label key={item.id}>
                       <input
@@ -712,26 +707,23 @@ function CreationDialog({ type, context, onClose, onCreated }) {
                       </span>
                     </label>
                     ))}
-                </div>
+                </CheckboxList>
                 {decisionEvidence.length === 0 && (
                   <small className="rt-field-hint">No evidence is linked to this claim yet. Record the decision only after reviewing the available evidence.</small>
                 )}
               </Field>
             )}
             {decisionType !== "assignment" && decisionEvidence.length > 0 && (
-              <label className="rt-check rt-review-ack">
-                <input type="checkbox" name="reviewedEvidence" required />
-                I have read the evidence content above, not only the titles, before recording this decision.
-              </label>
+              <Check label="I have read the evidence content above, not only the titles, before recording this decision." className="rt-review-ack" name="reviewedEvidence" required  />
             )}
           </>
       )}
-        {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
+        {error && <ErrorMessage>{error}</ErrorMessage>}
         <div className="rt-dialog-actions">
           <Button type="button" variant="secondary" onClick={onClose}>Cancel</Button>
           <Button busy={busy} type="submit">Create record <ArrowRight /></Button>
         </div>
-      </form>
+      </Form>
     </Dialog>
   );
 }
@@ -806,7 +798,7 @@ function TeamDialog({ workspace, onClose }) {
         </section>
         <section>
           <h3>Invite teammate</h3>
-          <form className="rt-form compact" onSubmit={invite}>
+          <Form compact onSubmit={invite}>
             <Field label="Email"><input type="email" name="email" required /></Field>
             <Field label="Role">
               <select name="role" defaultValue="reviewer">
@@ -817,7 +809,7 @@ function TeamDialog({ workspace, onClose }) {
               </select>
             </Field>
             <Button busy={busy} type="submit">Create invite <UserPlus /></Button>
-          </form>
+          </Form>
           {inviteUrl && (
             <div className="rt-invite-link">
               <span>Single-use invite link</span>
@@ -844,7 +836,7 @@ function TeamDialog({ workspace, onClose }) {
           )}
         </section>
       </div>
-      {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
+      {error && <ErrorMessage>{error}</ErrorMessage>}
     </Dialog>
   );
 }
@@ -967,7 +959,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
             <GithubLogo /> Connect GitHub App
           </Button>
           {project && available.length > 0 && (
-            <form className="rt-form compact" onSubmit={link}>
+            <Form compact onSubmit={link}>
               <Field label="Repository">
                 <select name="repository" required>
                   {available.map((item) => (
@@ -976,7 +968,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
                 </select>
               </Field>
               <Button busy={busy} type="submit">Link repository <ArrowRight /></Button>
-            </form>
+            </Form>
           )}
           {installations.length > 0 && available.length === 0 && (
             <p className="rt-muted">No accessible repositories were returned by the installation.</p>
@@ -985,7 +977,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
         <section>
           <h3>Import immutable snapshot</h3>
           {snapshot && repositories.length > 0 ? (
-            <form className="rt-form compact" onSubmit={importObject}>
+            <Form compact onSubmit={importObject}>
               <Field label="Linked repository">
                 <select name="projectRepositoryId" required>
                   {repositories.map((repository) => (
@@ -1015,7 +1007,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
                   ))}
                 </select>
               </Field>
-              <div className="rt-field-row">
+              <FieldRow>
                 <Field label="Relation">
                   <select name="relation" defaultValue="supports">
                     <option value="supports">Supports</option>
@@ -1026,9 +1018,9 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
                 <Field label="Evidence kind">
                   <input name="evidenceKind" defaultValue="github" required />
                 </Field>
-              </div>
+              </FieldRow>
               <Button busy={busy} type="submit">Import snapshot <GithubLogo /></Button>
-            </form>
+            </Form>
           ) : (
             <p className="rt-muted">
               Link a repository and open a release before importing.
@@ -1037,7 +1029,7 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
         </section>
       </div>
       {busy && <p className="rt-muted"><SpinnerGap className="rt-spin" /> Loading GitHub state…</p>}
-      {error && <p className="rt-error" role="alert"><WarningCircle /> {error}</p>}
+      {error && <ErrorMessage>{error}</ErrorMessage>}
     </Dialog>
   );
 }
