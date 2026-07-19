@@ -4,6 +4,60 @@ Release Truth is a multi-user evidence gate for software releases. Teams record
 material claims, attach manual or GitHub evidence, capture reviewer decisions,
 and run a deterministic server-side policy before shipping.
 
+## The problem
+
+Releases usually ship on a green checkmark and a gut feeling. The claim that
+mattered — "we don't collect message content," "this endpoint is
+idempotent" — quietly stops being true somewhere between the promise and the
+ship, and nobody notices until an incident. Release Truth makes that gap
+visible and blocks the release until it's closed: every material claim needs
+current, linked evidence, every reviewer decision is attributed and
+append-only, and the ship/no-ship verdict is computed by the server from the
+live evidence ledger, not typed in by a person.
+
+## Where Codex accelerated the build
+
+The evidence-gate architecture — the PostgreSQL append-only schema for
+claims, evidence, decisions and verdict runs, workspace RBAC, the
+deterministic fail-closed verdict engine, Ed25519-signed exports, and the
+Contabo production deployment pipeline — was built end to end in a single
+primary Codex session (commits `99e2fb7`…`80efb2e`, 2026-07-18 09:58–20:57
+UTC+3, ~11 hours). That session also wrote the GPT-5.6 evidence-assessment
+engine described below (`app/api/analyze/route.js`, `api/schema.mjs`) from
+the first commit. `/feedback` session ID: `<fill in from that Codex thread>`.
+
+Everything after that timestamp — reconnecting the GPT-5.6 endpoint to the
+live UI (it existed but nothing called it, and it was still gated behind a
+dead single-tenant auth path from before the multi-user rewrite), the
+Claim/Code/Tests/Decisions release timeline, an accessibility and RBAC
+hardening pass driven by two independent UX audits, and closing a real gap
+where "reviewer confirms they read the evidence" was only enforced in the
+browser and not on the server — was iterative debugging and hardening on top
+of that Codex-built foundation.
+
+## Where GPT-5.6 does meaningful work
+
+Selecting any evidence or decision on the release timeline exposes an
+"Assess with GPT-5.6" action. It sends the claim, the full current evidence
+set for that claim (not just the one item selected), and the most recent
+prior approval to `gpt-5.6-terra` via the Responses API with a structured
+schema (`evidenceAssessmentSchema`), and gets back a relation
+(`supports`/`contradicts`/`unproven`), a finding, an impact statement, cited
+excerpts, missing-evidence gaps, and a recommended action.
+
+Two things are load-bearing, not decorative:
+
+- **Grounding is enforced server-side.** Every cited excerpt is checked to be
+  an exact, contiguous substring of the source it claims to quote
+  (`groundAssessment` in `api/schema.mjs`); a hallucinated citation is
+  rejected before the response ever reaches the client.
+- **The model has no authority over the verdict.** It explains evidence. The
+  GO/NO-GO decision is computed by a separate deterministic policy engine
+  (`src/lib/verdict.js`) that never reads the model's output, so a bad or
+  unavailable model call degrades explanation quality, not release safety —
+  the endpoint fails closed with a 503 if `OPENAI_API_KEY` isn't configured,
+  never with a fabricated assessment.
+
 ## What is authoritative
 
 - PostgreSQL stores users, workspaces, roles, projects, releases, claims,
