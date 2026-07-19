@@ -205,6 +205,7 @@ describe("append-only decisions and reproducible verdict runs", () => {
             type: "approval",
             rationale: "Rollback evidence directly satisfies the acceptance criterion.",
             basedOnEvidenceIds: [evidenceResult.body.evidence.id],
+            reviewedEvidence: true,
           },
         }),
         { params: Promise.resolve({ releaseId }) },
