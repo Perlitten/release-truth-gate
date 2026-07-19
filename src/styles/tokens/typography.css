@@ -1,0 +1,23 @@
+/* Release Truth typography tokens — observed values from src/product.css. No new sizes. */
+:root{
+--rt-font-sans:"Inter Variable",Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+--rt-font-mono:"SFMono-Regular",Consolas,monospace;
+/* display + headings */
+--rt-text-hero:clamp(44px,6vw,84px);      /* auth story h1 · lh .98 · ls -.03em */
+--rt-text-onboarding:clamp(32px,5vw,50px);
+--rt-text-h1:clamp(27px,3vw,42px);        /* release title · ls -.03em */
+--rt-text-picker:38px;                    /* ls -.04em */
+--rt-text-section:clamp(25px,3vw,36px);   /* record section h2 · ls -.04em */
+--rt-text-metric:clamp(26px,3vw,38px);    /* metric number · lh 1 · ls -.04em */
+--rt-text-dialog:25px;                    /* dialog h2 · ls -.035em */
+--rt-text-banner:20px;                    /* verdict label · ls -.03em */
+--rt-text-empty:20px;--rt-text-detail:15px;--rt-text-card-title:14px;
+/* body + captions (the product is DENSE: body copy is 11-13px) */
+--rt-text-lead:clamp(15px,1.5vw,19px);--rt-text-input:13px;--rt-text-ui:12px;--rt-text-body:11px;--rt-text-caption:10px;--rt-text-micro:9px;--rt-text-nano:8px;
+/* overlines */
+--rt-kicker-size:11px;--rt-kicker-tracking:.13em;--rt-label-tracking:.04em;--rt-overline-tracking:.08em;
+/* weights (Inter Variable — mid-axis values are intentional) */
+--rt-weight-regular:400;--rt-weight-medium:650;--rt-weight-bold:700;--rt-weight-heavy:750;--rt-weight-black:800;
+/* line heights */
+--rt-leading-hero:.98;--rt-leading-tight:1.35;--rt-leading-body:1.55;--rt-leading-relaxed:1.65;
+}

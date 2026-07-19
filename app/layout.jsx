@@ -1,5 +1,5 @@
 import "@fontsource-variable/inter";
-import "../src/product.css";
+import "../src/styles/index.css";
 
 export const metadata = {
   title: "Release Truth — Evidence-Gated Launch Decisions",

@@ -1,0 +1,19 @@
+/* Release Truth foundations — radii, shadows, motion. Observed values; the scale is
+   deliberately irregular (7/8/9/11px…) — copy exact values, never snap to 4/8px. */
+:root{
+/* radii */
+--rt-radius-focus:4px;--rt-radius-state:4px;--rt-radius-tab:7px;--rt-radius-control:8px;--rt-radius-chip:9px;--rt-radius-mark:10px;--rt-radius-card:11px;--rt-radius-panel:12px;--rt-radius-logo:12px;--rt-radius-release-icon:13px;--rt-radius-board:14px;--rt-radius-dialog:14px;--rt-radius-auth-card:16px;--rt-radius-onboarding:18px;--rt-radius-pill:999px;
+/* borders: everything is a 1px solid hairline; no 2px+ decorative borders */
+--rt-border-w:1px;
+/* shadows: small, tight, cool-tinted; never soft 20px+ glows */
+--rt-shadow-hover:0 4px 8px rgba(22,42,44,.12);         /* timeline event hover */
+--rt-shadow-dialog:0 8px 8px rgba(4,24,27,.18);
+--rt-shadow-tab:0 2px 8px rgba(25,45,48,.08);           /* active auth tab */
+--rt-shadow-lane:8px 0 10px -8px rgba(22,42,44,.18);    /* sticky lane edge */
+--rt-shadow-logo-inset:inset 0 1px rgba(255,255,255,.18);
+/* motion: 150ms ease on color/border/transform; hover lift is -1px; spinner 800ms linear */
+--rt-transition:.15s ease; /* @kind other */
+--rt-spin-duration:.8s; /* @kind other */
+/* backdrop blur is reserved for overlays: dialog backdrop 7px, sticky project bar 16px */
+--rt-blur-backdrop:7px;--rt-blur-bar:16px;
+}
