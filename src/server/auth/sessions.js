@@ -65,12 +65,18 @@ export function userSessionCookieHeader({ token, expiresAt }) {
     0,
     Math.floor((expiresAt.getTime() - Date.now()) / 1000),
   );
-  return `${userSessionCookieName()}=${token}; Path=/; Max-Age=${maxAge}; Expires=${expiresAt.toUTCString()}; HttpOnly; SameSite=Strict${secure}`;
+  // Lax, not Strict: the GitHub App OAuth callback is a top-level redirect
+  // back from github.com. Strict withholds the cookie on that exact
+  // cross-site navigation, so the callback would always 401 regardless of
+  // who completes the authorization. Lax still blocks the cookie on
+  // cross-site POST/fetch (the actual CSRF vector) and is the standard,
+  // browser-default setting for session cookies.
+  return `${userSessionCookieName()}=${token}; Path=/; Max-Age=${maxAge}; Expires=${expiresAt.toUTCString()}; HttpOnly; SameSite=Lax${secure}`;
 }
 
 export function clearUserSessionCookieHeader() {
   const secure = secureCookiesEnabled() ? "; Secure" : "";
-  return `${userSessionCookieName()}=; Path=/; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; SameSite=Strict${secure}`;
+  return `${userSessionCookieName()}=; Path=/; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; SameSite=Lax${secure}`;
 }
 
 export function sessionTokenFromRequest(request) {
