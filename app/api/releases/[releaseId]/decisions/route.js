@@ -38,6 +38,7 @@ const decisionSchema = z
     ]),
     rationale: z.string().trim().min(12).max(12_000),
     assigneeId: z.string().uuid().nullable().optional(),
+    reviewedEvidence: z.boolean().default(false),
     basedOnEvidenceIds: z.array(z.string().uuid()).max(100).default([]),
     recordAction: z
       .enum(["snapshot", "correction", "revocation"])
@@ -96,6 +97,13 @@ export async function POST(request, { params }) {
       capability: "create_decision",
     });
     const input = await parseJsonBody(request, decisionSchema, 32_768);
+    if (input.type !== "assignment" && !input.reviewedEvidence) {
+      throw new HttpError(
+        400,
+        "You must confirm the evidence was reviewed before recording this decision.",
+        "evidence_not_reviewed",
+      );
+    }
     const [claim] = await db
       .select({ id: claims.id })
       .from(claims)

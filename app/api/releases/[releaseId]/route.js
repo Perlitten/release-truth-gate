@@ -131,8 +131,25 @@ export async function GET(request, { params }) {
       .where(eq(verdictRuns.releaseId, releaseId))
       .orderBy(verdictRuns.createdAt);
     const eventRows = await db
-      .select()
+      .select({
+        id: auditEvents.id,
+        workspaceId: auditEvents.workspaceId,
+        actorId: auditEvents.actorId,
+        actorRole: auditEvents.actorRole,
+        action: auditEvents.action,
+        targetType: auditEvents.targetType,
+        targetId: auditEvents.targetId,
+        metadata: auditEvents.metadata,
+        previousEventHash: auditEvents.previousEventHash,
+        eventHash: auditEvents.eventHash,
+        createdAt: auditEvents.createdAt,
+        actor: {
+          id: users.id,
+          displayName: users.displayName,
+        },
+      })
       .from(auditEvents)
+      .leftJoin(users, eq(users.id, auditEvents.actorId))
       .where(eq(auditEvents.workspaceId, membership.workspaceId))
       .orderBy(auditEvents.createdAt);
     return jsonResponse({

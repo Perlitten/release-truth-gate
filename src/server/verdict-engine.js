@@ -91,6 +91,14 @@ export function evaluateVerdict(input) {
   }
   const result = calculateVerdict(input.snapshot);
   const findings = deriveFindings(input.snapshot);
+  const claimById = new Map(input.snapshot.claims.map((claim) => [claim.id, claim]));
+  const blockingClaims = findings
+    .filter((finding) => finding.status === "contradicted")
+    .map((finding) => ({
+      claimId: finding.claimId,
+      title: claimById.get(finding.claimId)?.title || "Unknown claim",
+      contradictionCount: finding.evidenceIds?.length || 0,
+    }));
   const reasonCodes = new Set();
   if (input.snapshot.claims.filter((claim) => claim.material).length === 0) {
     reasonCodes.add("NO_MATERIAL_CLAIMS");
@@ -109,6 +117,9 @@ export function evaluateVerdict(input) {
   }
   if (result.status === "go") reasonCodes.add("ALL_GATES_SATISFIED");
   if (reasonCodes.size === 0) reasonCodes.add("NOT_EVALUABLE_FAIL_CLOSED");
-  return { result, reasonCodes: [...reasonCodes].sort() };
+  return {
+    result: { ...result, blockingClaims },
+    reasonCodes: [...reasonCodes].sort(),
+  };
 }
 

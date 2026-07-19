@@ -100,6 +100,55 @@ function formatDate(value) {
   }).format(new Date(value));
 }
 
+const EVIDENCE_RELATION_PRIORITY = { contradicts: 0, missing: 1, supports: 2 };
+function byBlockingPriority(left, right) {
+  const rank =
+    (EVIDENCE_RELATION_PRIORITY[left.relation] ?? 3) -
+    (EVIDENCE_RELATION_PRIORITY[right.relation] ?? 3);
+  return rank !== 0 ? rank : Date.parse(right.capturedAt) - Date.parse(left.capturedAt);
+}
+
+const AUDIT_ACTION_PHRASES = {
+  "claim.created": "recorded a claim",
+  "evidence.created": "attached evidence",
+  "export.generated": "generated a signed export",
+  "verdict.run": "ran the server verdict",
+  "decision.snapshot": "recorded a decision",
+  "decision.correction": "corrected a decision",
+  "decision.revocation": "revoked a decision",
+  "project.created": "created the project",
+  "project.updated": "updated the project",
+  "release.created": "created the release",
+  "release.updated": "updated the release",
+  "workspace.created": "created the workspace",
+  "membership.role_changed": "changed a member's role",
+  "invitation.created": "sent a workspace invitation",
+  "invitation.accepted": "accepted a workspace invitation",
+  "github.installation_connected": "connected a GitHub App installation",
+  "github.installation_disconnected": "disconnected a GitHub App installation",
+  "github.repository_linked": "linked a GitHub repository",
+  "github.object_imported": "imported a GitHub record",
+  "github.object_reimported": "re-imported a GitHub record",
+};
+
+const AUDIT_TARGET_TAB = {
+  claim: "claims",
+  evidence: "evidence",
+  decision: "decisions",
+  verdict_run: "timeline",
+  export_artifact: "audit",
+  release: "overview",
+};
+
+function humanizeAuditAction(action) {
+  if (AUDIT_ACTION_PHRASES[action]) return AUDIT_ACTION_PHRASES[action];
+  if (action.startsWith("release.")) {
+    return `moved the release to ${action.slice("release.".length).replace("_", " ")}`;
+  }
+  const [scope, verb] = action.split(".");
+  return `${verb?.replace(/_/g, " ") || "updated"} the ${scope || "record"}`;
+}
+
 function initials(name) {
   return (
     name
@@ -269,6 +318,11 @@ function AuthScreen({ invitation, bootError, onAuthenticated }) {
           <span><UsersThree /> Workspace roles</span>
           <span><LockKey /> Append-only records</span>
         </div>
+        <ol className="rt-auth-steps">
+          <li><ClipboardText weight="duotone" /> <span>Record a claim your release must satisfy</span></li>
+          <li><BracketsCurly weight="duotone" /> <span>Attach current code, test, or policy evidence</span></li>
+          <li><ShieldCheck weight="duotone" /> <span>Get a reproducible GO / NO-GO from the server</span></li>
+        </ol>
       </section>
       <section className="rt-auth-card">
         <div className="rt-auth-tabs">
@@ -464,6 +518,7 @@ function CreationDialog({ type, context, onClose, onCreated }) {
         rationale: data.get("rationale"),
         assigneeId:
           data.get("decisionType") === "assignment" ? data.get("assigneeId") : null,
+        reviewedEvidence: data.get("reviewedEvidence") === "on",
         basedOnEvidenceIds: data.getAll("basedOnEvidenceIds"),
       };
     }
@@ -1067,6 +1122,13 @@ function formatTime(value) {
   );
 }
 
+function formatFullTimestamp(value) {
+  return new Intl.DateTimeFormat("en", {
+    dateStyle: "full",
+    timeStyle: "long",
+  }).format(new Date(value));
+}
+
 const LANE_TO_FOCUS = { claim: "claim", code: "code", test: "tests", decision: "decisions" };
 
 function buildAnalysisPayload(event, snapshot) {
@@ -1127,7 +1189,7 @@ function buildAnalysisPayload(event, snapshot) {
   };
 }
 
-function TimelineTab({ snapshot }) {
+function TimelineTab({ snapshot, focusClaimId, onFocusHandled }) {
   const events = useMemo(() => {
     const claimIdByEvidenceId = new Map(
       snapshot.links.map((link) => [link.evidenceId, link.claimId]),
@@ -1256,6 +1318,21 @@ function TimelineTab({ snapshot }) {
     events.at(-1) ||
     null;
 
+  useEffect(() => {
+    if (!focusClaimId) return;
+    const target =
+      events.findLast(
+        (event) => event.claimId === focusClaimId && event.status === "contradicted",
+      ) || events.findLast((event) => event.claimId === focusClaimId);
+    if (target) {
+      setSelectedId(target.id);
+      boardRef.current
+        ?.querySelector(`[data-event-id="${target.id}"]`)
+        ?.scrollIntoView({ inline: "center", block: "nearest" });
+    }
+    onFocusHandled?.();
+  }, [focusClaimId, events, onFocusHandled]);
+
   const [assessing, setAssessing] = useState(false);
   const [assessment, setAssessment] = useState(null);
   const [assessError, setAssessError] = useState("");
@@ -1305,7 +1382,7 @@ function TimelineTab({ snapshot }) {
         <div className="rt-timeline-grid" style={{ "--rt-days": days.length }}>
           <span className="rt-timeline-corner" />
           {days.map((day) => (
-            <span className="rt-timeline-day" key={day}>
+            <span className="rt-timeline-day" key={day} title={formatFullTimestamp(`${day}T00:00:00Z`)}>
               {formatTimelineDay(day)}
             </span>
           ))}
@@ -1335,10 +1412,11 @@ function TimelineTab({ snapshot }) {
                           }`}
                           onClick={() => setSelectedId(event.id)}
                           key={event.id}
+                          data-event-id={event.id}
                         >
                           <status.icon weight="fill" />
                           <span>{event.title}</span>
-                          <small>{formatTime(event.at)}</small>
+                          <small title={formatFullTimestamp(event.at)}>{formatTime(event.at)}</small>
                         </button>
                       );
                     })}
@@ -1394,7 +1472,7 @@ function TimelineTab({ snapshot }) {
                 <dd>{selected.detail.owner || claimOwners.get(selected.claimId).name}</dd>
               </div>
             )}
-            <div><dt>Captured</dt><dd>{formatDate(selected.at)}</dd></div>
+            <div><dt>Captured</dt><dd title={formatFullTimestamp(selected.at)}>{formatDate(selected.at)}</dd></div>
           </dl>
           {selected.detail.excerpt && (
             <blockquote>{selected.detail.excerpt}</blockquote>
@@ -1466,12 +1544,19 @@ function ReleaseWorkspace({
       ? "timeline"
       : "overview",
   );
+  const [focusClaimId, setFocusClaimId] = useState(null);
   const [busy, setBusy] = useState(false);
   const [actionError, setActionError] = useState("");
   const role = snapshot.membership.role;
   const latestRun = snapshot.verdictRuns.at(-1) || null;
   const verdictStatus = latestRun?.result?.status || "not_run";
   const verdictLabel = latestRun?.result?.label || "NOT RUN";
+  const blockingClaims = latestRun?.result?.blockingClaims || [];
+
+  function jumpToBlocker(claimId) {
+    setTab("timeline");
+    setFocusClaimId(claimId);
+  }
   const VerdictIcon =
     verdictStatus === "go"
       ? CheckCircle
@@ -1522,6 +1607,15 @@ function ReleaseWorkspace({
     }
   }
 
+  const [confirmExport, setConfirmExport] = useState(false);
+  function requestExport() {
+    if (verdictStatus === "go") {
+      generateExport();
+    } else {
+      setConfirmExport(true);
+    }
+  }
+
   const tabs = [
     ["timeline", "Timeline"],
     ["overview", "Overview"],
@@ -1567,10 +1661,11 @@ function ReleaseWorkspace({
             <button
               type="button"
               className="rt-secondary"
-              onClick={generateExport}
+              onClick={requestExport}
               disabled={busy}
+              title="Certifies the record's integrity, not release readiness."
             >
-              <DownloadSimple /> Signed export
+              <DownloadSimple /> Export signed {verdictLabel} record
             </button>
           )}
           {can(role, "manage_release") && snapshot.release.status !== "finalized" && (
@@ -1606,6 +1701,22 @@ function ReleaseWorkspace({
             ? `Computed ${formatDate(latestRun.createdAt)} from the current evidence ledger.`
             : "No server verdict has been stored. Treat this release as blocked until one is run."}
         </p>
+        {blockingClaims.length > 0 && (
+          <ul className="rt-verdict-blockers">
+            {blockingClaims.map((blocker) => (
+              <li key={blocker.claimId}>
+                <button type="button" onClick={() => jumpToBlocker(blocker.claimId)}>
+                  {blocker.title}
+                  <span>
+                    {blocker.contradictionCount}{" "}
+                    {blocker.contradictionCount === 1 ? "contradiction" : "contradictions"}
+                  </span>
+                  <ArrowRight weight="bold" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
       {actionError && <p className="rt-error rt-release-error" role="alert"><WarningCircle /> {actionError}</p>}
 
@@ -1627,7 +1738,13 @@ function ReleaseWorkspace({
       </nav>
 
       <section className="rt-release-content" role="tabpanel" id={`release-panel-${tab}`} aria-labelledby={`release-tab-${tab}`}>
-        {tab === "timeline" && <TimelineTab snapshot={snapshot} />}
+        {tab === "timeline" && (
+          <TimelineTab
+            snapshot={snapshot}
+            focusClaimId={focusClaimId}
+            onFocusHandled={() => setFocusClaimId(null)}
+          />
+        )}
         {tab === "overview" && (
           <>
             <div className="rt-metrics">
@@ -1746,8 +1863,21 @@ function ReleaseWorkspace({
                 actionLabel="Add evidence"
               />
             ) : (
+              <>
+                {(() => {
+                  const contradicting = snapshot.activeEvidence.filter(
+                    (item) => item.relation === "contradicts",
+                  ).length;
+                  return contradicting > 0 ? (
+                    <p className="rt-evidence-summary">
+                      <WarningCircle weight="fill" /> {contradicting}{" "}
+                      {contradicting === 1 ? "blocking contradiction" : "blocking contradictions"}{" "}
+                      shown first.
+                    </p>
+                  ) : null;
+                })()}
               <div className="rt-record-list">
-                {snapshot.activeEvidence.map((item) => (
+                {[...snapshot.activeEvidence].sort(byBlockingPriority).map((item) => (
                   <article className="rt-record" key={item.id}>
                     <div className={`rt-record-mark ${item.relation}`}>
                       {item.relation === "supports" ? <CheckCircle /> : <WarningCircle />}
@@ -1769,6 +1899,7 @@ function ReleaseWorkspace({
                   </article>
                 ))}
               </div>
+              </>
             )}
           </RecordSection>
         )}
@@ -1844,21 +1975,66 @@ function ReleaseWorkspace({
               />
             ) : (
             <div className="rt-audit-list">
-              {[...snapshot.auditEvents].reverse().map((event) => (
-                <article key={event.id}>
-                  <span><ClockCounterClockwise /></span>
-                  <div>
-                    <strong>{event.action}</strong>
-                    <small>{formatDate(event.createdAt)} · {event.eventHash.slice(0, 12)}…</small>
-                  </div>
-                </article>
-              ))}
+              {[...snapshot.auditEvents].reverse().map((event) => {
+                const targetTab = AUDIT_TARGET_TAB[event.targetType];
+                const body = (
+                  <>
+                    <strong>
+                      {event.actor?.displayName || "A workspace member"}{" "}
+                      {humanizeAuditAction(event.action)}
+                    </strong>
+                    <small title={formatFullTimestamp(event.createdAt)}>{formatDate(event.createdAt)} · {event.eventHash.slice(0, 12)}…</small>
+                  </>
+                );
+                return (
+                  <article key={event.id}>
+                    <span><ClockCounterClockwise /></span>
+                    {targetTab ? (
+                      <button type="button" className="rt-audit-jump" onClick={() => setTab(targetTab)}>
+                        {body}
+                      </button>
+                    ) : (
+                      <div>{body}</div>
+                    )}
+                  </article>
+                );
+              })}
             </div>
             )}
           </RecordSection>
           </>
         )}
       </section>
+      {confirmExport && (
+        <Dialog
+          title={`Export signed ${verdictLabel} record?`}
+          eyebrow="Not a ship decision"
+          onClose={() => setConfirmExport(false)}
+        >
+          <p className="rt-confirm-body">
+            This Ed25519 signature certifies that the exported claims,
+            evidence, and decisions match the stored record exactly — it is
+            an integrity proof, not permission to ship. The current server
+            verdict is <strong>{verdictLabel}</strong>.
+          </p>
+          <div className="rt-dialog-actions">
+            <button type="button" className="rt-secondary" onClick={() => setConfirmExport(false)}>
+              Cancel
+            </button>
+            <button
+              type="button"
+              className="rt-primary"
+              disabled={busy}
+              onClick={() => {
+                setConfirmExport(false);
+                generateExport();
+              }}
+            >
+              {busy ? <SpinnerGap className="rt-spin" /> : <DownloadSimple />} Export anyway
+            </button>
+          </div>
+        </Dialog>
+      )}
     </div>
   );
 }

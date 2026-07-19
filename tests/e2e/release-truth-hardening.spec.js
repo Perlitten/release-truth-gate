@@ -82,6 +82,65 @@ test("blocks a blind decision sign-off until evidence acknowledgment is checked"
   await expect(page.getByRole("tab", { name: "Decisions 1" })).toBeVisible();
 });
 
+// The client checkbox is a convenience, not the real guarantee: a direct
+// API call that skips it entirely must still be rejected server-side.
+test("rejects a decision API call that omits evidence acknowledgment", async ({
+  page,
+}) => {
+  test.setTimeout(60_000);
+  await register(page, "e2e-blind-api@example.test", "Blind API Owner");
+  await createWorkspaceProjectRelease(page, "Blind API Team", "1.0.0");
+  await addClaim(page, "Checkout is idempotent");
+
+  const workspaceId = (
+    await (await page.request.get("/api/workspaces")).json()
+  ).workspaces[0].id;
+  const projectId = (
+    await (await page.request.get(`/api/workspaces/${workspaceId}/projects`)).json()
+  ).projects[0].id;
+  const releaseId = (
+    await (await page.request.get(`/api/projects/${projectId}/releases`)).json()
+  ).releases[0].id;
+  const claimId = (
+    await (await page.request.get(`/api/releases/${releaseId}`)).json()
+  ).activeClaims[0].id;
+
+  const withoutAck = await page.request.post(
+    `/api/releases/${releaseId}/decisions`,
+    {
+      headers: {
+        origin: "http://localhost:8787",
+        "sec-fetch-site": "same-origin",
+        "x-release-truth-request": "decision-create",
+      },
+      data: {
+        claimId,
+        type: "approval",
+        rationale: "Approving without ever setting reviewedEvidence.",
+        basedOnEvidenceIds: [],
+      },
+    },
+  );
+  expect(withoutAck.status()).toBe(400);
+  expect(await withoutAck.json()).toMatchObject({ code: "evidence_not_reviewed" });
+
+  const withAck = await page.request.post(`/api/releases/${releaseId}/decisions`, {
+    headers: {
+      origin: "http://localhost:8787",
+      "sec-fetch-site": "same-origin",
+      "x-release-truth-request": "decision-create",
+    },
+    data: {
+      claimId,
+      type: "approval",
+      rationale: "Approving with reviewedEvidence explicitly set.",
+      reviewedEvidence: true,
+      basedOnEvidenceIds: [],
+    },
+  });
+  expect(withAck.ok()).toBeTruthy();
+});
+
 // Fail-closed core guarantee: a release with a material claim and no
 // evidence must never read as GO.
 test("reads NOT EVALUABLE, never GO, when a material claim has no evidence", async ({
