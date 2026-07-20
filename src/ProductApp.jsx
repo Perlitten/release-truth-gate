@@ -42,6 +42,9 @@ import { Field } from "./components/forms/Field.jsx";
 import { FieldRow } from "./components/forms/FieldRow.jsx";
 import { Form } from "./components/forms/Form.jsx";
 import { Notice } from "./components/forms/Notice.jsx";
+import { Dialog } from "./components/feedback/Dialog.jsx";
+import { EmptyState } from "./components/feedback/EmptyState.jsx";
+import { RecordSection } from "./components/records/RecordSection.jsx";
 
 import { isAllowedSourceUrl } from "./lib/source-url.js";
 
@@ -172,80 +175,6 @@ function initials(name) {
       .map((part) => part[0])
       .join("")
       .toUpperCase() || "RT"
-  );
-}
-
-function Dialog({ title, eyebrow, children, onClose, wide = false }) {
-  const dialogRef = useRef(null);
-  const returnFocusRef = useRef(null);
-
-  useEffect(() => {
-    returnFocusRef.current = document.activeElement;
-    const focusableSelector = [
-      'button:not([disabled])',
-      'a[href]',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(",");
-    const focusFirst = () =>
-      dialogRef.current?.querySelector(focusableSelector)?.focus();
-    focusFirst();
-
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        event.preventDefault();
-        onClose();
-        return;
-      }
-      if (event.key !== "Tab") return;
-      const focusable = [...dialogRef.current?.querySelectorAll(focusableSelector) || []];
-      if (focusable.length === 0) {
-        event.preventDefault();
-        dialogRef.current?.focus();
-        return;
-      }
-      const first = focusable[0];
-      const last = focusable.at(-1);
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      returnFocusRef.current?.focus?.();
-    };
-  }, [onClose]);
-
-  return (
-    <div className="rt-dialog-backdrop" role="presentation" onMouseDown={onClose}>
-      <section
-        className={`rt-dialog ${wide ? "wide" : ""}`}
-        role="dialog"
-        aria-modal="true"
-        aria-label={title}
-        tabIndex={-1}
-        ref={dialogRef}
-        onMouseDown={(event) => event.stopPropagation()}
-      >
-        <header>
-          <div>
-            <span>{eyebrow}</span>
-            <h2>{title}</h2>
-          </div>
-          <button type="button" onClick={onClose} aria-label="Close">
-            <X />
-          </button>
-        </header>
-        {children}
-      </section>
-    </div>
   );
 }
 
@@ -1031,37 +960,6 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
       {busy && <p className="rt-muted"><SpinnerGap className="rt-spin" /> Loading GitHub state…</p>}
       {error && <ErrorMessage>{error}</ErrorMessage>}
     </Dialog>
-  );
-}
-
-function RecordSection({ title, description, action, actionLabel, children }) {
-  return (
-    <section className="rt-record-section">
-      <header>
-        <div><h2>{title}</h2><p>{description}</p></div>
-        {action && (
-          <Button type="button" variant="primary" onClick={action}>
-            <Plus /> {actionLabel}
-          </Button>
-        )}
-      </header>
-      {children}
-    </section>
-  );
-}
-
-function EmptyState({ icon: Icon, title, body, action, actionLabel }) {
-  return (
-    <div className="rt-empty">
-      <span><Icon weight="duotone" /></span>
-      <h3>{title}</h3>
-      <p>{body}</p>
-      {action && (
-        <Button type="button" variant="primary" onClick={action}>
-          <Plus /> {actionLabel}
-        </Button>
-      )}
-    </div>
   );
 }
 
