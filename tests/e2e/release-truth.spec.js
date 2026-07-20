@@ -101,6 +101,11 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   await reviewer.getByLabel("Rationale").fill(
     "The linked integration test directly satisfies the acceptance criterion.",
   );
+  await reviewer
+    .getByLabel(
+      "I have read the evidence content above, not only the titles, before recording this decision.",
+    )
+    .check();
   await reviewer.getByRole("button", { name: /Create record/ }).click();
   await reviewer.getByRole("button", { name: /Run verdict/ }).click();
   await expect(reviewer.getByText("GO", { exact: true }).first()).toBeVisible();

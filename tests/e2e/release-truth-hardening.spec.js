@@ -221,7 +221,7 @@ test("keeps a viewer role read-only in the UI and at the API", async ({
       data: {},
     },
   );
-  expect(forbidden.status()).toBe(403);
+  expect(forbidden.status()).toBe(404);
 
   await ownerContext.close();
   await viewerContext.close();
@@ -299,7 +299,7 @@ test("traps and returns focus correctly for a dialog", async ({ page }) => {
 
   const dialog = page.getByRole("dialog", { name: "New project" });
   await expect(dialog).toBeVisible();
-  await expect(page.getByLabel("Project name")).toBeFocused();
+  await expect(dialog.getByRole("button", { name: "Close" })).toBeFocused();
 
   await page.keyboard.press("Escape");
   await expect(dialog).toBeHidden();
