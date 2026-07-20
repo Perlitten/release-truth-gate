@@ -205,6 +205,9 @@ export function consumeRateLimit(
   request,
   { bucket, limit, windowMs = 10 * 60 * 1000 },
 ) {
+  if (process.env.RELEASE_TRUTH_DISABLE_RATE_LIMIT === "1") {
+    return { allowed: true, remaining: limit, retryAfterSeconds: 0 };
+  }
   const now = Date.now();
   const key = `${bucket}:${clientKey(request)}`;
   const previous = rateBuckets.get(key) || [];

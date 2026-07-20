@@ -26,6 +26,7 @@ const { privateKey, publicKey } = generateKeyPairSync("ed25519");
 const env = {
   ...process.env,
   NODE_ENV: "production",
+  RELEASE_TRUTH_DISABLE_RATE_LIMIT: "1",
   APP_ORIGIN: "http://localhost:8787",
   DATABASE_URL: databaseUrl,
   DATABASE_URL_DIRECT: databaseUrl,
