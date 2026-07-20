@@ -45,6 +45,10 @@ import { Notice } from "./components/forms/Notice.jsx";
 import { Dialog } from "./components/feedback/Dialog.jsx";
 import { EmptyState } from "./components/feedback/EmptyState.jsx";
 import { RecordSection } from "./components/records/RecordSection.jsx";
+import { VerdictBanner } from "./components/feedback/VerdictBanner.jsx";
+import { MetricCard } from "./components/feedback/MetricCard.jsx";
+import { VerdictHistory } from "./components/feedback/VerdictHistory.jsx";
+import { RecordCard } from "./components/records/RecordCard.jsx";
 
 import { isAllowedSourceUrl } from "./lib/source-url.js";
 
@@ -1581,34 +1585,14 @@ function ReleaseWorkspace({
           )}
         </div>
       </header>
-      <section className={`rt-verdict-banner ${verdictStatus}`} aria-label={`Server verdict: ${verdictLabel}`}>
-        <VerdictIcon weight="fill" aria-hidden="true" />
-        <div>
-          <span>Server verdict</span>
-          <strong>{verdictLabel}</strong>
-        </div>
-        <p>
-          {latestRun
-            ? `Computed ${formatDate(latestRun.createdAt)} from the current evidence ledger.`
-            : "No server verdict has been stored. Treat this release as blocked until one is run."}
-        </p>
-        {blockingClaims.length > 0 && (
-          <ul className="rt-verdict-blockers">
-            {blockingClaims.map((blocker) => (
-              <li key={blocker.claimId}>
-                <button type="button" onClick={() => jumpToBlocker(blocker.claimId)}>
-                  {blocker.title}
-                  <span>
-                    {blocker.contradictionCount}{" "}
-                    {blocker.contradictionCount === 1 ? "contradiction" : "contradictions"}
-                  </span>
-                  <ArrowRight weight="bold" />
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+      <VerdictBanner
+        status={verdictStatus}
+        label={verdictLabel}
+        icon={VerdictIcon}
+        latestRunAt={latestRun ? formatDate(latestRun.createdAt) : null}
+        blockers={blockingClaims}
+        onBlockerClick={jumpToBlocker}
+      />
       {actionError && <p className="rt-error rt-release-error" role="alert"><WarningCircle /> {actionError}</p>}
 
       <nav className="rt-tabs" role="tablist" aria-label="Release records">
@@ -1639,26 +1623,10 @@ function ReleaseWorkspace({
         {tab === "overview" && (
           <>
             <div className="rt-metrics">
-              <article>
-                <span>Material claims</span>
-                <strong>{snapshot.activeClaims.filter((claim) => claim.material).length}</strong>
-                <small>Authoritative snapshots</small>
-              </article>
-              <article>
-                <span>Evidence records</span>
-                <strong>{snapshot.activeEvidence.length}</strong>
-                <small>{snapshot.links.length} claim links</small>
-              </article>
-              <article>
-                <span>Human decisions</span>
-                <strong>{snapshot.activeDecisions.length}</strong>
-                <small>Append-only review log</small>
-              </article>
-              <article className={verdictStatus}>
-                <span>Server verdict</span>
-                <strong><VerdictIcon weight="fill" /> {verdictLabel}</strong>
-                <small>{latestRun ? formatDate(latestRun.createdAt) : "No stored verdict run"}</small>
-              </article>
+              <MetricCard label="Material claims" value={snapshot.activeClaims.filter((claim) => claim.material).length} hint="Authoritative snapshots" />
+              <MetricCard label="Evidence records" value={snapshot.activeEvidence.length} hint={`${snapshot.links.length} claim links`} />
+              <MetricCard label="Human decisions" value={snapshot.activeDecisions.length} hint="Append-only review log" />
+              <MetricCard tone={verdictStatus} label="Server verdict" value={<><VerdictIcon weight="fill" /> {verdictLabel}</>} hint={latestRun ? formatDate(latestRun.createdAt) : "No stored verdict run"} />
             </div>
             <div className="rt-overview-grid">
               <article className="rt-trust-card">
@@ -1707,23 +1675,20 @@ function ReleaseWorkspace({
             ) : (
               <div className="rt-record-list">
                 {snapshot.activeClaims.map((claim) => (
-                  <article className="rt-record" key={claim.id}>
-                    <div className="rt-record-mark claim"><ClipboardText /></div>
-                    <div>
-                      <div className="rt-record-title">
-                        <h3>{claim.title}</h3>
-                        {claim.material && <span>Material</span>}
-                      </div>
-                      <p>{claim.description}</p>
-                      <dl>
-                        <div><dt>Acceptance</dt><dd>{claim.acceptanceCriteria}</dd></div>
-                        <div><dt>Needs</dt><dd>{claim.requiredEvidenceKinds.join(", ")}</dd></div>
-                      </dl>
-                      <small>
-                        {claimLinks.get(claim.id) || 0} linked evidence · hash {claim.contentHash.slice(0, 12)}…
-                      </small>
+                  <RecordCard key={claim.id} tone="claim" icon={<ClipboardText />}>
+                    <div className="rt-record-title">
+                      <h3>{claim.title}</h3>
+                      {claim.material && <span>Material</span>}
                     </div>
-                  </article>
+                    <p>{claim.description}</p>
+                    <dl>
+                      <div><dt>Acceptance</dt><dd>{claim.acceptanceCriteria}</dd></div>
+                      <div><dt>Needs</dt><dd>{claim.requiredEvidenceKinds.join(", ")}</dd></div>
+                    </dl>
+                    <small>
+                      {claimLinks.get(claim.id) || 0} linked evidence · hash {claim.contentHash.slice(0, 12)}…
+                    </small>
+                  </RecordCard>
                 ))}
               </div>
             )}
@@ -1769,25 +1734,20 @@ function ReleaseWorkspace({
                 })()}
               <div className="rt-record-list">
                 {[...snapshot.activeEvidence].sort(byBlockingPriority).map((item) => (
-                  <article className="rt-record" key={item.id}>
-                    <div className={`rt-record-mark ${item.relation}`}>
-                      {item.relation === "supports" ? <CheckCircle /> : <WarningCircle />}
+                  <RecordCard key={item.id} tone={item.relation} icon={item.relation === "supports" ? <CheckCircle /> : <WarningCircle />}>
+                    <div className="rt-record-title">
+                      <h3>{item.summary}</h3>
+                      <StateChip state={item.relation}>{item.relation}</StateChip>
                     </div>
-                    <div>
-                      <div className="rt-record-title">
-                        <h3>{item.summary}</h3>
-                        <StateChip state={item.relation}>{item.relation}</StateChip>
-                      </div>
-                      <dl>
-                        <div><dt>Kind</dt><dd>{item.evidenceKind}</dd></div>
-                        <div><dt>Captured</dt><dd>{formatDate(item.capturedAt)}</dd></div>
-                      </dl>
-                      {isAllowedSourceUrl(item.sourceUrl) && (
-                        <a href={item.sourceUrl} target="_blank" rel="noreferrer">Open source</a>
-                      )}
-                      <small>hash {item.contentHash.slice(0, 12)}…</small>
-                    </div>
-                  </article>
+                    <dl>
+                      <div><dt>Kind</dt><dd>{item.evidenceKind}</dd></div>
+                      <div><dt>Captured</dt><dd>{formatDate(item.capturedAt)}</dd></div>
+                    </dl>
+                    {isAllowedSourceUrl(item.sourceUrl) && (
+                      <a href={item.sourceUrl} target="_blank" rel="noreferrer">Open source</a>
+                    )}
+                    <small>hash {item.contentHash.slice(0, 12)}…</small>
+                  </RecordCard>
                 ))}
               </div>
               </>
@@ -1817,17 +1777,14 @@ function ReleaseWorkspace({
             ) : (
               <div className="rt-record-list">
                 {snapshot.activeDecisions.map((decision) => (
-                  <article className="rt-record" key={decision.id}>
-                    <div className="rt-record-mark decision"><ShieldCheck /></div>
-                    <div>
-                      <div className="rt-record-title">
-                        <h3>{decision.type.replace("_", " ")}</h3>
-                        <span>{decision.status}</span>
-                      </div>
-                      <p>{decision.rationale}</p>
-                      <small>{decision.actor.displayName} · {formatDate(decision.createdAt)}</small>
+                  <RecordCard key={decision.id} tone="decision" icon={<ShieldCheck />}>
+                    <div className="rt-record-title">
+                      <h3>{decision.type.replace("_", " ")}</h3>
+                      <span>{decision.status}</span>
                     </div>
-                  </article>
+                    <p>{decision.rationale}</p>
+                    <small>{decision.actor.displayName} · {formatDate(decision.createdAt)}</small>
+                  </RecordCard>
                 ))}
               </div>
             )}
@@ -1841,17 +1798,14 @@ function ReleaseWorkspace({
                 title="Verdict history"
                 description="Every server-computed verdict for this release, in order."
               >
-                <ol className="rt-verdict-history">
-                  {snapshot.verdictRuns.map((run, index) => (
-                    <li key={run.id}>
-                      {index > 0 && <CaretDown className="rt-verdict-history-arrow" weight="bold" />}
-                      <span className={`rt-verdict-history-chip ${run.result?.status || "not_run"}`}>
-                        <strong>{run.result?.label || "UNKNOWN"}</strong>
-                        <small>{formatDate(run.createdAt)}</small>
-                      </span>
-                    </li>
-                  ))}
-                </ol>
+                <VerdictHistory
+                  runs={snapshot.verdictRuns.map((run) => ({
+                    id: run.id,
+                    status: run.result?.status || "not_run",
+                    label: run.result?.label || "UNKNOWN",
+                    at: formatDate(run.createdAt),
+                  }))}
+                />
               </RecordSection>
             )}
             <RecordSection
