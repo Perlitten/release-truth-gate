@@ -1,0 +1,7 @@
+/* Single ordered entry point for global styles. Imported by app/layout.jsx.
+   Tokens must load before product.css (which references var(--rt-*)). */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/foundations.css";
+@import "./product.css";

@@ -1,0 +1,5 @@
+/* Inter Variable is loaded via `import "@fontsource-variable/inter"` in app/layout.jsx,
+   which ships its own @font-face. The app has no vendored woff2, so no @font-face is
+   redeclared here. Font-family tokens (--rt-font-sans / --rt-font-mono) live in
+   typography.css. This file is the token-layer slot for font wiring, kept for parity
+   with the design system's tokens/ structure. */
