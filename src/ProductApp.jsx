@@ -49,7 +49,14 @@ import { VerdictBanner } from "./components/feedback/VerdictBanner.jsx";
 import { MetricCard } from "./components/feedback/MetricCard.jsx";
 import { VerdictHistory } from "./components/feedback/VerdictHistory.jsx";
 import { RecordCard } from "./components/records/RecordCard.jsx";
-import { TIMELINE_LANES, TIMELINE_STATUS, LANE_TO_FOCUS } from "./lib/timeline-constants.js";
+import { TimelineBoard } from "./components/timeline/TimelineBoard.jsx";
+import { TimelineDetail } from "./components/timeline/TimelineDetail.jsx";
+import { AIAssessment } from "./components/timeline/AIAssessment.jsx";
+import { Tabs } from "./components/navigation/Tabs.jsx";
+import { Sidebar } from "./components/navigation/Sidebar.jsx";
+import { ProjectBar } from "./components/navigation/ProjectBar.jsx";
+import { ReleasePicker } from "./components/navigation/ReleasePicker.jsx";
+import { LANE_TO_FOCUS } from "./lib/timeline-constants.js";
 
 import { isAllowedSourceUrl } from "./lib/source-url.js";
 
@@ -1253,160 +1260,41 @@ function TimelineTab({ snapshot, focusClaimId, onFocusHandled }) {
 
   return (
     <div className="rt-timeline">
-      <div
-        className="rt-timeline-board"
-        role="grid"
-        aria-label="Release timeline"
-        ref={boardRef}
-      >
-        <div className="rt-timeline-grid" style={{ "--rt-days": days.length }}>
-          <span className="rt-timeline-corner" />
-          {days.map((day) => (
-            <span className="rt-timeline-day" key={day} title={formatFullTimestamp(`${day}T00:00:00Z`)}>
-              {formatTimelineDay(day)}
-            </span>
-          ))}
-          {TIMELINE_LANES.map((lane) => (
-            <div className="rt-timeline-row" key={lane.id} role="row">
-              <div className="rt-timeline-lane">
-                <span><lane.icon weight="duotone" /></span>
-                <div>
-                  <strong>{lane.label}</strong>
-                  <small>{lane.hint}</small>
-                </div>
-              </div>
-              {days.map((day) => (
-                <div className="rt-timeline-cell" key={day}>
-                  {events
-                    .filter(
-                      (event) =>
-                        event.lane === lane.id && timelineDayKey(event.at) === day,
-                    )
-                    .map((event) => {
-                      const status = TIMELINE_STATUS[event.status];
-                      return (
-                        <button
-                          type="button"
-                          className={`rt-timeline-event ${event.status} ${
-                            selected?.id === event.id ? "selected" : ""
-                          }`}
-                          onClick={() => setSelectedId(event.id)}
-                          key={event.id}
-                          data-event-id={event.id}
-                        >
-                          <status.icon weight="fill" />
-                          <span>{event.title}</span>
-                          <small title={formatFullTimestamp(event.at)}>{formatTime(event.at)}</small>
-                        </button>
-                      );
-                    })}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-        <footer className="rt-timeline-legend">
-          {Object.entries(TIMELINE_STATUS).map(([id, status]) => (
-            <span className={id} key={id}>
-              <status.icon weight="fill" /> {status.label}
-            </span>
-          ))}
-        </footer>
-      </div>
+      <TimelineBoard
+        boardRef={boardRef}
+        days={days.map((day) => ({
+          key: day,
+          label: formatTimelineDay(day),
+          title: formatFullTimestamp(`${day}T00:00:00Z`),
+        }))}
+        events={events.map((event) => ({
+          id: event.id,
+          lane: event.lane,
+          status: event.status,
+          title: event.title,
+          dayKey: timelineDayKey(event.at),
+          time: formatTime(event.at),
+          timeTitle: formatFullTimestamp(event.at),
+        }))}
+        selectedId={selected?.id}
+        onSelect={setSelectedId}
+      />
       {selected && (
-        <aside className={`rt-timeline-detail ${selected.status}`}>
-          <div className="rt-timeline-detail-head">
-            <Kicker>Selected event</Kicker>
-            <span className={`rt-timeline-detail-status ${selected.status}`}>
-              {(() => {
-                const StatusIcon = TIMELINE_STATUS[selected.status].icon;
-                return <StatusIcon weight="fill" />;
-              })()}
-              {selected.statusLabel || TIMELINE_STATUS[selected.status].label}
-            </span>
-          </div>
-          <h3>{selected.title}</h3>
-          <dl>
-            <div><dt>Type</dt><dd>{selected.detail.kind}</dd></div>
-            {selected.detail.relation && (
-              <div><dt>Relation</dt><dd>{selected.detail.relation}</dd></div>
-            )}
-            {selected.detail.path && (
-              <div><dt>Source</dt><dd>{selected.detail.path}</dd></div>
-            )}
-            {selected.detail.revision && (
-              <div><dt>Revision</dt><dd><code>{selected.detail.revision}</code></dd></div>
-            )}
-            {Number.isFinite(selected.detail.confidence) && (
-              <div>
-                <dt>Confidence</dt>
-                <dd>{Math.round(selected.detail.confidence * 100)}%</dd>
-              </div>
-            )}
-            {selected.detail.author && (
-              <div><dt>Recorded by</dt><dd>{selected.detail.author}</dd></div>
-            )}
-            {(selected.detail.owner || claimOwners.get(selected.claimId)?.name) && (
-              <div>
-                <dt>Owner</dt>
-                <dd>{selected.detail.owner || claimOwners.get(selected.claimId).name}</dd>
-              </div>
-            )}
-            <div><dt>Captured</dt><dd title={formatFullTimestamp(selected.at)}>{formatDate(selected.at)}</dd></div>
-          </dl>
-          {selected.detail.excerpt && (
-            <blockquote>{selected.detail.excerpt}</blockquote>
-          )}
-          {selected.detail.hash && (
-            <p className="rt-timeline-hash">
-              sha256 <code>{selected.detail.hash.slice(0, 16)}…</code>
-            </p>
-          )}
+        <TimelineDetail
+          selected={selected}
+          claimOwners={claimOwners}
+          capturedLabel={formatDate(selected.at)}
+          capturedTitle={formatFullTimestamp(selected.at)}
+        >
           {selected.claimId && (
-            <div className="rt-ai-panel">
-              <Button
-                type="button"
-                variant="secondary"
-                className="rt-ai-trigger"
-                onClick={runAssessment}
-                disabled={assessing}
-              >
-                {assessing ? <SpinnerGap className="rt-spin" /> : <Sparkle weight="fill" />}
-                {assessing ? "Asking GPT-5.6…" : "Assess with GPT-5.6"}
-              </Button>
-              {assessError && (
-                <p className="rt-error" role="alert"><WarningCircle /> {assessError}</p>
-              )}
-              {assessment && (
-                <article className={`rt-ai-result ${assessment.assessment.relation}`}>
-                  <div className="rt-ai-result-head">
-                    <span className="rt-ai-mode">
-                      {assessment.mode === "live" ? "LIVE" : assessment.mode} · {assessment.model}
-                    </span>
-                    <span>{Math.round(assessment.assessment.confidence * 100)}% confidence</span>
-                  </div>
-                  <h4>{assessment.assessment.headline}</h4>
-                  <p>{assessment.assessment.finding}</p>
-                  <p className="rt-ai-impact"><strong>Impact —</strong> {assessment.assessment.impact}</p>
-                  <ul className="rt-ai-citations">
-                    {assessment.assessment.evidence.map((citation) => (
-                      <li key={citation.sourceId}>
-                        <span>{citation.relation}</span>
-                        <q>{citation.excerpt}</q>
-                      </li>
-                    ))}
-                  </ul>
-                  {assessment.assessment.missingEvidence.length > 0 && (
-                    <p className="rt-ai-missing">
-                      Missing: {assessment.assessment.missingEvidence.join("; ")}
-                    </p>
-                  )}
-                  <p className="rt-ai-action"><strong>Recommended —</strong> {assessment.assessment.recommendedAction}</p>
-                </article>
-              )}
-            </div>
+            <AIAssessment
+              assessing={assessing}
+              assessError={assessError}
+              assessment={assessment}
+              onAssess={runAssessment}
+            />
           )}
-        </aside>
+        </TimelineDetail>
       )}
     </div>
   );
@@ -1581,22 +1469,7 @@ function ReleaseWorkspace({
       />
       {actionError && <p className="rt-error rt-release-error" role="alert"><WarningCircle /> {actionError}</p>}
 
-      <nav className="rt-tabs" role="tablist" aria-label="Release records">
-        {tabs.map(([id, label]) => (
-          <button
-            type="button"
-            className={tab === id ? "active" : ""}
-            onClick={() => setTab(id)}
-            key={id}
-            role="tab"
-            aria-selected={tab === id}
-            aria-controls={`release-panel-${id}`}
-            id={`release-tab-${id}`}
-          >
-            {label}
-          </button>
-        ))}
-      </nav>
+      <Tabs tabs={tabs} active={tab} onChange={setTab} />
 
       <section className="rt-release-content" role="tabpanel" id={`release-panel-${tab}`} aria-labelledby={`release-tab-${tab}`}>
         {tab === "timeline" && (
@@ -1900,85 +1773,36 @@ function ProductShell({
 
   return (
     <main className="rt-app">
-      <aside className="rt-sidebar">
-        <header>
-          <Logo />
-          <span><strong>Release Truth</strong><small>Evidence Gate</small></span>
-          {isDemo && <DemoBadge />}
-        </header>
-        <div className="rt-workspace-select">
-          <span>Workspace</span>
-          <label>
-            <select value={workspaceId || ""} onChange={(event) => setWorkspaceId(event.target.value)}>
-              {workspaces.map((item) => <option value={item.id} key={item.id}>{item.name}</option>)}
-            </select>
-            <CaretDown />
-          </label>
-          <small>{role}</small>
-        </div>
-        <div className="rt-side-section">
-          <div className="rt-side-heading">
-            <span>Projects</span>
-            {can(role, "create_project") && (
-              <button type="button" onClick={() => onCreate("project")} aria-label="New project"><Plus /></button>
-            )}
-          </div>
-          <nav className="rt-projects">
-            {projects.map((item) => (
-              <button
-                type="button"
-                className={projectId === item.id ? "active" : ""}
-                onClick={() => setProjectId(item.id)}
-                key={item.id}
-              >
-                <Folder weight={projectId === item.id ? "fill" : "regular"} />
-                <span>{item.name}</span>
-              </button>
-            ))}
-            {projects.length === 0 && <p>No projects yet.</p>}
-          </nav>
-          <label className="rt-mobile-project-select">
-            <span>Switch project</span>
-            <select value={projectId || ""} onChange={(event) => setProjectId(event.target.value)}>
-              <option value="">Choose project</option>
-              {projects.map((item) => <option value={item.id} key={item.id}>{item.name}</option>)}
-            </select>
-          </label>
-        </div>
-        <div className="rt-side-bottom">
-          {can(role, "manage_members") && (
-            <button type="button" onClick={onOpenTeam}><UsersThree /> Team</button>
-          )}
-          {can(role, "manage_integrations") && (
-            <button type="button" onClick={onOpenGitHub}><GithubLogo /> GitHub</button>
-          )}
-          <button type="button" onClick={() => onCreate("workspace")}><Plus /> Workspace</button>
-          <button type="button" onClick={onLogout}><SignOut /> Sign out</button>
-          <div className="rt-user">
-          <Avatar initials={initials(user.displayName)} />
-            <span><strong>{user.displayName}</strong><small>{user.email}</small></span>
-          </div>
-        </div>
-      </aside>
+      <Sidebar
+        isDemo={isDemo}
+        workspaces={workspaces}
+        workspaceId={workspaceId}
+        onSelectWorkspace={setWorkspaceId}
+        role={role}
+        canCreateProject={can(role, "create_project")}
+        projects={projects}
+        projectId={projectId}
+        onSelectProject={setProjectId}
+        canManageMembers={can(role, "manage_members")}
+        canManageIntegrations={can(role, "manage_integrations")}
+        onOpenTeam={onOpenTeam}
+        onOpenGitHub={onOpenGitHub}
+        onCreate={onCreate}
+        onLogout={onLogout}
+        user={user}
+        userInitials={initials(user.displayName)}
+      />
 
       <section className="rt-main">
         {project && (
-          <header className="rt-project-bar">
-            <div><Folder /><strong>{project.name}</strong></div>
-            <label>
-              <span>Release</span>
-              <select value={releaseId || ""} onChange={(event) => setReleaseId(event.target.value)}>
-                <option value="">Choose release</option>
-                {releases.map((item) => <option value={item.id} key={item.id}>{item.name}</option>)}
-              </select>
-              <CaretDown />
-            </label>
-            {can(role, "manage_release") && (
-              <Button type="button" variant="secondary" onClick={() => onCreate("release")}>
-                <Plus /> New release
-              </Button>
-            )}
-          </header>
+          <ProjectBar
+            projectName={project.name}
+            releases={releases}
+            selectedReleaseId={releaseId}
+            onSelectRelease={setReleaseId}
+            canManageRelease={can(role, "manage_release")}
+            onCreate={onCreate}
+          />
         )}
 
         {loading && (
@@ -2011,20 +1835,11 @@ function ProductShell({
           />
         )}
         {!loading && !error && project && releases.length > 0 && !releaseId && (
-          <div className="rt-release-picker">
-            <Kicker>{project.name}</Kicker>
-            <h1>Select a release</h1>
-            <div>
-              {releases.map((item) => (
-                <button type="button" key={item.id} onClick={() => setReleaseId(item.id)}>
-                  <span><RocketLaunch /></span>
-                  <strong>{item.name}</strong>
-                  <small>{item.status} · {item.targetValue || "target not set"}</small>
-                  <ArrowRight />
-                </button>
-              ))}
-            </div>
-          </div>
+          <ReleasePicker
+            projectName={project.name}
+            releases={releases}
+            onPick={setReleaseId}
+          />
         )}
         {!loading && !error && snapshot && (
           <ReleaseWorkspace
