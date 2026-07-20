@@ -113,7 +113,7 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   await owner.getByRole("button", { name: /Refresh/ }).click();
   await expect(owner.getByText("GO", { exact: true }).first()).toBeVisible();
   const downloadPromise = owner.waitForEvent("download");
-  await owner.getByRole("button", { name: /Signed export/ }).click();
+  await owner.getByRole("button", { name: /Export signed/ }).click();
   const download = await downloadPromise;
   const exportEnvelope = JSON.parse(await readFile(await download.path(), "utf8"));
   const verifyResponse = await owner.request.post("/api/exports/verify", {
