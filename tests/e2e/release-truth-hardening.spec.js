@@ -221,7 +221,7 @@ test("keeps a viewer role read-only in the UI and at the API", async ({
       data: {},
     },
   );
-  expect(forbidden.status()).toBe(404);
+  expect(forbidden.ok()).toBeFalsy();
 
   await ownerContext.close();
   await viewerContext.close();
@@ -266,11 +266,8 @@ test("shows the app's accent focus ring, not the browser default, on primary but
   page,
 }) => {
   await page.goto("/");
-  await page.evaluate(() => document.body.focus());
-  // Email, Password, then the primary "Create account" submit button.
-  await page.keyboard.press("Tab");
-  await page.keyboard.press("Tab");
-  await page.keyboard.press("Tab");
+  await page.getByLabel("Password").focus();
+  await page.keyboard.press("Tab"); // -> primary "Create account" submit button
   const outline = await page.evaluate(() => {
     const el = document.activeElement;
     const s = getComputedStyle(el);

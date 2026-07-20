@@ -1,14 +1,17 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X } from "@phosphor-icons/react";
 
 export function Dialog({ title, eyebrow, children, onClose, wide = false }) {
   const dialogRef = useRef(null);
-  const returnFocusRef = useRef(null);
+  // Capture the opener during render, before the dialog's autoFocus'd field
+  // steals focus, so focus can return to it on close.
+  const [returnFocusEl] = useState(() =>
+    typeof document !== "undefined" ? document.activeElement : null,
+  );
 
   useEffect(() => {
-    returnFocusRef.current = document.activeElement;
     const focusableSelector = [
       'button:not([disabled])',
       'a[href]',
@@ -47,7 +50,7 @@ export function Dialog({ title, eyebrow, children, onClose, wide = false }) {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      returnFocusRef.current?.focus?.();
+      returnFocusEl?.focus?.();
     };
   }, [onClose]);
 
