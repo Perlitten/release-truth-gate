@@ -49,6 +49,7 @@ import { VerdictBanner } from "./components/feedback/VerdictBanner.jsx";
 import { MetricCard } from "./components/feedback/MetricCard.jsx";
 import { VerdictHistory } from "./components/feedback/VerdictHistory.jsx";
 import { RecordCard } from "./components/records/RecordCard.jsx";
+import { TIMELINE_LANES, TIMELINE_STATUS, LANE_TO_FOCUS } from "./lib/timeline-constants.js";
 
 import { isAllowedSourceUrl } from "./lib/source-url.js";
 
@@ -967,19 +968,6 @@ function GitHubDialog({ workspace, project, snapshot, onClose, onImported }) {
   );
 }
 
-const TIMELINE_LANES = [
-  { id: "claim", label: "Claim", hint: "What we promise", icon: ClipboardText },
-  { id: "code", label: "Code", hint: "What we ship", icon: BracketsCurly },
-  { id: "test", label: "Tests", hint: "What we verify", icon: Flask },
-  { id: "decision", label: "Decisions", hint: "Who decides", icon: Scales },
-];
-
-const TIMELINE_STATUS = {
-  verified: { label: "Verified", icon: CheckCircle },
-  contradicted: { label: "Contradicted", icon: XCircle },
-  pending: { label: "Pending", icon: ClockCounterClockwise },
-};
-
 function evidenceTimelineStatus(relation) {
   if (relation === "supports") return "verified";
   if (relation === "contradicts") return "contradicted";
@@ -1022,8 +1010,6 @@ function formatFullTimestamp(value) {
     timeStyle: "long",
   }).format(new Date(value));
 }
-
-const LANE_TO_FOCUS = { claim: "claim", code: "code", test: "tests", decision: "decisions" };
 
 function buildAnalysisPayload(event, snapshot) {
   if (!event.claimId) return null;
