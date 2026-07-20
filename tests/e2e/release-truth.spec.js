@@ -60,7 +60,7 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   await owner.getByLabel("Evidence kind").fill("test");
   await owner.getByRole("button", { name: /Create record/ }).click();
   await owner.getByRole("button", { name: /Run verdict/ }).click();
-  await expect(owner.getByText("CONDITIONAL GO", { exact: true })).toBeVisible();
+  await expect(owner.getByText("CONDITIONAL GO", { exact: true }).first()).toBeVisible();
 
   await register(reviewer, "e2e-reviewer@example.test", "E2E Reviewer");
   const workspaceResponse = await owner.request.get("/api/workspaces");
@@ -103,10 +103,10 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   );
   await reviewer.getByRole("button", { name: /Create record/ }).click();
   await reviewer.getByRole("button", { name: /Run verdict/ }).click();
-  await expect(reviewer.getByText("GO", { exact: true })).toBeVisible();
+  await expect(reviewer.getByText("GO", { exact: true }).first()).toBeVisible();
 
   await owner.getByRole("button", { name: /Refresh/ }).click();
-  await expect(owner.getByText("GO", { exact: true })).toBeVisible();
+  await expect(owner.getByText("GO", { exact: true }).first()).toBeVisible();
   const downloadPromise = owner.waitForEvent("download");
   await owner.getByRole("button", { name: /Signed export/ }).click();
   const download = await downloadPromise;

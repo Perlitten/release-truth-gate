@@ -152,7 +152,7 @@ test("reads NOT EVALUABLE, never GO, when a material claim has no evidence", asy
   await addClaim(page, "Data is encrypted at rest");
 
   await page.getByRole("button", { name: /Run verdict/ }).click();
-  await expect(page.getByText("NOT EVALUABLE", { exact: true })).toBeVisible();
+  await expect(page.getByText("NOT EVALUABLE", { exact: true }).first()).toBeVisible();
   await expect(page.getByText("GO", { exact: true })).not.toBeVisible();
 });
 
