@@ -35,7 +35,7 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
     .click();
   await owner.getByLabel("Project name").fill("Payments API");
   await owner.getByRole("button", { name: /Create record/ }).click();
-  await owner.getByRole("button", { name: "New release" }).click();
+  await owner.getByRole("button", { name: "New release" }).first().click();
   await owner.getByLabel("Release name").fill("1.0.0");
   await owner.getByLabel("Target value").fill("v1.0.0");
   await owner.getByRole("button", { name: /Create record/ }).click();
@@ -53,7 +53,7 @@ test("two users share evidence, review it, run GO, and verify a signed export", 
   await owner.getByRole("button", { name: /Create record/ }).click();
 
   await owner.getByRole("tab", { name: "Evidence 0" }).click();
-  await owner.getByRole("button", { name: "Add evidence" }).click();
+  await owner.getByRole("button", { name: "Add evidence" }).first().click();
   await owner
     .getByLabel("Evidence summary")
     .fill("Integration test passed against the release tag.");

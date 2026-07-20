@@ -26,7 +26,7 @@ async function createWorkspaceProjectRelease(page, workspaceName, releaseName) {
     .click();
   await page.getByLabel("Project name").fill("Hardening project");
   await page.getByRole("button", { name: /Create record/ }).click();
-  await page.getByRole("button", { name: "New release" }).click();
+  await page.getByRole("button", { name: "New release" }).first().click();
   await page.getByLabel("Release name").fill(releaseName);
   await page.getByLabel("Target value").fill("v1.0.0");
   await page.getByRole("button", { name: /Create record/ }).click();
@@ -53,7 +53,7 @@ test("blocks a blind decision sign-off until evidence acknowledgment is checked"
   await addClaim(page, "Checkout is idempotent");
 
   await page.getByRole("tab", { name: /^Evidence/ }).click();
-  await page.getByRole("button", { name: "Add evidence" }).click();
+  await page.getByRole("button", { name: "Add evidence" }).first().click();
   await page.getByLabel("Evidence summary").fill("Idempotency test passed on the release tag.");
   await page.getByLabel("Evidence kind").fill("test");
   await page.getByRole("button", { name: /Create record/ }).click();
