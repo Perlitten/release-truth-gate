@@ -49,6 +49,7 @@ import { VerdictBanner } from "./components/feedback/VerdictBanner.jsx";
 import { MetricCard } from "./components/feedback/MetricCard.jsx";
 import { VerdictHistory } from "./components/feedback/VerdictHistory.jsx";
 import { RecordCard } from "./components/records/RecordCard.jsx";
+import { AuditTrail } from "./components/records/AuditTrail.jsx";
 import { TimelineBoard } from "./components/timeline/TimelineBoard.jsx";
 import { TimelineDetail } from "./components/timeline/TimelineDetail.jsx";
 import { AIAssessment } from "./components/timeline/AIAssessment.jsx";
@@ -1678,32 +1679,18 @@ function ReleaseWorkspace({
                 body="Record activity will appear here with its tamper-evident hash chain."
               />
             ) : (
-            <div className="rt-audit-list">
-              {[...snapshot.auditEvents].reverse().map((event) => {
-                const targetTab = AUDIT_TARGET_TAB[event.targetType];
-                const body = (
-                  <>
-                    <strong>
-                      {event.actor?.displayName || "A workspace member"}{" "}
-                      {humanizeAuditAction(event.action)}
-                    </strong>
-                    <small title={formatFullTimestamp(event.createdAt)}>{formatDate(event.createdAt)} · {event.eventHash.slice(0, 12)}…</small>
-                  </>
-                );
-                return (
-                  <article key={event.id}>
-                    <span><ClockCounterClockwise /></span>
-                    {targetTab ? (
-                      <button type="button" className="rt-audit-jump" onClick={() => setTab(targetTab)}>
-                        {body}
-                      </button>
-                    ) : (
-                      <div>{body}</div>
-                    )}
-                  </article>
-                );
-              })}
-            </div>
+            <AuditTrail
+              events={[...snapshot.auditEvents].reverse().map((event) => ({
+                id: event.id,
+                actorName: event.actor?.displayName || "A workspace member",
+                actionText: humanizeAuditAction(event.action),
+                fullTimestamp: formatFullTimestamp(event.createdAt),
+                dateText: formatDate(event.createdAt),
+                hashText: event.eventHash.slice(0, 12),
+                targetTab: AUDIT_TARGET_TAB[event.targetType],
+              }))}
+              onJump={setTab}
+            />
             )}
           </RecordSection>
           </>
