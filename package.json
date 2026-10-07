@@ -45,7 +45,7 @@
     "esbuild": "^0.28.1",
     "vite": "^8.1.5",
     "vitest": "^4.1.11",
-    "wrangler": "4.129.0"
+    "wrangler": "4.131.0"
   },
   "overrides": {
     "esbuild@<=0.24.2": "0.25.12",
