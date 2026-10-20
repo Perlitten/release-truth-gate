@@ -40,7 +40,7 @@ steps:
   when:
   - status: failure
 - name: upload-failure-artifacts
-  image: woodpeckerci/plugin-s3
+  image: woodpeckerci/plugin-s3@sha256:bf0a088e66b991803e3b9b0401f616245c4d736674195204a7e9e343a871a9ea
   settings:
     bucket:
       from_secret: ci_artifact_bucket
@@ -54,6 +54,6 @@ steps:
     target: /${CI_REPO}/${CI_PIPELINE_NUMBER}/ci
     path_style: true
     region: us-east-1
-    access: private
+    acl: private
   when:
   - status: failure
